@@ -1,0 +1,116 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@base": "http://identifiers.org/ncbigene/",
+		"term": "http://biothings.io/terms/mygene/",
+		"GO": "http://identifiers.org/go/GO:",
+		"go": {
+			"@type": "@id",
+			"@id": "term:has_annotation",
+			"@context": {
+				"BP": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/vocab/objects/GeneToGoTermObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/vocab/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/go/"
+							}
+						},
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/evidence/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+                "CC": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/objects/GeneToGoTermObject/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/evidence/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                },
+                "MF": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/objects/GeneToGoTermObject/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/evidence/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                }
+			}
+		}
+	}
+}

@@ -1,0 +1,305 @@
+{
+    "@id": "http://biothings.io/explorer/objects/geneAnnotationObject/",
+	"@context": {
+		"@version": 1.1,
+		"@base": "http://identifiers.org/ncbigene/",
+		"term": "http://biothings.io/terms/mygene/",
+		"ont": "http://biothings.io/ontologies/",
+		"GO": "http://identifiers.org/go/GO:",
+		"symbol": {
+			"@type": "@id",
+			"@id": "http://biothings.io/explorer/attributes/id/",
+			"@context": {
+				"@base": "http://identifiers.org/hgnc.symbol/"
+			}
+		},
+        "taxid": {
+            "@type": "@id",
+            "@id": "http://biothings.io/explorer/attributes/taxonomy/",
+            "@context": {
+                "@base": "http://identifiers.org/taxonomy/"
+            }
+        },
+        "name": {
+            "@type": "@id",
+            "@id": "http://biothings.io/explorer/attributes/label/",
+            "@context": {
+                "@base": "http://schema.org/Text/"
+            }
+        },
+        "other_names": {
+            "@type": "@id",
+            "@id": "http://biothings.io/explorer/attributes/label/",
+            "@context": {
+                "@base": "http://schema.org/Text/"
+            }
+        },
+		"uniprot": {
+			"@type": "@id",
+			"@id": "http://biothings.io/explorer/objects/proteinAnnotationObject/",
+			"@context": {
+				"Swiss-Prot": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/attributes/id/",
+					"@context": {
+						"@base": "http://identifiers.org/uniprot/"
+					}
+				}
+			}
+		},
+		"generif": {
+			"@type": "@id",
+			"@id": "http://biothings.io/explorer/objects/publicationAnnotationObject/",
+			"@context": {
+				"pubmed": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/attributes/id/",
+					"@context": {
+						"@base": "http://identifiers.org/pubmed/"
+					}
+				},
+                "text": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/attributes/label/",
+                    "@context": {
+                        "@base": "http://schema.org/Text/"
+                    }
+                }
+			}
+		},
+		"pathway": {
+			"@type": "@id",
+			"@id": "term:has_annotation",
+			"@context": {
+				"biocarta": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/objects/pathwayAnnotationObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/biocarta.pathway/"
+							}
+						},
+						"name": {
+							"@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+						}
+					}
+				},
+				"kegg": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/objects/pathwayAnnotationObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/kegg.pathway/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+				"reactome": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/objects/pathwayAnnotationObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/reactome/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+				"wikipathways": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/objects/pathwayAnnotationObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/wikipathways/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+				"pharmgkb": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/objects/pathwayAnnotationObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/pharmgkb.pathways/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				}
+			}
+		},
+        "interpro": {
+            "@type": "@id",
+            "@id": "http://biothings.io/explorer/objects/proteinAnnotationObject/",
+            "@context": {
+                "id": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/attributes/id/",
+                    "@context": {
+                        "@base": "http://identifiers.org/interpro/"
+                    }
+                },
+                "desc": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/attributes/label/",
+                    "@context": {
+                        "@base": "http://schema.org/Text/"
+                    }
+                }
+            }
+        },
+		"go": {
+			"@type": "@id",
+			"@id": "term:has_annotation",
+			"@context": {
+				"BP": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/objects/geneOntologyAnnotationObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/go/"
+							}
+						},
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/publication/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/evidence/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+                "CC": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/objects/geneOntologyAnnotationObject/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/publication/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/evidence/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                },
+                "MF": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/objects/geneOntologyAnnotationObject/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/publication/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/evidence/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                }
+			}
+		}
+	}
+}

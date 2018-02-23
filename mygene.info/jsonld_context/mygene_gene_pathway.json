@@ -1,0 +1,113 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@base": "http://identifiers.org/ncbigene/",
+		"term": "http://biothings.io/terms/mygene/",
+		"pathway": {
+			"@type": "@id",
+			"@id": "term:has_annotation",
+			"@context": {
+				"biocarta": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/vocab/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/biocarta.pathway/"
+							}
+						},
+						"name": {
+							"@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+						}
+					}
+				},
+				"kegg": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/vocab/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/kegg.pathway/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+				"reactome": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/vocab/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/reactome/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+				"wikipathways": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/vocab/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/wikipathways/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				},
+				"pharmgkb": {
+					"@type": "@id",
+					"@id": "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/",
+					"@context": {
+						"id": {
+							"@type": "@id",
+							"@id": "http://biothings.io/explorer/vocab/attributes/id/",
+							"@context": {
+								"@base": "http://identifiers.org/pharmgkb.pathways/"
+							}
+						},
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+					}
+				}
+			}
+		}
+	}
+}
