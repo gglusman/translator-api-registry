@@ -1,0 +1,82 @@
+openapi: '3.0.0'
+info:
+  version: '1.0'
+  title: MyChem.info API
+  description: >-
+    Documentation of the MyChem.info Chemical Query web services. Learn more about
+    [MyChem.info](http://mychem.info/)
+  termsOfService: http://mychem.info/terms/
+  contact:
+    name: Chunlei Wu
+    x-role: responsible developer
+    email: help@mychem.info
+    x-id:
+      - 'http://orcid.org/0000-0002-2629-6124'
+      - 'https://github.com/newgene'
+servers:
+  - url: 'http://mychem.info/v1'
+    description: 'Production server'
+tags:
+  - name: chemical
+  - name: drug
+  - name: annotation
+  - name: query
+  - name: translator
+paths:
+  '/drug/{drugid}':
+    get:
+      summary: 'For a given chemical id, return the matching chemical object'
+      parameters:
+        - name: drugid
+          in: path
+          description: >-
+            DrugBank ID, InCHIKey, CHEBI ID, CHEMBL ID
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/inchikey/'
+            - 'http://identifiers.org/drugbank/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/inchikey/'
+              template: /drug/{drugid}
+            - valueType: 'http://identifiers.org/drugbank/'
+              template: /drug/{drugid}
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A chemical object'
+          x-responseValueType:
+            - path: ./
+              objectType: "http://biothings.io/explorer/vocab/class/ChemicalSubstance/"
+              valueType: 
+                - "http://identifiers.org/inchikey/"
+                - "http://identifiers.org/pubchem.compound/"
+                - "http://identifiers.org/pubchem.substance/"
+                - "http://identifiers.org/iuphar.ligand/"
+                - "http://biothings.io/terms/drugname/"
+                - "http://identifiers.org/inchi/"
+                - "http://identifiers.org/unii/"
+                - "http://identifiers.org/drugbank/"
+                - "http://identifiers.org/rxcui/"
+                - "http://identifiers.org/chebi/"
+                - "http://identifiers.org/chembl.compound/"
+                - "http://identifiers.org/kegg.drug/"
+                - "http://identifiers.org/kegg.compound/"
+                - "http://identifiers.org/pharmgkb.drug/"
+              JSONLDContext: 'mygene.info/jsonld_context/mygene_gene_gene.json'
+            - path: drugbank.targets
+              objectType: "http://biothings.io/explorer/vocab/objects/ChemicalToGeneOrGeneProductObject/"
+              valueType:
+                - "http://identifiers.org/uniprot/"
+              JSONLDContext: 'mychem.info/jsonld_context/mychem_chemical_geneorgeneproduct.json'
+            - path: drugbank.drug_interactions
+              objectType: "http://biothings.io/explorer/vocab/objects/PairwiseChemicalInteractionObject/"
+              valueType:
+                - "http://identifiers.org/drugbank/"
+                - "http://biothings.io/terms/drugname/"
+              JSONLDContext: 'mychem.info/jsonld_context/mychem_chemical_chemical.json'
+            - path: drugcentral.drug_use
+              objectType: "http://biothings.io/explorer/vocab/objects/ChemicalToDiseaseOrPhenotypicFeatureObject/"
+              valueType:
+                - "http://identifiers.org/snomedct/"
+              JSONLDContext: 'mychem.info/jsonld_context/mychem_chemical_disease.json'

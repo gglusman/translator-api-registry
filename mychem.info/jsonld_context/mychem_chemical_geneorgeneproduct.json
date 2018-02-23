@@ -1,0 +1,69 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@base": "http://identifiers.org/inchikey/",
+		"term": "http://biothings.io/terms/mychem/",
+		"_id": "@id",
+        "drugbank": {
+            "@type": "@id",
+            "@id": "ont:has_annotation",
+            "@context": {
+                "targets": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/objects/ChemicalToGeneOrGeneProductObject/",
+                    "@context": {
+                        "uniprot": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/uniprot/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "organism": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/taxonomy/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "source": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                            "@context": {
+                                "@base": "http://schema.org/URL/"
+                            }
+                        },
+                        "actions": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "general_function": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/qualifiers/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "specific_function": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/qualifiers/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}
