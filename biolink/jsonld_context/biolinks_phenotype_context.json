@@ -3,21 +3,69 @@
         "@version": 1.1,
         "_id": "@id",
         "HP": "http://identifiers.org/hp/",
+        "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "http://biothings.io/explorer/objects/phenotypeAnnotationObject/",
             "@context": {
                 "object": {
                     "@type": "@id",
-                    "@id": "term:has_annotation",
+                    "@id": "http://biothings.io/pass/",
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "ont:associatedWithPhenotype",
+                            "@id": "http://biothings.io/explorer/attributes/id/",
                             "@context": {
                                 "@base": "http://identifiers.org/hp/"
                             }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
                         }
+                    }
+                },
+                "relation": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/relationships/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/ro/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/relationships/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                },
+                "publication": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/relationships/id/",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/relationships/publication/"
+                            }
+                        }
+                    }
+                },
+                "provided_by": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/relationships/datasource/",
+                    "@context": {
+                        "@base": "http://schema.org/URL/"
                     }
                 }
             }

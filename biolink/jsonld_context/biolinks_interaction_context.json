@@ -3,22 +3,85 @@
         "@version": 1.1,
         "_id": "@id",
         "NCBIGene": "http://identifiers.org/ncbigene/",
-        "HGNC": "http://identifiers.org/hgnc/",
+        "MGI": "http://identifiers.org/mgi/",
+        "ZFIN": "http://identifiers.org/zfin/",
+        "Xenbase": "http://identifiers.org/xenbase/",
+        "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "http://biothings.io/explorer/vocab/objects/PairwiseGeneOrProteinInteractionObject/",
             "@context": {
                 "object": {
                     "@type": "@id",
-                    "@id": "term:has_annotation",
+                    "@id": "http://biothings.io/pass/",
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "ont:physicallyInteractsWith",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
                             "@context": {
-                                "@base": "http://identifiers.org/ncbigene/"
+                                "@base": "http://identifiers.org/hgnc/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/hgnc.symbol/"
+                            }
+                        },
+                        "taxon": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "id": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/explorer/vocab/attributes/taxonomy/",
+                                    "@context": {
+                                      "@base": "http://identifiers.org/taxonomy/"
+                                    }
+                                }
                             }
                         }
+                    }
+                },
+                "relation": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/ro/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                },
+                "publication": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        }
+                    }
+                },
+                "provided_by": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                    "@context": {
+                        "@base": "http://schema.org/URL/"
                     }
                 }
             }
