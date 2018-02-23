@@ -1,0 +1,100 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "term": "http://biothings.io/terms/dgidb/",
+        "matchedTerms": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "interactions": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/objects/GeneOrGeneProductToChemicalObject/",
+                    "@context": {
+                        "geneChemblId": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/chembl.compound/"
+                            }
+                        },
+                        "drugName": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "sources": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "pmids": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "interactionTypes": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ambiguousTerms": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "interactions": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/objects/GeneOrGeneProductToChemicalObject/",
+                    "@context": {
+                        "geneChemblId": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/chembl.compound/"
+                            }
+                        },
+                        "drugName": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "sources": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "pmids": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "interactionTypes": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

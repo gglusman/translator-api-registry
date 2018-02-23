@@ -1,0 +1,61 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "term": "http://biothings.io/terms/dgidb/",
+        "ont": "http://biothings.io/ontology/",
+        "matchedTerms": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "interactions": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/explorer/vocab/objects/ChemicalToGeneOrGeneProductObject/",
+                    "@context": {
+                        "geneName": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/hgnc.symbol/"
+                            }
+                        },
+                        "geneEntrezId": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@context": {
+                                "@base": "http://identifiers.org/ncbigene/"
+                            }
+                        },
+                        "geneLongName": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "sources": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        },
+                        "pmids": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/publications/",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "interactionTypes": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@context": {
+                                "@base": "http://schema.org/Text/"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
