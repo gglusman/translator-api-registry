@@ -1,0 +1,25 @@
+URI,Recommended name,Description,Semantic Type
+http://identifiers.org/hgnc/,hgnc,records in the HGNC symbol database,gene
+http://identifiers.org/hgnc.symbol/,hgnc.symbol,HGNC symbol,gene
+http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
+http://identifiers.org/pubmed/,pubmed,PubMed is a service of the U.S. National Library of Medicine that includes citations from MEDLINE and other life science journals for biomedical articles,publication
+http://identifiers.org/ro/,ro,consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies,ontology
+http://biothings.io/explorer/vocab/terms/disease-gene-relation/,disease-gene-relation,the relationship between disease and gene,relation
+http://biothings.io/explorer/vocab/terms/database/,database,database information,database
+http://identifiers.org/hp/,hp,Human Phenotype Ontology,phenotype
+http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypeName,name of phenotype,phenotype
+http://biothings.io/explorer/vocab/terms/disease-phenotype-relation/,disease-phenotype-relation,relationship between disease and phenotype,relation
+http://biothings.io/explorer/vocab/terms/gene-homolog-relation/,gene-homolog-relation,relationship between gene and its homologs,relation
+http://biothings.io/explorer/vocab/terms/gene-interaction-relation/,gene-interaction-relation,relationship between gene and its interactors,relation
+http://identifiers.org/reactome.pathways/,reactome.pathways,reacomte pathway id,pathways
+http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysName,description for pathway,pathways
+http://biothings.io/explorer/vocab/terms/gene-pathways-relation/,gene-pathways-relation,relationship between a gene aand a pathway,relation
+http://biothings.io/explorer/vocab/terms/gene-phenotype-relation/,gene-phenotype-relation,relationship between a gene and a phenotype,relation
+http://biothings.io/explorer/vocab/terms/pathways-gene-relation/,pathways-gene-relation,relationship between a pathways and a gene,relation
+http://biothings.io/explorer/vocab/terms/variant-gene-relation/,variant-gene-relation,relationship between a variant and a gene,relation
+http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
+http://identifiers.org/ncbigene/,ncbigene,ncbi gene id,gene
+http://biothings.io/explorer/vocab/terms/gene-approved-name/,gene-approved-name,gene approved name,gene
+http://biothings.io/explorer/vocab/terms/drug-gene-relation/,drug-gene-relation,description of drug gene interaction,relation
+http://biothings.io/explorer/vocab/terms/drug-name/,drugName,name of a drug,chemical
+http://biothings.io/explorer/vocab/terms/gene-drug-relation/,gene-drug-relation,description of gene drug interaction,relation
