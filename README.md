@@ -21,11 +21,17 @@ This [OpenAPI GUI](http://smart-api.info/openapi-gui/) interface can also be use
 ### Converting from a Swagger/OpenAPI v2 metadata
 If you already have an API metadata document in older Swagger/OpenAPI v2 specification. You can try this conversion tool to convert it to the latest OpenAPI v3 format, and then edit it in the [editor](http://smart-api.info/editor-oa3/):
 
-http://openapi-converter.appspot.com/
+https://mermade.org.uk/openapi-converter
+
+http://openapiconverter.azurewebsites.net/
+
 
 This converter is not perfect, but still a good starting point.
 
 Tip: Feel free to play with your API metadata file with the tools we mentioned above, and commit your changes even when they are not fully complete or valid. As along as the metadata entry has not been added to the API_LIST.yml file (see below), you will be fine :-). When you are happy with your metadata, you can now move to the next step to add it to the API_LIST.yml file.
+
+A [code snippet](https://github.com/PriceLab/translator-bigquery-api/blob/6d652ec28d0ae7b893395b3e3c360c9d5b144fe3/app/api/bigquery/endpoints/metadata.py#L115) to convert [flask-restful](http://flask-restful.readthedocs.io) auto-generated swagger v2 specification to SmartAPI metedata, kindly provided by @JohnCEarls.
+
 
 ## API_LIST.yml file
 This is a YAML file at the root of this repo to keep track of all APIs available in this repo. Our SmartAPI application will import all the API metadata based on this file and render an API registry web frontend.
@@ -51,6 +57,9 @@ For each API, you just need to add a text block like this:
       * discuss it with us at our slack channel (#arch-working-group)
       * open an issue in this repo
       * submit a pull-request for your modified [API_LIST.yml](API_LIST.yml) file
+
+## CORS support
+If you want users are able to request your API from the browser, e.g. in a web application, your API should support [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). We recommend every translator API to support CORS. Depending on your web server (e.g. Apache or Nginx) and/or the web framework (e.g. Django, Flask, Tornado) you use, you can find the relevant instruction to enable CORS for your API [here](https://enable-cors.org/), or via Google.
 
 ## How to pick URIs for annotating input parameters or the response data object?
 Typically for a JSON-based REST API, we use URIs to annotate both the acceptable parameter value types and the fields from the response data object, both in  [OpenAPI](https://www.openapis.org/) metdata files and JSON-LD context files. You can find some examples for "[mygene.info](mygene.info)" and "[myvariant.info](myvariant.info)" APIs.

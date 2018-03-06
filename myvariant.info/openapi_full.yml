@@ -10,27 +10,31 @@ info:
     name: Chunlei Wu
     x-role: responsible developer
     email: help@myvariant.info
-    x-id:
-      - 'http://orcid.org/0000-0002-2629-6124'
-      - 'https://github.com/newgene'
+    x-id: https://github.com/newgene
 servers:
   - url: 'http://myvariant.info/v1'
     description: 'Production server'
+  - url: 'https://myvariant.info/v1'
+    description: 'Encrypted Production server'
 tags:
   - name: variant
-  - name: annotation
   - name: query
+  - name: metadata
   - name: translator
 paths:
   /query:
     get:
-      summary: 'Make variant query and return matching variant hits'
+      tags:
+        - "query"
+      summary: 'Make variant query and return matching variant list. Support JSONP and CORS as well.'
       parameters:
         - name: q
-          in: query
-          description: >-
-            Query string. Examples "rs752396467", "possibly_damaging", "CDK7".
+          in: "query"
+          description: 'Query string. Examples "rs752396467", "possibly_damaging", "CDK7". The detailed query syntax can be found from our [docs](http://docs.myvariant.info/en/latest/doc/variant_query_service.html).'
           required: true
+          example: CDK7
+          schema:
+            type: string
           x-valueType:
             - 'http://identifiers.org/hgnc.symbol/'
             - 'http://identifiers.org/dbsnp/'
@@ -89,11 +93,24 @@ paths:
               template: clinvar.variant_id:input_value
           schema:
             type: string
+        - name: callback
+          in: "query"
+          $ref: '#/components/parameters/callback'
+        - name: dotfield
+          in: "query"
+          $ref: '#/components/parameters/dotfield'
+        - name: email
+          in: "query"
+          $ref: '#/components/parameters/email'
       responses:
         '200':
           description: 'A query response object with "hits" property'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResult'
           x-responseValueType:
-            - path: _id
+            - path: hits._id
               valueType: 'http://identifiers.org/hgvs/'
             - path: dbsnp.rsid
               valueType: 'http://identifiers.org/dbsnp/'
@@ -101,13 +118,16 @@ paths:
             'myvariant.info/jsonld_context/myvariant_query_1.1.json'
   '/variant/{variantid}':
     get:
-      summary: 'For a given variant id, return the matching variant object'
+      tags:
+        - "variant"
+      summary: 'Retrieve variant annotation object based on HGVS or rsid, support JSONP and CORS as well.'
       parameters:
         - name: variantid
           in: path
           description: >-
-            Variant HGVS ID, dbSNP ID
+            HGVS or rsid, e.g., chr6:g.152708291G>A, rs12190874
           required: true
+          example: 'chr6:g.152708291G>A'
           x-valueType:
             - 'http://identifiers.org/hgvs/'
             - 'http://identifiers.org/dbsnp/'
@@ -118,9 +138,66 @@ paths:
               template: /variant/{variantid}
           schema:
             type: string
+        - name: fields
+          in: "query"
+          $ref: '#/components/parameters/fields'
+        - name: dotfield
+          in: "query"
+          $ref: '#/components/parameters/dotfield'
+        - name: callback
+          in: "query"
+          $ref: '#/components/parameters/callback'
+        - name: email
+          in: "query"
+          $ref: '#/components/parameters/email'
       responses:
         '200':
-          description: 'A variant object'
+          description: 'A matching variant object'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variant'
+          x-responseValueType:
+            - path: _id
+              valueType: 'http://identifiers.org/hgvs/'
+          x-JSONLDContext:
+            'https://raw.githubusercontent.com/NCATS-Tangerine/translator-api-registry/master/myvariant.info/jsonld_context/myvariant_variant_1.1.json'
+        '404':
+          description: 'A response indicating an unknown variant id'
+  '/variant':
+    post:
+      tags:
+        - "variant"
+      summary: 'For a list of variant ids, return the matching variant objects'
+      requestBody:
+        content:
+          'application/x-www-form-urlencoded':
+            schema:
+             properties:
+                ids:
+                  description: 'multiple variant ids seperated by comma, e.g., "ids=chr6:g.152708291G>A,chr1:g.35367G>A" or "ids=rs5882,rs12190874". Note that currently we only take the input ids up to 1000 maximum, the rest will be omitted.'
+                  type: string
+             required:
+               - ids
+      parameters:
+        - name: fields
+          in: "query"
+          $ref: '#/components/parameters/fields'
+        - name: dotfield
+          in: "query"
+          $ref: '#/components/parameters/dotfield'
+        - name: email
+          in: "query"
+          $ref: '#/components/parameters/email'
+      responses:
+        '200':
+          description: 'a list of matching variant objects'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Variant'
           x-responseValueType:
             - path: cadd.gene.genename
               valueType: 'http://identifiers.org/hgnc.symbol/'

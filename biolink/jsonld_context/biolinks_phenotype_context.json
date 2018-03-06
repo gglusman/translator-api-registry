@@ -34,16 +34,16 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/relationships/id/",
+                            "@id": "rel:id",
                             "@context": {
                                 "@base": "http://identifiers.org/ro/"
                             }
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/relationships/label/",
+                            "@id": "rel:label",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-homolog-relation/"
                             }
                         }
                     }
@@ -54,18 +54,18 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/relationships/id/",
+                            "@id": "rel:publication",
                             "@context": {
-                                "@base": "http://biothings.io/explorer/relationships/publication/"
+                                "@base": "http://identifiers.org/pubmed/"
                             }
                         }
                     }
                 },
                 "provided_by": {
                     "@type": "@id",
-                    "@id": "http://biothings.io/explorer/relationships/datasource/",
+                    "@id": "rel:provided_by",
                     "@context": {
-                        "@base": "http://schema.org/URL/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
                     }
                 }
             }

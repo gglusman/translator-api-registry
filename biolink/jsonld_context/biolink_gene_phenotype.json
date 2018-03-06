@@ -1,12 +1,14 @@
 {
     "@context": {
         "@version": 1.1,
-        "_id": "@id",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
         "HP": "http://identifiers.org/hp/",
         "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
             "@type": "@id",
-            "@id": "http://biothings.io/explorer/vocab/objects/GeneToPhenotypicFeatureObject/",
+            "@id": "assoc:GeneToPhenotypicFeatureObject",
             "@context": {
                 "object": {
                     "@type": "@id",
@@ -14,16 +16,16 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@id": "attr:id",
                             "@context": {
                                 "@base": "http://identifiers.org/hp/"
                             }
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@id": "attr:label",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/phenotype-name/"
                             }
                         }
                     }
@@ -34,16 +36,16 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/id/",
+                            "@id": "rel:id",
                             "@context": {
                                 "@base": "http://identifiers.org/ro/"
                             }
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@id": "rel:label",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-phenotype-relation/"
                             }
                         }
                     }
@@ -54,7 +56,7 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/id/",
+                            "@id": "rel:publication",
                             "@context": {
                                 "@base": "http://identifiers.org/pubmed/"
                             }
@@ -63,9 +65,9 @@
                 },
                 "provided_by": {
                     "@type": "@id",
-                    "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                    "@id": "rel:provided_by",
                     "@context": {
-                        "@base": "http://schema.org/URL/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
                     }
                 }
             }

@@ -1,8 +1,9 @@
 {
     "@context": {
         "@version": 1.1,
-        "_id": "@id",
-        "NCBIGene": "http://identifiers.org/ncbigene/",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
         "HGNC": "http://identifiers.org/hgnc/",
         "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
@@ -15,14 +16,14 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@id": "attr:id",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc/"
                             }
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@id": "attr:label",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
@@ -33,7 +34,7 @@
                             "@context": {
                                 "id": {
                                     "@type": "@id",
-                                    "@id": "http://biothings.io/explorer/vocab/attributes/taxonomy/",
+                                    "@id": "attr:taxonomy",
                                     "@context": {
                                       "@base": "http://identifiers.org/taxonomy/"
                                     }
@@ -48,16 +49,16 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/id/",
+                            "@id": "rel:id",
                             "@context": {
                                 "@base": "http://identifiers.org/ro/"
                             }
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@id": "rel:label",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathway-gene-relation/"
                             }
                         }
                     }
@@ -68,7 +69,7 @@
                     "@context": {
                         "id": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/id/",
+                            "@id": "rel:publication",
                             "@context": {
                                 "@base": "http://identifiers.org/pubmed/"
                             }
@@ -77,9 +78,9 @@
                 },
                 "provided_by": {
                     "@type": "@id",
-                    "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                    "@id": "rel:provided_by",
                     "@context": {
-                        "@base": "http://schema.org/URL/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
                     }
                 }
             }
