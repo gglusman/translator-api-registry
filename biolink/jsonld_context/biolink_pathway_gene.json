@@ -8,7 +8,7 @@
         "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
             "@type": "@id",
-            "@id": "http://biothings.io/explorer/vocab/objects/PathwayToGeneObject/",
+            "@id": "assoc:PathwayToGeneAssociation",
             "@context": {
                 "subject": {
                     "@type": "@id",
@@ -23,7 +23,7 @@
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "attr:label",
+                            "@id": "attr:id-secondary",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }

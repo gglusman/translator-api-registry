@@ -8,7 +8,7 @@
         "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:SequenceVariantToGeneObject",
+            "@id": "assoc:SequenceVariantToGeneAssociation",
             "@context": {
                 "subject": {
                     "@type": "@id",
@@ -23,7 +23,7 @@
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "attr:label",
+                            "@id": "attr:id-secondary",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }

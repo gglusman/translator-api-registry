@@ -24,7 +24,7 @@
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "attr:label",
+                            "@id": "attr:id-secondary",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }

@@ -8,7 +8,7 @@
         "RO": "http://purl.obolibrary.org/obo/RO_",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:GeneToPathwayObject",
+            "@id": "assoc:GeneToPathwayAssociation",
             "@context": {
                 "object": {
                     "@type": "@id",
@@ -23,7 +23,7 @@
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "attr:label",
+                            "@id": "attr:id-secondary",
                             "@context": {
                                 "@base": "http://biothings.io/explorer/vocab/terms/pathway-name/"
                             }
