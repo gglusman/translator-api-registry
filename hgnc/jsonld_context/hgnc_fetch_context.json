@@ -1,9 +1,9 @@
 {
     "@context": {
         "@version": 1.1,
-        "@base": "http://identifiers.org/ncbigene/",
-        "term": "http://biothings.io/terms/dgidb/",
-        "ont": "http://biothings.io/ontology/",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
         "HGNC": "http://identifiers.org/hgnc/",
         "MGI": "http://identifiers.org/mgi/",
         "RGD": "http://identifiers.org/rgd/",
@@ -18,84 +18,84 @@
                     "@context": {
                         "ccds_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/ccds/"
                             }
                         },
                         "ena": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/ena.embl/"
                             }
                         },
                         "ensembl_gene_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/ensembl.gene/"
                             }
                         },
                         "entrez_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/ncbigene/"
                             }
                         },
                         "hgnc_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc/"
                             }
                         },
                         "mgd_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/mgi/"
                             }
                         },
                         "omim_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/omim.gene/"
                             }
                         },
                         "pubmed_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/pubmed/"
                             }
                         },
                         "refseq_accession": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/refseq/"
                             }
                         },
                         "symbol": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
                         },
                         "uniprot_ids": {
                             "@type": "@id",
-                            "@id": "ont:associatedWithProtein",
+                            "@id": "assoc:GeneToGeneProductObject",
                             "@context": {
                                 "@base": "http://identifiers.org/uniprot/"
                             }
                         },
                         "rgd_id": {
                             "@type": "@id",
-                            "@id": "ont:hasXref",
+                            "@id": "assoc:AnnotationObject",
                             "@context": {
                                 "@base": "http://identifiers.org/rgd/"
                             }
