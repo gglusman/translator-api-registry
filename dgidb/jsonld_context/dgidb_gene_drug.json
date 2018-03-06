@@ -1,95 +1,50 @@
 {
     "@context": {
         "@version": 1.1,
-        "term": "http://biothings.io/terms/dgidb/",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
         "matchedTerms": {
             "@type": "@id",
             "@id": "term:has_annotation",
             "@context": {
                 "interactions": {
                     "@type": "@id",
-                    "@id": "http://biothings.io/explorer/vocab/objects/GeneOrGeneProductToChemicalObject/",
+                    "@id": "assoc:GeneOrGeneProductToChemicalAssociation",
                     "@context": {
                         "geneChemblId": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
+                            "@id": "attr:id",
                             "@context": {
                                 "@base": "http://identifiers.org/chembl.compound/"
                             }
                         },
                         "drugName": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
+                            "@id": "attr:id-secondary",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                             }
                         },
                         "sources": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
+                            "@id": "rel:provided_by",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/database/"
                             }
                         },
                         "pmids": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/publications/",
+                            "@id": "rel:publication",
                             "@context": {
                                 "@base": "http://identifiers.org/pubmed/"
                             }
                         },
                         "interactionTypes": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@id": "rel:label",
                             "@context": {
-                                "@base": "http://schema.org/Text/"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "ambiguousTerms": {
-            "@type": "@id",
-            "@id": "term:has_annotation",
-            "@context": {
-                "interactions": {
-                    "@type": "@id",
-                    "@id": "http://biothings.io/explorer/vocab/objects/GeneOrGeneProductToChemicalObject/",
-                    "@context": {
-                        "geneChemblId": {
-                            "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/id/",
-                            "@context": {
-                                "@base": "http://identifiers.org/chembl.compound/"
-                            }
-                        },
-                        "drugName": {
-                            "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/attributes/label/",
-                            "@context": {
-                                "@base": "http://schema.org/Text/"
-                            }
-                        },
-                        "sources": {
-                            "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/provided_by/",
-                            "@context": {
-                                "@base": "http://schema.org/Text/"
-                            }
-                        },
-                        "pmids": {
-                            "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/publications/",
-                            "@context": {
-                                "@base": "http://identifiers.org/pubmed/"
-                            }
-                        },
-                        "interactionTypes": {
-                            "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
-                            "@context": {
-                                "@base": "http://schema.org/Text/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-drug-relation/"
                             }
                         }
                     }
