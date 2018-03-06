@@ -49,7 +49,7 @@ paths:
             - path: objects
               valueType: 'http://identifiers.org/hgnc/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_gene_context.json'
+            'biolink/jsonld_context/biolink_disease_gene.json'
   '/bioentity/disease/{diseaseid}/phenotypes':
     get:
       summary: 'Returns phenotypes associated with a disease'
@@ -79,7 +79,7 @@ paths:
             - path: objects
               valueType: 'http://identifiers.org/hp/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_phenotype_context.json'
+            'biolink/jsonld_context/biolinks_disease_phenotype.json'
   '/bioentity/gene/{geneid}/homologs':
     get:
       summary: 'Returns homologs for a gene'
@@ -107,7 +107,7 @@ paths:
             - path: edge.obj
               valueType: 'http://identifiers.org/ncbigene/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_homolog_context.json'
+            'biolink/jsonld_context/biolinks_gene_homolog.json'
   '/bioentity/gene/{geneid}/interactions':
     get:
       summary: 'Returns interactions for a gene'
@@ -136,7 +136,7 @@ paths:
             - path: objects
               valueType: 'http://identifiers.org/hgnc/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_interaction_context.json'
+            'biolink/jsonld_context/biolinks_gene_interaction.json'
   '/bioentity/gene/{geneid}/phenotypes':
     get:
       summary: 'Returns phenotypes associated with gene'
@@ -163,7 +163,7 @@ paths:
             - path: edge.obj
               valueType: 'http://identifiers.org/hp/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_phenotype_context.json'
+            'biolink/jsonld_context/biolinks_gene_phenotype.json'
   '/bioentity/gene/{geneid}/pathways':
     get:
       summary: 'Returns pathways associated with gene'
@@ -190,7 +190,7 @@ paths:
             - path: edge.obj
               valueType: 'http://identifiers.org/reactome/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_pathway_context.json'
+            'biolink/jsonld_context/biolink_gene_pathway.json'
   '/bioentity/pathway/{pathwayid}/genes':
     get:
       summary: 'Returns genes associated with a pathway'
@@ -214,7 +214,7 @@ paths:
             - path: association.object.id
               valueType: 'http://identifiers.org/hgnc/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_gene_context.json'
+            'biolink/jsonld_context/biolink_pathway_gene.json'
   '/bioentity/variant/{variantid}/genes':
     get:
       summary: 'Returns genes associated with a variant'
@@ -238,4 +238,4 @@ paths:
             - path: association.object.id
               valueType: 'http://identifiers.org/hgnc/'
           x-JSONLDContext:
-            'biolink/jsonld_context/biolinks_variant2gene_context.json'
+            'biolink/jsonld_context/biolink_variant_gene.json'
