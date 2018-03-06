@@ -18,14 +18,14 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://identifiers.org/reactome/"
+                                "@base": "http://identifiers.org/reactome.pathways/"
                             }
                         },
                         "label": {
                             "@type": "@id",
                             "@id": "attr:id-secondary",
                             "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/pathway-name/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
                             }
                         }
                     }
@@ -45,7 +45,7 @@
                             "@type": "@id",
                             "@id": "rel:label",
                             "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/gene-pathway-relation/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-pathways-relation/"
                             }
                         }
                     }
