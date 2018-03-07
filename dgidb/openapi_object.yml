@@ -44,11 +44,8 @@ paths:
           description: 'A query response object with "matchedTerm" property'
           x-responseValueType:
             - path: mathcedTerms.interactions
-              objectType: "http://biothings.io/explorer/vocab/objects/ChemicalToGeneOrGeneProductObject/"
-              valueType:
-                - "http://identifiers.org/hgnc.symbol/"
-                - "http://identifiers.org/ncbigene/"
-              JSONLDContext: 'dgidb/jsonld_context/dgidb_drug_gene.json'
+              valueType: "http://identifiers.org/hgnc.symbol/"
+          x-JSONLDContext: 'dgidb/jsonld_context/dgidb_drug_gene.json'
   '/interactions.json?genes={genesymbol}':
     get:
       summary: 'return interactions for a gene with a drug'
@@ -72,9 +69,8 @@ paths:
         '200':
           description: 'A query response object with "matchedTerm" property'
           x-responseValueType:
-            - path: mathcedTerms.interactions
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneOrGeneProductToChemicalObject/"
-              valueType:
-                - "http://identifiers.org/chembl.compound/"
-                - 'http://biothings.io/terms/drugname/'
-              JSONLDContext: 'dgidb/jsonld_context/dgidb_gene_drug.json'
+            - path: matchedTerms.interactions.drugName
+              valueType: 'http://biothings.io/terms/drugname/'
+            - path: matchedTerms.interactions.chemblId
+              valueType: 'http://identifiers.org/chembl.compound/'
+          x-JSONLDContext: 'dgidb/jsonld_context/dgidb_gene_drug.json'
