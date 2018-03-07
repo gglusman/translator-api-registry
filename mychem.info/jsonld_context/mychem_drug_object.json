@@ -123,6 +123,33 @@
                             }
                         }
                     }
+                },
+                "drug_use": {
+                    "@type": "@id",
+                    "@id": "assoc:ChemicalToDiseaseOrPhenotypicFeatureAssociation",
+                    "@context": {
+                        "snomed_id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/snomedct/"
+                            }
+                        },
+                        "snomed_name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                            }
+                        },
+                        "relation": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-disease-relation/"
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -394,6 +421,74 @@
                     "@id": "assoc:AnnotationObject",
                     "@context": {
                         "@base": "http://identifiers.org/inchi/"
+                    }
+                },
+                "drug_interactions": {
+                    "@type": "@id",
+                    "@id": "assoc:PairwiseChemicalInteractionAssociation",
+                    "@context": {
+                        "drugbank-id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/drugbank/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drugname/"
+                            }
+                        },
+                        "description": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-drug-interaction-description/"
+                            }
+                        }
+                    }
+                },
+                "targets": {
+                    "@type": "@id",
+                    "@id": "assoc:ChemicalToGeneOrGeneProductObject",
+                    "@context": {
+                        "uniprot": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/uniprot/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-approved-name/"
+                            }
+                        },
+                        "organism": {
+                            "@type": "@id",
+                            "@id": "attr:taxonomy",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/genebank-common-name/"
+                            }
+                        },
+                        "source": {
+                            "@type": "@id",
+                            "@id": "rel:provided_by",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                            }
+                        },
+                        "actions": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-relation/"
+                            }
+                        }
                     }
                 }
             }
