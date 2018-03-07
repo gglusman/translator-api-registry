@@ -47,11 +47,8 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/DiseaseToGeneOrGeneProductObject/"
-              valueType: 
-                - "http://identifiers.org/ncbigene/"
-                - "http://identifiers.org/hgnc/"
-              JSONLDContext: "biolink/jsonld_context/biolink_disease_gene.json"
+              valueType: "http://identifiers.org/hgnc/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_disease_gene.json"
   '/bioentity/disease/{diseaseid}/phenotypes':
     get:
       summary: 'Returns phenotypes associated with a disease'
@@ -79,10 +76,8 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/DiseaseToPhenotypicFeatureObject/"
-              valueType: 
-                - "http://identifiers.org/hp/"
-              JSONLDContext: "biolink/jsonld_context/biolink_disease_phenotype.json"
+              valueType: "http://identifiers.org/hp/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_disease_phenotype.json"
   '/bioentity/gene/{geneid}/homologs':
     get:
       summary: 'Returns homologs for a gene'
@@ -103,13 +98,13 @@ paths:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
-            - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneToGeneHomologyObject/"
-              valueType: 
-                - "http://identifiers.org/mgi/"
-                - "http://identifiers.org/zfin/"
-                - "http://identifiers.org/ncbigene/"
-              JSONLDContext: "biolink/jsonld_context/biolink_gene_homolog.json"
+            - path: edge.obj
+              valueType: 'http://identifiers.org/mgi/'
+            - path: edge.obj
+              valueType: 'http://identifiers.org/zfin/'
+            - path: edge.obj
+              valueType: 'http://identifiers.org/ncbigene/'
+          x-JSONLDContext: "biolink/jsonld_context/biolink_gene_homolog.json"
   '/bioentity/gene/{geneid}/interactions':
     get:
       summary: 'Returns interactions for a gene'
@@ -134,11 +129,8 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/PairwiseGeneOrProteinInteractionObject/"
-              valueType: 
-                - "http://identifiers.org/hgnc/"
-                - "http://identifiers.org/ncbigene/"
-              JSONLDContext: "biolink/jsonld_context/biolink_gene_interaction.json"
+              valueType:  "http://identifiers.org/hgnc/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_gene_interaction.json"
   '/bioentity/gene/{geneid}/phenotypes':
     get:
       summary: 'Returns phenotypes associated with gene'
@@ -163,10 +155,8 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneToPhenotypicFeatureObject/"
-              valueType: 
-                - "http://identifiers.org/hp/"
-              JSONLDContext: "biolink/jsonld_context/biolink_gene_phenotype.json"
+              valueType:  "http://identifiers.org/hp/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_gene_phenotype.json"
   '/bioentity/gene/{geneid}/pathways':
     get:
       summary: 'Returns pathways associated with gene'
@@ -191,10 +181,8 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/"
-              valueType: 
-                - "http://identifiers.org/reactome/"
-              JSONLDContext: "biolink/jsonld_context/biolink_gene_pathway.json"
+              valueType:  "http://identifiers.org/reactome.pathway/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_gene_pathway.json"
   '/bioentity/pathway/{pathwayid}/genes':
     get:
       summary: 'Returns genes associated with a pathway'
@@ -216,10 +204,8 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/PathwayToGeneObject/"
-              valueType: 
-                - "http://identifiers.org/hgnc/"
-              JSONLDContext: "biolink/jsonld_context/biolink_pathway_gene.json"
+              valueType:  "http://identifiers.org/hgnc/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_pathway_gene.json"
   '/bioentity/variant/{variantid}/genes':
     get:
       summary: 'Returns genes associated with a variant'
@@ -241,7 +227,5 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              objectType: "http://biothings.io/explorer/vocab/objects/SequenceVariantToGeneObject/"
-              valueType: 
-                - "http://identifiers.org/hgnc/"
-              JSONLDContext: "biolink/jsonld_context/biolink_variant_gene.json"
+              valueType:  "http://identifiers.org/hgnc/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_variant_gene.json"
