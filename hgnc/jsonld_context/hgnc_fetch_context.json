@@ -7,7 +7,6 @@
         "HGNC": "http://identifiers.org/hgnc/",
         "MGI": "http://identifiers.org/mgi/",
         "RGD": "http://identifiers.org/rgd/",
-        "_id": "@id",
         "response": {
             "@type": "@id",
             "@id": "term:has_annotation",
@@ -18,84 +17,77 @@
                     "@context": {
                         "ccds_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/ccds/"
                             }
                         },
                         "ena": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/ena.embl/"
                             }
                         },
                         "ensembl_gene_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/ensembl.gene/"
                             }
                         },
                         "entrez_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/ncbigene/"
                             }
                         },
                         "hgnc_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc/"
                             }
                         },
                         "mgd_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/mgi/"
                             }
                         },
                         "omim_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/omim.gene/"
                             }
                         },
-                        "pubmed_id": {
-                            "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
-                            "@context": {
-                                "@base": "http://identifiers.org/pubmed/"
-                            }
-                        },
                         "refseq_accession": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/refseq/"
                             }
                         },
                         "symbol": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
                         },
                         "uniprot_ids": {
                             "@type": "@id",
-                            "@id": "assoc:GeneToGeneProductObject",
+                            "@id": "assoc:GeneToGeneProductAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/uniprot/"
                             }
                         },
                         "rgd_id": {
                             "@type": "@id",
-                            "@id": "assoc:AnnotationObject",
+                            "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/rgd/"
                             }
