@@ -6,6 +6,7 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "HP": "http://identifiers.org/hp/",
         "RO": "http://purl.obolibrary.org/obo/RO_",
+        "PMID": "http://identifiers.org/pubmed/",
         "associations": {
             "@type": "@id",
             "@id": "assoc:DiseaseToPhenotypicFeatureAssociation",

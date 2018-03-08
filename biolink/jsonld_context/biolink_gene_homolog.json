@@ -7,6 +7,8 @@
         "NCBIGene": "http://identifiers.org/ncbigene/",
         "HGNC": "http://identifiers.org/hgnc/",
         "RO": "http://purl.obolibrary.org/obo/RO_",
+        "PMID": "http://identifiers.org/pubmed/",
+        "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {
             "@type": "@id",
             "@id": "assoc:GeneToGeneHomologyAssociation",
