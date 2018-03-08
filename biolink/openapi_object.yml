@@ -103,7 +103,15 @@ paths:
             - path: edge.obj
               valueType: 'http://identifiers.org/zfin/'
             - path: edge.obj
-              valueType: 'http://identifiers.org/ncbigene/'
+              valueType: 'http://identifiers.org/hgnc/'
+            - path: edge.obj
+              valueType: 'http://identifiers.org/flybase/'
+            - path: edge.obj
+              valueType: 'http://identifiers.org/xenbase/'
+            - path: edge.obj
+              valueType: 'http://identifiers.org/rgd/'
+            - path: edge.obj
+              valueType: 'http://identifiers.org/sgd/'
           x-JSONLDContext: "biolink/jsonld_context/biolink_gene_homolog.json"
   '/bioentity/gene/{geneid}/interactions':
     get:
@@ -130,6 +138,8 @@ paths:
           x-responseValueType:
             - path: objects
               valueType:  "http://identifiers.org/hgnc/"
+            - path: objects
+              valueType: "http://identifiers.org/mgi/"
           x-JSONLDContext: "biolink/jsonld_context/biolink_gene_interaction.json"
   '/bioentity/gene/{geneid}/phenotypes':
     get:
@@ -182,6 +192,8 @@ paths:
           x-responseValueType:
             - path: objects
               valueType:  "http://identifiers.org/reactome.pathway/"
+            - path: objects
+              valueType: "http://identifiers.org/kegg.pathway/"
           x-JSONLDContext: "biolink/jsonld_context/biolink_gene_pathway.json"
   '/bioentity/pathway/{pathwayid}/genes':
     get:
