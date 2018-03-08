@@ -59,7 +59,7 @@
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@id": "rel:label",
                             "@context": {
                                 "@base": "http://biothings.io/explorer/vocab/terms/disease-gene-relation/"
                             }

@@ -5,6 +5,12 @@
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "NCBIGene": "http://identifiers.org/ncbigene/",
+        "FlyBase": "http://identifiers.org/flybase/",
+        "MGI": "http://identifiers.org/mgi/",
+        "ZFIN": "http://identifiers.org/zfin/",
+        "Xenbase": "http://identifiers.org/xenbase/",
+        "RGD": "http://identifiers.org/rgd/",
+        "SGD": "http://identifiers.org/sgd/",
         "HGNC": "http://identifiers.org/hgnc/",
         "RO": "http://purl.obolibrary.org/obo/RO_",
         "PMID": "http://identifiers.org/pubmed/",
@@ -59,7 +65,7 @@
                         },
                         "label": {
                             "@type": "@id",
-                            "@id": "http://biothings.io/explorer/vocab/relationships/label/",
+                            "@id": "rel:label",
                             "@context": {
                                 "@base": "http://biothings.io/explorer/vocab/terms/gene-homolog-relation/"
                             }
