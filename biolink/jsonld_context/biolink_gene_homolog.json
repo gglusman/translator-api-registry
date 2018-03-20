@@ -12,7 +12,7 @@
         "RGD": "http://identifiers.org/rgd/",
         "SGD": "http://identifiers.org/sgd/",
         "HGNC": "http://identifiers.org/hgnc/",
-        "RO": "http://purl.obolibrary.org/obo/RO_",
+        "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {

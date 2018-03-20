@@ -5,7 +5,7 @@
         "NCBIGene": "http://identifiers.org/ncbigene/",
         "HGNC": "http://identifiers.org/hgnc/",
         "ont": "http://biothings.io/ontology/",
-        "RO": "http://purl.obolibrary.org/obo/RO_",
+        "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {

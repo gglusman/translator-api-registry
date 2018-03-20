@@ -5,7 +5,7 @@
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "HP": "http://identifiers.org/hp/",
-        "RO": "http://purl.obolibrary.org/obo/RO_",
+        "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "associations": {
             "@type": "@id",

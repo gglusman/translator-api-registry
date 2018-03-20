@@ -5,7 +5,7 @@
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "HGNC": "http://identifiers.org/hgnc/",
-        "RO": "http://purl.obolibrary.org/obo/RO_",
+        "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {

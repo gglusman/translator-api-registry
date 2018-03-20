@@ -6,7 +6,7 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "REACT": "http://identifiers.org/reactome.pathway/",
         "KEGG-path": "http://identifiers.org/kegg.pathway/",
-        "RO": "http://purl.obolibrary.org/obo/RO_",
+        "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "associations": {
             "@type": "@id",
