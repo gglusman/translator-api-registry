@@ -1,62 +1,297 @@
 {
     "@context": {
         "@version": 1.1,
-        "@base": "http://identifiers.org/ncbigene/",
-        "term": "http://biothings.io/terms/mygene/",
-        "ont": "http://biothings.io/ontologies/",
-        "ipi": {
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "GO": "http://identifiers.org/go/GO:",
+        "pathway": {
             "@type": "@id",
-            "@id": "ont:associatedWithProtein",
+            "@id": "term:has_annotation",
             "@context": {
-                "@base": "http://identifiers.org/ipi/"
+                "biocarta": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/biocarta.pathway/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                            }
+                        }
+                    }
+                },
+                "kegg": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/kegg.pathway/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                            }
+                        }
+                    }
+                },
+                "reactome": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/reactome.pathway/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                            }
+                        }
+                    }
+                },
+                "wikipathways": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/wikipathways/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                            }
+                        }
+                    }
+                },
+                "pharmgkb": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/pharmgkb.pathway/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                            }
+                        }
+                    }
+                }
             }
         },
-        "unigene": {
+        "uniprot": {
             "@type": "@id",
-            "@id": "ont:associatedWithTranscript",
+            "@id": "assoc:GeneToGeneProductAssociation",
             "@context": {
-                "@base": "http://identifiers.org/unigene/"
+                "Swiss-Prot": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://identifiers.org/uniprot/"
+                    }
+                }
             }
         },
         "ensembl": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "ont:has_annotation",
             "@context": {
                 "protein": {
                     "@type": "@id",
-                    "@id": "ont:associatedWithProtein",
+                    "@id": "assoc:GeneToGeneProductAssociation",
                     "@context": {
                         "@base": "http://identifiers.org/ensembl.protein/"
                     }
                 },
                 "gene": {
                     "@type": "@id",
-                    "@id": "ont:hasXref",
+                    "@id": "assoc:EquivalentAssociation",
                     "@context": {
                         "@base": "http://identifiers.org/ensembl.gene/"
                     }
                 },
                 "transcript": {
                     "@type": "@id",
-                    "@id": "ont:associatedWithTranscript",
+                    "@id": "assoc:GeneToGeneProductAssociation",
                     "@context": {
                         "@base": "http://identifiers.org/ensembl.transcript/"
                     }
-                },
-                "translation": {
+                }
+            }
+        },
+        "go": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "BP": {
                     "@type": "@id",
-                    "@id": "ont:associatedWithProtein",
+                    "@id": "assoc:GeneToGoTermAssociation",
                     "@context": {
-                        "@base": "http://identifiers.org/ensembl.translation/"
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "rel:evidence",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
+                            }
+                        }
+                    }
+                },
+                "CC": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToGoTermAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "rel:evidence",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
+                            }
+                        }
+                    }
+                },
+                "MF": {
+                    "@type": "@id",
+                    "@id": "assoc:GeneToGoTermAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "rel:evidence",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
+                            }
+                        }
                     }
                 }
             }
         },
         "pdb": {
             "@type": "@id",
-            "@id": "ont:associatedWithProteinStructure",
+            "@id": "assoc:GeneToProteinStructureAssociation",
             "@context": {
                 "@base": "http://identifiers.org/pdb/"
+            }
+        },
+        "unigene": {
+            "@type": "@id",
+            "@id": "assoc:GeneToGeneProductAssociation",
+            "@context": {
+                "@base": "http://identifiers.org/unigene/"
+            }
+        },
+        "symbol": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://identifiers.org/hgnc.symbol/"
+            }
+        },
+        "MIM": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://identifiers.org/omim.gene/"
+            }
+        },
+        "HGNC": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://identifiers.org/hgnc/"
             }
         }
     }
