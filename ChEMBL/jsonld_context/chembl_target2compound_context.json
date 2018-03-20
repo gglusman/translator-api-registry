@@ -1,19 +1,25 @@
 {
     "@context": {
         "@version": 1.1,
-        "@base": "http://identifiers.org/chembl.compound/",
-        "term": "http://biothings.io/terms/pubchem/",
-        "ont": "http://biothings.io/ontology/",
-        "_id": "@id",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
         "mechanisms": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "assoc:ChemicalToGeneOrGeneProductObject",
             "@context": {
                 "molecule_chembl_id": {
                     "@type": "@id",
-                    "@id": "ont:physicallyInteractsWith",
+                    "@id": "attr:id",
                     "@context": {
                         "@base": "http://identifiers.org/chembl.compound/"
+                    }
+                },
+                "action_type": {
+                    "@type": "@id",
+                    "@id": "rel:label",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-relation/"
                     }
                 }
             }

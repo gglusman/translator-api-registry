@@ -69,31 +69,6 @@ paths:
               valueType: 'http://identifiers.org/uniprot/'
           x-JSONLDContext:
             'ChEMBL/jsonld_context/chembl_target_prediction_context.json'
-  '/target':
-    get:
-      summary: 'return drugs related to a protein target'
-      parameters:
-        - name: target_components__accession
-          in: query
-          description: >-
-            Put uniprot protein ID here. 
-          required: true
-          example: P30277
-          x-valueType:
-            - 'http://identifiers.org/uniprot/'
-          x-requestTemplate:
-            - valueType: 'http://identifiers.org/uniprot/'
-              template: input_value
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 'A query response object with "targets" property'
-          x-responseValueType:
-            - path: targets.target_chembl_id
-              valueType: 'http://identifiers.org/chembl.target/'
-          x-JSONLDContext:
-            'ChEMBL/jsonld_context/chembl_uniprot2chembl_context.json'
   '/mechanism':
     get:
       summary: 'return drugs interacts with protein'
