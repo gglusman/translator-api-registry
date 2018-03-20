@@ -22,6 +22,117 @@ tags:
   - name: query
   - name: translator
 paths:
+  /querygene:
+    get:
+      summary: 'Make gene query and return matching gene hits'
+      parameters:
+        - name: geneid
+          in: path
+          description: >-
+            Query string. Examples "CDK2", "NM_052827", "204639_at". The
+            detailed query syntax can be found at
+            http://docs.mygene.info/en/latest/doc/query_service.html
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/hgnc.symbol/'
+            - 'http://identifiers.org/refseq/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/hgnc.symbol/'
+              template: symbol:{geneid}
+            - valueType: 'http://identifiers.org/refseq/'
+              template: refseq.genomic:{geneid}
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: hits.entrezgene
+              valueType: 'http://identifiers.org/ncbigene/'
+            - path: hits.symbol
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+          x-JSONLDContext:
+            'mygene.info/jsonld_context/mygene_query_object.json'
+  /querygeneproduct:
+    get:
+      summary: 'Make gene query and return matching gene hits'
+      parameters:
+        - name: geneproductid
+          in: path
+          description: >-
+            Query string. Examples "CDK2", "NM_052827", "204639_at". The
+            detailed query syntax can be found at
+            http://docs.mygene.info/en/latest/doc/query_service.html
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/unigene/'
+            - 'http://identifiers.org/uniprot/'
+            - 'http://identifiers.org/pdb/'
+            - 'http://identifiers.org/ensembl.protein/'
+            - 'http://identifiers.org/ensembl.transcript/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/unigene/'
+              template: unigene:{geneproductid}
+            - valueType: 'http://identifiers.org/uniprot/'
+              template: uniprot.Swiss-Prot:{geneproductid}
+            - valueType: 'http://identifiers.org/pdb/'
+              template: pdb:{geneproductid}
+            - valueType: 'http://identifiers.org/ensembl.protein/'
+              template: ensembl.protein:{geneproductid}
+            - valueType: 'http://identifiers.org/ensembl.transcript/'
+              template: ensembl.transcript:{geneproductid}
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: hits.entrezgene
+              valueType: 'http://identifiers.org/ncbigene/'
+            - path: hits.symbol
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+          x-JSONLDContext:
+            'mygene.info/jsonld_context/mygene_query_object.json'
+  /querypathway:
+    get:
+      summary: 'Make gene query and return matching gene hits'
+      parameters:
+        - name: pathwayid
+          in: path
+          description: >-
+            Query string. Examples "CDK2", "NM_052827", "204639_at". The
+            detailed query syntax can be found at
+            http://docs.mygene.info/en/latest/doc/query_service.html
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/biocarta.pathway/'
+            - 'http://identifiers.org/kegg.pathway/'
+            - 'http://identifiers.org/wikipathways/'
+            - 'http://identifiers.org/pharmgkb.pathways/'
+            - 'http://identifiers.org/reactome.pathway/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/biocarta.pathway/'
+              template: pathway.biocarta.id:{pathwayid}
+            - valueType: 'http://identifiers.org/kegg.pathway/'
+              template: pathway.kegg.id:{pathwayid}
+            - valueType: 'http://identifiers.org/wikipathways/'
+              template: pathway.wikipathways.id:{pathwayid}
+            - valueType: 'http://identifiers.org/pharmgkb.pathway/'
+              template: pathway.pharmgkb.id:{pathwayid}
+            - valueType: 'http://identifiers.org/reactome.pathway/'
+              template: pathway.reactome.id:{pathwayid}
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: hits.entrezgene
+              valueType: 'http://identifiers.org/ncbigene/'
+            - path: hits.symbol
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+          x-JSONLDContext:
+            'mygene.info/jsonld_context/mygene_query_object.json'
   '/gene/{geneid}':
     get:
       summary: 'For a given gene id, return the matching gene object'
@@ -47,31 +158,35 @@ paths:
         '200':
           description: 'A gene object'
           x-responseValueType:
-            - path: ./
-              objectType: "http://biothings.io/explorer/vocab/class/Gene/"
-              valueType: 
-                - "http://identifiers.org/hgnc.symbol/"
-                - "http://identifiers.org/taxonomy/"
-              JSONLDContext: 'mygene.info/jsonld_context/mygene_gene_gene.json'
-            - path: pathway
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneToPathwayObject/"
-              valueType:
-                - "http://identifiers.org/biocarta.pathway/"
-                - "http://identifiers.org/kegg.pathway/"
-                - "http://identifiers.org/reactome/"
-                - "http://identifiers.org/wikipathways/"
-                - "http://identifiers.org/pharmgkb.pathways/"
-              JSONLDContext: 'mygene.info/jsonld_context/mygene_gene_pathway.json'
-            - path: go
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneToGoTermObject/"
-              valueType:
-                - "http://identifiers.org/go/"
-              JSONLDContext: 'mygene.info/jsonld_context/mygene_gene_go.json'
-            - path: uniprot
-              objectType: "http://biothings.io/explorer/vocab/objects/GeneToGeneProductObject/"
-              valueType:
-                - "http://identifiers.org/uniprot/"
-                - "http://identifiers.org/ensembl.protein/"
-                - "http://identifiers.org/ensembl.transcript/"
-                - "http://identifiers.org/ensembl.translation/"
-              JSONLDContext: 'mygene.info/jsonld_context/mygene_gene_protein.json'
+            - path: symbol
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+            - path: unigene
+              valueType: 'http://identifiers.org/unigene/'
+            - path: uniprot.Swiss-Prot
+              valueType: 'http://identifiers.org/uniprot/'
+            - path: pdb
+              valueType: 'http://identifiers.org/pdb/'
+            - path: pathway.biocarta.id
+              valueType: 'http://identifiers.org/biocarta.pathway/'
+            - path: pathway.kegg.id
+              valueType: 'http://identifiers.org/kegg.pathway/'
+            - path: pathway.reactome.id
+              valueType: 'http://identifiers.org/reactome.pathway/'
+            - path: pathway.wikipathways.id
+              valueType: 'http://identifiers.org/wikipathways/'
+            - path: pathway.pharmgkb.id
+              valueType: 'http://identifiers.org/pharmgkb.pathway/'
+            - path: go.bp.id
+              valueType: 'http://identifiers.org/go/'
+            - path: ensembl.gene
+              valueType: 'http://identifiers.org/ensembl.gene/'
+            - path: ensembl.protein
+              valueType: 'http://identifiers.org/ensembl.protein/'
+            - path: ensembl.transcript
+              valueType: 'http://identifiers.org/ensembl.transcript/'
+            - path: MIM
+              valueType: 'http://identifiers.org/omim.gene/'
+            - path: HGNC
+              valueType: 'http://identifiers.org/hgnc/'
+          x-JSONLDContext:
+            'mygene.info/jsonld_context/mygene_gene_object.json'
