@@ -1,31 +1,106 @@
-openapi: '3.0.0'
+openapi: 3.0.0
 info:
   version: '1.0'
   title: MyChem.info API
-  description: >-
-    Documentation of the MyChem.info Chemical Query web services. Learn more about
-    [MyChem.info](http://mychem.info/)
-  termsOfService: http://mychem.info/terms/
+  description: Documentation of the MyChem.info chem query web services.  Learn
+    more about [MyChem.info](http://MyChem.info/)
+  termsOfService: http://MyChem.info/terms
   contact:
     name: Chunlei Wu
     x-role: responsible developer
-    email: help@mychem.info
-    x-id:
-      - 'http://orcid.org/0000-0002-2629-6124'
-      - 'https://github.com/newgene'
+    email: help@biothings.io
+    x-id: https://github.com/newgene
 servers:
-  - url: 'http://mychem.info/v1'
-    description: 'Production server'
+- url: http://MyChem.info/v1
+  description: Production server
+- url: https://MyChem.info/v1
+  description: Encrypted Production server
 tags:
-  - name: chemical
-  - name: drug
-  - name: annotation
-  - name: query
-  - name: translator
+- name: chemical
+- name: drug
+- name: annotation
+- name: query
+- name: translator
 paths:
+  /query:
+    get:
+      summary: 'Make chemical query and return matching chemical hits'
+      parameters:
+        - name: q
+          in: query
+          description: >-
+            Query string. Examples "Fludara", "CHEMBI:63599", "DB01073".
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/rxcui/'
+            - 'http://identifiers.org/chebi/'
+            - 'http://identifiers.org/chembl.compound/'
+            - 'http://identifiers.org/drugbank/'
+            - 'http://identifiers.org/iuphar.ligand/'
+            - 'http://identifiers.org/kegg.drug/'
+            - 'http://identifiers.org/kegg.compound/'
+            - 'http://identifiers.org/pubchem.compound/'
+            - 'http://identifiers.org/unii/'
+            - 'http://identifiers.org/inchikey/'
+            - 'http://identifiers.org/inchi/'
+            - 'http://identifiers.org/uniprot/'
+            - 'http://biothings.io/terms/drugname/'
+            - 'http://identifiers.org/snomedct/'
+            - 'http://identifiers.org/pharmgkb.drug/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/rxcui/'
+              template: aeolus.rxcui:input_value OR drugcentral.xref.rxnorm:input_value OR ginas.xrefs.RXCUI:input_value OR pharmgkb.external_vocabulary.rxnorm:input_value
+            - valueType: 'http://identifiers.org/chebi/'
+              template: drugcentral.xref.chebi:input_value OR chebi.chebi_id:input_value
+            - valueType: 'http://identifiers.org/chembl.compound/'
+              template: chembl.molecule_chembl_id:input_value OR drugbank.chembl:input_value OR drugcentral.xref.chembl_id:input_value
+            - valueType: 'http://identifiers.org/drugbank/'
+              template: drugcentral.xref.drugbank_id:input_value OR pharmgkb.cross_references.drugbank:input_value OR drugbank.drugbank_id:input_value OR chebi.drugbank_database_links:input_value
+            - valueType: 'http://identifiers.org/iuphar.ligand/'
+              template: drugcentral.xref.iuphar_ligand_id:input_value OR pharmgkb.cross_references.iuphar_ligand:input_value
+            - valueType: 'http://identifiers.org/kegg.drug/'
+              template: drugcentral.xref.kegg_drug:input_value OR chebi.kegg_drug_database_links:input_value OR drugbank.kegg_drug:input_value OR pharmgkb.cross_references.kegg_drug:input_value
+            - valueType: 'http://identifiers.org/kegg.compound/'
+              template: chebi.kegg_compound_database_links:input_value OR pharmgkb.cross_references.kegg_compound:input_value
+            - valueType: 'http://identifiers.org/pubchem.compound/'
+              template: drugcentral.xref.pubchem_cid:input_value OR chebi.pubchem_database_links:input_value OR pharmgkb.cross_references.pubchem_compound:input_value OR pubchem.cid:input_value
+            - valueType: 'http://identifiers.org/unii/'
+              template: drugcentral.xref.unii:input_value OR aeolus.unii:input_value OR ginas.unii:input_value OR unii.unii:input_value
+            - valueType: 'http://identifiers.org/inchikey/'
+              template: aeolus.inchikey:input_value OR chebi.inchikey:input_value OR chembl.inchi_key:input_value OR drugbank.inchi_key:input_value OR drugcentral.structures.inchikey:input_value OR ginas.inchikey:input_value OR pubchem.inchi_key:input_value OR unii.inchikey:input_value
+            - valueType: 'http://identifiers.org/inchi/'
+              template: pubchem.inchi:input_value OR pharmgkb.inchi:input_value OR drugcentral.structures.inchi:input_value OR drugbank.inchi:input_value OR chembl.inchi:input_value OR chebi.inchi:input_value
+            - valueType: 'http://identifiers.org/uniprot/'
+              template: drugbank.enzymes.uniprot:input_value OR drugbank.pathways.enzymes.uniprot-id:input_value OR drugbank.pharmacology.snp_adverse_drug_reactions.reaction.uniprot-id:input_value OR drugbank.pharmacology.snp_effects.effect.uniprot-id:input_value OR drugbank.targets.uniprot:input_value OR drugbank.transporters.uniprot:input_value OR drugcentral.bioactivity.uniprot_id:input_value OR pharmgkb.cross_references.uniprotkb:input_value
+            - valueType: 'http://biothings.io/terms/drugname/'
+              template: aeolus.drug_name:input_value OR chebi.chebi_name:input_value OR chembl.pref_name:input_value OR drugbank.name:input_value
+            - valueType: 'http://identifiers.org/pharmgkb.drug/'
+              template: pharmgkb.pharmgkb_accession_id:input_value
+            - valueType: 'http://identifiers.org/snomedct/'
+              template: drugcentral.drug_use.snomed_id:input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: _id
+              valueType: 'http://identifiers.org/inchikey/'
+            - path: aeolus.drug_name
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+            - path: drugbank.accession_number
+              valueType: 'http://identifiers.org/drugbank/'
+            - path: chembl
+              valueType: 'http://identifiers.org/chembl.compound/'
+            - path: drugbank.target.uniprot
+              valueType: 'http://identifiers.org/uniprot/'
+          x-JSONLDContext:
+            'mychem.info/jsonld_context/mychem_query_object.json'
   '/drug/{drugid}':
     get:
-      summary: 'For a given chemical id, return the matching chemical object'
+      tags:
+      - chemical
+      summary: Retrieve chemical objects based on ID
       parameters:
         - name: drugid
           in: path
@@ -44,39 +119,51 @@ paths:
             type: string
       responses:
         '200':
-          description: 'A chemical object'
+          description: A matching chemical object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
           x-responseValueType:
-            - path: ./
-              objectType: "http://biothings.io/explorer/vocab/class/ChemicalSubstance/"
-              valueType: 
-                - "http://identifiers.org/inchikey/"
-                - "http://identifiers.org/pubchem.compound/"
-                - "http://identifiers.org/pubchem.substance/"
-                - "http://identifiers.org/iuphar.ligand/"
-                - "http://biothings.io/terms/drugname/"
-                - "http://identifiers.org/inchi/"
-                - "http://identifiers.org/unii/"
-                - "http://identifiers.org/drugbank/"
-                - "http://identifiers.org/rxcui/"
-                - "http://identifiers.org/chebi/"
-                - "http://identifiers.org/chembl.compound/"
-                - "http://identifiers.org/kegg.drug/"
-                - "http://identifiers.org/kegg.compound/"
-                - "http://identifiers.org/pharmgkb.drug/"
-              JSONLDContext: 'mygene.info/jsonld_context/mygene_gene_gene.json'
-            - path: drugbank.targets
-              objectType: "http://biothings.io/explorer/vocab/objects/ChemicalToGeneOrGeneProductObject/"
-              valueType:
-                - "http://identifiers.org/uniprot/"
-              JSONLDContext: 'mychem.info/jsonld_context/mychem_chemical_geneorgeneproduct.json'
-            - path: drugbank.drug_interactions
-              objectType: "http://biothings.io/explorer/vocab/objects/PairwiseChemicalInteractionObject/"
-              valueType:
-                - "http://identifiers.org/drugbank/"
-                - "http://biothings.io/terms/drugname/"
-              JSONLDContext: 'mychem.info/jsonld_context/mychem_chemical_chemical.json'
-            - path: drugcentral.drug_use
-              objectType: "http://biothings.io/explorer/vocab/objects/ChemicalToDiseaseOrPhenotypicFeatureObject/"
-              valueType:
-                - "http://identifiers.org/snomedct/"
-              JSONLDContext: 'mychem.info/jsonld_context/mychem_chemical_disease.json'
+            - path: _id
+              valueType: 'http://identifiers.org/inchikey/'
+            - path: aeolus.drugname
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+            - path: pubchem.inchi
+              valueType: 'http://identifiers.org/inchi/'
+            - path: drugcentral.xref.unii
+              valueType: 'http://identifiers.org/unii/'
+            - path: drugbank.enzymes.uniprot
+              valueType: 'http://identifiers.org/uniprot/'
+            - path: drugbank.drugbank_id
+              valueType: 'http://identifiers.org/drugbank/'
+            - path: cadd.gene.gene_id
+              valueType: 'http://identifiers.org/dbsnp/'
+            - path: cadd.gene.feature_id
+              valueType: 'http://identifiers.org/pubmed/'
+            - path: cadd.gene.ccds_id
+              valueType: 'http://identifiers.org/clinicaltrials/'
+            - path: aeolus.rxcui
+              valueType: 'http://identifiers.org/rxcui/'
+            - path: chebi.chebi_id
+              valueType: 'http://identifiers.org/chebi/'
+            - path: chembl.molecule_chembl_id
+              valueType: 'http://identifiers.org/chembl.compound/'
+            - path: drugcentral.xref.kegg_drug
+              valueType: 'http://identifiers.org/kegg.drug/'
+            - path: chebi.kegg_compound_database_links
+              valueType: 'http://identifiers.org/kegg.compound/'
+            - path: drugcentral.drug_use.snomed_id
+              valueType: 'http://identifiers.org/snomedct/'
+            - path: drugcentral.xref.iuphar_ligand_id
+              valueType: 'http://identifiers.org/iuphar.ligand/'
+            - path: drugcentral.drug_use.snomed_name
+              valueType: 'http://biothings.io/concepts/disease_name/'
+            - path: pharmgkb.pharmgkb_accession_id
+              valueType: 'http://identifiers.org/pharmgkb.drug/'
+            - path: drugcentral.xref.pubchem_cid
+              valueType: 'http://identifiers.org/pubchem.compound/'
+            - path: pharmgkb.cross_references.pubchem_substance
+              valueType: 'http://identifiers.org/pubchem.substance/'
+          x-JSONLDContext:
+            'mychem.info/jsonld_context/mychem_drug_object.json'

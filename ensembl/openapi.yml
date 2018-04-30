@@ -19,44 +19,6 @@ tags:
   - name: genotype
   - name: translator
 paths:
-  '/variation/human/{dbsnp}?phenotypes=1':
-    get:
-      summary: 'Uses a variant identifier (e.g. rsID) to return the variation phenotype'
-      parameters:
-        - name: dbsnp
-          in: path
-          description: >-
-            Put dbsnp ids here, e.g. rs56116432
-          required: true
-          x-valueType:
-            - 'http://identifiers.org/dbsnp/'
-          x-requestTemplate:
-            - valueType: 'http://identifiers.org/dbsnp/'
-              template: '/variation/human/{dbsnp}?phenotypes=1'
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 'list of phenotypes related to the variant'
-  '/variation/human/{dbsnp}?genotypes=1':
-    get:
-      summary: 'Uses a variant identifier (e.g. rsID) to return the variation genotypes'
-      parameters:
-        - name: dbsnp
-          in: path
-          description: >-
-            Put dbsnp ids here, e.g. rs56116432
-          required: true
-          x-valueType:
-            - 'http://identifiers.org/dbsnp/'
-          x-requestTemplate:
-            - valueType: 'http://identifiers.org/dbsnp/'
-              template: '/variation/human/{dbsnp}?genotypes=1'
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 'list of phenotypes related to the variant'
   '/taxonomy/id/{taxonomyid}':
     get:
       summary: 'Search for a taxonomic term by its identifier or name'

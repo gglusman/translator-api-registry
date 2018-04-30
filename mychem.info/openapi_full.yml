@@ -86,16 +86,8 @@ paths:
           x-responseValueType:
             - path: _id
               valueType: 'http://identifiers.org/inchikey/'
-            - path: unii.unii
-              valueType: 'http://identifiers.org/unii/'
             - path: aeolus.drug_name
               valueType: 'http://biothings.io/terms/drugname/'
-            - path: drgucentral.xref.pubchem_cid
-              valueType: 'http://identifiers.org/pubchem.compound/'
-            - path: drugcentral.xref.iuphar_ligand_id
-              valueType: 'http://identifiers.org/iuphar.ligand/'
-            - path: aeolus.rxcui
-              valueType: 'http://identifiers.org/rxcui/'
             - path: drugcentral.xref.chebi
               valueType: 'http://identifiers.org/chebi/'
             - path: drugbank.accession_number

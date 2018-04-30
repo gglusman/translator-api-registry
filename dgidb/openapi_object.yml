@@ -57,11 +57,8 @@ paths:
           required: true
           x-valueType:
             - 'http://identifiers.org/hgnc.symbol/'
-            - 'http://identifiers.org/ncbigene/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/hgnc.symbol/'
-              template: /interactions.json?genes={genesymbol}
-            - valueType: 'http://identifiers.org/ncbigene/'
               template: /interactions.json?genes={genesymbol}
           schema:
             type: string

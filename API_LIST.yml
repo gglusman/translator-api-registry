@@ -6,37 +6,23 @@
 # "translator" is a placeholder for translator specific attributes
 
 APIs:
-  - metadata: mygene.info/openapi_full_temp.yml
+  - metadata: mygene.info/openapi_full_object.yml
     translator:
         - returnjson: true
           notes: ""
-
-  - metadata: myvariant.info/openapi_full.yml
+  - metadata: mychem.info/openapi_object.yml
     translator:
         - returnjson: true
           notes: ""
-
-  - metadata: mychem.info/openapi_full.yml
+  - metadata: dgidb/openapi_object.yml
     translator:
         - returnjson: true
           notes: ""
-  - metadata: dgidb/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: biolink/openapi.yml
+  - metadata: biolink/openapi_object.yml
     translator:
         - returnjson: true
           notes: ""  
-  - metadata: disease ontology api/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: ensembl/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: ebi_proteins/openapi.yml
+  - metadata: hgnc/openapi.yml
     translator:
         - returnjson: true
           notes: ""
@@ -44,23 +30,11 @@ APIs:
     translator:
         - returnjson: true
           notes: ""
-  - metadata: hgnc/openapi.yml
+  - metadata: disease ontology api/openapi.yml
     translator:
         - returnjson: true
           notes: ""
-  - metadata: ncbi etuils api/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: pmc/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: pubchem/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: quickgo/openapi.yml
+  - metadata: reactome/openapi.yml
     translator:
         - returnjson: true
           notes: ""

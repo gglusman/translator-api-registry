@@ -31,7 +31,7 @@
                 },
                 "probability": {
                     "@type": "@id", 
-                    "@id": "rel:label",
+                    "@id": "rel:probability",
                     "@context": {
                         "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-interaction-probability/"
                     }

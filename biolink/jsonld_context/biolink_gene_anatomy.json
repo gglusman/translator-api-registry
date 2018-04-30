@@ -5,6 +5,7 @@
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "UBERON": "http://identifiers.org/uberon/",
+        "CL": "http://identifiers.org/cl/",
         "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "NCBITaxon": "http://identifiers.org/taxonomy/",

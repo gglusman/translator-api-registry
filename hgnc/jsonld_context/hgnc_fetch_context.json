@@ -52,7 +52,7 @@
                         },
                         "mgd_id": {
                             "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
+                            "@id": "assoc:GeneToGeneHomologyAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/mgi/"
                             }
@@ -87,7 +87,7 @@
                         },
                         "rgd_id": {
                             "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
+                            "@id": "assoc:GeneToGeneHomologyAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/rgd/"
                             }

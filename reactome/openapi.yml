@@ -64,7 +64,7 @@ paths:
           description: 'List of reactome pathways'
           x-responseValueType:
             - path: data.stId
-              valueType: 'http://identifiers.org/reactome.pathways/'
+              valueType: 'http://identifiers.org/reactome.pathway/'
           x-JSONLDContext:
             'reactome/jsonld_context/complex2pathways.json'
   '/data/participants/{ReactomePathwaysId}':
@@ -78,9 +78,9 @@ paths:
           required: true
           example: R-HSA-202403
           x-valueType:
-            - 'http://identifiers.org/reactome.pathways/'
+            - 'http://identifiers.org/reactome.pathway/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/reactome.pathways/'
+            - valueType: 'http://identifiers.org/reactome.pathway/'
               template: /data/participants/{ReactomePathwaysId}
           schema:
             type: string
@@ -92,28 +92,3 @@ paths:
               valueType: 'http://identifiers.org/uniprot/'
           x-JSONLDContext:
             'reactome/jsonld_context/pathways2uniprot.json'
-  '/interactors/static/molecule/{uniprotId}/details':
-    get:
-      summary: 'Participants contains a PhysicalEntity (dbId, displayName) and a collection of ReferenceEntities (dbId, name, identifier, url)'
-      parameters:
-        - name: uniprotId
-          in: path
-          description: >-
-            Put uniprot id here, e.g. P61073
-          required: true
-          example: P61073
-          x-valueType:
-            - 'http://identifiers.org/uniprot/'
-          x-requestTemplate:
-            - valueType: 'http://identifiers.org/uniprot/'
-              template: /interactors/static/molecule/{uniprotId}/details
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 'List of uniprot Ids which interacts with the uniprot ID'
-          x-responseValueType:
-            - path: entities.interactors.acc
-              valueType: 'http://identifiers.org/uniprot/'
-          x-JSONLDContext:
-            'reactome/jsonld_context/reactome_interaction.json'

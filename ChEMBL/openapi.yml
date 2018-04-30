@@ -17,7 +17,7 @@ tags:
   - name: protein
   - name: bioassay
 paths:
-  '/comopund_record':
+  '/compound_record':
     get:
       summary: 'return chembl compound id corresponding to a drug name'
       parameters:
@@ -28,9 +28,9 @@ paths:
           required: true
           example: riluzole
           x-valueType:
-            - 'http://biothings.io/terms/drugname/'
+            - 'http://biothings.io/explorer/vocab/terms/drug-name/'
           x-requestTemplate:
-            - valueType: 'http://biothings.io/terms/drugname/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
               template: input_value
           schema:
             type: string

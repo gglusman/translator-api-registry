@@ -14,14 +14,14 @@
                     "@context": {
                         "geneName": {
                             "@type": "@id",
-                            "@id": "attr:id-secondary",
+                            "@id": "attr:id",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
                         },
                         "geneEntrezId": {
                             "@type": "@id",
-                            "@id": "attr:id",
+                            "@id": "attr:id-secondary",
                             "@context": {
                                 "@base": "http://identifiers.org/ncbigene/"
                             }

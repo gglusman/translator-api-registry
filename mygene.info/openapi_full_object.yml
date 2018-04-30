@@ -38,9 +38,9 @@ paths:
             - 'http://identifiers.org/refseq/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/hgnc.symbol/'
-              template: symbol:{geneid}
+              template: /query?q=symbol:{geneid}
             - valueType: 'http://identifiers.org/refseq/'
-              template: refseq.genomic:{geneid}
+              template: /query?q=refseq.genomic:{geneid}
           schema:
             type: string
       responses:
@@ -72,15 +72,15 @@ paths:
             - 'http://identifiers.org/ensembl.transcript/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/unigene/'
-              template: unigene:{geneproductid}
+              template: /query?q=unigene:{geneproductid}
             - valueType: 'http://identifiers.org/uniprot/'
-              template: uniprot.Swiss-Prot:{geneproductid}
+              template: /query?q=uniprot.Swiss-Prot:{geneproductid}
             - valueType: 'http://identifiers.org/pdb/'
-              template: pdb:{geneproductid}
+              template: /query?q=pdb:{geneproductid}
             - valueType: 'http://identifiers.org/ensembl.protein/'
-              template: ensembl.protein:{geneproductid}
+              template: /query?q=ensembl.protein:{geneproductid}
             - valueType: 'http://identifiers.org/ensembl.transcript/'
-              template: ensembl.transcript:{geneproductid}
+              template: /query?q=ensembl.transcript:{geneproductid}
           schema:
             type: string
       responses:
@@ -112,15 +112,15 @@ paths:
             - 'http://identifiers.org/reactome.pathway/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/biocarta.pathway/'
-              template: pathway.biocarta.id:{pathwayid}
+              template: /query?q=pathway.biocarta.id:{pathwayid}
             - valueType: 'http://identifiers.org/kegg.pathway/'
-              template: pathway.kegg.id:{pathwayid}
+              template: /query?q=pathway.kegg.id:{pathwayid}
             - valueType: 'http://identifiers.org/wikipathways/'
-              template: pathway.wikipathways.id:{pathwayid}
+              template: /query?q=pathway.wikipathways.id:{pathwayid}
             - valueType: 'http://identifiers.org/pharmgkb.pathway/'
-              template: pathway.pharmgkb.id:{pathwayid}
+              template: /query?q=pathway.pharmgkb.id:{pathwayid}
             - valueType: 'http://identifiers.org/reactome.pathway/'
-              template: pathway.reactome.id:{pathwayid}
+              template: /query?q=pathway.reactome.id:{pathwayid}
           schema:
             type: string
       responses:

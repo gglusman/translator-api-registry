@@ -1,11 +1,14 @@
-DiseaseToGeneOrGeneProductAssociation
-DiseaseToPhenotypicFeatureAssociation
-GeneToGeneHomologyAssociation
-PairwiseGeneOrProteinInteractionAssociation
-GeneToPhenotypicFeatureAssociation
-GeneToPathwayAssociation
-GeneToPhenotypicFeatureAssociation
-PathwayToGeneAssociation
-SequenceVariantToGeneAssociation
-ChemicalToGeneOrGeneProductAssociation
-GeneOrGeneProductToChemicalAssociation
+URI,Recommended name,Description,Semantic Type
+http://biothings.io/explorer/vocab/terms/disease-gene-relation/,disease-gene-relation,the relationship between disease and gene,relation
+http://biothings.io/explorer/vocab/terms/disease-phenotype-relation/,disease-phenotype-relation,relationship between disease and phenotype,relation
+http://biothings.io/explorer/vocab/terms/gene-homolog-relation/,gene-homolog-relation,relationship between gene and its homologs,relation
+http://biothings.io/explorer/vocab/terms/gene-interaction-relation/,gene-interaction-relation,relationship between gene and its interactors,relation
+http://biothings.io/explorer/vocab/terms/gene-pathways-relation/,gene-pathways-relation,relationship between a gene aand a pathway,relation
+http://biothings.io/explorer/vocab/terms/gene-phenotype-relation/,gene-phenotype-relation,relationship between a gene and a phenotype,relation
+http://biothings.io/explorer/vocab/terms/pathways-gene-relation/,pathways-gene-relation,relationship between a pathways and a gene,relation
+http://biothings.io/explorer/vocab/terms/variant-gene-relation/,variant-gene-relation,relationship between a variant and a gene,relation
+http://biothings.io/explorer/vocab/terms/drug-gene-relation/,drug-gene-relation,description of drug gene interaction,relation
+http://biothings.io/explorer/vocab/terms/gene-drug-relation/,gene-drug-relation,description of gene drug interaction,relation
+http://biothings.io/explorer/vocab/terms/drug-disease-relation/,drug-disease-relation,relationship between drug and disease,relation
+http://biothings.io/explorer/vocab/terms/gene-anatomy-relation/,gene-anatomy-relation,relationship between gene and anatomy,relation
+http://biothings.io/explorer/vocab/terms/database/,database,database information,database
