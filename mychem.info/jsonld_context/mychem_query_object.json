@@ -38,7 +38,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://biothings.io/terms/drugname/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                             }
                         },
                         "rxcui": {
@@ -295,7 +295,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://biothings.io/terms/drugname/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                             }
                         },
                         "drugbank_database_links": {
@@ -371,7 +371,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://biothings.io/terms/drugname/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                             }
                         }
                     }
@@ -405,7 +405,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://biothings.io/terms/drugname/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                             }
                         },
                         "chembl": {

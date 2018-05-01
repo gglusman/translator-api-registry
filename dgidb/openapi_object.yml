@@ -30,10 +30,10 @@ paths:
             Put gene names here, e.g. riluzole 
           required: true
           x-valueType:
-            - 'http://biothings.io/terms/drugname/'
+            - 'http://biothings.io/explorer/vocab/terms/drug-name/'
             - 'http://identifiers.org/chembl.compound/'
           x-requestTemplate:
-            - valueType: 'http://biothings.io/terms/drugname/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
               template: /interactions.json?drugs={drugname}
             - valueType: 'http://identifiers.org/chembl.compound/'
               template: /interactions.json?drugs={drugname}
@@ -67,7 +67,7 @@ paths:
           description: 'A query response object with "matchedTerm" property'
           x-responseValueType:
             - path: matchedTerms.interactions.drugName
-              valueType: 'http://biothings.io/terms/drugname/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
             - path: matchedTerms.interactions.chemblId
               valueType: 'http://identifiers.org/chembl.compound/'
           x-JSONLDContext: 'dgidb/jsonld_context/dgidb_gene_drug.json'

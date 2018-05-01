@@ -44,7 +44,7 @@ paths:
             - 'http://identifiers.org/inchikey/'
             - 'http://identifiers.org/inchi/'
             - 'http://identifiers.org/uniprot/'
-            - 'http://biothings.io/terms/drugname/'
+            - 'http://biothings.io/explorer/vocab/terms/drug-name/'
             - 'http://identifiers.org/snomedct/'
             - 'http://identifiers.org/pharmgkb.drug/'
           x-requestTemplate:
@@ -72,7 +72,7 @@ paths:
               template: pubchem.inchi:input_value OR pharmgkb.inchi:input_value OR drugcentral.structures.inchi:input_value OR drugbank.inchi:input_value OR chembl.inchi:input_value OR chebi.inchi:input_value
             - valueType: 'http://identifiers.org/uniprot/'
               template: drugbank.enzymes.uniprot:input_value OR drugbank.pathways.enzymes.uniprot-id:input_value OR drugbank.pharmacology.snp_adverse_drug_reactions.reaction.uniprot-id:input_value OR drugbank.pharmacology.snp_effects.effect.uniprot-id:input_value OR drugbank.targets.uniprot:input_value OR drugbank.transporters.uniprot:input_value OR drugcentral.bioactivity.uniprot_id:input_value OR pharmgkb.cross_references.uniprotkb:input_value
-            - valueType: 'http://biothings.io/terms/drugname/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
               template: aeolus.drug_name:input_value OR chebi.chebi_name:input_value OR chembl.pref_name:input_value OR drugbank.name:input_value
             - valueType: 'http://identifiers.org/pharmgkb.drug/'
               template: pharmgkb.pharmgkb_accession_id:input_value
