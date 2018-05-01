@@ -40,6 +40,7 @@ http://identifiers.org/refseq/,refseq,refseq id,gene
 http://identifiers.org/rgd/,rgd,rgd id,gene
 http://identifiers.org/sgd/,sgd,sgd id,gene
 http://identifiers.org/zfin/,zfin,zfin id,gene
+http://identifiers.org/reactome.complex/,reactome.complex,reacomte complex id,gene
 http://identifiers.org/ro/,ro,consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies,ontology
 http://identifiers.org/go/,go,gene ontology id,ontology
 http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term description,ontology
