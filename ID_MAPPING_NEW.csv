@@ -13,6 +13,7 @@ http://identifiers.org/iuphar.ligand/,iuphar.ligand,iuphar ligand id,chemical
 http://identifiers.org/kegg.drug/,kegg.drug,kegg drug id,chemical
 http://identifiers.org/kegg.compound/,kegg.compound,kegg compound id,chemical
 http://identifiers.org/pubchem.compound/,pubchem.compound,pubchem compound id,chemical
+http://identifiers.org/pubchem.substance/,pubchem.substance,pubchem substance id,chemical
 http://identifiers.org/unii/,unii,unii id,chemical
 http://identifiers.org/inchi/,inchi,inchi,chemical
 http://identifiers.org/pharmgkb.drug/,pharmgkb.drug,pharmgkb drug id,chemical
