@@ -59,4 +59,4 @@ http://biothings.io/explorer/vocab/terms/genebank-common-name/,genebank-common-n
 http://identifiers.org/ensembl.transcript/,ensembl.transcript,ensembl transcript id,transcript
 http://identifiers.org/ensembl.translation/,ensembl.translation,ensembl translation id,transcript
 http://identifiers.org/unigene/,unigene,unigene id,transcript
-http://identifiers.org/pharmgkb.pathway/pharmgkb.pathway,pharmgkb.pathway,pharmgkb pathway id,pathway
+http://identifiers.org/pharmgkb.pathway/,pharmgkb.pathway,pharmgkb pathway id,pathway
