@@ -92,6 +92,8 @@ paths:
               valueType: 'http://identifiers.org/drugbank/'
             - path: chembl
               valueType: 'http://identifiers.org/chembl.compound/'
+            - path: pubchem
+              valueType: 'http://identifiers.org/pubchem.compound/'
             - path: drugbank.target.uniprot
               valueType: 'http://identifiers.org/uniprot/'
           x-JSONLDContext:
