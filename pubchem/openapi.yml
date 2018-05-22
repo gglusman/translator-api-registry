@@ -185,3 +185,27 @@ paths:
               valueType: 'http://identifiers.org/pubmed/'
           x-JSONLDContext:
             'pubchem/jsonld_context/pubchem_compound2pubchem_context.json'
+  '/compound/name/{drugname}/synonyms/JSON':
+    get:
+      summary: 'return synonyms of a drug name'
+      parameters:
+        - name: drugname
+          in: path
+          description: >-
+            Put drugname here, e.g. riluzole
+          required: true
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/drug-name/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+              template: /compound/name/{drugname}/synonyms/JSON
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "InformationList" property'
+          x-responseValueType:
+            - path: InformationList.Information.Synonym
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+          x-JSONLDContext:
+            'pubchem/jsonld_context/drugname2synonym.json'
