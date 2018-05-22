@@ -65,7 +65,7 @@ paths:
             - valueType: 'http://identifiers.org/omim.disease/'
               template: /bioentity/disease/OMIM:{diseaseid}/genes
             - valueType: 'http://identifiers.org/doid/'
-              template: /bioentity/disease/{diseaseid}/genes
+              template: /bioentity/disease/DOID:{diseaseid}/genes
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -94,7 +94,7 @@ paths:
             - valueType: 'http://identifiers.org/orphanet/'
               template: /bioentity/disease/Orphanet:{diseaseid}/phenotypes/
             - valueType: 'http://identifiers.org/doid/'
-              template: /bioentity/disease/{diseaseid}/phenotypes/
+              template: /bioentity/disease/DOID:{diseaseid}/phenotypes/
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'

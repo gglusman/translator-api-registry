@@ -1,0 +1,42 @@
+openapi: '3.0.0'
+info:
+  version: '1.0'
+  title: COHD API
+  description: >-
+    COHD is a database of IDK
+    http://cohd.nsides.io/api/v1/omop/findConceptIDs?q=cancer
+  termsOfService: http://cohd.nsides.io/api/v1/
+  contact:
+    name: COHD Help Desk
+    x-role: responsible developer
+    email: cohd@ncbi.nlm.nih.gov
+servers:
+  - url: 'http://cohd.nsides.io/api/v1/'
+    description: 'Production server'
+tags:
+  - name: disease
+paths:
+  '/findConceptIDs':
+    get:
+      summary: 'return concept id associated with disease '
+      parameters:
+        - name: genesymbol
+          in: path
+          description: >-
+            Put gene symbols here, e.g. CDK7 
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/hgnc.symbol/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/hgnc.symbol/'
+              template: /assay/target/genesymbol/{genesymbol}/aids/JSON
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "IdentifierList" property'
+          x-responseValueType:
+            - path: IdentifierList.AID
+              valueType: 'http://identifiers.org/pubchem.bioassay/'
+          x-JSONLDContext:
+            'pubchem/jsonld_context/pubchem_gene2bioassay_context.json'

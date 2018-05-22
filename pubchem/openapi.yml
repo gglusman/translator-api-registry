@@ -161,3 +161,27 @@ paths:
               valueType: 'http://identifiers.org/pubchem.compound/'
           x-JSONLDContext:
             'pubchem/jsonld_context/pubchem_bioassay2compound_context.json'
+  '/compound/cid/{compoundid}/xrefs/PubMedID/JSON':
+    get:
+      summary: 'return pubmed ids associated with a pubchem compound id'
+      parameters:
+        - name: compoundid
+          in: path
+          description: >-
+            Put PubChem Compound ID here, e.g. 2244
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/pubchem.compound/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/pubchem.compound/'
+              template: /compound/cid/{compoundid}/xrefs/PubMedID/JSON
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "InformationList" property'
+          x-responseValueType:
+            - path: InformationList.Information.PubMedID
+              valueType: 'http://identifiers.org/pubmed/'
+          x-JSONLDContext:
+            'pubchem/jsonld_context/pubchem_compound2pubchem_context.json'

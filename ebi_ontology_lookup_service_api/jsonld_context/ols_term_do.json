@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "label": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+            }
+        },
+        "description": {
+            "@type": "@id",
+            "@id": "assoc:HasDescriptionAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/disease-description/"
+            }
+        },
+        "synonyms": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+            }
+        }
+    }
+}

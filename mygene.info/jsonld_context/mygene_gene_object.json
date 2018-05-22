@@ -124,6 +124,19 @@
                 }
             }
         },
+        "umls": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "Swiss-Prot": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://identifiers.org/umls.gene/"
+                    }
+                }
+            }
+        },
         "ensembl": {
             "@type": "@id",
             "@id": "ont:has_annotation",
@@ -292,6 +305,20 @@
             "@id": "assoc:EquivalentAssociation",
             "@context": {
                 "@base": "http://identifiers.org/hgnc/"
+            }
+        },
+        "miRBase": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://identifiers.org/mirbase/"
+            }
+        },
+        "summary": {
+            "@type": "@id",
+            "@id": "assoc:HasDescriptionAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/gene-description/"
             }
         }
     }

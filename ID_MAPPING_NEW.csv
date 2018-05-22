@@ -1,10 +1,15 @@
 URI,Recommended name,Description,Semantic Type
 http://identifiers.org/uberon/,uberon,uberon id,anatomy
+http://identifiers.org/mesh.anatomy/,mesh.anatomy,mesh anatomy id,anatomy
 http://identifiers.org/cl/,cl,cell type ontology,anatomy
+http://biothings.io/explorer/vocab/terms/anatomy-description/,anatomyDescription,description of anatomy,anatomy
 http://biothings.io/explorer/vocab/terms/anatomy/,anatomy,anatomy name,anatomy
+http://identifiers.org/pubchem.bioassay/,pubchem.bioassay,pubchem bioassay id,bioassay
 http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
 http://biothings.io/explorer/vocab/terms/drug-name/,drugname,name of a drug,chemical
+http://biothings.io/explorer/vocab/terms/chemical-description/,chemical-description,description of a drug,chemical
 http://identifiers.org/inchikey/,inchikey,inchikey,chemical
+http://identifiers.org/pharos.ligand/,pharos.ligand,pharos ligand id,chemical
 http://identifiers.org/rxcui/,rxcui,rxcui,chemical
 http://identifiers.org/chebi/,chebi,chebi id,chemical
 http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
@@ -19,19 +24,24 @@ http://identifiers.org/inchi/,inchi,inchi,chemical
 http://identifiers.org/pharmgkb.drug/,pharmgkb.drug,pharmgkb drug id,chemical
 http://identifiers.org/snomedct/,snomedct,snomedct,disease
 http://biothings.io/explorer/vocab/terms/disease-name/,diseasename,disease name,disease
+http://biothings.io/explorer/vocab/terms/disease-description/,diseaseDescription,disease description,disease
 http://identifiers.org/mesh.disease/,mesh.disease,mesh diesease id,disease
 http://identifiers.org/ncit/,nci,nci,disease
+http://identifiers.org/pharos.disease/,pharos.disease,pharos disease id,disease
 http://identifiers.org/snomedct/,snomed,snomed,disease
-http://identifiers.org/umls/,umls,umls,disease
+http://identifiers.org/umls.disease/,umls,umls,disease
 http://identifiers.org/omim.disease/,omim.disease,omim disease id,disease
 http://identifiers.org/doid/,do,disease ontology id,disease
 http://identifiers.org/hgnc/,hgnc,records in the HGNC symbol database,gene
 http://identifiers.org/hgnc.symbol/,hgnc.symbol,HGNC symbol,gene
 http://identifiers.org/ncbigene/,ncbigene,ncbi gene id,gene
+http://identifiers.org/umls.gene/,umls.gene,umls gene id,gene
 http://biothings.io/explorer/vocab/terms/gene-approved-name/,gene-approved-name,gene approved name,gene
+http://biothings.io/explorer/vocab/terms/gene-description/,gene-description,description for gene,gene
 http://identifiers.org/ccds/,ccds,ccds id,gene
 http://identifiers.org/ena.embl/,ena,ena id,gene
 http://identifiers.org/ensembl.gene/,ensembl.gene,ensembl gene id,gene
+http://identifiers.org/mirbase/,mirbase,mirbase id,gene
 http://identifiers.org/mgi/,mgi,mgi id,gene
 http://identifiers.org/flybase/,flybase,flybase id,gene
 http://identifiers.org/xenbase/,xenbase,xenbase id,gene
@@ -40,10 +50,12 @@ http://identifiers.org/refseq/,refseq,refseq id,gene
 http://identifiers.org/rgd/,rgd,rgd id,gene
 http://identifiers.org/sgd/,sgd,sgd id,gene
 http://identifiers.org/zfin/,zfin,zfin id,gene
+http://identifiers.org/pharos.target/,pharos.target,pharos target id,gene
 http://identifiers.org/reactome.complex/,reactome.complex,reacomte complex id,gene
 http://identifiers.org/ro/,ro,consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies,ontology
 http://identifiers.org/go/,go,gene ontology id,ontology
-http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term description,ontology
+http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term label,ontology
+http://biothings.io/explorer/vocab/terms/go-description/,go-description,description for go term,ontology
 http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,go evidence code,ontology
 http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
 http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
@@ -53,6 +65,7 @@ http://identifiers.org/kegg.pathway/,kegg.pathway,kegg pathway id,pathway
 http://identifiers.org/wikipathways/,wikipathways,wikipathways id,pathway
 http://identifiers.org/hp/,hp,Human Phenotype Ontology,phenotype
 http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypeName,name of phenotype,phenotype
+http://biothings.io/explorer/vocab/terms/phenotype-description/,phenotypeDescription,description of phenotype,phenotype
 http://identifiers.org/ensembl.protein/,ensembl.protein,ensembl protein id,gene
 http://identifiers.org/uniprot/,uniprot,uniprot id,gene
 http://identifiers.org/pdb/,pdb,protein database id,gene

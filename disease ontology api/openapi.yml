@@ -33,7 +33,7 @@ paths:
             - 'http://identifiers.org/doid/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/doid/'
-              template: /metadata/{doid}
+              template: /metadata/DOID:{doid}
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'

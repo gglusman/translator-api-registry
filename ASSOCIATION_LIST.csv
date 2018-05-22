@@ -1,5 +1,6 @@
 URI,Recommended name,Description,Semantic Type
 http://biothings.io/explorer/vocab/terms/disease-gene-relation/,disease-gene-relation,the relationship between disease and gene,relation
+http://biothings.io/explorer/vocab/terms/gene-disease-relation/,gene-disease-relation,the relationship between gene and disease,relation
 http://biothings.io/explorer/vocab/terms/disease-phenotype-relation/,disease-phenotype-relation,relationship between disease and phenotype,relation
 http://biothings.io/explorer/vocab/terms/gene-homolog-relation/,gene-homolog-relation,relationship between gene and its homologs,relation
 http://biothings.io/explorer/vocab/terms/gene-interaction-relation/,gene-interaction-relation,relationship between gene and its interactors,relation
@@ -12,3 +13,4 @@ http://biothings.io/explorer/vocab/terms/gene-drug-relation/,gene-drug-relation,
 http://biothings.io/explorer/vocab/terms/drug-disease-relation/,drug-disease-relation,relationship between drug and disease,relation
 http://biothings.io/explorer/vocab/terms/gene-anatomy-relation/,gene-anatomy-relation,relationship between gene and anatomy,relation
 http://biothings.io/explorer/vocab/terms/database/,database,database information,database
+http://biothings.io/explorer/vocab/terms/pvalue/,pvalue,p value,relation

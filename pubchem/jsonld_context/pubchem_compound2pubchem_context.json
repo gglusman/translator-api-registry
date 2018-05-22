@@ -4,15 +4,21 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
-        "content": {
+        "InformationList": {
             "@type": "@id",
             "@id": "term:has_annotation",
             "@context": {
-                "id": {
+                "Information": {
                     "@type": "@id",
-                    "@id": "assoc:EquivalentAssociation",
+                    "@id": "term:has_annotation",
                     "@context": {
-                        "@base": "http://identifiers.org/pharos.target/"
+                        "PubMedID": {
+                            "@type": "@id",
+                            "@id": "assoc:ChemicalToPublicationAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        }
                     }
                 }
             }

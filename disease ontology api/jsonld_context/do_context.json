@@ -6,7 +6,7 @@
         "SNOMEDCT_US_2016_03_01": "http://identifiers.org/snomedct/",
         "NCI": "http://identifiers.org/ncit/",
         "UMLS_CUI": "http://identifiers.org/umls/",
-        "DOID": "http://identifiers.org/doid/DOID:",
+        "DOID": "http://identifiers.org/doid/",
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",

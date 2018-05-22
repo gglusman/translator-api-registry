@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "DOID": "http://identifiers.org/doid/",
+        "_embedded": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "terms": {
+                    "@type": "@id",
+                    "@id": "assoc:DiseaseOntologyToParentDiseaseOntologyAssociation",
+                    "@context": {
+                        "description": {
+                            "@type": "@id",
+                            "@id": "attr:description",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/disease-description/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                            }
+                        },
+                        "obo_id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/doid/"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

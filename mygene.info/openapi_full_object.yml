@@ -160,6 +160,8 @@ paths:
           x-responseValueType:
             - path: symbol
               valueType: 'http://identifiers.org/hgnc.symbol/'
+            - path: umls.cui
+              valueType: 'http://identifiers.org/umls.gene/'
             - path: unigene
               valueType: 'http://identifiers.org/unigene/'
             - path: uniprot.Swiss-Prot
@@ -188,5 +190,7 @@ paths:
               valueType: 'http://identifiers.org/omim.gene/'
             - path: HGNC
               valueType: 'http://identifiers.org/hgnc/'
+            - path: miRBase
+              valueType: 'http://identifiers.org/mirbase/'
           x-JSONLDContext:
             'mygene.info/jsonld_context/mygene_gene_object.json'

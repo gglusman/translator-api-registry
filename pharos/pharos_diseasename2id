@@ -1,0 +1,276 @@
+https://pharos.ncats.io/idg/api/v1/diseases/search?q=medulloblastoma
+
+{
+"id": 62,
+"version": 1,
+"created": 1526919604249,
+"modified": 1526919604250,
+"deprecated": false,
+"etag": "951a6ecb0f01ed27",
+"uri": "https://pharos.ncats.io/idg/api/v1/diseases/search?q=medulloblastoma",
+"path": "/idg/api/v1/diseases/search",
+"method": "GET",
+"sha1": "0189700d87d674853056fb218e89b0fed09c7a00",
+"total": 14,
+"count": 10,
+"skip": 0,
+"top": 10,
+"status": null,
+"query": "medulloblastoma",
+"filter": null,
+"_namespace": null,
+"sideway": [],
+"facets": [],
+"content": [
+{
+"id": 12692,
+"version": 1,
+"created": 1525100728000,
+"modified": 1525100728000,
+"deprecated": false,
+"name": "Large cell medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(12692)?view=full",
+"_synonyms": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(12692)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(12692)/properties"
+},
+"_links": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(12692)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 10680,
+"version": 1,
+"created": 1525049627000,
+"modified": 1525049627000,
+"deprecated": false,
+"name": "Melanotic medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(10680)?view=full",
+"_synonyms": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(10680)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(10680)/properties"
+},
+"_links": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(10680)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 6433,
+"version": 1,
+"created": 1524988835000,
+"modified": 1524988835000,
+"deprecated": false,
+"name": "Desmoplastic Medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(6433)?view=full",
+"_synonyms": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(6433)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 4,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(6433)/properties"
+},
+"_links": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(6433)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 6435,
+"version": 1,
+"created": 1524988835000,
+"modified": 1524988835000,
+"deprecated": false,
+"name": "MEDULLOBLASTOMA WITH EXTENSIVE NODULARITY",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(6435)?view=full",
+"_synonyms": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(6435)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 3,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(6435)/properties"
+},
+"_links": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(6435)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 8193,
+"version": 1,
+"created": 1525004151000,
+"modified": 1525004151000,
+"deprecated": false,
+"name": "Adult medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(8193)?view=full",
+"_synonyms": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(8193)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(8193)/properties"
+},
+"_links": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(8193)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 1296,
+"version": 1,
+"created": 1524957572000,
+"modified": 1524957572000,
+"deprecated": false,
+"name": "Childhood medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(1296)?view=full",
+"_synonyms": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(1296)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(1296)/properties"
+},
+"_links": {
+"count": 5,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(1296)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 4597,
+"version": 1,
+"created": 1524973224000,
+"modified": 1524973224000,
+"deprecated": false,
+"name": "Cerebellar medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(4597)?view=full",
+"_synonyms": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(4597)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(4597)/properties"
+},
+"_links": {
+"count": 3,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(4597)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 8121,
+"version": 1,
+"created": 1525003454000,
+"modified": 1525003454000,
+"deprecated": false,
+"name": "Rhabdoid tumor predisposition syndrome 2",
+"description": "A familial cancer syndrome predisposing to renal or extrarenal malignant rhabdoid tumors and to a variety of tumors of the central nervous system, including choroid plexus carcinoma, medulloblastoma, and central primitive neuroectodermal tumors. Rhabdoid tumors are the most aggressive and lethal malignancies occurring in early childhood.",
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(8121)?view=full",
+"_synonyms": {
+"count": 3,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(8121)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(8121)/properties"
+},
+"_links": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(8121)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 5227,
+"version": 1,
+"created": 1524977995000,
+"modified": 1524977995000,
+"deprecated": false,
+"name": "Rhabdoid tumor predisposition syndrome 1",
+"description": "A familial cancer syndrome predisposing to renal or extrarenal malignant rhabdoid tumors and to a variety of tumors of the central nervous system, including choroid plexus carcinoma, medulloblastoma, and central primitive neuroectodermal tumors. Rhabdoid tumors are the most aggressive and lethal malignancies occurring in early childhood.",
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(5227)?view=full",
+"_synonyms": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(5227)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(5227)/properties"
+},
+"_links": {
+"count": 1,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(5227)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+},
+{
+"id": 4,
+"version": 1,
+"created": 1524954998000,
+"modified": 1524954998000,
+"deprecated": false,
+"name": "group 4 medulloblastoma",
+"description": null,
+"self": "https://pharos.ncats.io/idg/api/v1/diseases(4)?view=full",
+"_synonyms": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(4)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(4)/properties"
+},
+"_links": {
+"count": 1875,
+"href": "https://pharos.ncats.io/idg/api/v1/diseases(4)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Disease"
+}
+]
+}

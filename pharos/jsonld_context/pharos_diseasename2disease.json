@@ -6,20 +6,13 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "content": {
             "@type": "@id",
-            "@id": "assoc:EquivalentAssociation",
+            "@id": "term:has_annotation",
             "@context": {
                 "id": {
                     "@type": "@id",
-                    "@id": "attr:id",
+                    "@id": "assoc:EquivalentAssociation",
                     "@context": {
-                        "@base": "http://identifiers.org/pharos.ligand/"
-                    }
-                },
-                "name": {
-                    "@type": "@id",
-                    "@id": "attr:id-secondary",
-                    "@context": {
-                        "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                        "@base": "http://identifiers.org/pharos.disease/"
                     }
                 }
             }

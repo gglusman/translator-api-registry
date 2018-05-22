@@ -292,6 +292,13 @@
                         "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                     }
                 },
+                "definition": {
+                    "@type": "@id",
+                    "@id": "assoc:HasDescriptionAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/chemical-description/"
+                    }
+                },
                 "drugbank_database_links": {
                     "@type": "@id",
                     "@id": "assoc:EquivalentAssociation",

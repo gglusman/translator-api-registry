@@ -1,0 +1,43 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "MESH": "http://identifiers.org/mesh.anatomy/",
+        "label": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/anatomy/"
+            }
+        },
+        "annotation": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "database_cross_reference": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/mesh.anatomy/"
+                    }
+                }
+            }
+        },
+        "description": {
+            "@type": "@id",
+            "@id": "assoc:HasDescriptionAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/anatomy-description/"
+            }
+        },
+        "synonyms": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/anatomy/"
+            }
+        }
+    }
+}
