@@ -128,7 +128,7 @@
             "@type": "@id",
             "@id": "assoc:EquivalentAssociation",
             "@context": {
-                "Swiss-Prot": {
+                "cui": {
                     "@type": "@id",
                     "@id": "attr:id",
                     "@context": {
@@ -169,74 +169,6 @@
             "@id": "term:has_annotation",
             "@context": {
                 "BP": {
-                    "@type": "@id",
-                    "@id": "assoc:GeneToGoTermAssociation",
-                    "@context": {
-                        "id": {
-                            "@type": "@id",
-                            "@id": "attr:id",
-                            "@context": {
-                                "@base": "http://identifiers.org/go/"
-                            }
-                        },
-                        "pubmed": {
-                            "@type": "@id",
-                            "@id": "rel:publication",
-                            "@context": {
-                                "@base": "http://identifiers.org/pubmed/"
-                            }
-                        },
-                        "term": {
-                            "@type": "@id",
-                            "@id": "attr:label",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
-                            }
-                        },
-                        "evidence": {
-                            "@type": "@id",
-                            "@id": "rel:evidence",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
-                            }
-                        }
-                    }
-                },
-                "CC": {
-                    "@type": "@id",
-                    "@id": "assoc:GeneToGoTermAssociation",
-                    "@context": {
-                        "id": {
-                            "@type": "@id",
-                            "@id": "attr:id",
-                            "@context": {
-                                "@base": "http://identifiers.org/go/"
-                            }
-                        },
-                        "pubmed": {
-                            "@type": "@id",
-                            "@id": "rel:publication",
-                            "@context": {
-                                "@base": "http://identifiers.org/pubmed/"
-                            }
-                        },
-                        "term": {
-                            "@type": "@id",
-                            "@id": "attr:label",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
-                            }
-                        },
-                        "evidence": {
-                            "@type": "@id",
-                            "@id": "rel:evidence",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
-                            }
-                        }
-                    }
-                },
-                "MF": {
                     "@type": "@id",
                     "@id": "assoc:GeneToGoTermAssociation",
                     "@context": {
