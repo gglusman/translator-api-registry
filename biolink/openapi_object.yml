@@ -23,6 +23,60 @@ tags:
   - name: query
   - name: translator
 paths:
+  '/bioentity/phenotype/{phenotypeid}':
+    get:
+      summary: 'Returns phenotype label'
+      parameters:
+        - name: phenotypeid
+          in: path
+          description: >-
+            CURIE identifier of phenotype, e.g. HP:000001. Equivalent IDs can be used with same results
+          required: true
+          schema:
+            type: string
+          x-valueType:
+            - 'http://identifiers.org/hp/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/hp/'
+              template: /bioentity/phenotype/HP:{phenotypeid}
+      responses:
+        '200':
+          description: 'phenotype label'
+          x-responseValueType:
+            - path: objects
+              valueType: 'http://biothings.io/explorer/vocab/terms/phenotype-name/'
+          x-JSONLDContext:
+            'biolink/jsonld_context/biolink_phenotype_label.json'
+  '/bioentity/disease/{diseaseid}':
+    get:
+      summary: 'Returns phenotype label'
+      parameters:
+        - name: diseaseid
+          in: path
+          description: >-
+            CURIE identifier of diseae, e.g. MONDO:00001. Equivalent IDs can be used with same results
+          required: true
+          schema:
+            type: string
+          x-valueType:
+            - 'http://identifiers.org/mondo/'
+            - 'http://identifiers.org/omim.disease/'
+            - 'http://identifiers.org/doid/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/mondo/'
+              template: /bioentity/disease/MONDO:{diseaseid}
+            - valueType: 'http://identifiers.org/omim.disease/'
+              template: /bioentity/disease/OMIM:{diseaseid}
+            - valueType: 'http://identifiers.org/doid/'
+              template: /bioentity/disease/DOID:{diseaseid}
+      responses:
+        '200':
+          description: 'disease label'
+          x-responseValueType:
+            - path: objects
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+          x-JSONLDContext:
+            'biolink/jsonld_context/biolink_disease_label.json'
   '/bioentity/gene/{geneid}/expression/anatomy':
     get:
       summary: 'Returns anatomy associated with a gene'
@@ -38,7 +92,7 @@ paths:
             - 'http://identifiers.org/ncbigene/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/ncbigene/'
-              template: /bioentity/gene/NCBIGene:{geneid}/expression/anatomy
+              template: /bioentity/gene/NCBIGene:{geneid}/expression/anatomy?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -63,9 +117,9 @@ paths:
             - 'http://identifiers.org/doid/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/omim.disease/'
-              template: /bioentity/disease/OMIM:{diseaseid}/genes
+              template: /bioentity/disease/OMIM:{diseaseid}/genes?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/doid/'
-              template: /bioentity/disease/DOID:{diseaseid}/genes
+              template: /bioentity/disease/DOID:{diseaseid}/genes?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -90,11 +144,11 @@ paths:
             - 'http://identifiers.org/orphanet/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/omim.disease/'
-              template: /bioentity/disease/OMIM:{diseaseid}/phenotypes/
+              template: /bioentity/disease/OMIM:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/orphanet/'
-              template: /bioentity/disease/Orphanet:{diseaseid}/phenotypes/
+              template: /bioentity/disease/Orphanet:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/doid/'
-              template: /bioentity/disease/DOID:{diseaseid}/phenotypes/
+              template: /bioentity/disease/DOID:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -117,7 +171,7 @@ paths:
             - 'http://identifiers.org/ncbigene/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/ncbigene/'
-              template: /bioentity/gene/NCBIGene:{geneid}/homologs/
+              template: /bioentity/gene/NCBIGene:{geneid}/homologs/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -153,9 +207,9 @@ paths:
             - 'http://identifiers.org/hgnc/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/ncbigene/'
-              template: /bioentity/gene/NCBIGene:{geneid}/interactions/
+              template: /bioentity/gene/NCBIGene:{geneid}/interactions/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/hgnc/'
-              template: /bioentity/gene/HGNC:{geneid}/interactions/
+              template: /bioentity/gene/HGNC:{geneid}/interactions/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -207,9 +261,9 @@ paths:
             - 'http://identifiers.org/hgnc/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/ncbigene/'
-              template: /bioentity/gene/NCBIGene:{geneid}/pathways
+              template: /bioentity/gene/NCBIGene:{geneid}/pathways/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/hgnc/'
-              template: /bioentity/gene/HGNC:{geneid}/pathways
+              template: /bioentity/gene/HGNC:{geneid}/pathways/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -234,7 +288,7 @@ paths:
             - 'http://identifiers.org/reactome/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/reactome/'
-              template: /bioentity/pathway/REACT:{pathwayid}/genes
+              template: /bioentity/pathway/REACT:{pathwayid}/genes/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -257,7 +311,7 @@ paths:
             - 'http://identifiers.org/clinvar/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/clinvar/'
-              template: /bioentity/variant/ClinVarVariant:{variantid}/genes
+              template: /bioentity/variant/ClinVarVariant:{variantid}/genes/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
@@ -265,3 +319,78 @@ paths:
             - path: objects
               valueType:  "http://identifiers.org/hgnc/"
           x-JSONLDContext: "biolink/jsonld_context/biolink_variant_gene.json"
+  '/bioentity/anatomy/{anatomyid}/genes':
+    get:
+      summary: 'Returns genes associated with an anatomy'
+      parameters:
+        - name: anatomyid
+          in: path
+          description: >-
+            CURIE identifier of anatomy, e.g. UBERON:0002037
+          required: true
+          schema:
+            type: string
+          x-valueType:
+            - 'http://identifiers.org/uberon/'
+            - 'http://identifiers.org/cl/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uberon/'
+              template: /bioentity/anatomy/UBERON:{anatomyid}/genes/?fetch_objects=true&rows=250
+            - valueType: 'http://identifiers.org/cl/'
+              template: /bioentity/anatomy/CL:{anatomyid}/genes/?fetch_objects=true&rows=250
+      responses:
+        '200':
+          description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
+          x-responseValueType:
+            - path: objects
+              valueType:  "http://identifiers.org/hgnc/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_anatomy_gene.json"
+  '/bioentity/phenotype/{phenotypeid}/anatomy':
+    get:
+      summary: 'Returns genes associated with an anatomy'
+      parameters:
+        - name: phenotypeid
+          in: path
+          description: >-
+            CURIE identifier of phenotype, e.g. HP:0000003
+          required: true
+          schema:
+            type: string
+          x-valueType:
+            - 'http://identifiers.org/hp/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/hp/'
+              template: /bioentity/phenotype/HP:{phenotypeid}/anatomy/?fetch_objects=true&rows=250
+      responses:
+        '200':
+          description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
+          x-responseValueType:
+            - path: objects
+              valueType:  "http://identifiers.org/uberon/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_phenotype_anatomy.json"
+  '/bioentity/gene/{geneid}/diseases':
+    get:
+      summary: 'Returns diseases associated with a gene'
+      parameters:
+        - name: geneid
+          in: path
+          description: >-
+            CURIE identifier of gene, e.g. NCBIGene:1017
+          required: true
+          schema:
+            type: string
+          x-valueType:
+            - 'http://identifiers.org/ncbigene/'
+            - 'http://identifiers.org/hgnc/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/ncbigene/'
+              template: /bioentity/gene/NCBIGene:{geneid}/diseases/?fetch_objects=true&rows=200
+            - valueType: 'http://identifiers.org/hgnc/'
+              template: /bioentity/gene/HGNC:{geneid}/diseases/?fetch_objects=true&rows=250
+      responses:
+        '200':
+          description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
+          x-responseValueType:
+            - path: objects
+              valueType:  "http://identifiers.org/mondo/"
+          x-JSONLDContext: "biolink/jsonld_context/biolink_gene_disease.json"
