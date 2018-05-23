@@ -1,0 +1,98 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "HGNC": "http://identifiers.org/hgnc/",
+        "RO": "http://identifiers.org/ro/RO:",
+        "PMID": "http://identifiers.org/pubmed/",
+        "NCBITaxon": "http://identifiers.org/taxonomy/",
+        "associations": {
+            "@type": "@id",
+            "@id": "assoc:AnatomyToGeneOrGeneProductAssociation",
+            "@context": {
+                "subject": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/hgnc/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "attr:id-secondary",
+                            "@context": {
+                                "@base": "http://identifiers.org/hgnc.symbol/"
+                            }
+                        },
+                        "taxon": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "id": {
+                                    "@type": "@id",
+                                    "@id": "attr:taxonomy",
+                                    "@context": {
+                                      "@base": "http://identifiers.org/taxonomy/"
+                                    }
+                                },
+                                "label": {
+                                    "@type": "@id",
+                                    "@id": "attr:taxonomy",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/taxonomyname/"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "relation": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "rel:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/ro/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-anatomy-relation/"
+                            }
+                        }
+                    }
+                },
+                "publication": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        }
+                    }
+                },
+                "provided_by": {
+                    "@type": "@id",
+                    "@id": "rel:provided_by",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                    }
+                }
+            }
+        }
+    }
+}
