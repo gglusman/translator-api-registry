@@ -42,6 +42,8 @@ paths:
               valueType: 'http://identifiers.org/uniprot/'
             - path: gene
               valueType: 'http://identifiers.org/hgnc.symbol/'
+            - path: name
+              valueType: 'http://biothings.io/explorer/vocab/terms/gene-approved-name/'
             - path: synonyms.Entrez Gene.term
               valueType: 'http://identifiers.org/ncbigene/'
             - path: MIM.term
