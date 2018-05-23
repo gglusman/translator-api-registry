@@ -235,9 +235,9 @@ paths:
             - 'http://identifiers.org/hgnc/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/ncbigene/'
-              template: /bioentity/gene/NCBIGene:{geneid}/phenotypes
+              template: /bioentity/gene/NCBIGene:{geneid}/phenotypes/?exclude_automatic_assertions=true&unselect_evidence=true
             - valueType: 'http://identifiers.org/hgnc/'
-              template: /bioentity/gene/HGNC:{geneid}/phenotypes
+              template: /bioentity/gene/HGNC:{geneid}/phenotypes/?exclude_automatic_assertions=true&unselect_evidence=true
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
