@@ -96,6 +96,12 @@ paths:
               valueType: 'http://identifiers.org/pubchem.compound/'
             - path: drugbank.target.uniprot
               valueType: 'http://identifiers.org/uniprot/'
+            - path: drugcentral.xref.umls
+              valueType: 'http://identifiers.org/umls.compound/'
+            - path: drugcentral.xref.mesh
+              valueType: 'http://identifiers.org/mesh.compound/'
+            - path: chebi.definition
+              valueType: 'http://biothings.io/explorer/vocab/terms/chemical-description/'
           x-JSONLDContext:
             'mychem.info/jsonld_context/mychem_query_object.json'
   '/drug/{drugid}':
@@ -167,5 +173,11 @@ paths:
               valueType: 'http://identifiers.org/pubchem.compound/'
             - path: pharmgkb.cross_references.pubchem_substance
               valueType: 'http://identifiers.org/pubchem.substance/'
+            - path: drugcentral.xref.umls
+              valueType: 'http://identifiers.org/umls.compound/'
+            - path: drugcentral.xref.mesh
+              valueType: 'http://identifiers.org/mesh.compound/' 
+            - path: chebi.definition
+              valueType: 'http://biothings.io/explorer/vocab/terms/chemical-description/'
           x-JSONLDContext:
             'mychem.info/jsonld_context/mychem_drug_object.json'

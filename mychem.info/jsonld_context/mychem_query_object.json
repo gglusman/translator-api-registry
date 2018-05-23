@@ -127,6 +127,20 @@
                                     "@context": {
                                         "@base": "http://identifiers.org/pubchem.compound/"
                                     }
+                                },
+                                "mesh_descriptor_ui": {
+                                    "@type": "@id",
+                                    "@id": "assoc:EquivalentAssociation",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/mesh.compound/"
+                                    }
+                                },
+                                "umlscui": {
+                                    "@type": "@id",
+                                    "@id": "assoc:EquivalentAssociation",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/umls.compound/"
+                                    }
                                 }
                             }
                         },
@@ -296,6 +310,13 @@
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
                                 "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                            }
+                        },
+                        "definition": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/chemical-description/"
                             }
                         },
                         "drugbank_database_links": {
