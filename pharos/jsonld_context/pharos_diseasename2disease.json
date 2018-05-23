@@ -6,13 +6,20 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "content": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "assoc:EquivalentAssociation",
             "@context": {
                 "id": {
                     "@type": "@id",
-                    "@id": "assoc:EquivalentAssociation",
+                    "@id": "attr:id",
                     "@context": {
                         "@base": "http://identifiers.org/pharos.disease/"
+                    }
+                },
+                "name": {
+                    "@type": "@id",
+                    "@id": "attr:id-secondary",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
                     }
                 }
             }
