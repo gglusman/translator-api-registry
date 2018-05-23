@@ -170,10 +170,6 @@ paths:
         '200':
           description: 'An Gene Ontology child object'
           x-responseValueType:
-            - path: _embedded.terms.description
-              valueType: 'http://biothings.io/explorer/vocab/terms/go-description/'
-            - path: _embedded.terms.label
-              valueType: 'http://biothings.io/explorer/vocab/terms/go-term/'
             - path: _embedded.terms.obo_id
               valueType: 'http://identifiers.org/go/'
           x-JSONLDContext:
@@ -198,10 +194,6 @@ paths:
         '200':
           description: 'An Gene Ontology parent object'
           x-responseValueType:
-            - path: _embedded.terms.description
-              valueType: 'http://biothings.io/explorer/vocab/terms/go-description/'
-            - path: _embedded.terms.label
-              valueType: 'http://biothings.io/explorer/vocab/terms/go-term/'
             - path: _embedded.terms.obo_id
               valueType: 'http://identifiers.org/go/'
           x-JSONLDContext:
@@ -226,10 +218,6 @@ paths:
         '200':
           description: 'An Disease Ontology child object'
           x-responseValueType:
-            - path: _embedded.terms.description
-              valueType: 'http://biothings.io/explorer/vocab/terms/disease-description/'
-            - path: _embedded.terms.label
-              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
             - path: _embeddd.terms.obo_id
               valueType: 'http://identifiers.org/doid/'
           x-JSONLDContext:
@@ -254,10 +242,6 @@ paths:
         '200':
           description: 'An Disease Ontology parent object'
           x-responseValueType:
-            - path: _embedded.terms.description
-              valueType: 'http://biothings.io/explorer/vocab/terms/disease-description/'
-            - path: _embedded.terms.label
-              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
             - path: _embeddd.terms.obo_id
               valueType: 'http://identifiers.org/doid/'
           x-JSONLDContext:

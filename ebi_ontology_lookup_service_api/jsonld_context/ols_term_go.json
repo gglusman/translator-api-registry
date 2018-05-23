@@ -4,6 +4,7 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "Catalysis of the reaction": "http://biothings.io/explorer/vocab/terms/go-description/Catalysis of the reaction:",
         "label": {
             "@type": "@id",
             "@id": "assoc:EquivalentAssociation",
