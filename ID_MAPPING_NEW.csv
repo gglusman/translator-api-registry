@@ -7,12 +7,14 @@ http://biothings.io/explorer/vocab/terms/anatomy/,anatomy,anatomy name,anatomy
 http://identifiers.org/pubchem.bioassay/,pubchem.bioassay,pubchem bioassay id,bioassay
 http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
 http://biothings.io/explorer/vocab/terms/drug-name/,drugname,name of a drug,chemical
-http://biothings.io/explorer/vocab/terms/chemical-description/,chemical-description,description of a drug,chemical
+http://biothings.io/explorer/vocab/terms/chemical-description/,chemicalDescription,description of a drug,chemical
 http://identifiers.org/inchikey/,inchikey,inchikey,chemical
 http://identifiers.org/pharos.ligand/,pharos.ligand,pharos ligand id,chemical
 http://identifiers.org/rxcui/,rxcui,rxcui,chemical
 http://identifiers.org/chebi/,chebi,chebi id,chemical
 http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
+http://identifiers.org/umls.compound/,umls.compound,umls compound id,chemical
+http://identifiers.org/mesh.compound/,mesh.compound,mesh compound id,chemical
 http://identifiers.org/drugbank/,drugbank,drugbank id,chemical
 http://identifiers.org/iuphar.ligand/,iuphar.ligand,iuphar ligand id,chemical
 http://identifiers.org/kegg.drug/,kegg.drug,kegg drug id,chemical
@@ -55,7 +57,7 @@ http://identifiers.org/reactome.complex/,reactome.complex,reacomte complex id,ge
 http://identifiers.org/ro/,ro,consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies,ontology
 http://identifiers.org/go/,go,gene ontology id,ontology
 http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term label,ontology
-http://biothings.io/explorer/vocab/terms/go-description/,go-description,description for go term,ontology
+http://biothings.io/explorer/vocab/terms/go-description/,goDescription,description for go term,ontology
 http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,go evidence code,ontology
 http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
 http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
