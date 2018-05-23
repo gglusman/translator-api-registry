@@ -50,5 +50,7 @@ paths:
               valueType: 'http://identifiers.org/omim.disease/'
             - path: parents
               valueType: 'http://identifiers.org/doid/'
+            - path: name
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
           x-JSONLDContext:
             'disease ontology api/jsonld_context/do_context.json'
