@@ -33,6 +33,7 @@ http://identifiers.org/pharos.disease/,pharos.disease,pharos disease id,disease
 http://identifiers.org/snomedct/,snomed,snomed,disease
 http://identifiers.org/umls.disease/,umls,umls,disease
 http://identifiers.org/omim.disease/,omim.disease,omim disease id,disease
+http://identifiers.org/mondo/,mondo,mondo disease id,disease
 http://identifiers.org/doid/,do,disease ontology id,disease
 http://identifiers.org/hgnc/,hgnc,records in the HGNC symbol database,gene
 http://identifiers.org/hgnc.symbol/,hgnc.symbol,HGNC symbol,gene
@@ -59,7 +60,9 @@ http://identifiers.org/go/,go,gene ontology id,ontology
 http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term label,ontology
 http://biothings.io/explorer/vocab/terms/go-description/,goDescription,description for go term,ontology
 http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,go evidence code,ontology
-http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
+http://identifiers.org/taxonomy/,taxonomy,The taxonomy 
+contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
+http://biothings.io/explorer/vocab/terms/taxonomyname/,taxonomyname,taxonomy label,taxonomy
 http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
 http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysName,description for pathway,pathway
 http://identifiers.org/biocarta.pathway/,biocarta.pathway,biocarta pathway id,pathway
