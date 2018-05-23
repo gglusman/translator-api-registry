@@ -42,12 +42,12 @@ paths:
               valueType: 'http://identifiers.org/chembl.compound/'
           x-JSONLDContext:
             'ChEMBL/jsonld_context/chembl_drugname2chemblcompound_context.json'
-  '/target_prediction':
+  '/target_prediction/{chemblid}':
     get:
       summary: 'return predicted binding of a molecule to given biological target'
       parameters:
-        - name: molecule_chembl_id__exact
-          in: query
+        - name: chemblid
+          in: path
           description: >-
             Put chembl compound id here
           required: true
@@ -56,7 +56,7 @@ paths:
             - 'http://identifiers.org/chembl.compound/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/chembl.compound/'
-              template: input_value
+              template: /target_prediction?molecule_chembl_id__exact={chemblid}&target_organism__exact=Homo sapiens
           schema:
             type: string
       responses:
