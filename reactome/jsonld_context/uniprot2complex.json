@@ -6,13 +6,20 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "data": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "assoc:isComponentOf",
             "@context": {
                 "stId": {
                     "@type": "@id",
-                    "@id": "assoc:isComponentOf",
+                    "@id": "attr:id",
                     "@context": {
                         "@base": "http://identifiers.org/reactome.complex/"
+                    }
+                },
+                "displayName": {
+                    "@type": "@id",
+                    "@id": "attr:id-secondary",
+                    "@context": {
+                        "@base": "http://identifiers.org/reactome.displayname/"
                     }
                 }
             }

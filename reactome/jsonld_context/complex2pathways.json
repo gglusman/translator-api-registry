@@ -6,13 +6,20 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "data": {
             "@type": "@id",
-            "@id": "term:has_annotation",
+            "@id": "assoc:ComplexToPathwayAssociation",
             "@context": {
                 "stId": {
                     "@type": "@id",
-                    "@id": "assoc:ComplexToPathwayAssociation",
+                    "@id": "attr:id",
                     "@context": {
                         "@base": "http://identifiers.org/reactome.pathway/"
+                    }
+                },
+                "displayName": {
+                    "@type": "@id",
+                    "@id": "attr:id-secondary",
+                    "@context": {
+                        "@base": "http://identifiers.org/reactome.displayname/"
                     }
                 }
             }

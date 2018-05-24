@@ -92,3 +92,53 @@ paths:
               valueType: 'http://identifiers.org/uniprot/'
           x-JSONLDContext:
             'reactome/jsonld_context/pathways2uniprot.json'
+  '/data/participants/{ReactomePathwaysId}':
+    get:
+      summary: 'Participants contains a PhysicalEntity (dbId, displayName) and a collection of ReferenceEntities (dbId, name, identifier, url)'
+      parameters:
+        - name: ReactomePathwaysId
+          in: path
+          description: >-
+            Put Reactome Pathways id here, e.g. R-HSA-202403
+          required: true
+          example: R-HSA-202403
+          x-valueType:
+            - 'http://identifiers.org/reactome.pathway/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/reactome.pathway/'
+              template: /data/participants/{ReactomePathwaysId}
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'List of uniprot Ids which participates in the pathways'
+          x-responseValueType:
+            - path: data.refEntities.identifier
+              valueType: 'http://identifiers.org/uniprot/'
+          x-JSONLDContext:
+            'reactome/jsonld_context/pathways2uniprot.json'
+  '/interactors/static/molecule/{uniprot}/details':
+    get:
+      summary: 'Retrieve a detailed interaction information of a given accession'
+      parameters:
+        - name: uniprot
+          in: path
+          description: >-
+            Put UniProt id here, e.g. Q06609
+          required: true
+          example: Q06609
+          x-valueType:
+            - 'http://identifiers.org/uniprot/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uniprot/'
+              template: /interactors/static/molecule/{uniprot}/details
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'List of uniprot Ids which interacts with your input uniprot'
+          x-responseValueType:
+            - path: entities.interactors
+              valueType: 'http://identifiers.org/uniprot/'
+          x-JSONLDContext:
+            'reactome/jsonld_context/uniprot2uniprot.json'

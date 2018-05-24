@@ -4,26 +4,26 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
-        "data": {
+        "entities": {
             "@type": "@id",
             "@id": "term:has_annotation",
             "@context": {
-                "refEntities": {
+                "interactors": {
                     "@type": "@id",
-                    "@id": "assoc:PathwayToProteinAssociation",
+                    "@id": "assoc:PairwiseGeneOrProteinInteractionAssociation",
                     "@context": {
-                        "identifier": {
-                            "@type": "@id",
+                        "acc": {
                             "@id": "attr:id",
+                            "@type": "@id",
                             "@context": {
                                 "@base": "http://identifiers.org/uniprot/"
                             }
                         },
-                        "displayName": {
-                            "@type": "@id",
+                        "alias": {
                             "@id": "attr:id-secondary",
+                            "@type": "@id",
                             "@context": {
-                                "@base": "http://identifiers.org/reactome.displayname/"
+                                "@base": "http://identifiers.org/hgnc.symbol/"
                             }
                         }
                     }
