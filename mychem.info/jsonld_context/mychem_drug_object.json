@@ -473,7 +473,7 @@
                 },
                 "targets": {
                     "@type": "@id",
-                    "@id": "assoc:ChemicalToGeneOrGeneProductObject",
+                    "@id": "assoc:ChemicalToGeneOrGeneProductAssociation",
                     "@context": {
                         "uniprot": {
                             "@type": "@id",
