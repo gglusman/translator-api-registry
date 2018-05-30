@@ -60,10 +60,10 @@ http://identifiers.org/go/,go,gene ontology id,ontology
 http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term label,ontology
 http://biothings.io/explorer/vocab/terms/go-description/,goDescription,description for go term,ontology
 http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,go evidence code,ontology
-http://identifiers.org/taxonomy/,taxonomy,The taxonomy 
-contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
+http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
 http://biothings.io/explorer/vocab/terms/taxonomyname/,taxonomyname,taxonomy label,taxonomy
 http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
+http://identifiers.org/reactome.displayname/,reactome.displayname,reacomte displayname id,pathway
 http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysName,description for pathway,pathway
 http://identifiers.org/biocarta.pathway/,biocarta.pathway,biocarta pathway id,pathway
 http://identifiers.org/kegg.pathway/,kegg.pathway,kegg pathway id,pathway
