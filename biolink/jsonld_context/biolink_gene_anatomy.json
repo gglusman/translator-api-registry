@@ -11,7 +11,7 @@
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:DiseaseToGeneOrGeneProductAssociation",
+            "@id": "assoc:GeneOrGeneProductToAnatomyAssociation",
             "@context": {
                 "object": {
                     "@type": "@id",
