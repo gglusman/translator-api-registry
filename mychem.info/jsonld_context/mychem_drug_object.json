@@ -4,6 +4,8 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "CID": "http://identifiers.org/pubchem.compound/",
+        "SID": "http://identifiers.org/pubchem.substance/",
         "aeolus": {
             "@type": "@id",
             "@id": "term:has_annotation",
@@ -341,13 +343,6 @@
                         "@base": "http://identifiers.org/kegg.compound/"
                     }
                 },
-                "pubchem_database_links": {
-                    "@type": "@id",
-                    "@id": "assoc:EquivalentAssociation",
-                    "@context": {
-                        "@base": "http://identifiers.org/pubchem.compound/"
-                    }
-                },
                 "inchikey": {
                     "@type": "@id",
                     "@id": "assoc:EquivalentAssociation",
@@ -518,13 +513,6 @@
             "@type": "@id",
             "@id": "term:has_annotation",
             "@context": {
-                "cid": {
-                    "@type": "@id",
-                    "@id": "assoc:EquivalentAssociation",
-                    "@context": {
-                        "@base": "http://identifiers.org/pubchem.compound/"
-                    }
-                },
                 "inchi_key": {
                     "@type": "@id",
                     "@id": "assoc:EquivalentAssociation",

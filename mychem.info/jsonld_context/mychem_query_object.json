@@ -5,6 +5,8 @@
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "CHEBI": "http://identifiers.org/chebi/",
+        "CID": "http://identifiers.org/pubchem.compound/",
+        "SID": "http://identifiers.org/pubchem.substance/",
         "hits": {
             "@type": "@id",
             "@id": "term:has_annotation",
@@ -63,13 +65,6 @@
                                     "@id": "assoc:EquivalentAssociation",
                                     "@context": {
                                         "@base": "http://identifiers.org/rxcui/"
-                                    }
-                                },
-                                "chebi": {
-                                    "@type": "@id",
-                                    "@id": "assoc:EquivalentAssociation",
-                                    "@context": {
-                                        "@base": "http://identifiers.org/chebi/"
                                     }
                                 },
                                 "chembl_id": {
@@ -340,13 +335,6 @@
                                 "@base": "http://identifiers.org/kegg.compound/"
                             }
                         },
-                        "pubchem_database_links": {
-                            "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
-                            "@context": {
-                                "@base": "http://identifiers.org/pubchem.compound/"
-                            }
-                        },
                         "inchikey": {
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
@@ -476,13 +464,6 @@
                     "@type": "@id",
                     "@id": "term:has_annotation",
                     "@context": {
-                        "cid": {
-                            "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
-                            "@context": {
-                                "@base": "http://identifiers.org/pubchem.compound/"
-                            }
-                        },
                         "inchi_key": {
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
