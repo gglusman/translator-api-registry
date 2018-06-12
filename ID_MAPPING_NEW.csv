@@ -1,6 +1,6 @@
 URI,Recommended name,Description,Semantic Type
 http://identifiers.org/uberon/,uberon,uberon id,anatomy
-http://identifiers.org/mesh.anatomy/,mesh.anatomy,mesh anatomy id,anatomy
+http://biothings.io/explorer/vocab/terms/mesh.anatomy/,mesh.anatomy,mesh anatomy id,anatomy
 http://identifiers.org/cl/,cl,cell type ontology,anatomy
 http://biothings.io/explorer/vocab/terms/anatomy-description/,anatomyDescription,description of anatomy,anatomy
 http://biothings.io/explorer/vocab/terms/anatomy/,anatomy,anatomy name,anatomy
