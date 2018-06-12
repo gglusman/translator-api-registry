@@ -4,7 +4,7 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
-        "MESH": "http://identifiers.org/mesh.anatomy/",
+        "MESH": "http://biothings.io/explorer/vocab/terms/mesh.anatomy/",
         "label": {
             "@type": "@id",
             "@id": "assoc:EquivalentAssociation",
@@ -20,7 +20,7 @@
                     "@type": "@id",
                     "@id": "assoc:EquivalentAssociation",
                     "@context": {
-                        "@base": "http://identifiers.org/mesh.anatomy/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/mesh.anatomy/"
                     }
                 }
             }
