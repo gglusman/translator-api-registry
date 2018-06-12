@@ -43,7 +43,7 @@ paths:
             - path: description
               valueType: 'http://biothings.io/explorer/vocab/terms/anatomy-description/'
             - path: annotation.cross_database_reference
-              valueType: 'http://identifiers.org/mesh.anatomy/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/mesh.anatomy/'
           x-JSONLDContext:
             'ebi_ontology_lookup_service_api/jsonld_context/ols_term_anatomy.json'
   /ontologies/cl/terms/{clid}:
