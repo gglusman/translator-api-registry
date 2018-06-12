@@ -21,7 +21,7 @@
                         },
                         "drugName": {
                             "@type": "@id",
-                            "@id": "attr:id-secondary",
+                            "@id": "attr:secondary-id",
                             "@context": {
                                 "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                             }

@@ -21,7 +21,7 @@
                         },
                         "geneEntrezId": {
                             "@type": "@id",
-                            "@id": "attr:id-secondary",
+                            "@id": "attr:secondary-id",
                             "@context": {
                                 "@base": "http://identifiers.org/ncbigene/"
                             }
