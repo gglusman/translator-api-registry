@@ -1,6 +1,6 @@
 URI,NAME,CATEGORY
 http://biothings.io/explorer/vocab/attributes/id,id,object
-http://biothings.io/explorer/vocab/attributes/id-secondary,secondary-id,object
+http://biothings.io/explorer/vocab/attributes/secondary-id,secondary-id,object
 http://biothings.io/explorer/vocab/attributes/label,label,object
 http://biothings.io/explorer/vocab/attributes/taxonomy,taxonomy,object
 http://biothings.io/explorer/vocab/attributes/description,description,object
