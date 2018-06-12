@@ -20,7 +20,7 @@
                             }
                         },
                         "alias": {
-                            "@id": "attr:id-secondary",
+                            "@id": "attr:secondary-id",
                             "@type": "@id",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
