@@ -96,7 +96,7 @@
                                     "@context": {
                                         "term": {
                                             "@type": "@id",
-                                            "@id": "attr:id-secondary",
+                                            "@id": "attr:secondary-id",
                                             "@context": {
                                                 "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
                                             }
@@ -158,7 +158,7 @@
                                     "@context": {
                                         "term": {
                                             "@type": "@id",
-                                            "@id": "attr:id-secondary",
+                                            "@id": "attr:secondary-id",
                                             "@context": {
                                                 "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
                                             }
