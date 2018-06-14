@@ -20,6 +20,71 @@ tags:
   - name: query
   - name: translator
 paths:
+  /variant/{variantid}/disease:
+    get:
+      summary: 'Return disease and conditions associated with variant'
+      parameters:
+        - name: variantid
+          in: path
+          description: >-
+            Variant HGVS ID, dbSNP ID
+          required: true
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/hgvs/'
+            - 'http://identifiers.org/dbsnp/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/hgvs/'
+              template: /variant/{{input}}?fields=civic.evidence_items.disease,clinvar.rcv
+            - valueType: 'http://identifiers.org/dbsnp/'
+              template: /variant/{{input}}?fields=civic.evidence_items.disease,clinvar.rcv
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A disease object'
+          x-responseValueType:
+            - path: civic.evidence_items.disease.doid
+              valueType: 'http://identifiers.org/doid/'
+            - path: civic.evidence_items.disease.name
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+            - path: clinvar.rcv.conditions.identifiers.medgen
+              valueType: 'http://identifiers.org/medgen/'
+            - path: clinvar.rcv.conditions.identifiers.omim
+              valueType: 'http://identifiers.org/omim.disease/'
+            - path: clinvar.rcv.conditions.identifiers.orphanet
+              valueType: 'http://identifiers.org/orphanet/'
+          x-JSONLDContext:
+            'myvariant.info/jsonld_context/myvariant_variant_disease.json'
+  /variant/{variantid}/chemical:
+    get:
+      summary: 'Return chemical and drugs associated with variant'
+      parameters:
+        - name: variantid
+          in: path
+          description: >-
+            Variant HGVS ID, dbSNP ID
+          required: true
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/hgvs/'
+            - 'http://identifiers.org/dbsnp/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/hgvs/'
+              template: /variant/{{input}}?fields=civic.evidence_items.drugs
+            - valueType: 'http://identifiers.org/dbsnp/'
+              template: /variant/{{input}}?fields=civic.evidence_items.drugs
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A chemical object'
+          x-responseValueType:
+            - path: civic.evidence_items.drugs.name
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+            - path: civic.evidence_items.drugs.pubchem_id
+              valueType: 'http://identifiers.org/pubchem.compound/'
+          x-JSONLDContext:
+            'myvariant.info/jsonld_context/myvariant_variant_chemical.json'
+  
   /query:
     get:
       summary: 'Make variant query and return matching variant hits'

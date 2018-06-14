@@ -34,7 +34,7 @@ http://identifiers.org/snomedct/,snomed,snomed,disease
 http://identifiers.org/umls.disease/,umls,umls,disease
 http://identifiers.org/omim.disease/,omim.disease,omim disease id,disease
 http://identifiers.org/mondo/,mondo,mondo disease id,disease
-http://identifiers.org/doid/,do,disease ontology id,disease
+http://identifiers.org/doid/,doid,disease ontology id,disease
 http://identifiers.org/hgnc/,hgnc,records in the HGNC symbol database,gene
 http://identifiers.org/hgnc.symbol/,hgnc.symbol,HGNC symbol,gene
 http://identifiers.org/ncbigene/,ncbigene,ncbi gene id,gene

@@ -41,6 +41,13 @@
                                     "@context": {
                                       "@base": "http://identifiers.org/taxonomy/"
                                     }
+                                },
+                                "label": {
+                                    "@type": "@id",
+                                    "@id": "attr:taxonomy",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/taxonomyname/"
+                                    }
                                 }
                             }
                         }

@@ -14,6 +14,10 @@ APIs:
     translator:
         - returnjson: true
           notes: ""
+  - metadata: mydisease.info/openapi.yml
+    translator:
+        - returnjson: true
+          notes: ""
   - metadata: dgidb/openapi_object.yml
     translator:
         - returnjson: true

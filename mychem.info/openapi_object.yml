@@ -22,7 +22,31 @@ tags:
 - name: query
 - name: translator
 paths:
-  /query:
+  /querybydrugtarget:
+    get:
+      summary: 'Query for chemicals which interacts with proteins'
+      parameters:
+        - name: uniprotid
+          in: path
+          description: >-
+            Query string.
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/uniprot/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uniprot/'
+              template: /query?q=drugbank.targets.uniprot:{uniprotid} OR drugcentral.bioactivity.uniprot_id:{uniprotid} OR pharmgkb.cross_references.uniprotkb:{uniprotid} & fields=_id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: _id
+              valueType: 'http://identifiers.org/inchikey/'
+          x-JSONLDContext:
+            'mychem.info/jsonld_context/mychem_querybydrugtarget.json'
+  /querybydrugid:
     get:
       summary: 'Make chemical query and return matching chemical hits'
       parameters:
@@ -41,9 +65,7 @@ paths:
             - 'http://identifiers.org/kegg.compound/'
             - 'http://identifiers.org/pubchem.compound/'
             - 'http://identifiers.org/unii/'
-            - 'http://identifiers.org/inchikey/'
             - 'http://identifiers.org/inchi/'
-            - 'http://identifiers.org/uniprot/'
             - 'http://biothings.io/explorer/vocab/terms/drug-name/'
             - 'http://identifiers.org/snomedct/'
             - 'http://identifiers.org/pharmgkb.drug/'
@@ -70,8 +92,6 @@ paths:
               template: aeolus.inchikey:input_value OR chebi.inchikey:input_value OR chembl.inchi_key:input_value OR drugbank.inchi_key:input_value OR drugcentral.structures.inchikey:input_value OR ginas.inchikey:input_value OR pubchem.inchi_key:input_value OR unii.inchikey:input_value
             - valueType: 'http://identifiers.org/inchi/'
               template: pubchem.inchi:input_value OR pharmgkb.inchi:input_value OR drugcentral.structures.inchi:input_value OR drugbank.inchi:input_value OR chembl.inchi:input_value OR chebi.inchi:input_value
-            - valueType: 'http://identifiers.org/uniprot/'
-              template: drugbank.enzymes.uniprot:input_value OR drugbank.pathways.enzymes.uniprot-id:input_value OR drugbank.pharmacology.snp_adverse_drug_reactions.reaction.uniprot-id:input_value OR drugbank.pharmacology.snp_effects.effect.uniprot-id:input_value OR drugbank.targets.uniprot:input_value OR drugbank.transporters.uniprot:input_value OR drugcentral.bioactivity.uniprot_id:input_value OR pharmgkb.cross_references.uniprotkb:input_value
             - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
               template: aeolus.drug_name:input_value OR chebi.chebi_name:input_value OR chembl.pref_name:input_value OR drugbank.name:input_value & fields=drugcentral, chebi, drugbank
             - valueType: 'http://identifiers.org/pharmgkb.drug/'

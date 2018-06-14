@@ -1,0 +1,60 @@
+openapi: '3.0.0'
+info:
+  version: '1.0'
+  title: MyDisease.info API
+  description: >-
+    Documentation of the MyDisease.info Disease Query web services. Learn more about
+    [MyDisease.info](http://mydisease.info/)
+  termsOfService: http://mydisease.info/terms/
+  contact:
+    name: Chunlei Wu
+    x-role: responsible developer
+    email: help@mydisease.info
+    x-id:
+      - 'http://orcid.org/0000-0002-2629-6124'
+      - 'https://github.com/newgene'
+servers:
+  - url: 'http://mydisease.info/v1'
+    description: 'Production server'
+tags:
+  - name: disease
+  - name: annotation
+  - name: query
+  - name: translator
+paths:
+  '/disease/{mondoid}':
+    get:
+      summary: Retrieve disease objects based on mondo ID
+      parameters:
+        - name: mondoid
+          in: path
+          description: >-
+            MONDO ID
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/mondo/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/mondo/'
+              template: /disease/MONDO:{mondoid}
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A matching disease object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
+          x-responseValueType:
+            - path: mondo.label
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+            - path: mondo.definition
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-description/'
+            - path: mondo.xrefs.doid
+              valueType: 'http://identifiers.org/doid/'
+            - path: mondo.xrefs.omim
+              valueType: 'http://identifiers.org/omim.disease/'
+            - path: mondo.xrefs.umls
+              valueType: 'http://identifiers.org/umls.disease/'
+          x-JSONLDContext:
+            'mydisease.info/jsonld_context/mydisease_disease_annotation.json'
