@@ -132,7 +132,7 @@ paths:
             - path: hits.symbol
               valueType: 'http://identifiers.org/hgnc.symbol/'
           x-JSONLDContext:
-            'mygene.info/jsonld_context/mygene_query_object.json'
+            'mygene.info/jsonld_context/mygene_query_pathway.json'
   '/gene/{geneid}':
     get:
       summary: 'For a given gene id, return the matching gene object'
