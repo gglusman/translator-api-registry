@@ -145,6 +145,7 @@ paths:
             - 'http://identifiers.org/omim.disease/'
             - 'http://identifiers.org/doid/'
             - 'http://identifiers.org/orphanet/'
+            - 'http://identifiers.org/mondo/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/omim.disease/'
               template: /bioentity/disease/OMIM:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
@@ -152,6 +153,8 @@ paths:
               template: /bioentity/disease/Orphanet:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/doid/'
               template: /bioentity/disease/DOID:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
+            - valueType: 'http://identifiers.org/mondo/'
+              template: /bioentity/disease/MONDO:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
       responses:
         '200':
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
