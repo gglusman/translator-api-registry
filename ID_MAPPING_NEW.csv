@@ -26,6 +26,7 @@ http://identifiers.org/inchi/,inchi,inchi,chemical
 http://identifiers.org/pharmgkb.drug/,pharmgkb.drug,pharmgkb drug id,chemical
 http://identifiers.org/snomedct/,snomedct,snomedct,disease
 http://biothings.io/explorer/vocab/terms/disease-name/,diseasename,disease name,disease
+http://identifiers.org/orphanet/,orphanet,orphanet disease id,disease
 http://biothings.io/explorer/vocab/terms/disease-description/,diseaseDescription,disease description,disease
 http://identifiers.org/mesh.disease/,mesh.disease,mesh diesease id,disease
 http://identifiers.org/ncit/,nci,nci,disease
