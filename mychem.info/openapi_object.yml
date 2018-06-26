@@ -46,6 +46,30 @@ paths:
               valueType: 'http://identifiers.org/inchikey/'
           x-JSONLDContext:
             'mychem.info/jsonld_context/mychem_querybydrugtarget.json'
+  /querybydiseaseid:
+    get:
+      summary: 'Query disease to chemical'
+      parameters:
+        - name: diseaseid
+          in: path
+          description: >-
+            Query string. Examples "Fludara", "CHEMBI:63599", "DB01073".
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/snomedct/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/snomedct/'
+              template: /query?q=drugcentral.drug_use.snomed_id:{diseaseid}&fields=_id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: _id
+              valueType: 'http://identifiers.org/inchikey/'
+          x-JSONLDContext:
+            'mychem.info/jsonld_context/mychem_query_disease2chemical.json'
   /querybydrugid:
     get:
       summary: 'Make chemical query and return matching chemical hits'
@@ -67,7 +91,6 @@ paths:
             - 'http://identifiers.org/unii/'
             - 'http://identifiers.org/inchi/'
             - 'http://biothings.io/explorer/vocab/terms/drug-name/'
-            - 'http://identifiers.org/snomedct/'
             - 'http://identifiers.org/pharmgkb.drug/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/rxcui/'
@@ -96,8 +119,6 @@ paths:
               template: aeolus.drug_name:input_value OR chebi.chebi_name:input_value OR chembl.pref_name:input_value OR drugbank.name:input_value & fields=drugcentral, chebi, drugbank
             - valueType: 'http://identifiers.org/pharmgkb.drug/'
               template: pharmgkb.pharmgkb_accession_id:input_value
-            - valueType: 'http://identifiers.org/snomedct/'
-              template: drugcentral.drug_use.snomed_id:input_value
           schema:
             type: string
       responses:
