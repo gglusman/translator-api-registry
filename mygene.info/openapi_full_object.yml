@@ -133,6 +133,34 @@ paths:
               valueType: 'http://identifiers.org/hgnc.symbol/'
           x-JSONLDContext:
             'mygene.info/jsonld_context/mygene_query_pathway.json'
+  /querygo:
+    get:
+      summary: 'Make gene query and return matching gene hits'
+      parameters:
+        - name: goid
+          in: path
+          description: >-
+            Query string. Examples "CDK2", "NM_052827", "204639_at". The
+            detailed query syntax can be found at
+            http://docs.mygene.info/en/latest/doc/query_service.html
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/go/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/go/'
+              template: /query?q=GO:{goid}&size=500
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: hits.entrezgene
+              valueType: 'http://identifiers.org/ncbigene/'
+            - path: hits.symbol
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+          x-JSONLDContext:
+            'mygene.info/jsonld_context/mygene_query_pathway.json'
   '/gene/{geneid}':
     get:
       summary: 'For a given gene id, return the matching gene object'

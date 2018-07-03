@@ -199,6 +199,13 @@
                             "@context": {
                                 "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
                             }
+                        },
+                        "gocategory": {
+                            "@type": "@id",
+                            "@id": "rel:category",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-category/"
+                            }
                         }
                     }
                 }
