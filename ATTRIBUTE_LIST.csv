@@ -11,3 +11,4 @@ http://biothings.io/explorer/vocab/relationships/evidence,evidence,edge
 http://biothings.io/explorer/vocab/relationships/provided_by,provided_by,edge
 http://biothings.io/explorer/vocab/relationships/probability,probability,edge
 http://biothings.io/explorer/vocab/relationships/pvalue,pvalue,edge
+http://biothings.io/explorer/vocab/relationships/category,category,edge
