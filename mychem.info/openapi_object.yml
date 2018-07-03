@@ -98,7 +98,7 @@ paths:
             - valueType: 'http://identifiers.org/chebi/'
               template: drugcentral.xref.chebi:input_value OR chebi.chebi_id:input_value
             - valueType: 'http://identifiers.org/chembl.compound/'
-              template: /query?q=chembl.molecule_chembl_id:{drugid} OR drugbank.chembl:{drugid} OR drugcentral.xref.chembl_id:{drugid}&fields=drugcentral,drugbank
+              template: /query?q=chembl.molecule_chembl_id:{drugid} OR drugbank.chembl:{drugid} OR drugcentral.xref.chembl_id:{drugid}&fields=drugcentral,drugbank,chembl
             - valueType: 'http://identifiers.org/drugbank/'
               template: /query?q=drugcentral.xref.drugbank_id:{drugid} OR pharmgkb.cross_references.drugbank:{drugid} OR drugbank.drugbank_id:{drugid} OR chebi.drugbank_database_links:{drugid}
             - valueType: 'http://identifiers.org/iuphar.ligand/'
