@@ -96,7 +96,7 @@ paths:
             - path: hits.disgenet.genes_related_to_disease.gene_name
               valueType: 'http://identifiers.org/hgnc.symbol/'
           x-JSONLDContext:
-            'MyDisease.info/jsonld_context/mydisease_disease2gene.json'
+            'mydisease.info/jsonld_context/mydisease_disease2gene.json'
   '/querydiseasetovariant':
     get:
       summary: Retrieve variants related to disease
@@ -133,7 +133,7 @@ paths:
             - path: hits.disgenet.variants_related_to_disease.rsid
               valueType: 'http://identifiers.org/dbsnp/'
           x-JSONLDContext:
-            'MyDisease.info/jsonld_context/mydisease_disease2variant.json'
+            'mydisease.info/jsonld_context/mydisease_disease2variant.json'
   '/querydiseasetophenotype':
     get:
       summary: Retrieve phenotypes related to disease
@@ -173,7 +173,7 @@ paths:
             - path: hits.hpo.phenotypes_related_to_disease.rsid
               valueType: 'http://identifiers.org/hp/'
           x-JSONLDContext:
-            'MyDisease.info/jsonld_context/mydisease_disease2phenotype.json'
+            'mydisease.info/jsonld_context/mydisease_disease2phenotype.json'
   '/queryphenotypetodisease':
     get:
       summary: Retrieve diseases related to phenotype
@@ -203,4 +203,4 @@ paths:
             - path: hits.mondo.xrefs.omim
               valueType: 'http://identifiers.org/omim.disease/'
           x-JSONLDContext:
-            'MyDisease.info/jsonld_context/mydisease_phenotype2disease.json'
+            'mydisease.info/jsonld_context/mydisease_phenotype2disease.json'
