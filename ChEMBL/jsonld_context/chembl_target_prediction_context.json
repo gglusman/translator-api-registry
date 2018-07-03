@@ -35,7 +35,6 @@
                     "@context": {
                         "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-interaction-probability/"
                     }
-
                 }
             }
         }
