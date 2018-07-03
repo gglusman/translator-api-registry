@@ -142,27 +142,33 @@
                 },
                 "drug_use": {
                     "@type": "@id",
-                    "@id": "assoc:ChemicalToDiseaseOrPhenotypicFeatureAssociation",
+                    "@id": "term:has_annotation",
                     "@context": {
-                        "snomed_id": {
+                        "indication": {
                             "@type": "@id",
-                            "@id": "attr:id",
+                            "@id": "assoc:treats",
                             "@context": {
-                                "@base": "http://identifiers.org/snomedct/"
-                            }
-                        },
-                        "snomed_name": {
-                            "@type": "@id",
-                            "@id": "attr:label",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
-                            }
-                        },
-                        "relation": {
-                            "@type": "@id",
-                            "@id": "rel:label",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/drug-disease-relation/"
+                                "concept_name": {
+                                    "@type": "@id",
+                                    "@id": "attr:label",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                                    }
+                                },
+                                "snomed_concept_id": {
+                                    "@type": "@id",
+                                    "@id": "attr:secondary-id",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/snomedct/"
+                                    }
+                                },
+                                "umls_cui": {
+                                    "@type": "@id",
+                                    "@id": "attr:id",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/umls.disease/"
+                                    }
+                                }
                             }
                         }
                     }

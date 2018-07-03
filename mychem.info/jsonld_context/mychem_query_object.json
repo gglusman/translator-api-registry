@@ -18,40 +18,6 @@
                         "@base": "http://identifiers.org/inchikey/"
                     }
                 },
-                "aeolus": {
-                    "@type": "@id",
-                    "@id": "term:has_annotation",
-                    "@context": {
-                        "unii": {
-                            "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
-                            "@context": {
-                                "@base": "http://identifiers.org/unii/"
-                            }
-                        },
-                        "inchikey": {
-                            "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
-                            "@context": {
-                                "@base": "http://identifiers.org/inchikey/"
-                            }
-                        },
-                        "drug_name": {
-                            "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
-                            }
-                        },
-                        "rxcui": {
-                            "@type": "@id",
-                            "@id": "assoc:EquivalentAssociation",
-                            "@context": {
-                                "@base": "http://identifiers.org/rxcui/"
-                            }
-                        }
-                    }
-                },
                 "drugcentral": {
                     "@type": "@id",
                     "@id": "term:has_annotation",
@@ -155,6 +121,92 @@
                                     "@id": "assoc:EquivalentAssociation",
                                     "@context": {
                                         "@base": "http://identifiers.org/inchikey/"
+                                    }
+                                }
+                            }
+                        },
+                        "drug_use": {
+                            "@type": "@id",
+                            "@id": "term:has_annotation",
+                            "@context": {
+                                "indication": {
+                                    "@type": "@id",
+                                    "@id": "assoc:treats",
+                                    "@context": {
+                                        "concept_name": {
+                                            "@type": "@id",
+                                            "@id": "attr:label",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                                            }
+                                        },
+                                        "snomed_concept_id": {
+                                            "@type": "@id",
+                                            "@id": "attr:secondary-id",
+                                            "@context": {
+                                                "@base": "http://identifiers.org/snomedct/"
+                                            }
+                                        },
+                                        "umls_cui": {
+                                            "@type": "@id",
+                                            "@id": "attr:id",
+                                            "@context": {
+                                                "@base": "http://identifiers.org/umls.disease/"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "fda_adverse_event": {
+                            "@type": "@id",
+                            "@id": "assoc:causes",
+                            "@context": {
+                                "meddra_code": {
+                                    "@type": "@id",
+                                    "@id": "attr:id",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/meddra/"
+                                    }
+                                },
+                                "meddra_term": {
+                                    "@type": "@id",
+                                    "@id": "attr:label",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                                    }
+                                },
+                                "llr": {
+                                    "@type": "@id",
+                                    "@id": "rel:probability",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/drug-disease-interaction-probability/"
+                                    }
+                                }
+                            }
+                        },
+                        "pharmacology_class": {
+                            "@type": "@id",
+                            "@id": "term:has_annotation",
+                            "@context": {
+                                "fda_epc": {
+                                    "@type": "@id",
+                                    "@id": "assoc:subclass_of",
+                                    "@context": {
+                                        "code": {
+                                            "@type": "@id",
+                                            "@id": "attr:id",
+                                            "@context": {
+                                                "@base": "http://identifiers.org/ndfrt/"
+                                            }
+                                        },
+                                        "description": {
+                                            "@type": "@id",
+                                            "@id": "attr:label",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/epc-description/"
+                                            }
+                                        } 
                                     }
                                 }
                             }
@@ -355,6 +407,13 @@
                     "@type": "@id",
                     "@id": "term:has_annotation",
                     "@context": {
+                        "max_phase": {
+                            "@type": "@id",
+                            "@id": "assoc:in_phase",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-phase/"
+                            }
+                        },
                         "molecule_chembl_id": {
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",

@@ -74,8 +74,8 @@ paths:
     get:
       summary: 'Make chemical query and return matching chemical hits'
       parameters:
-        - name: q
-          in: query
+        - name: drugid
+          in: path
           description: >-
             Query string. Examples "Fludara", "CHEMBI:63599", "DB01073".
           required: true
@@ -98,9 +98,9 @@ paths:
             - valueType: 'http://identifiers.org/chebi/'
               template: drugcentral.xref.chebi:input_value OR chebi.chebi_id:input_value
             - valueType: 'http://identifiers.org/chembl.compound/'
-              template: chembl.molecule_chembl_id:input_value OR drugbank.chembl:input_value OR drugcentral.xref.chembl_id:input_value
+              template: /query?q=chembl.molecule_chembl_id:{drugid} OR drugbank.chembl:{drugid} OR drugcentral.xref.chembl_id:{drugid}&fields=drugcentral,drugbank
             - valueType: 'http://identifiers.org/drugbank/'
-              template: drugcentral.xref.drugbank_id:input_value OR pharmgkb.cross_references.drugbank:input_value OR drugbank.drugbank_id:input_value OR chebi.drugbank_database_links:input_value
+              template: /query?q=drugcentral.xref.drugbank_id:{drugid} OR pharmgkb.cross_references.drugbank:{drugid} OR drugbank.drugbank_id:{drugid} OR chebi.drugbank_database_links:{drugid}
             - valueType: 'http://identifiers.org/iuphar.ligand/'
               template: drugcentral.xref.iuphar_ligand_id:input_value OR pharmgkb.cross_references.iuphar_ligand:input_value
             - valueType: 'http://identifiers.org/kegg.drug/'
@@ -143,6 +143,18 @@ paths:
               valueType: 'http://identifiers.org/mesh.compound/'
             - path: chebi.definition
               valueType: 'http://biothings.io/explorer/vocab/terms/chemical-description/'
+            - path: drugcentral.drug_use.indication.snomed_id
+              valueType: 'http://identifiers.org/snomedct/'
+            - path: drugcentral.drug_use.indication.umls_cui
+              valueType: 'http://identifiers.org/umls.disease/'
+            - path: drugcentral.drug_use.indication.concept_name
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+            - path: drugcental.fda_adverse_event.meddra_code
+              valueType: 'http://identifiers.org/meddra/'
+            - path: drugcentral.pharmacology_class.fda_epc.code
+              valueType: 'http://identifiers.org/ndfrt/'
+            - path: chembl.max_phase
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-phase/'
           x-JSONLDContext:
             'mychem.info/jsonld_context/mychem_query_object.json'
   '/drug/{drugid}':
@@ -202,12 +214,14 @@ paths:
               valueType: 'http://identifiers.org/kegg.drug/'
             - path: chebi.kegg_compound_database_links
               valueType: 'http://identifiers.org/kegg.compound/'
-            - path: drugcentral.drug_use.snomed_id
+            - path: drugcentral.drug_use.indication.snomed_id
               valueType: 'http://identifiers.org/snomedct/'
+            - path: drugcentral.drug_use.indication.umls_cui
+              valueType: 'http://identifiers.org/umls.disease/'
             - path: drugcentral.xref.iuphar_ligand_id
               valueType: 'http://identifiers.org/iuphar.ligand/'
-            - path: drugcentral.drug_use.snomed_name
-              valueType: 'http://biothings.io/concepts/disease_name/'
+            - path: drugcentral.drug_use.indication.concept_name
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
             - path: pharmgkb.pharmgkb_accession_id
               valueType: 'http://identifiers.org/pharmgkb.drug/'
             - path: drugcentral.xref.pubchem_cid
