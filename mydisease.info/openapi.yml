@@ -58,3 +58,149 @@ paths:
               valueType: 'http://identifiers.org/umls.disease/'
           x-JSONLDContext:
             'mydisease.info/jsonld_context/mydisease_disease_annotation.json'
+  '/querydiseasetogene':
+    get:
+      summary: Retrieve genes related to disease
+      parameters:
+        - name: diseaseid
+          in: path
+          description: >-
+            disease ID, e.g. UMLS ID
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/umls.disease/'
+            - 'http://identifiers.org/mondo/'
+            - 'http://identifiers.org/doid/'
+            - 'http://identifiers.org/omim.disease/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/umls.disease/'
+              template: /query?q=disgenet.xrefs.umls:{diseaseid}&fields=disgenet.genes_related_to_disease
+            - valueType: 'http://identifiers.org/mondo/'
+              template: /query?q=_id:"MONDO:{diseaseid}"&fields=disgenet.genes_related_to_disease
+            - valueType: 'http://identifiers.org/doid/'
+              template: /query?q=mondo.xrefs.doid:"DOID:{diseaseid}"&fields=disgenet.genes_related_to_disease
+            - valueType: 'http://identifiers.org/omim.disease/'
+              template: /query?q=mondo.xrefs.omim:{diseaseid}&fields=disgenet.genes_related_to_disease
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A matching gene object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
+          x-responseValueType:
+            - path: hits.disgenet.genes_related_to_disease.gene_id
+              valueType: 'http://identifiers.org/ncbigene/'
+            - path: hits.disgenet.genes_related_to_disease.gene_name
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+          x-JSONLDContext:
+            'MyDisease.info/jsonld_context/mydisease_disease2gene.json'
+  '/querydiseasetovariant':
+    get:
+      summary: Retrieve variants related to disease
+      parameters:
+        - name: diseaseid
+          in: path
+          description: >-
+            disease ID, e.g. UMLS ID
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/umls.disease/'
+            - 'http://identifiers.org/mondo/'
+            - 'http://identifiers.org/doid/'
+            - 'http://identifiers.org/omim.disease/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/umls.disease/'
+              template: /query?q=disgenet.xrefs.umls:{diseaseid}&fields=disgenet.variants_related_to_disease
+            - valueType: 'http://identifiers.org/mondo/'
+              template: /query?q=_id:"MONDO:{diseaseid}"&fields=disgenet.variants_related_to_disease
+            - valueType: 'http://identifiers.org/doid/'
+              template: /query?q=mondo.xrefs.doid:"DOID:{diseaseid}"&fields=disgenet.variants_related_to_disease
+            - valueType: 'http://identifiers.org/omim.disease/'
+              template: /query?q=mondo.xrefs.omim:{diseaseid}&fields=disgenet.variants_related_to_disease
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A matching gene object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
+          x-responseValueType:
+            - path: hits.disgenet.variants_related_to_disease.rsid
+              valueType: 'http://identifiers.org/dbsnp/'
+          x-JSONLDContext:
+            'MyDisease.info/jsonld_context/mydisease_disease2variant.json'
+  '/querydiseasetophenotype':
+    get:
+      summary: Retrieve phenotypes related to disease
+      parameters:
+        - name: diseaseid
+          in: path
+          description: >-
+            disease ID, e.g. UMLS ID
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/umls.disease/'
+            - 'http://identifiers.org/mondo/'
+            - 'http://identifiers.org/doid/'
+            - 'http://identifiers.org/omim.disease/'
+            - 'http://identifiers.org/orphanet/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/umls.disease/'
+              template: /query?q=mondo.xrefs.umls:{diseaseid}&fields=hpo.phenotype_related_to_disease
+            - valueType: 'http://identifiers.org/mondo/'
+              template: /query?q=_id:"MONDO:{diseaseid}"&fields=hpo.phenotype_related_to_disease
+            - valueType: 'http://identifiers.org/doid/'
+              template: /query?q=mondo.xrefs.doid:"DOID:{diseaseid}"&fields=hpo.phenotype_related_to_disease
+            - valueType: 'http://identifiers.org/omim.disease/'
+              template: /query?q=mondo.xrefs.omim:{diseaseid}&fields=hpo.phenotype_related_to_disease
+            - valueType: 'http://identifiers.org/orphanet/'
+              template: /query?q=mondo.xrefs.orphanet:{diseaseid}&fields=hpo.phenotype_related_to_disease  
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A matching gene object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
+          x-responseValueType:
+            - path: hits.hpo.phenotypes_related_to_disease.rsid
+              valueType: 'http://identifiers.org/hp/'
+          x-JSONLDContext:
+            'MyDisease.info/jsonld_context/mydisease_disease2phenotype.json'
+  '/queryphenotypetodisease':
+    get:
+      summary: Retrieve diseases related to phenotype
+      parameters:
+        - name: phenotypeid
+          in: path
+          description: >-
+            phenotype ID, e.g. HPO ID
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/hp/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/hp/'
+              template: /query?q=hpo.phenotype_related_to_disease.hpo_id:"HP:{phenotypeid}"&fields=_id,mondo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A matching disease object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
+          x-responseValueType:
+            - path: hits.mondo.xrefs.doid
+              valueType: 'http://identifiers.org/doid/'
+            - path: hits.mondo.xrefs.omim
+              valueType: 'http://identifiers.org/omim.disease/'
+          x-JSONLDContext:
+            'MyDisease.info/jsonld_context/mydisease_phenotype2disease.json'
