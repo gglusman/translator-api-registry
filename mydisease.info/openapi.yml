@@ -204,3 +204,36 @@ paths:
               valueType: 'http://identifiers.org/omim.disease/'
           x-JSONLDContext:
             'mydisease.info/jsonld_context/mydisease_phenotype2disease.json'
+  '/querygenetodisease':
+    get:
+      summary: Retrieve diseases related to phenotype
+      parameters:
+        - name: geneid
+          in: path
+          description: >-
+            gene ID, e.g. ncbigene id
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/ncbigene/'
+            - 'http://identifiers.org/hgnc.symbol/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/ncbigene/'
+              template: /query?q=disgenet.genes_related_to_disease.gene_id:{geneid}&fields=_id,mondo
+            - valueType: 'http://identifiers.org/hgnc.symbol/'
+              template: /query?q=disgenet.genes_related_to_disease.gene_name:{geneid}&fields=_id,mondo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A matching disease object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chem'
+          x-responseValueType:
+            - path: hits.mondo.xrefs.doid
+              valueType: 'http://identifiers.org/doid/'
+            - path: hits.mondo.xrefs.omim
+              valueType: 'http://identifiers.org/omim.disease/'
+          x-JSONLDContext:
+            'mydisease.info/jsonld_context/mydisease_gene2disease.json'
