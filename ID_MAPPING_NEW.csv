@@ -2,12 +2,12 @@ URI,Recommended name,Description,Semantic Type
 http://identifiers.org/uberon/,uberon,uberon id,anatomy
 http://biothings.io/explorer/vocab/terms/mesh.anatomy/,mesh.anatomy,mesh anatomy id,anatomy
 http://identifiers.org/cl/,cl,cell type ontology,anatomy
-http://biothings.io/explorer/vocab/terms/anatomy-description/,anatomyDescription,description of anatomy,anatomy
+http://biothings.io/explorer/vocab/terms/anatomy-description/,anatomydescription,description of anatomy,anatomy
 http://biothings.io/explorer/vocab/terms/anatomy/,anatomy,anatomy name,anatomy
 http://identifiers.org/pubchem.bioassay/,pubchem.bioassay,pubchem bioassay id,bioassay
 http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
 http://biothings.io/explorer/vocab/terms/drug-name/,drugname,name of a drug,chemical
-http://biothings.io/explorer/vocab/terms/chemical-description/,chemicalDescription,description of a drug,chemical
+http://biothings.io/explorer/vocab/terms/chemical-description/,chemicaldescription,description of a drug,chemical
 http://identifiers.org/inchikey/,inchikey,inchikey,chemical
 http://identifiers.org/pharos.ligand/,pharos.ligand,pharos ligand id,chemical
 http://identifiers.org/rxcui/,rxcui,rxcui,chemical
@@ -25,13 +25,13 @@ http://identifiers.org/unii/,unii,unii id,chemical
 http://identifiers.org/inchi/,inchi,inchi,chemical
 http://identifiers.org/pharmgkb.drug/,pharmgkb.drug,pharmgkb drug id,chemical
 http://identifiers.org/ndfrt/,ndfrt,establish pharmacological class,chemical
-http://biothings.io/explorer/vocab/terms/epc-description/,epc description,description for established pharmacological class,chemical
-http://biothings.io/explorer/vocab/terms/drug-phase/,drugPhase,drug phase,chemical
+http://biothings.io/explorer/vocab/terms/epc-description/,epcdescription,description for established pharmacological class,chemical
+http://biothings.io/explorer/vocab/terms/drug-phase/,drugphase,drug phase,chemical
 http://identifiers.org/snomedct/,snomedct,snomedct,disease
 http://biothings.io/explorer/vocab/terms/disease-name/,diseasename,disease name,disease
 http://identifiers.org/meddra/,meddra,MedDRA,disease
 http://identifiers.org/orphanet/,orphanet,orphanet disease id,disease
-http://biothings.io/explorer/vocab/terms/disease-description/,diseaseDescription,disease description,disease
+http://biothings.io/explorer/vocab/terms/disease-description/,diseasedescription,disease description,disease
 http://identifiers.org/mesh.disease/,mesh.disease,mesh diesease id,disease
 http://identifiers.org/ncit/,nci,nci,disease
 http://identifiers.org/pharos.disease/,pharos.disease,pharos disease id,disease
@@ -63,20 +63,20 @@ http://identifiers.org/reactome.complex/,reactome.complex,reacomte complex id,ge
 http://identifiers.org/ro/,ro,consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies,ontology
 http://identifiers.org/go/,go,gene ontology id,ontology
 http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term label,ontology
-http://biothings.io/explorer/vocab/terms/go-description/,goDescription,description for go term,ontology
+http://biothings.io/explorer/vocab/terms/go-description/,godescription,description for go term,ontology
 http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,go evidence code,ontology
 http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
 http://biothings.io/explorer/vocab/terms/taxonomyname/,taxonomyname,taxonomy label,taxonomy
 http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
 http://identifiers.org/reactome.displayname/,reactome.displayname,reacomte displayname id,pathway
-http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysName,description for pathway,pathway
+http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysname,description for pathway,pathway
 http://identifiers.org/biocarta.pathway/,biocarta.pathway,biocarta pathway id,pathway
 http://identifiers.org/kegg.pathway/,kegg.pathway,kegg pathway id,pathway
 http://identifiers.org/wikipathways/,wikipathways,wikipathways id,pathway
 http://identifiers.org/hp/,hp,Human Phenotype Ontology,phenotype
-http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypeName,name of phenotype,phenotype
+http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypename,name of phenotype,phenotype
 http://biothings.io/explorer/vocab/terms/phenotype-evidence/,phenotype-evidence,phenotype evidence,phenotype
-http://biothings.io/explorer/vocab/terms/phenotype-description/,phenotypeDescription,description of phenotype,phenotype
+http://biothings.io/explorer/vocab/terms/phenotype-description/,phenotypedescription,description of phenotype,phenotype
 http://identifiers.org/ensembl.protein/,ensembl.protein,ensembl protein id,gene
 http://identifiers.org/uniprot/,uniprot,uniprot id,gene
 http://identifiers.org/pdb/,pdb,protein database id,gene
