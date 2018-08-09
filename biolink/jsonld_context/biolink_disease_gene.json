@@ -13,7 +13,7 @@
             "@type": "@id",
             "@id": "assoc:DiseaseToGeneOrGeneProductAssociation",
             "@context": {
-                "subject": {
+                "object": {
                     "@type": "@id",
                     "@id": "http://biothings.io/pass/",
                     "@context": {
