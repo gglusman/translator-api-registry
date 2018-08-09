@@ -25,8 +25,8 @@ http://identifiers.org/unii/,unii,unii id,chemical
 http://identifiers.org/inchi/,inchi,inchi,chemical
 http://identifiers.org/pharmgkb.drug/,pharmgkb.drug,pharmgkb drug id,chemical
 http://identifiers.org/ndfrt/,ndfrt,establish pharmacological class,chemical
-http://biothings.io/explorer/vocab/terms/epc-description/,epc description,description for established pharmacological class,chemical
-http://biothings.io/explorer/vocab/terms/drug-phase/,drugPhase,drug phase,chemical
+http://biothings.io/explorer/vocab/terms/epc-description/,epcdescription,description for established pharmacological class,chemical
+http://biothings.io/explorer/vocab/terms/drug-phase/,drugphase,drug phase,chemical
 http://identifiers.org/snomedct/,snomedct,snomedct,disease
 http://biothings.io/explorer/vocab/terms/disease-name/,diseasename,disease name,disease
 http://identifiers.org/meddra/,meddra,MedDRA,disease
@@ -69,12 +69,12 @@ http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationship
 http://biothings.io/explorer/vocab/terms/taxonomyname/,taxonomyname,taxonomy label,taxonomy
 http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
 http://identifiers.org/reactome.displayname/,reactome.displayname,reacomte displayname id,pathway
-http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysName,description for pathway,pathway
+http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysname,description for pathway,pathway
 http://identifiers.org/biocarta.pathway/,biocarta.pathway,biocarta pathway id,pathway
 http://identifiers.org/kegg.pathway/,kegg.pathway,kegg pathway id,pathway
 http://identifiers.org/wikipathways/,wikipathways,wikipathways id,pathway
 http://identifiers.org/hp/,hp,Human Phenotype Ontology,phenotype
-http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypeName,name of phenotype,phenotype
+http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypename,name of phenotype,phenotype
 http://biothings.io/explorer/vocab/terms/phenotype-evidence/,phenotype-evidence,phenotype evidence,phenotype
 http://biothings.io/explorer/vocab/terms/phenotype-description/,phenotypedescription,description of phenotype,phenotype
 http://identifiers.org/ensembl.protein/,ensembl.protein,ensembl protein id,gene
