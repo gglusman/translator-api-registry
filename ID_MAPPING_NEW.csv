@@ -1,89 +1,175 @@
-URI,Recommended name,Description,Semantic Type
-http://identifiers.org/uberon/,uberon,uberon id,anatomy
-http://biothings.io/explorer/vocab/terms/mesh.anatomy/,mesh.anatomy,mesh anatomy id,anatomy
-http://identifiers.org/cl/,cl,cell type ontology,anatomy
-http://biothings.io/explorer/vocab/terms/anatomy-description/,anatomydescription,description of anatomy,anatomy
-http://biothings.io/explorer/vocab/terms/anatomy/,anatomy,anatomy name,anatomy
-http://identifiers.org/pubchem.bioassay/,pubchem.bioassay,pubchem bioassay id,bioassay
-http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
-http://biothings.io/explorer/vocab/terms/drug-name/,drugname,name of a drug,chemical
-http://biothings.io/explorer/vocab/terms/chemical-description/,chemicaldescription,description of a drug,chemical
-http://identifiers.org/inchikey/,inchikey,inchikey,chemical
-http://identifiers.org/pharos.ligand/,pharos.ligand,pharos ligand id,chemical
-http://identifiers.org/rxcui/,rxcui,rxcui,chemical
-http://identifiers.org/chebi/,chebi,chebi id,chemical
-http://identifiers.org/chembl.compound/,chembl.compound,chembl compound id,chemical
-http://identifiers.org/umls.compound/,umls.compound,umls compound id,chemical
-http://identifiers.org/mesh.compound/,mesh.compound,mesh compound id,chemical
-http://identifiers.org/drugbank/,drugbank,drugbank id,chemical
-http://identifiers.org/iuphar.ligand/,iuphar.ligand,iuphar ligand id,chemical
-http://identifiers.org/kegg.drug/,kegg.drug,kegg drug id,chemical
-http://identifiers.org/kegg.compound/,kegg.compound,kegg compound id,chemical
-http://identifiers.org/pubchem.compound/,pubchem.compound,pubchem compound id,chemical
-http://identifiers.org/pubchem.substance/,pubchem.substance,pubchem substance id,chemical
-http://identifiers.org/unii/,unii,unii id,chemical
-http://identifiers.org/inchi/,inchi,inchi,chemical
-http://identifiers.org/pharmgkb.drug/,pharmgkb.drug,pharmgkb drug id,chemical
-http://identifiers.org/ndfrt/,ndfrt,establish pharmacological class,chemical
-http://biothings.io/explorer/vocab/terms/epc-description/,epcdescription,description for established pharmacological class,chemical
-http://biothings.io/explorer/vocab/terms/drug-phase/,drugphase,drug phase,chemical
-http://identifiers.org/snomedct/,snomedct,snomedct,disease
-http://biothings.io/explorer/vocab/terms/disease-name/,diseasename,disease name,disease
-http://identifiers.org/meddra/,meddra,MedDRA,disease
-http://identifiers.org/orphanet/,orphanet,orphanet disease id,disease
-http://biothings.io/explorer/vocab/terms/disease-description/,diseasedescription,disease description,disease
-http://identifiers.org/mesh.disease/,mesh.disease,mesh diesease id,disease
-http://identifiers.org/ncit/,nci,nci,disease
-http://identifiers.org/pharos.disease/,pharos.disease,pharos disease id,disease
-http://identifiers.org/snomedct/,snomed,snomed,disease
-http://identifiers.org/umls.disease/,umls.disease,umls,disease
-http://identifiers.org/omim.disease/,omim.disease,omim disease id,disease
-http://identifiers.org/mondo/,mondo,mondo disease id,disease
-http://identifiers.org/doid/,doid,disease ontology id,disease
-http://identifiers.org/hgnc/,hgnc,records in the HGNC symbol database,gene
-http://identifiers.org/hgnc.symbol/,hgnc.symbol,HGNC symbol,gene
-http://identifiers.org/ncbigene/,ncbigene,ncbi gene id,gene
-http://identifiers.org/umls.gene/,umls.gene,umls gene id,gene
-http://biothings.io/explorer/vocab/terms/gene-approved-name/,gene-approved-name,gene approved name,gene
-http://biothings.io/explorer/vocab/terms/gene-description/,gene-description,description for gene,gene
-http://identifiers.org/ccds/,ccds,ccds id,gene
-http://identifiers.org/ena.embl/,ena,ena id,gene
-http://identifiers.org/ensembl.gene/,ensembl.gene,ensembl gene id,gene
-http://identifiers.org/mirbase/,mirbase,mirbase id,gene
-http://identifiers.org/mgi/,mgi,mgi id,gene
-http://identifiers.org/flybase/,flybase,flybase id,gene
-http://identifiers.org/xenbase/,xenbase,xenbase id,gene
-http://identifiers.org/omim.gene/,omim.gene,omim gene id,gene
-http://identifiers.org/refseq/,refseq,refseq id,gene
-http://identifiers.org/rgd/,rgd,rgd id,gene
-http://identifiers.org/sgd/,sgd,sgd id,gene
-http://identifiers.org/zfin/,zfin,zfin id,gene
-http://identifiers.org/pharos.target/,pharos.target,pharos target id,gene
-http://identifiers.org/reactome.complex/,reactome.complex,reacomte complex id,gene
-http://identifiers.org/ro/,ro,consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies,ontology
-http://identifiers.org/go/,go,gene ontology id,ontology
-http://biothings.io/explorer/vocab/terms/go-term/,go-term,go term label,ontology
-http://biothings.io/explorer/vocab/terms/go-description/,godescription,description for go term,ontology
-http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,go evidence code,ontology
-http://identifiers.org/taxonomy/,taxonomy,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined,organism
-http://biothings.io/explorer/vocab/terms/taxonomyname/,taxonomyname,taxonomy label,taxonomy
-http://identifiers.org/reactome.pathway/,reactome.pathway,reacomte pathway id,pathway
-http://identifiers.org/reactome.displayname/,reactome.displayname,reacomte displayname id,pathway
-http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysname,description for pathway,pathway
-http://identifiers.org/biocarta.pathway/,biocarta.pathway,biocarta pathway id,pathway
-http://identifiers.org/kegg.pathway/,kegg.pathway,kegg pathway id,pathway
-http://identifiers.org/wikipathways/,wikipathways,wikipathways id,pathway
-http://identifiers.org/hp/,hp,Human Phenotype Ontology,phenotype
-http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotypename,name of phenotype,phenotype
-http://biothings.io/explorer/vocab/terms/phenotype-evidence/,phenotype-evidence,phenotype evidence,phenotype
-http://biothings.io/explorer/vocab/terms/phenotype-description/,phenotypedescription,description of phenotype,phenotype
-http://identifiers.org/ensembl.protein/,ensembl.protein,ensembl protein id,gene
-http://identifiers.org/uniprot/,uniprot,uniprot id,gene
-http://identifiers.org/pdb/,pdb,protein database id,gene
-http://identifiers.org/pubmed/,pubmed,PubMed is a service of the U.S. National Library of Medicine that includes citations from MEDLINE and other life science journals for biomedical articles,publication
-http://biothings.io/explorer/vocab/terms/genebank-common-name/,genebank-common-name,genebank common name,taxonomy
-http://identifiers.org/ensembl.transcript/,ensembl.transcript,ensembl transcript id,transcript
-http://identifiers.org/ensembl.translation/,ensembl.translation,ensembl translation id,transcript
-http://identifiers.org/unigene/,unigene,unigene id,transcript
-http://identifiers.org/dbsnp/,dbsnp,rsid,variant
-http://identifiers.org/pharmgkb.pathway/,pharmgkb.pathway,pharmgkb pathway id,pathway
+URI,Recommended name,Semantic Type,Pattern,Prefix,Example,Attribute Type,Description
+http://identifiers.org/uberon/,UBERON,anatomy,^UBERON\:\d+$,uberon,UBERON:0008203,ID,"Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data."
+http://biothings.io/explorer/vocab/terms/mesh.anatomy/,mesh.anatomy,anatomy,,mesh.anatomy,9738,ID,"MeSH (Medical Subject Headings) is the National Library of Medicine's controlled vocabulary thesaurus. It consists of sets of terms naming descriptors in a hierarchical structure that permits searching at various levels of specificity. This thesaurus is used by NLM for indexing articles from biomedical journals, cataloguing of books, docume"
+http://identifiers.org/cl/,Cell Type Ontology,anatomy,^CL:\d{7}$,cl,CL:0000232,ID,"The Cell Ontology is designed as a structured controlled vocabulary for cell types. The ontology was constructed for use by the model organism and other bioinformatics databases, incorporating cell types from prokaryotes to mammals, and includes plants and fungi."
+http://biothings.io/explorer/vocab/terms/anatomy-description/,Anatomy-description,anatomy,,anatomy-description,,Description,description of anatomy
+http://biothings.io/explorer/vocab/terms/anatomy/,anatomy,anatomy,,anatomy,,Name,anatomy name
+http://identifiers.org/pubchem.bioassay/,PubChem-bioassay,bioassay,^\d+$,pubchem.bioassay,1018,ID,PubChem provides information on the biological activities of small molecules. It is a component of NIH's Molecular Libraries Roadmap Initiative. PubChem bioassay archives active compounds and bioassay results.
+http://identifiers.org/chembl.compound/,ChEMBL compound,chemical,^CHEMBL\d+$,chembl.compound,CHEMBL744,ID,"ChEMBL is a database of bioactive compounds, their quantitative properties and bioactivities (binding constants, pharmacology and ADMET, etc). The data is abstracted and curated from the primary scientific literature."
+http://biothings.io/explorer/vocab/terms/drug-name/,drug-name,chemical,,drug-name,riluzole,Name,name of a drug
+http://biothings.io/explorer/vocab/terms/chemical-description/,chemical-description,chemical,,chemical-description,,Description,description of a drug
+http://identifiers.org/inchikey/,InChIKey,chemical,^[A-Z]{14}\-[A-Z]{10}(\-[A-Z])?,inchikey,RYYVLZVUVIJVGH-UHFFFAOYSA-N,ID,"The IUPAC International Chemical Identifier (InChI, see MIR:00000383) is an identifier for chemical substances, and is derived solely from a structural representation of that substance. Since these can be quite unwieldly, particularly for web use, the InChIKey was developed. These are of a fixed length (25 character) and were created as a condensed, more web friendly, digital representation of the InChI."
+http://biothings.io/explorer/vocab/terms/pharos.ligand/,pharos.ligand,chemical,^\d+$,pharos.ligand,1,ID,pharos ligand id
+http://biothings.io/explorer/vocab/terms/rxcui/,rxcui,chemical,,rxcui,35623,ID,The RxNorm concept unique identifer for the clinical drug or substance involved in the event
+http://identifiers.org/chebi/,ChEBI,chemical,^CHEBI:\d+$,chebi,CHEBI:36927,ID,Chemical Entities of Biological Interest (ChEBI) is a freely available dictionary of molecular entities focused on 'small' chemical compounds.
+http://biothings.io/explorer/vocab/terms/umls.compound/,umls.compound,chemical,^C\d+$,umls.compound,C0073379,ID,"The Unified Medical Language System is a repository of biomedical vocabularies. Vocabularies integrated in the UMLS Metathesaurus include the NCBI taxonomy, Gene Ontology, the Medical Subject Headings (MeSH), OMIM and the Digital Anatomist Symbolic Knowledge Base. UMLS concepts are not only inter-related, but may also be linked to external resources such as GenBank."
+http://biothings.io/explorer/vocab/terms/mesh.compound/,mesh.compound,chemical,^(C|D)\d{6}$,mesh.compound,D019782,ID,mesh compound id
+http://identifiers.org/drugbank/,DrugBank,chemical,^DB\d{5}$,drugbank,DB00001,ID,"The DrugBank database is a bioinformatics and chemoinformatics resource that combines detailed drug (i.e. chemical, pharmacological and pharmaceutical) data with comprehensive drug target (i.e. sequence, structure, and pathway) information. This collection references drug information."
+http://identifiers.org/iuphar.ligand/,IUPHAR ligand,chemical,^\d+$,iuphar.ligand,1755,ID,"The IUPHAR Compendium details the molecular, biophysical and pharmacological properties of identified mammalian sodium, calcium and potassium channels, as well as the related cyclic nucleotide-modulated ion channels and the recently described transient receptor potential channels. It includes information on nomenclature systems, and on inter and intra-species molecular structure variation. This collection references ligands."
+http://identifiers.org/kegg.drug/,KEGG Drug,chemical,^D\d+$,kegg.drug,D00123,ID,KEGG DRUG contains chemical structures of drugs and additional information such as therapeutic categories and target molecules.
+http://identifiers.org/kegg.compound/,KEGG Compound,chemical,^C\d+$,kegg.compound,C12345,ID,KEGG compound contains our knowledge on the universe of chemical substances that are relevant to life.
+http://identifiers.org/pubchem.compound/,PubChem-compound,chemical,^\d+$,pubchem.compound,5070,ID,PubChem provides information on the biological activities of small molecules. It is a component of NIH's Molecular Libraries Roadmap Initiative. PubChem Compound archives chemical structures and records.
+http://identifiers.org/pubchem.substance/,PubChem-substance,chemical,^\d+$,pubchem.substance,223440865,ID,PubChem provides information on the biological activities of small molecules. It is a component of NIH's Molecular Libraries Roadmap Initiative. PubChem Substance archives chemical substance records.
+http://identifiers.org/unii/,UNII,chemical,^[A-Z0-9]+$,unii,3G6A5W338E,ID,"The purpose of the joint FDA/USP Substance Registration System (SRS) is to support health information technology initiatives by generating unique ingredient identifiers (UNIIs) for substances in drugs, biologics, foods, and devices. The UNII is a non- proprietary, free, unique, unambiguous, non semantic, alphanumeric identifier based on a substance‰Ûªs molecular structure and/or descriptive information."
+http://identifiers.org/inchi/,InChI,chemical,"^InChI\=1S?\/[A-Za-z0-9\.]+(\+[0-9]+)?(\/[cnpqbtmsih][A-Za-z0-9\-\+\(\)\,\/\?\;\.]+)*$",inchi,"InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3",ID,"The IUPAC International Chemical Identifier (InChI) is a non-proprietary identifier for chemical substances that can be used in printed and electronic data sources. It is derived solely from a structural representation of that substance, such that a single compound always yields the same identifier."
+http://identifiers.org/pharmgkb.drug/,PharmGKB Drug,chemical,^PA\d+$,pharmgkb.drug,PA448710,ID,"The PharmGKB database is a central repository for genetic, genomic, molecular and cellular phenotype data and clinical information about people who have participated in pharmacogenomics research studies. The data includes, but is not limited to, clinical and basic pharmacokinetic and pharmacogenomic research in the cardiovascular, pulmonary, cancer, pathways, metabolic and transporter domains."
+http://biothings.io/explorer/vocab/terms/ndfrt/,ndfrt,chemical,,ndfrt,N0000006860,ID,NDF-RT combines the NDF hierarchical drug classification with a multi-category reference model.
+http://biothings.io/explorer/vocab/terms/epc-description/,EPC-Description,chemical,,epc-description,,Description,An FDA ÒEstablished Pharmacologic ClassÓ (EPC) text phrase is a pharmacologic class associated with an approved indication of an active moiety that the FDA has determined to be scientifically valid and clinically meaningful.
+http://biothings.io/explorer/vocab/terms/drug-phase/,Drug-Phase,chemical,,drug-phase,,Description,drug phase
+http://identifiers.org/snomedct/,SNOMED CT,disease,^(\w+)?\d+$,snomedct,284196006,ID,"SNOMED CT (Systematized Nomenclature of Medicine -- Clinical Terms), is a systematically organized computer processable collection of medical terminology covering most areas of clinical information such as diseases, findings, procedures, microorganisms, pharmaceuticals, etc."
+http://biothings.io/explorer/vocab/terms/disease-name/,disease-name,disease,,disease-name,,Name,disease name
+http://identifiers.org/meddra/,MedDRA,disease,^\d+$,meddra,10015919,ID,"The Medical Dictionary for Regulatory Activities (MedDRA) was developed by the International Council for Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use (ICH)to provide a standardised medical terminology to facilitate sharing of regulatory information internationally for medical products used by humans. It is used within regulatory processes, safety monitoring, as well as for marketing activities. Products covered by the scope of MedDRA include pharmaceuticals, biologics, vaccines and drug-device combination products. The MedDRA dictionary is organized by System Organ Class (SOC), divided into High-Level Group Terms (HLGT), High-Level Terms (HLT), Preferred Terms (PT) and finally into Lowest Level Terms (LLT)."
+http://identifiers.org/orphanet/,Orphanet,disease,^\d+$,orphanet,85163,ID,"Orphanet is a reference portal for information on rare diseases and orphan drugs. It‰Ûªs aim is to help improve the diagnosis, care and treatment of patients with rare diseases."
+http://biothings.io/explorer/vocab/terms/disease-description/,disease-description,disease,,disease-description,,Description,disease description
+http://biothings.io/explorer/vocab/terms/mesh.disease/,mesh.disease,disease,^(C|D)\d{6}$,mesh.disease,D007619,ID,"MeSH (Medical Subject Headings) is the National Library of Medicine's controlled vocabulary thesaurus. It consists of sets of terms naming descriptors in a hierarchical structure that permits searching at various levels of specificity. This thesaurus is used by NLM for indexing articles from biomedical journals, cataloguing of books, docume"
+http://identifiers.org/ncit/,NCIt,disease,^C\d+$,ncit,C80519,ID,"NCI Thesaurus (NCIt) provides reference terminology covering vocabulary for clinical care, translational and basic research, and public information and administrative activities, providing a stable and unique identification code."
+http://biothings.io/explorer/vocab/terms/pharos.disease/,pharos.disease,disease,^\d+$,pharos.disease,1,ID,pharos disease id
+http://identifiers.org/snomedct/,SNOMED CT,disease,^(\w+)?\d+$,snomedct,284196006,ID,"SNOMED CT (Systematized Nomenclature of Medicine -- Clinical Terms), is a systematically organized computer processable collection of medical terminology covering most areas of clinical information such as diseases, findings, procedures, microorganisms, pharmaceuticals, etc."
+http://biothings.io/explorer/vocab/terms/umls.disease/,umls.disease,disease,^C\d+$,umls.disease,C0022521,ID,"The Unified Medical Language System is a repository of biomedical vocabularies. Vocabularies integrated in the UMLS Metathesaurus include the NCBI taxonomy, Gene Ontology, the Medical Subject Headings (MeSH), OMIM and the Digital Anatomist Symbolic Knowledge Base. UMLS concepts are not only inter-related, but may also be linked to external resources such as GenBank."
+http://biothings.io/explorer/vocab/terms/omim.disease/,omim.disease,disease,^[*#+%^]?\d{6}$,omim.disease,244400,ID,omim disease id
+http://biothings.io/explorer/vocab/terms/mondo/,MONDO,disease,^MONDO\:\d+$,mondo,MONDO:0016575,ID,mondo disease id
+http://identifiers.org/doid/,Human Disease Ontology,disease,^DOID\:\d+$,doid,DOID:11337,ID,"The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
+http://identifiers.org/hgnc/,HGNC,gene,"^((HGNC|hgnc):)?\d{1,5}$",hgnc,2674,ID,"The HGNC (HUGO Gene Nomenclature Committee) provides an approved gene name and symbol (short-form abbreviation) for each known human gene.  All approved symbols are stored in the HGNC database, and each symbol is unique. HGNC identifiers refer to records in the HGNC symbol database."
+http://identifiers.org/hgnc.symbol/,HGNC Symbol,gene,^[A-Za-z-0-9_]+(\@)?$,hgnc.symbol,CDK7,ID,"The HGNC (HUGO Gene Nomenclature Committee) provides an approved gene name and symbol (short-form abbreviation) for each known human gene. All approved symbols are stored in the HGNC database, and each symbol is unique. This collection refers to records using the HGNC symbol."
+http://identifiers.org/ncbigene/,NCBI Gene,gene,^\d+$,ncbigene,1019,ID,"Entrez Gene is the NCBI's database for gene-specific information, focusing on completely sequenced genomes, those with an active research community to contribute gene-specific information, or those that are scheduled for intense sequence analysis."
+http://biothings.io/explorer/vocab/terms/umls.gene/,umls.gene,gene,^C\d+$,umls.gene,C1332733,ID,umls gene id
+http://biothings.io/explorer/vocab/terms/gene-approved-name/,gene-approved-name,gene,,gene-approved-name,,Name,gene approved name
+http://biothings.io/explorer/vocab/terms/gene-description/,gene-description,gene,,gene-description,,Description,description for gene
+http://identifiers.org/ccds/,Consensus CDS,gene,^CCDS\d+\.\d+$,ccds,CCDS13573.1,ID,"The Consensus CDS (CCDS) project is a collaborative effort to identify a core set of human and mouse protein coding regions that are consistently annotated and of high quality. The CCDS set is calculated following coordinated whole genome annotation updates carried out by the NCBI, WTSI, and Ensembl. The long term goal is to support convergence towards a standard set of gene annotations."
+http://identifiers.org/ena.embl/,ENA,gene,^[A-Z]+[0-9]+(\.\d+)?$,ena.embl,BN000065,ID,"The European Nucleotide Archive (ENA) captures and presents information relating to experimental workflows that are based around nucleotide sequencing. ENA is made up of a number of distinct databases that includes EMBL-Bank, the Sequence Read Archive (SRA) and the Trace Archive each with their own data formats and standards. This collection references Embl-Bank identifiers."
+http://biothings.io/explorer/vocab/terms/ensembl.gene/,ensembl.gene,gene,^((ENS[FPTG]\\d{11}(\\.\\d+)?)|(FB\\w{2}\\d{7})|(Y[A-Z]{2}\\d{3}[a-zA-Z](\\-[A-Z])?)|([A-Z_a-z0-9]+(\\.)?(t)?(\\d+)?([a-z])?))$,ensembl.gene,ENSG00000123374,ID,ensembl gene id
+http://identifiers.org/mirbase/,miRBase Sequence,gene,MI\d{7},mirbase,MI0000001,ID,"The miRBase Sequence Database is a searchable database of published miRNA sequences and annotation. The data were previously provided by the miRNA Registry. Each entry in the miRBase Sequence database represents a predicted hairpin portion of a miRNA transcript (termed mir in the database), with information on the location and sequence of the mature miRNA sequence (termed miR)."
+http://identifiers.org/mgi/,Mouse Genome Database,gene,^MGI:\d+$,mgi,MGI:2442292,ID,"The Mouse Genome Database (MGD) project includes data on gene characterization, nomenclature, mapping, gene homologies among mammals, sequence links, phenotypes, allelic variants and mutants, and strain data."
+http://identifiers.org/fb/,flybase,gene,^FB\w{2}\d{7}$,flybase,FBgn0011293,ID,flybase id
+http://identifiers.org/xenbase/,Xenbase,gene,^(XB-GENE-)?\d+$,xenbase,922462,ID,"Xenbase is the model organism database for Xenopus laevis and X. (Silurana) tropicalis. It contains genomic, development data and community information for Xenopus research. it includes gene expression patterns that incorporates image data from the literature, large scale screens and community submissions."
+http://identifiers.org/omim.gene/,omim.gene,gene,^[*#+%^]?\d{6}$,omim.gene,116953,ID,omim gene id
+http://identifiers.org/refseq/,RefSeq,gene,^((AC|AP|NC|NG|NM|NP|NR|NT|NW|XM|XP|XR|YP|ZP)_\d+|(NZ\_[A-Z]{4}\d+))(\.\d+)?$,refseq,NP_012345,ID,"The Reference Sequence (RefSeq) collection aims to provide a comprehensive, integrated, non-redundant set of sequences, including genomic DNA, transcript (RNA), and protein products."
+http://identifiers.org/rgd/,Rat Genome Database,gene,"^\d{4,}$",rgd,2018,ID,"Rat Genome Database seeks to collect, consolidate, and integrate rat genomic and genetic data with curated functional and physiological data and make these data widely available to the scientific community. This collection references genes."
+http://identifiers.org/sgd/,SGD,gene,^((S\d+$)|(Y[A-Z]{2}\d{3}[a-zA-Z](\-[A-Z])?))$,sgd,S000003909,ID,The Saccharomyces Genome Database (SGD) project collects information and maintains a database of the molecular biology of the yeast Saccharomyces cerevisiae.
+http://identifiers.org/zfin/,ZFIN Bioentity,gene,^ZDB\-\w+\-\d+\-\d+$,zfin,ZDB-GENE-041118-11,ID,ZFIN serves as the zebrafish model organism database. This collection references all zebrafish biological entities in ZFIN.
+http://biothings.io/explorer/vocab/terms/pharos.target/,pharos.target,gene,^\d+$,pharos.target,1,ID,pharos target id
+http://biothings.io/explorer/vocab/terms/reactome.complex/,reactome.complex,gene,(^R-[A-Z]{3}-\d+(-\d+)?(\.\d+)?$)|(^REACT_\d+(\.\d+)?$),reactome.complex,R-HSA-1497822,ID,reacomte complex id
+http://identifiers.org/ro/,Relation Ontology,ontology,^RO:\d+{7}$,ro,RO:0002533,ID,The OBO Relation Ontology provides consistent and unambiguous formal definitions of the relational expressions used in biomedical ontologies.
+http://identifiers.org/go/,Gene Ontology,ontology,^GO:\d{7}$,go,GO:0006915,ID,The Gene Ontology project provides a controlled vocabulary to describe gene and gene product attributes in any organism.
+http://biothings.io/explorer/vocab/terms/go-term/,go-term,ontology,,go-term,,Name,go term label
+http://biothings.io/explorer/vocab/terms/go-description/,godescription,ontology,,godescription,,Description,description for go term
+http://biothings.io/explorer/vocab/terms/go-evidence/,go-evidence,ontology,,go-evidence,,Description,go evidence code
+http://identifiers.org/taxonomy/,Taxonomy,organism,^\d+$,taxonomy,9606,ID,The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined.
+http://biothings.io/explorer/vocab/terms/taxonomyname/,taxonomyname,taxonomy,,taxonomyname,,Name,taxonomy label
+http://biothings.io/explorer/vocab/terms/reactome.pathway/,reactome.pathway,pathway,(^R-[A-Z]{3}-\d+(-\d+)?(\.\d+)?$)|(^REACT_\d+(\.\d+)?$),reactome.pathway,R-HSA-109582,ID,reacomte pathway id
+http://biothings.io/explorer/vocab/terms/reactome.displayname/,reactome.displayname,pathway,,reactome.displayname,,Name,reacomte displayname id
+http://biothings.io/explorer/vocab/terms/pathways-name/,pathwaysname,pathway,,pathwaysname,,Name,description for pathway
+http://identifiers.org/biocarta.pathway/,BioCarta Pathway,pathway,^([hm]\_)?\w+Pathway$,biocarta.pathway,cellcyclepathway,Name,"BioCarta is a supplier and distributor of characterized reagents and assays for biopharmaceutical and academic research. It catalogs community produced online maps depicting molecular relationships from areas of active research, generating classical pathways as well as suggestions for new pathways. This collections references pathway maps."
+http://identifiers.org/kegg.pathway/,KEGG Pathway,pathway,"^\w{2,4}\d{5}$",kegg.pathway,hsa00620,ID,KEGG PATHWAY is a collection of manually drawn pathway maps representing our knowledge on the molecular interaction and reaction networks.
+http://identifiers.org/wikipathways/,WikiPathways,pathway,"WP\d{1,5}(\_r\d+)?$",wikipathways,WP100,ID,WikiPathways is a resource providing an open and public collection of  pathway maps created and curated by the community in a Wiki like style.
+http://identifiers.org/hp/,Human Phenotype Ontology,phenotype,^HP:\d{7}$,hp,HP:0000118,ID,"The Human Phenotype Ontology (HPO) aims to provide a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality, such as atrial septal defect. The HPO is currently being developed using the medical literature, Orphanet, DECIPHER, and OMIM."
+http://biothings.io/explorer/vocab/terms/phenotype-name/,phenotype-name,phenotype,,phenotype-name,,Name,name of phenotype
+http://biothings.io/explorer/vocab/terms/phenotype-evidence/,phenotype-evidence,phenotype,,phenotype-evidence,,Description,phenotype evidence
+http://biothings.io/explorer/vocab/terms/phenotype-description/,phenotype-description,phenotype,,phenotype-description,,Description,description of phenotype
+http://biothings.io/explorer/vocab/terms/ensembl.protein/,ensembl.protein,gene,^((ENS[FPTG]\\d{11}(\\.\\d+)?)|(FB\\w{2}\\d{7})|(Y[A-Z]{2}\\d{3}[a-zA-Z](\\-[A-Z])?)|([A-Z_a-z0-9]+(\\.)?(t)?(\\d+)?([a-z])?))$,ensembl.protein,ENSP00000243067,ID,Ensembl is a joint project between EMBL - EBI and the Sanger Institute to develop a software system which produces and maintains automatic annotation on selected eukaryotic genomes. This collections also references outgroup organisms
+http://identifiers.org/uniprot/,UniProt Knowledgebase,gene,"^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$",uniprot,P0DP23,ID,"The UniProt Knowledgebase (UniProtKB) is a comprehensive resource for protein sequence and functional information with extensive cross-references to more than 120 external databases. Besides amino acid sequence and a description, it also provides taxonomic data and citation information."
+http://identifiers.org/pdb/,Protein Data Bank,gene,^[0-9][A-Za-z0-9]{3}$,pdb,2gc4,ID,The Protein Data Bank is the single worldwide archive of structural data of biological macromolecules.
+http://identifiers.org/pubmed/,PubMed,publication,^\d+$,pubmed,16333295,ID,PubMed is a service of the U.S. National Library of Medicine that includes citations from MEDLINE and other life science journals for biomedical articles back to the 1950s.
+http://biothings.io/explorer/vocab/terms/genebank-common-name/,genebank-common-name,taxonomy,,genebank-common-name,,Name,genebank common name
+http://biothings.io/explorer/vocab/terms/ensembl.transcript/,ensembl.transcript,transcript,^((ENS[FPTG]\\d{11}(\\.\\d+)?)|(FB\\w{2}\\d{7})|(Y[A-Z]{2}\\d{3}[a-zA-Z](\\-[A-Z])?)|([A-Z_a-z0-9]+(\\.)?(t)?(\\d+)?([a-z])?))$,ensembl.transcript,ENST00000266970,ID,Ensembl is a joint project between EMBL - EBI and the Sanger Institute to develop a software system which produces and maintains automatic annotation on selected eukaryotic genomes. This collections also references outgroup organisms
+http://biothings.io/explorer/vocab/terms/ensembl.translation/,ensembl.translation,transcript,^((ENS[FPTG]\\d{11}(\\.\\d+)?)|(FB\\w{2}\\d{7})|(Y[A-Z]{2}\\d{3}[a-zA-Z](\\-[A-Z])?)|([A-Z_a-z0-9]+(\\.)?(t)?(\\d+)?([a-z])?))$,ensembl.translation,ENSP00000266970,ID,Ensembl is a joint project between EMBL - EBI and the Sanger Institute to develop a software system which produces and maintains automatic annotation on selected eukaryotic genomes. This collections also references outgroup organisms
+http://identifiers.org/unigene/,UniGene,transcript,^\d+$,unigene,4900,ID,"A UniGene entry is a set of transcript sequences that appear to come from the same transcription locus (gene or expressed pseudogene), together with information on protein similarities, gene expression, cDNA clone reagents, and genomic location."
+http://identifiers.org/dbsnp/,dbSNP,variant,^rs\d+$,dbsnp,rs13078881,ID,The dbSNP database is a repository for both single base nucleotide subsitutions and short deletion and insertion polymorphisms.
+http://identifiers.org/pharmgkb.pathways/,pharmgkb.pathway,pathway,^PA\d+$,pharmgkb.pathway,PA165292177,ID,"PharmGKB Pathways are drug centric, gene based, interactive pathways which focus on candidate genes and gene groups and associated genotype and phenotype data of relevance for pharmacogenetic and pharmacogenomic studies."
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
