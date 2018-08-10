@@ -42,7 +42,7 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://identifiers.org/pharos.disease/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/pharos.disease/"
                             } 
                         },
                         "properties": {
@@ -104,7 +104,7 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://identifiers.org/pharos.target/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/pharos.target/"
                             } 
                         },
                         "properties": {

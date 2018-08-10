@@ -59,13 +59,13 @@ paths:
           schema:
             type: string
           x-valueType:
-            - 'http://identifiers.org/mondo/'
-            - 'http://identifiers.org/omim.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/omim.disease/'
             - 'http://identifiers.org/doid/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /bioentity/disease/MONDO:{diseaseid}
-            - valueType: 'http://identifiers.org/omim.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
               template: /bioentity/disease/OMIM:{diseaseid}
             - valueType: 'http://identifiers.org/doid/'
               template: /bioentity/disease/DOID:{diseaseid}
@@ -113,15 +113,15 @@ paths:
           schema:
             type: string
           x-valueType:
-            - 'http://identifiers.org/omim.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/omim.disease/'
             - 'http://identifiers.org/doid/'
-            - 'http://identifiers.org/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/omim.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
               template: /bioentity/disease/OMIM:{diseaseid}/genes?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/doid/'
               template: /bioentity/disease/DOID:{diseaseid}/genes?fetch_objects=true&rows=250
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /bioentity/disease/MONDO:{diseaseid}/genes?fetch_objects=true&rows=250
       responses:
         '200':
@@ -142,18 +142,18 @@ paths:
           schema:
             type: string
           x-valueType:
-            - 'http://identifiers.org/omim.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/omim.disease/'
             - 'http://identifiers.org/doid/'
             - 'http://identifiers.org/orphanet/'
-            - 'http://identifiers.org/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/omim.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
               template: /bioentity/disease/OMIM:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/orphanet/'
               template: /bioentity/disease/Orphanet:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
             - valueType: 'http://identifiers.org/doid/'
               template: /bioentity/disease/DOID:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /bioentity/disease/MONDO:{diseaseid}/phenotypes/?fetch_objects=true&rows=250
       responses:
         '200':
@@ -275,7 +275,7 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              valueType:  "http://identifiers.org/reactome.pathway/"
+              valueType:  "http://biothings.io/explorer/vocab/terms/reactome.pathway/"
             - path: objects
               valueType: "http://identifiers.org/kegg.pathway/"
           x-JSONLDContext: "biolink/jsonld_context/biolink_gene_pathway.json"
@@ -398,5 +398,5 @@ paths:
           description: 'A distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload'
           x-responseValueType:
             - path: objects
-              valueType:  "http://identifiers.org/mondo/"
+              valueType:  "http://biothings.io/explorer/vocab/terms/mondo/"
           x-JSONLDContext: "biolink/jsonld_context/biolink_gene_disease.json"

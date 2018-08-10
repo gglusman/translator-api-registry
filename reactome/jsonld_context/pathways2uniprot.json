@@ -23,7 +23,7 @@
                             "@type": "@id",
                             "@id": "attr:secondary-id",
                             "@context": {
-                                "@base": "http://identifiers.org/reactome.displayname/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/reactome.displayname/"
                             }
                         }
                     }

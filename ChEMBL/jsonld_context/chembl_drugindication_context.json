@@ -15,7 +15,7 @@
                     "@type": "@id",
                     "@id": "attr:id",
                     "@context": {
-                        "@base": "http://identifiers.org/mesh.disease/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/mesh.disease/"
                     }
                 },
                 "efo_id": {

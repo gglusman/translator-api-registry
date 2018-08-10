@@ -39,7 +39,7 @@ paths:
           description: 'List of reactome complexes'
           x-responseValueType:
             - path: data.stId
-              valueType: 'http://identifiers.org/reactome.complex/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/reactome.complex/'
           x-JSONLDContext:
             'reactome/jsonld_context/uniprot2complex.json'
   '/data/pathways/low/diagram/entity/{ReactomeComplexId}/allForms':
@@ -53,9 +53,9 @@ paths:
           required: true
           example: R-HSA-199420
           x-valueType:
-            - 'http://identifiers.org/reactome.complex/'
+            - 'http://biothings.io/explorer/vocab/terms/reactome.complex/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/reactome.complex/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/reactome.complex/'
               template: /data/pathways/low/diagram/entity/{ReactomeComplexId}/allForms
           schema:
             type: string
@@ -64,7 +64,7 @@ paths:
           description: 'List of reactome pathways'
           x-responseValueType:
             - path: data.stId
-              valueType: 'http://identifiers.org/reactome.pathway/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
           x-JSONLDContext:
             'reactome/jsonld_context/complex2pathways.json'
   '/data/participants/{ReactomePathwaysId}':
@@ -78,9 +78,9 @@ paths:
           required: true
           example: R-HSA-202403
           x-valueType:
-            - 'http://identifiers.org/reactome.pathway/'
+            - 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/reactome.pathway/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
               template: /data/participants/{ReactomePathwaysId}
           schema:
             type: string
@@ -103,9 +103,9 @@ paths:
           required: true
           example: R-HSA-202403
           x-valueType:
-            - 'http://identifiers.org/reactome.pathway/'
+            - 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/reactome.pathway/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
               template: /data/participants/{ReactomePathwaysId}
           schema:
             type: string

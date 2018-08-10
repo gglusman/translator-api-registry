@@ -12,7 +12,7 @@
                     "@type": "@id",
                     "@id": "attr:id",
                     "@context": {
-                        "@base": "http://identifiers.org/pharos.ligand/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/pharos.ligand/"
                     }
                 },
                 "name": {

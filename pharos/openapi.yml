@@ -28,9 +28,9 @@ paths:
             Pharos target id
           required: true
           x-valueType:
-            - 'http://identifiers.org/pharos.target/'
+            - 'http://biothings.io/explorer/vocab/terms/pharos.target/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/pharos.target/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
               template: /targets({geneid})?view=full&format=jsonld
           schema:
             type: string
@@ -49,11 +49,11 @@ paths:
             - path: MIM.term
               valueType: 'http://identifiers.org/omim.gene/'
             - path: links.ix.idg.models.Disease.refid
-              valueType: 'http://identifiers.org/pharos.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
             - path: links.ix.idg.models.Disease.properties.IDG Disease/term
               valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
             - path: links.ix.idg.models.Ligand.refid
-              valueType: 'http://identifiers.org/pharos.ligand/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
             - path: links.ix.idg.models.Ligand.properties.IDG Ligand/term
               valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
           x-JSONLDContext:
@@ -69,9 +69,9 @@ paths:
             Pharos ligand id
           required: true
           x-valueType:
-            - 'http://identifiers.org/pharos.ligand/'
+            - 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/pharos.ligand/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
               template: /ligands({drugid})?view=full&format=jsonld
           schema:
             type: string
@@ -84,11 +84,11 @@ paths:
             - path: synonyms.CHEMBL ID
               valueType: 'http://identifiers.org/chembl.compound/'
             - path: links.ix.idg.models.Target.refid
-              valueType: 'http://identifiers.org/pharos.target/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
             - path: links.ix.idg.models.Target.properties.IDG Target.term
               valueType: 'http://identifiers.org/hgnc.symbol/'
             - path: links.ix.idg.models.Disease.refid
-              valueType: 'http://identifiers.org/pharos.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
             - path: links.ix.idg.models.Disease.properties.IDG Disease/term
               valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
           x-JSONLDContext:
@@ -103,9 +103,9 @@ paths:
             Pharos disease id
           required: true
           x-valueType:
-            - 'http://identifiers.org/pharos.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/pharos.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
               template: /diseases({diseaseid})?view=full&format=jsonld
           schema:
             type: string
@@ -118,15 +118,15 @@ paths:
             - path: synonyms.DOID
               valueType: 'http://identifiers.org/doid/'
             - path: synonyms.DiseaseOntology.term
-              valueType: 'http://identifiers.org/omim.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
             - path: synonyms.DiseaseOntology.term
-              valueType: 'http://identifiers.org/umls.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
             - path: links.ix.idg.models.Target.refid
-              valueType: 'http://identifiers.org/pharos.target/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
             - path: links.ix.idg.models.Target.properties.IDG Target.term
               valueType: 'http://identifiers.org/hgnc.symbol/'
             - path: links.ix.idg.models.Ligand.refid
-              valueType: 'http://identifiers.org/pharos.ligand/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
             - path: links.ix.idg.models.Ligand.properties.IDG Ligand/term
               valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
           x-JSONLDContext:
@@ -153,7 +153,7 @@ paths:
           description: 'A pharos ligand annotation object'
           x-responseValueType:
             - path: content.id
-              valueType: 'http://identifiers.org/pharos.ligand/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
           x-JSONLDContext:
             'pharos/jsonld_context/pharos_drugname2ligand.json'
   '/targets/search':
@@ -178,7 +178,7 @@ paths:
           description: 'A pharos target annotation object'
           x-responseValueType:
             - path: content.id
-              valueType: 'http://identifiers.org/pharos.target/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
           x-JSONLDContext:
             'pharos/jsonld_context/pharos_uniprot2target.json'
   '/diseases/search':
@@ -203,6 +203,6 @@ paths:
           description: 'A pharos disease annotation object'
           x-responseValueType:
             - path: content.id
-              valueType: 'http://identifiers.org/pharos.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
           x-JSONLDContext:
             'pharos/jsonld_context/pharos_diseasename2disease.json'

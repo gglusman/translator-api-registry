@@ -32,9 +32,9 @@ paths:
             MONDO ID
           required: true
           x-valueType:
-            - 'http://identifiers.org/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /disease/MONDO:{mondoid}
           schema:
             type: string
@@ -53,9 +53,9 @@ paths:
             - path: mondo.xrefs.doid
               valueType: 'http://identifiers.org/doid/'
             - path: mondo.xrefs.omim
-              valueType: 'http://identifiers.org/omim.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
             - path: mondo.xrefs.umls
-              valueType: 'http://identifiers.org/umls.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
           x-JSONLDContext:
             'mydisease.info/jsonld_context/mydisease_disease_annotation.json'
   '/querydiseasetogene':
@@ -68,18 +68,18 @@ paths:
             disease ID, e.g. UMLS ID
           required: true
           x-valueType:
-            - 'http://identifiers.org/umls.disease/'
-            - 'http://identifiers.org/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/umls.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
             - 'http://identifiers.org/doid/'
-            - 'http://identifiers.org/omim.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/omim.disease/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/umls.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
               template: /query?q=disgenet.xrefs.umls:{diseaseid}&fields=disgenet.genes_related_to_disease
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /query?q=_id:"MONDO:{diseaseid}"&fields=disgenet.genes_related_to_disease
             - valueType: 'http://identifiers.org/doid/'
               template: /query?q=mondo.xrefs.doid:"DOID:{diseaseid}"&fields=disgenet.genes_related_to_disease
-            - valueType: 'http://identifiers.org/omim.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
               template: /query?q=mondo.xrefs.omim:{diseaseid}&fields=disgenet.genes_related_to_disease
           schema:
             type: string
@@ -107,18 +107,18 @@ paths:
             disease ID, e.g. UMLS ID
           required: true
           x-valueType:
-            - 'http://identifiers.org/umls.disease/'
-            - 'http://identifiers.org/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/umls.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
             - 'http://identifiers.org/doid/'
-            - 'http://identifiers.org/omim.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/omim.disease/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/umls.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
               template: /query?q=disgenet.xrefs.umls:{diseaseid}&fields=disgenet.variants_related_to_disease
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /query?q=_id:"MONDO:{diseaseid}"&fields=disgenet.variants_related_to_disease
             - valueType: 'http://identifiers.org/doid/'
               template: /query?q=mondo.xrefs.doid:"DOID:{diseaseid}"&fields=disgenet.variants_related_to_disease
-            - valueType: 'http://identifiers.org/omim.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
               template: /query?q=mondo.xrefs.omim:{diseaseid}&fields=disgenet.variants_related_to_disease
           schema:
             type: string
@@ -144,19 +144,19 @@ paths:
             disease ID, e.g. UMLS ID
           required: true
           x-valueType:
-            - 'http://identifiers.org/umls.disease/'
-            - 'http://identifiers.org/mondo/'
+            - 'http://biothings.io/explorer/vocab/terms/umls.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/mondo/'
             - 'http://identifiers.org/doid/'
-            - 'http://identifiers.org/omim.disease/'
+            - 'http://biothings.io/explorer/vocab/terms/omim.disease/'
             - 'http://identifiers.org/orphanet/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/umls.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
               template: /query?q=mondo.xrefs.umls:{diseaseid}&fields=hpo.phenotype_related_to_disease
-            - valueType: 'http://identifiers.org/mondo/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/mondo/'
               template: /query?q=_id:"MONDO:{diseaseid}"&fields=hpo.phenotype_related_to_disease
             - valueType: 'http://identifiers.org/doid/'
               template: /query?q=mondo.xrefs.doid:"DOID:{diseaseid}"&fields=hpo.phenotype_related_to_disease
-            - valueType: 'http://identifiers.org/omim.disease/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
               template: /query?q=mondo.xrefs.omim:{diseaseid}&fields=hpo.phenotype_related_to_disease
             - valueType: 'http://identifiers.org/orphanet/'
               template: /query?q=mondo.xrefs.orphanet:{diseaseid}&fields=hpo.phenotype_related_to_disease  
@@ -201,7 +201,7 @@ paths:
             - path: hits.mondo.xrefs.doid
               valueType: 'http://identifiers.org/doid/'
             - path: hits.mondo.xrefs.omim
-              valueType: 'http://identifiers.org/omim.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
           x-JSONLDContext:
             'mydisease.info/jsonld_context/mydisease_phenotype2disease.json'
   '/querygenetodisease':
@@ -234,6 +234,6 @@ paths:
             - path: hits.mondo.xrefs.doid
               valueType: 'http://identifiers.org/doid/'
             - path: hits.mondo.xrefs.omim
-              valueType: 'http://identifiers.org/omim.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
           x-JSONLDContext:
             'mydisease.info/jsonld_context/mydisease_gene2disease.json'

@@ -53,9 +53,9 @@ paths:
             Put ensembl gene ids here, e.g. ENSG00000157764
           required: true
           x-valueType:
-            - 'http://identifiers.org/ensembl.gene/'
+            - 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/ensembl.gene/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
               template: '/lookup/id/{geneid}?content-type=application/json;phenotypes=1;expand=1'
           schema:
             type: string
@@ -66,7 +66,7 @@ paths:
             - path: Transcript.Exon.id
               valueType: 'http://identifiers.org/ensembl.exon/'
             - path: Transcript.Translation.id
-              valueType: 'http://identifiers.org/ensembl.protein/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.protein/'
             - path: phenotypes.ontology_accessions
               valueType: 'http://identifiers.org/efo/'
             - path: phenotypes.ontology_accessions

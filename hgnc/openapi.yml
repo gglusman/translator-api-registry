@@ -28,13 +28,13 @@ paths:
           x-valueType:
             - 'http://identifiers.org/hgnc.symbol/'
             - 'http://identifiers.org/hgnc/'
-            - 'http://identifiers.org/ensembl.gene/'
+            - 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/hgnc.symbol/'
               template: /fetch/symbol/{gene}
             - valueType: 'http://identifiers.org/hgnc/'
               template: /fetch/hgnc_id/HGNC:{gene}
-            - valueType: 'http://identifiers.org/ensembl.gene/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
               template: /fetch/ensembl_gene_id/{gene}
           schema:
             type: string
@@ -55,7 +55,7 @@ paths:
             - path: response.docs.ccds_id
               valueType: 'http://identifiers.org/ccds/'
             - path: response.docs.ensembl_gene_id
-              valueType: 'http://identifiers.org/ensembl.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
             - path: response.docs.omim_id
               valueType: 'http://identifiers.org/omim.gene/'
             - path: response.docs.uniprot_ids

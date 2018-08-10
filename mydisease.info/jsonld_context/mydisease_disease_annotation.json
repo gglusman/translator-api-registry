@@ -24,14 +24,14 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/omim.disease/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/omim.disease/"
                             }
                         },
                         "umls": {
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/umls.disease/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/umls.disease/"
                             }
                         }
                     }

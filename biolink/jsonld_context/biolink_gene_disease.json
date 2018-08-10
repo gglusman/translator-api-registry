@@ -4,7 +4,7 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
-        "MONDO": "http://identifiers.org/mondo/",
+        "MONDO": "http://biothings.io/explorer/vocab/terms/mondo/",
         "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
         "NCBITaxon": "http://identifiers.org/taxonomy/",
@@ -20,7 +20,7 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://identifiers.org/mondo/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/mondo/"
                             }
                         },
                         "label": {

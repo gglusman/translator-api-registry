@@ -114,7 +114,7 @@ paths:
           description: 'A query response object with "drug_indications" property'
           x-responseValueType:
             - path: drug_indications.mesh_id
-              valueType: 'http://identifiers.org/mesh.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/mesh.disease/'
             - path: drug_indications.efo_id
               valueType: 'http://identifiers.org/hp/'
             - path: drug_indications.efo_id

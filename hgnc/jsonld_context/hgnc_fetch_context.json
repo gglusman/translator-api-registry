@@ -33,7 +33,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.gene/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
                             }
                         },
                         "entrez_id": {

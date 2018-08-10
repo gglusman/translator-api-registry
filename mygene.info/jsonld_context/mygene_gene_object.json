@@ -57,7 +57,7 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://identifiers.org/reactome.pathway/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/reactome.pathway/"
                             }
                         },
                         "name": {
@@ -97,7 +97,7 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/pharmgkb.pathway/"
+                                "@base": "http://identifiers.org/pharmgkb.pathways/"
                             }
                         },
                         "name": {
@@ -132,7 +132,7 @@
                     "@type": "@id",
                     "@id": "attr:id",
                     "@context": {
-                        "@base": "http://identifiers.org/umls.gene/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/umls.gene/"
                     }
                 }
             }
@@ -145,21 +145,21 @@
                     "@type": "@id",
                     "@id": "assoc:GeneToGeneProductAssociation",
                     "@context": {
-                        "@base": "http://identifiers.org/ensembl.protein/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/ensembl.protein/"
                     }
                 },
                 "gene": {
                     "@type": "@id",
                     "@id": "assoc:EquivalentAssociation",
                     "@context": {
-                        "@base": "http://identifiers.org/ensembl.gene/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
                     }
                 },
                 "transcript": {
                     "@type": "@id",
                     "@id": "assoc:GeneToGeneProductAssociation",
                     "@context": {
-                        "@base": "http://identifiers.org/ensembl.transcript/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/ensembl.transcript/"
                     }
                 }
             }

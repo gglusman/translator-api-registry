@@ -49,14 +49,14 @@
 							"@type": "@id",
 							"@id": "ont:associatedWithGene",
 							"@context": {
-								"@base": "http://identifiers.org/ensembl.gene/"
+								"@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
 							}
 						},
 						"feature_id": {
 							"@type": "@id",
 							"@id": "ont:associatedWithTranscript",
 							"@context": {
-								"@base": "http://identifiers.org/ensembl.transcript/"
+								"@base": "http://biothings.io/explorer/vocab/terms/ensembl.transcript/"
 							}
 						},
                         "ccds_id": {
@@ -158,7 +158,7 @@
                                             "@type": "@id",
                                             "@id": "ont:associatedWithDisease",
                                             "@context": {
-                                                "@base": "http://identifiers.org/omim.disease/"
+                                                "@base": "http://biothings.io/explorer/vocab/terms/omim.disease/"
                                             }
                                         }
                                     } 
@@ -209,21 +209,21 @@
                             "@type": "@id",
                             "@id": "ont:associatedWithGene",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.gene/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
                             }
                         },
                         "transcriptid": {
                             "@type": "@id",
                             "@id": "ont:associatedWithTranscript",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.transcript/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.transcript/"
                             }
                         },
                         "proteinid": {
                             "@type": "@id",
                             "@id": "ont:associatedWithProtein",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.protein/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.protein/"
                             }
                         }
                     }

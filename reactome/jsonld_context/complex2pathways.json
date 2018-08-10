@@ -12,14 +12,14 @@
                     "@type": "@id",
                     "@id": "attr:id",
                     "@context": {
-                        "@base": "http://identifiers.org/reactome.pathway/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/reactome.pathway/"
                     }
                 },
                 "displayName": {
                     "@type": "@id",
                     "@id": "attr:secondary-id",
                     "@context": {
-                        "@base": "http://identifiers.org/reactome.displayname/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/reactome.displayname/"
                     }
                 }
             }

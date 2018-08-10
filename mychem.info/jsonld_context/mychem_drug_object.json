@@ -38,7 +38,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/rxcui/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/rxcui/"
                             }
                         },
                         "chebi": {
@@ -108,14 +108,14 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/mesh.compound/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/mesh.compound/"
                             }
                         },
                         "umlscui": {
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/umls.compound/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/umls.compound/"
                             }
                         }
                     }
@@ -166,7 +166,7 @@
                                     "@type": "@id",
                                     "@id": "attr:id",
                                     "@context": {
-                                        "@base": "http://identifiers.org/umls.disease/"
+                                        "@base": "http://biothings.io/explorer/vocab/terms/umls.disease/"
                                     }
                                 }
                             }
@@ -187,7 +187,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/rxcui/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/rxcui/"
                             }
                         }
                     }
@@ -227,7 +227,7 @@
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
                             "@context": {
-                                "@base": "http://identifiers.org/rxcui/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/rxcui/"
                             }
                         }
                     }

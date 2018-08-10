@@ -68,8 +68,8 @@ paths:
             - 'http://identifiers.org/unigene/'
             - 'http://identifiers.org/uniprot/'
             - 'http://identifiers.org/pdb/'
-            - 'http://identifiers.org/ensembl.protein/'
-            - 'http://identifiers.org/ensembl.transcript/'
+            - 'http://biothings.io/explorer/vocab/terms/ensembl.protein/'
+            - 'http://biothings.io/explorer/vocab/terms/ensembl.transcript/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/unigene/'
               template: /query?q=unigene:{geneproductid}&size=100
@@ -77,9 +77,9 @@ paths:
               template: /query?q=uniprot.Swiss-Prot:{geneproductid}&size=100
             - valueType: 'http://identifiers.org/pdb/'
               template: /query?q=pdb:{geneproductid}&size=100
-            - valueType: 'http://identifiers.org/ensembl.protein/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.protein/'
               template: /query?q=ensembl.protein:{geneproductid}&size=100
-            - valueType: 'http://identifiers.org/ensembl.transcript/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.transcript/'
               template: /query?q=ensembl.transcript:{geneproductid}&size=100
           schema:
             type: string
@@ -109,7 +109,7 @@ paths:
             - 'http://identifiers.org/kegg.pathway/'
             - 'http://identifiers.org/wikipathways/'
             - 'http://identifiers.org/pharmgkb.pathways/'
-            - 'http://identifiers.org/reactome.pathway/'
+            - 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/biocarta.pathway/'
               template: /query?q=pathway.biocarta.id:{pathwayid}&size=100
@@ -117,9 +117,9 @@ paths:
               template: /query?q=pathway.kegg.id:{pathwayid}&size=100
             - valueType: 'http://identifiers.org/wikipathways/'
               template: /query?q=pathway.wikipathways.id:{pathwayid}&size=100
-            - valueType: 'http://biothings.io/explorer/vocab/terms/pharmgkb.pathway/'
+            - valueType: 'http://identifiers.org/pharmgkb.pathways/'
               template: /query?q=pathway.pharmgkb.id:{pathwayid}&size=100
-            - valueType: 'http://identifiers.org/reactome.pathway/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
               template: /query?q=pathway.reactome.id:{pathwayid}&size=100
           schema:
             type: string
@@ -174,11 +174,11 @@ paths:
           required: true
           x-valueType:
             - 'http://identifiers.org/ncbigene/'
-            - 'http://identifiers.org/ensembl.gene/'
+            - 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/ncbigene/'
               template: /gene/{geneid}
-            - valueType: 'http://identifiers.org/ensembl.gene/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
               template: /gene/{geneid}
           schema:
             type: string
@@ -189,7 +189,7 @@ paths:
             - path: symbol
               valueType: 'http://identifiers.org/hgnc.symbol/'
             - path: umls.cui
-              valueType: 'http://identifiers.org/umls.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.gene/'
             - path: unigene
               valueType: 'http://identifiers.org/unigene/'
             - path: uniprot.Swiss-Prot
@@ -201,19 +201,19 @@ paths:
             - path: pathway.kegg.id
               valueType: 'http://identifiers.org/kegg.pathway/'
             - path: pathway.reactome.id
-              valueType: 'http://identifiers.org/reactome.pathway/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/reactome.pathway/'
             - path: pathway.wikipathways.id
               valueType: 'http://identifiers.org/wikipathways/'
             - path: pathway.pharmgkb.id
-              valueType: 'http://biothings.io/explorer/vocab/terms/pharmgkb.pathway/'
+              valueType: 'http://identifiers.org/pharmgkb.pathways/'
             - path: go.bp.id
               valueType: 'http://identifiers.org/go/'
             - path: ensembl.gene
-              valueType: 'http://identifiers.org/ensembl.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
             - path: ensembl.protein
-              valueType: 'http://identifiers.org/ensembl.protein/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.protein/'
             - path: ensembl.transcript
-              valueType: 'http://identifiers.org/ensembl.transcript/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.transcript/'
             - path: MIM
               valueType: 'http://identifiers.org/omim.gene/'
             - path: HGNC

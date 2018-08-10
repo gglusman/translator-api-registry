@@ -80,7 +80,7 @@ paths:
             Query string. Examples "Fludara", "CHEMBI:63599", "DB01073".
           required: true
           x-valueType:
-            - 'http://identifiers.org/rxcui/'
+            - 'http://biothings.io/explorer/vocab/terms/rxcui/'
             - 'http://identifiers.org/chebi/'
             - 'http://identifiers.org/chembl.compound/'
             - 'http://identifiers.org/drugbank/'
@@ -93,7 +93,7 @@ paths:
             - 'http://biothings.io/explorer/vocab/terms/drug-name/'
             - 'http://identifiers.org/pharmgkb.drug/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/rxcui/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/rxcui/'
               template: aeolus.rxcui:input_value OR drugcentral.xref.rxnorm:input_value OR ginas.xrefs.RXCUI:input_value OR pharmgkb.external_vocabulary.rxnorm:input_value
             - valueType: 'http://identifiers.org/chebi/'
               template: drugcentral.xref.chebi:input_value OR chebi.chebi_id:input_value
@@ -138,21 +138,21 @@ paths:
             - path: drugbank.target.uniprot
               valueType: 'http://identifiers.org/uniprot/'
             - path: drugcentral.xref.umls
-              valueType: 'http://identifiers.org/umls.compound/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.compound/'
             - path: drugcentral.xref.mesh
-              valueType: 'http://identifiers.org/mesh.compound/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/mesh.compound/'
             - path: chebi.definition
               valueType: 'http://biothings.io/explorer/vocab/terms/chemical-description/'
             - path: drugcentral.drug_use.indication.snomed_id
               valueType: 'http://identifiers.org/snomedct/'
             - path: drugcentral.drug_use.indication.umls_cui
-              valueType: 'http://identifiers.org/umls.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
             - path: drugcentral.drug_use.indication.concept_name
               valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
             - path: drugcental.fda_adverse_event.meddra_code
               valueType: 'http://identifiers.org/meddra/'
             - path: drugcentral.pharmacology_class.fda_epc.code
-              valueType: 'http://identifiers.org/ndfrt/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ndfrt/'
             - path: chembl.max_phase
               valueType: 'http://biothings.io/explorer/vocab/terms/drug-phase/'
           x-JSONLDContext:
@@ -205,7 +205,7 @@ paths:
             - path: cadd.gene.ccds_id
               valueType: 'http://identifiers.org/clinicaltrials/'
             - path: aeolus.rxcui
-              valueType: 'http://identifiers.org/rxcui/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/rxcui/'
             - path: chebi.chebi_id
               valueType: 'http://identifiers.org/chebi/'
             - path: chembl.molecule_chembl_id
@@ -217,7 +217,7 @@ paths:
             - path: drugcentral.drug_use.indication.snomed_id
               valueType: 'http://identifiers.org/snomedct/'
             - path: drugcentral.drug_use.indication.umls_cui
-              valueType: 'http://identifiers.org/umls.disease/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
             - path: drugcentral.xref.iuphar_ligand_id
               valueType: 'http://identifiers.org/iuphar.ligand/'
             - path: drugcentral.drug_use.indication.concept_name
@@ -229,9 +229,9 @@ paths:
             - path: pharmgkb.cross_references.pubchem_substance
               valueType: 'http://identifiers.org/pubchem.substance/'
             - path: drugcentral.xref.umls
-              valueType: 'http://identifiers.org/umls.compound/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.compound/'
             - path: drugcentral.xref.mesh
-              valueType: 'http://identifiers.org/mesh.compound/' 
+              valueType: 'http://biothings.io/explorer/vocab/terms/mesh.compound/' 
             - path: chebi.definition
               valueType: 'http://biothings.io/explorer/vocab/terms/chemical-description/'
           x-JSONLDContext:

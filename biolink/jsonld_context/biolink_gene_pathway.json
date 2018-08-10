@@ -4,7 +4,7 @@
         "assoc": "http://biothings.io/explorer/vocab/objects/",
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
-        "REACT": "http://identifiers.org/reactome.pathway/",
+        "REACT": "http://biothings.io/explorer/vocab/terms/reactome.pathway/",
         "KEGG-path": "http://identifiers.org/kegg.pathway/",
         "RO": "http://identifiers.org/ro/RO:",
         "PMID": "http://identifiers.org/pubmed/",
@@ -20,7 +20,7 @@
                             "@type": "@id",
                             "@id": "attr:id",
                             "@context": {
-                                "@base": "http://identifiers.org/reactome.pathway/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/reactome.pathway/"
                             }
                         },
                         "label": {

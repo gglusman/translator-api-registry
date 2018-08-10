@@ -13,7 +13,7 @@
                     "@type": "@id",
                     "@id": "ont:predicts",
                     "@context": {
-                        "@base": "http://identifiers.org/ensembl.gene/"
+                        "@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
                     }
                 }
             }
