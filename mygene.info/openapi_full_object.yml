@@ -215,7 +215,7 @@ paths:
             - path: ensembl.transcript
               valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.transcript/'
             - path: MIM
-              valueType: 'http://identifiers.org/omim.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.gene/'
             - path: HGNC
               valueType: 'http://identifiers.org/hgnc/'
             - path: miRBase

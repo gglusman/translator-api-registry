@@ -57,7 +57,7 @@ paths:
             - path: response.docs.ensembl_gene_id
               valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
             - path: response.docs.omim_id
-              valueType: 'http://identifiers.org/omim.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.gene/'
             - path: response.docs.uniprot_ids
               valueType: 'http://identifiers.org/uniprot/'
             - path: response.docs.rgd_id

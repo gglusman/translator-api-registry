@@ -47,7 +47,7 @@ paths:
             - path: synonyms.Entrez Gene.term
               valueType: 'http://identifiers.org/ncbigene/'
             - path: MIM.term
-              valueType: 'http://identifiers.org/omim.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.gene/'
             - path: links.ix.idg.models.Disease.refid
               valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
             - path: links.ix.idg.models.Disease.properties.IDG Disease/term
