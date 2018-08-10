@@ -117,7 +117,7 @@ paths:
               template: /query?q=pathway.kegg.id:{pathwayid}&size=100
             - valueType: 'http://identifiers.org/wikipathways/'
               template: /query?q=pathway.wikipathways.id:{pathwayid}&size=100
-            - valueType: 'http://identifiers.org/pharmgkb.pathway/'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharmgkb.pathway/'
               template: /query?q=pathway.pharmgkb.id:{pathwayid}&size=100
             - valueType: 'http://identifiers.org/reactome.pathway/'
               template: /query?q=pathway.reactome.id:{pathwayid}&size=100
@@ -205,7 +205,7 @@ paths:
             - path: pathway.wikipathways.id
               valueType: 'http://identifiers.org/wikipathways/'
             - path: pathway.pharmgkb.id
-              valueType: 'http://identifiers.org/pharmgkb.pathway/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharmgkb.pathway/'
             - path: go.bp.id
               valueType: 'http://identifiers.org/go/'
             - path: ensembl.gene
