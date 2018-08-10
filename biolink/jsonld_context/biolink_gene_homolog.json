@@ -5,7 +5,7 @@
         "attr": "http://biothings.io/explorer/vocab/attributes/",
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "NCBIGene": "http://identifiers.org/ncbigene/",
-        "FlyBase": "http://identifiers.org/flybase/",
+        "FlyBase": "http://identifiers.org/fb/",
         "MGI": "http://identifiers.org/mgi/",
         "ZFIN": "http://identifiers.org/zfin/",
         "Xenbase": "http://identifiers.org/xenbase/",

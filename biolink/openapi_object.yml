@@ -189,7 +189,7 @@ paths:
             - path: edge.obj
               valueType: 'http://identifiers.org/hgnc/'
             - path: edge.obj
-              valueType: 'http://identifiers.org/flybase/'
+              valueType: 'http://identifiers.org/fb/'
             - path: edge.obj
               valueType: 'http://identifiers.org/xenbase/'
             - path: edge.obj
