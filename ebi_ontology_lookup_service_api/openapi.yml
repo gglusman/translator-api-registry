@@ -246,3 +246,51 @@ paths:
               valueType: 'http://identifiers.org/doid/'
           x-JSONLDContext:
             'ebi_ontology_lookup_service_api/jsonld_context/ols_do_parent.json'
+  /ontologies/uberon/parents/{uberonid}:
+    get:
+      summary: Return parent Uberon Ontology id
+      parameters:
+        - name: uberonid
+          in: path
+          description: >-
+            Uberon id, e.g. 0035553
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/uberon/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uberon/'
+              template: '/ontologies/uberon/parents?id=UBERON:{uberonid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Uberon Ontology parent object'
+          x-responseValueType:
+            - path: _embeddd.terms.obo_id
+              valueType: 'http://identifiers.org/uberon/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_uberon_parent.json'
+  /ontologies/uberon/children/{uberonid}:
+    get:
+      summary: Return child Uberon Ontology id
+      parameters:
+        - name: uberonid
+          in: path
+          description: >-
+            Uberon id, e.g. 0035553
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/uberon/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uberon/'
+              template: '/ontologies/uberon/children?id=UBERON:{uberonid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Uberon Ontology child object'
+          x-responseValueType:
+            - path: _embeddd.terms.obo_id
+              valueType: 'http://identifiers.org/uberon/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_uberon_child.json'
