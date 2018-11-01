@@ -1,0 +1,40 @@
+predicate,definition,used_in
+AnatomicalEntityToGeneOrGeneProductAssociation,An association between an anatomical entity and a gene or gene product,biolink API
+BioassayToChemicalAssociation,An association between a bioassay entity and a chemical,pubchem API
+ChemicalToClinicalTrialAssociation,An association between a chemical and a clinical trial,mychem.info API
+ChemicalToDiseaseOrPhenotypicFeatureAssociation,An interaction between a chemical entity and a phenotype or disease, where the presence of the chemical gives rise to or exacerbates the phenotype,ChEMBL API/pharos API
+ChemicalToGeneOrGeneProductAssociation,An interaction between a chemical entity and a gene or gene product,ChEMBL API/DGIdb API/mychem.info API/pharos API
+ChemicalToPublicationAssociation,An association between a chemical and a publication,pubchem API
+DiseaseOntologyToChildDiseaseOntologyAssociation,An association between a parent disease ontology and a child disease ontology,EBI OLS API/disease ontology API
+DiseaseOntologyToParentDiseaseOntologyAssociation,An association between a child disease ontology and a parent disease ontology,EBI OLS API/disease ontology API
+DiseaseToChemicalAssociation,An association between a disease and a chemical in which the chemical is associated with the disease in some way,mychem.info API/pharos API
+DiseaseToGeneOrGeneProductAssociation,An association between a disease and a gene in which the gene is associated with the disease in some way,mydisease.info API/biolink API/pharos API
+DiseaseToPhenotypicFeatureAssociation,An association between a disease and a phenotypic feature in which the phenotypic feature is associated with the disease in some way,mydisease.info API/biolink API
+DiseaseToVariantAssociation,An association between a disease and a variant in which the variant is associated with the disease in some way,mydisease.info API
+EquivalentAssociation,Two IDs are equivalent,biolink API/ChEMBL API/EBI OLS API/hgnc API/mychem.info API/mydisease.info API/mygene.info API/pharos API
+GeneOntologyToChildGeneOntologyAssociation,An association between a parent gene ontology and a child gene ontology,EBI OLS API
+GeneOntologyToParentGeneOntologyAssociation,An association between a child gene ontology and a parent gene ontology,EBI OLS API
+GeneOrGeneProductAssociatedWithBioassay,An association between a gene or gene product with a bioassay entity,pubchem API
+GeneOrGeneProductToAnatomicalEntityAssociation,An association between a gene or gene product with an anatomical entity,biolink API
+GeneOrGeneProductToChemicalAssociation,An interaction between a gene or gene product with a chemical entity,DGIdb API/mychem.info API/pharos API
+GeneOrGeneProductToDiseaseAssociation,An association between a gene or a gene product with a disease,biolink API/pharos API
+GeneOrGeneProductToPhenotypicFeatureAssociation,An association between a gene or a gene product with a phenotypic feature,biolink API
+GeneToGeneHomologyAssociation,A homology association between two genes. May be orthology (in which case the species of subject and object should differ) or paralogy (in which case the species may be the same),biolink API/hgnc API
+GeneToGeneProductAssociation,An association between a gene and its gene product,hgnc API/mygene.info API
+MacromolecularMachineToBiologicalProcessAssociation,A functional association between a macromolecular machine (gene, gene product or complex) and a biological process or pathway (as represented in the GO biological process branch), where the entity carries out some part of the process, regulates it, or acts upstream of it,mygene.info API/biolink API/reactome API
+MacromolecularMachineToMolecularActivityAssociation,A functional association between a macromolecular machine (gene, gene product or complex) and a molecular activity (as represented in the GO molecular function branch), where the entity carries out the activity, or contributes to its execution,mygene.info API
+MacromolecularMachineToCellularComponentAssociation,A functional association between a macromolecular machine (gene, gene product or complex) and a cellular component (as represented in the GO cellular component branch), where the entity carries out its function in the cellular component,mygene.info API
+GeneToProteinStructureAssociation,An association between a gene and a protein structure,mygene.info API
+HasDescriptionAssociation,One entity is a description of another,EBI OLS API/mychem.info API/mydisease.info API/mygene.info API
+TaxonomyIsChildOfTaxonomy,An association between a child taxonomy and a parent taxonomy,taxonomy API
+PairwiseChemicalInteractionAssociation,An interaction between two chemicals,mychem.info API
+PairwiseGeneOrProteinInteractionAssociation,An interaction between two genes or two gene products. May be physical (e.g. protein binding) or genetic (between genes). May be symmetric (e.g. protein interaction) or directed (e.g. phosphorylation),biolink API/reactome API
+BiologicalProcessToMacromolecularMachineAssociation,A functional association between a biological process or pathway (as represented in the GO biological process branch) and a macromolecular machine (gene, gene product or complex), where the entity carries out some part of the process, regulates it, or acts upstream of it,mygene.info API/biolink API/reactome API
+DiseaseOrPhenotypicFeatureAssociationToLocationAssociation,An association between either a disease or a phenotypic feature and an anatomical entity, where the disease/feature manifests in that site.,biolink API
+PhenotypicFeatureToDiseaseAssociation,An association between a phenotype and a disease,mydisease.info
+VariantToGeneAssociation,An association between a variant and a gene,biolink API
+ThingToGeneAssociation,An association between a thing and a gene,mygene.info API
+Causes,holds between two entities where the occurrence, existence, or activity of one causes the occurrence or generation of the other,mychem.info API
+Subclass_of,holds between two classes where the domain class is a specialization of the range class,mychem.info API
+Regulates,describes an entity that has a direct affect on the state or quality of another existing entity.,mychem.info API
+Treats,holds between a therapeutic procedure or chemical substance and a disease or phenotypic feature that it is used to treat,mychem.info API
