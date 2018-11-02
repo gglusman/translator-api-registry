@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "data": {
+            "@type": "@id",
+            "@id": "assoc:PublicationToVariantAssociation",
+            "@context": {
+                "name": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://identifiers.org/dbsnp/"
+                    }
+                },
+                "clinical_significance": {
+                    "@type": "@id",
+                    "@id": "attr:clinical-significance",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                    }
+                },
+                "evidence": {
+                    "@type": "@id",
+                    "@id": "rel:provided_by",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
             "@context": {
                 "AID": {
                     "@type": "@id",
-                    "@id": "assoc:GeneOrGeneProductAssociatedWithBioassay",
+                    "@id": "assoc:GeneOrGeneProductToBioassayAssociation",
                     "@context": {
                         "@base": "http://identifiers.org/pubchem.bioassay/"
                     }

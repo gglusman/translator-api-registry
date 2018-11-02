@@ -6,7 +6,7 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "mechanisms": {
             "@type": "@id",
-            "@id": "assoc:ChemicalToGeneOrGeneProductObject",
+            "@id": "assoc:ChemicalToGeneOrGeneProductAssociation",
             "@context": {
                 "molecule_chembl_id": {
                     "@type": "@id",

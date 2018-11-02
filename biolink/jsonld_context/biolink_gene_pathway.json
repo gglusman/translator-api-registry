@@ -10,7 +10,7 @@
         "PMID": "http://identifiers.org/pubmed/",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:GeneToPathwayAssociation",
+            "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
             "@context": {
                 "object": {
                     "@type": "@id",

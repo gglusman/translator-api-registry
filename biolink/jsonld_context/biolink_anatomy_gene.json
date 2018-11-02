@@ -10,7 +10,7 @@
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:AnatomyToGeneOrGeneProductAssociation",
+            "@id": "assoc:AnatomicalEntityToGeneOrGeneProductAssociation",
             "@context": {
                 "subject": {
                     "@type": "@id",

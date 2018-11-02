@@ -3,7 +3,10 @@ AnatomicalEntityToGeneOrGeneProductAssociation,An association between an anatomi
 BioassayToChemicalAssociation,An association between a bioassay entity and a chemical,pubchem API
 ChemicalToClinicalTrialAssociation,An association between a chemical and a clinical trial,mychem.info API
 ChemicalToDiseaseOrPhenotypicFeatureAssociation,An interaction between a chemical entity and a phenotype or disease, where the presence of the chemical gives rise to or exacerbates the phenotype,ChEMBL API/pharos API
+VariantToDiseaseOrPhenotypicFeatureAssociation,An interaction between a variant and a phenotype or disease, where the presence of the variant gives rise to or exacerbates the phenotype,Ensembl API
 ChemicalToGeneOrGeneProductAssociation,An interaction between a chemical entity and a gene or gene product,ChEMBL API/DGIdb API/mychem.info API/pharos API
+VariantToPublicationAssociation,An association between a variant and a publication,litvar API
+PublicationToVariantAssociation,An association between a publication and a variant,Ensembl API
 ChemicalToPublicationAssociation,An association between a chemical and a publication,pubchem API
 DiseaseOntologyToChildDiseaseOntologyAssociation,An association between a parent disease ontology and a child disease ontology,EBI OLS API/disease ontology API
 DiseaseOntologyToParentDiseaseOntologyAssociation,An association between a child disease ontology and a parent disease ontology,EBI OLS API/disease ontology API

@@ -11,7 +11,7 @@
             "@context": {
                 "biocarta": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
                     "@context": {
                         "id": {
                             "@type": "@id",
@@ -31,7 +31,7 @@
                 },
                 "kegg": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
                     "@context": {
                         "id": {
                             "@type": "@id",
@@ -51,7 +51,7 @@
                 },
                 "reactome": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
                     "@context": {
                         "id": {
                             "@type": "@id",
@@ -71,7 +71,7 @@
                 },
                 "wikipathways": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
                     "@context": {
                         "id": {
                             "@type": "@id",
@@ -91,7 +91,7 @@
                 },
                 "pharmgkb": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToPathwayAssociation",
+                    "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
                     "@context": {
                         "id": {
                             "@type": "@id",
@@ -170,7 +170,89 @@
             "@context": {
                 "BP": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToGoTermAssociation",
+                    "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "rel:evidence",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
+                            }
+                        },
+                        "gocategory": {
+                            "@type": "@id",
+                            "@id": "rel:category",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-category/"
+                            }
+                        }
+                    }
+                },
+                "CC": {
+                    "@type": "@id",
+                    "@id": "assoc:MacromolecularMachineToCellularComponentAssociation",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/go/"
+                            }
+                        },
+                        "pubmed": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        },
+                        "term": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-term/"
+                            }
+                        },
+                        "evidence": {
+                            "@type": "@id",
+                            "@id": "rel:evidence",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-evidence/"
+                            }
+                        },
+                        "gocategory": {
+                            "@type": "@id",
+                            "@id": "rel:category",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/go-category/"
+                            }
+                        }
+                    }
+                },
+                "MF": {
+                    "@type": "@id",
+                    "@id": "assoc:MacromolecularMachineToMolecularActivityAssociation",
                     "@context": {
                         "id": {
                             "@type": "@id",

@@ -131,7 +131,7 @@
                             "@context": {
                                 "indication": {
                                     "@type": "@id",
-                                    "@id": "assoc:treats",
+                                    "@id": "assoc:Treats",
                                     "@context": {
                                         "concept_name": {
                                             "@type": "@id",
@@ -160,7 +160,7 @@
                         },
                         "fda_adverse_event": {
                             "@type": "@id",
-                            "@id": "assoc:causes",
+                            "@id": "assoc:Causes",
                             "@context": {
                                 "meddra_code": {
                                     "@type": "@id",
@@ -191,7 +191,7 @@
                             "@context": {
                                 "fda_epc": {
                                     "@type": "@id",
-                                    "@id": "assoc:subclass_of",
+                                    "@id": "assoc:Subclass_of",
                                     "@context": {
                                         "code": {
                                             "@type": "@id",
@@ -325,7 +325,7 @@
                                 },
                                 "clinicaltrials_gov": {
                                     "@type": "@id",
-                                    "@id": "ont:associatedWithClinicalTrial",
+                                    "@id": "assoc:ChemicalToClinicalTrialAssociation",
                                     "@context": {
                                         "@base": "http://identifiers.org/clinicaltrials/"
                                     }
@@ -407,13 +407,6 @@
                     "@type": "@id",
                     "@id": "term:has_annotation",
                     "@context": {
-                        "max_phase": {
-                            "@type": "@id",
-                            "@id": "assoc:in_phase",
-                            "@context": {
-                                "@base": "http://biothings.io/explorer/vocab/terms/drug-phase/"
-                            }
-                        },
                         "molecule_chembl_id": {
                             "@type": "@id",
                             "@id": "assoc:EquivalentAssociation",
@@ -506,48 +499,7 @@
                         },
                         "targets": {
                             "@type": "@id",
-                            "@id": "assoc:targets",
-                            "@context": {
-                                "uniprot": {
-                                    "@type": "@id",
-                                    "@id": "attr:id",
-                                    "@context": {
-                                        "@base": "http://identifiers.org/uniprot/"
-                                    }
-                                },
-                                "name": {
-                                    "@type": "@id",
-                                    "@id": "attr:label",
-                                    "@context": {
-                                        "@base": "http://biothings.io/explorer/vocab/terms/gene-approved-name/"
-                                    }
-                                },
-                                "organism": {
-                                    "@type": "@id",
-                                    "@id": "attr:taxonomy",
-                                    "@context": {
-                                        "@base": "http://biothings.io/explorer/vocab/terms/genebank-common-name/"
-                                    }
-                                },
-                                "source": {
-                                    "@type": "@id",
-                                    "@id": "rel:provided_by",
-                                    "@context": {
-                                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
-                                    }
-                                },
-                                "actions": {
-                                    "@type": "@id",
-                                    "@id": "rel:label",
-                                    "@context": {
-                                        "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-relation/"
-                                    }
-                                }
-                            }
-                        },
-                        "enzymes": {
-                            "@type": "@id",
-                            "@id": "assoc:has_enzyme",
+                            "@id": "assoc:Regulates",
                             "@context": {
                                 "uniprot": {
                                     "@type": "@id",

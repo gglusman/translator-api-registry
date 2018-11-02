@@ -58,3 +58,7 @@ APIs:
     translator:
         - returnjson: true
           notes: ""
+  - metadata: ensembl/openapi.yml
+    translator:
+        - returnjson: true
+          notes: ""

@@ -14,7 +14,7 @@
                     "@context": {
                         "SID": {
                             "@type": "@id",
-                            "@id": "assoc:BioassayAssociatedWithChemical",
+                            "@id": "assoc:BioassayToChemicalAssociation",
                             "@context": {
                                 "@base": "http://identifiers.org/pubchem.substance/"
                             }

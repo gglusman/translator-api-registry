@@ -14,11 +14,59 @@ servers:
   - url: 'http://rest.ensembl.org'
     description: 'Production server'
 tags:
-  - name: phenotype
   - name: variant
-  - name: genotype
-  - name: translator
 paths:
+  '/variation/human/pmid/{pmid}':
+    get:
+      summary: 'Fetch variants by publication using PubMed reference number (PMID)'
+      parameters:
+        - name: pmid
+          in: path
+          description: >-
+            PubMed reference number (PMID)
+          required: true
+          example: 26318936
+          x-valueType:
+            - 'http://identifiers.org/pubmed/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/pubmed/'
+              template: /variation/human/pmid/{pmid}?content-type=application/json
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A variant annotation object'
+          x-responseValueType:
+            - path: name
+              valueType: 'http://identifiers.org/dbsnp/'
+          x-JSONLDContext:
+            'ensembl/jsonld_context/pmid2rsid_context.json'
+  '/variation/human/{rsid}':
+    get:
+      summary: 'Uses a variant identifier (e.g. rsID) to return phenotypic feature associated with the variant'
+      parameters:
+        - name: rsid
+          in: path
+          description: Variant id
+          required: true
+          example: rs56116432
+          x-valueType:
+            - 'http://identifiers.org/dbsnp/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/dbsnp/'
+              template: /variation/human/{rsid}?phenotypes=1;content-type=application/json
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A phenoytpe annotation object'
+          x-responseValueType:
+            - path: phenotypes.trait
+              valueType: http://biothings.io/explorer/vocab/terms/phenotype-name/
+            - path: phenotypes.ontology_accessions
+              valueType: http://identifiers.org/hp/
+          x-JSONLDContext:
+            'ensembl/jsonld_context/rsid2phenotype_context.json'
   '/taxonomy/id/{taxonomyid}':
     get:
       summary: 'Search for a taxonomic term by its identifier or name'

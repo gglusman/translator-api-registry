@@ -26,14 +26,14 @@
         },
         "parents": {
             "@type": "@id",
-            "@id": "assoc:IsChildOf",
+            "@id": "assoc:DiseaseOntologyToParentDiseaseOntologyAssociation",
             "@context": {
                 "@base": "http://identifiers.org/doid/"
             } 
         },
         "children": {
             "@type": "@id",
-            "@id": "assoc:IsParentOf",
+            "@id": "assoc:DiseaseOntologyToChildDiseaseOntologyAssociation",
             "@context": {
                 "@base": "http://identifiers.org/doid/"
             } 

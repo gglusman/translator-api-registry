@@ -18,14 +18,14 @@
                             "@context": {
                                 "doid": {
                                     "@type": "@id",
-                                    "@id": "assoc:PhenotypeToDiseaseAssociation",
+                                    "@id": "assoc:PhenotypicFeatureToDiseaseAssociation",
                                     "@context": {
                                         "@base": "http://identifiers.org/doid/"
                                     }
                                 },
                                 "omim": {
                                     "@type": "@id", 
-                                    "@id": "assoc:PhenotypeToDiseaseAssociation",
+                                    "@id": "assoc:PhenotypicFeatureToDiseaseAssociation",
                                     "@context": {
                                         "@base": "http://biothings.io/explorer/vocab/terms/omim.disease/"
                                     }

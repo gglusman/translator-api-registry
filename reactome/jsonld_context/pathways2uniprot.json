@@ -10,7 +10,7 @@
             "@context": {
                 "refEntities": {
                     "@type": "@id",
-                    "@id": "assoc:PathwayToProteinAssociation",
+                    "@id": "assoc:BiologicalProcessToMacromolecularMachineAssociation",
                     "@context": {
                         "identifier": {
                             "@type": "@id",
