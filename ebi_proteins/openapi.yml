@@ -381,33 +381,8 @@ paths:
             format: int32
       responses:
         '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PLocation2GLocationCollection'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/PLocation2GLocationCollection'
-        '400':
-          description: Invalid request Parameter.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-        '404':
-          description: Resources not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-  '/coordinates/{accession}':
+          description: 'PTMs related to the accession'
+  '/features/{accession}?categories=MOLECULAR_PROCESSING':
     get:
       tags:
         - coordinates
@@ -589,37 +564,8 @@ paths:
             type: boolean
       responses:
         '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/GnEntry'
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/GnEntry'
-        '400':
-          description: Invalid request Parameter.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-        '404':
-          description: Resources not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-  /features:
+          description: 'MOLECULAR_PROCESSINGs related to the accession'
+  '/features/{accession}?categories=TOPOLOGY':
     get:
       tags:
         - features
@@ -834,48 +780,8 @@ paths:
               type: string
       responses:
         '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ProteinFeatureInfo'
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ProteinFeatureInfo'
-            text/x-gff:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ProteinFeatureInfo'
-        '400':
-          description: Invalid request Parameter.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            text/x-gff:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-        '404':
-          description: Resources not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-            text/x-gff:
-              schema:
-                $ref: '#/components/schemas/ErrorMessage'
-  '/features/{accession}':
+          description: 'TOPOLOGYs related to the accession'
+  '/variation/{accession}':
     get:
       tags:
         - features

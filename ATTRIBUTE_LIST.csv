@@ -1,0 +1,14 @@
+URI,NAME,CATEGORY
+http://biothings.io/explorer/vocab/attributes/id,id,object
+http://biothings.io/explorer/vocab/attributes/secondary-id,secondary-id,object
+http://biothings.io/explorer/vocab/attributes/label,label,object
+http://biothings.io/explorer/vocab/attributes/taxonomy,taxonomy,object
+http://biothings.io/explorer/vocab/attributes/description,description,object
+http://biothings.io/explorer/vocab/relationships/id,id,edge
+http://biothings.io/explorer/vocab/relationships/label,label,edge
+http://biothings.io/explorer/vocab/relationships/publication,publication,edge
+http://biothings.io/explorer/vocab/relationships/evidence,evidence,edge
+http://biothings.io/explorer/vocab/relationships/provided_by,provided_by,edge
+http://biothings.io/explorer/vocab/relationships/probability,probability,edge
+http://biothings.io/explorer/vocab/relationships/pvalue,pvalue,edge
+http://biothings.io/explorer/vocab/relationships/category,category,edge

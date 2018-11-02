@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@base": "http://identifiers.org/taxonomy/",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "parent_taxid": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "id": {
+                    "@type": "@id",
+                    "@id": "assoc:IsChildOf",
+                    "@context": {
+                        "@base": "http://identifiers.org/taxonomy/"
+                    }
+                }
+            }
+        }
+    }
+}

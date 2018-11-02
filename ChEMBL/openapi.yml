@@ -1,0 +1,125 @@
+openapi: '3.0.0'
+info:
+  version: '1.0'
+  title: ChEMBL API
+  description: >-
+    ChEMBL is a database of bioactive drug-like small molecules, it contains 2-D structures, calculated properties (e.g. logP, Molecular Weight, Lipinski Parameters, etc.) and abstracted bioactivities (e.g. binding constants, pharmacology and ADMET data).
+  termsOfService: https://www.ebi.ac.uk/chembl/about
+  contact:
+    name: Andrew Leach
+    x-role: responsible developer
+    email: arl@ebi.ac.uk
+servers:
+  - url: 'https://www.ebi.ac.uk/chembl/api/data'
+    description: 'Production server'
+tags:
+  - name: drug
+  - name: protein
+  - name: bioassay
+paths:
+  '/compound_record':
+    get:
+      summary: 'return chembl compound id corresponding to a drug name'
+      parameters:
+        - name: compound_name__iexact
+          in: query
+          description: >-
+            Put drugname here
+          required: true
+          example: riluzole
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/drug-name/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+              template: input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "compound_records" property'
+          x-responseValueType:
+            - path: compound_records.molecule_chembl_id
+              valueType: 'http://identifiers.org/chembl.compound/'
+          x-JSONLDContext:
+            'ChEMBL/jsonld_context/chembl_drugname2chemblcompound_context.json'
+  '/target_prediction/{chemblid}':
+    get:
+      summary: 'return predicted binding of a molecule to given biological target'
+      parameters:
+        - name: chemblid
+          in: path
+          description: >-
+            Put chembl compound id here
+          required: true
+          example: CHEMBL744
+          x-valueType:
+            - 'http://identifiers.org/chembl.compound/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/chembl.compound/'
+              template: /target_prediction?molecule_chembl_id__exact={chemblid}&target_organism__exact=Homo sapiens
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "target_prediction" property'
+          x-responseValueType:
+            - path: target_prediction.target_chembl_id
+              valueType: 'http://identifiers.org/chembl.target/'
+            - path: target_prediction.target_accession
+              valueType: 'http://identifiers.org/uniprot/'
+          x-JSONLDContext:
+            'ChEMBL/jsonld_context/chembl_target_prediction_context.json'
+  '/mechanism':
+    get:
+      summary: 'return drugs interacts with protein'
+      parameters:
+        - name: target_chembl_id
+          in: query
+          description: >-
+            Put target ChEMBL ID here, e.g. CHEMBL2326
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/chembl.target/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/chembl.target/'
+              template: input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "mechanisms" property'
+          x-responseValueType:
+            - path: mechanisms.molecule_chembl_id
+              valueType: 'http://identifiers.org/chembl.compound/'
+          x-JSONLDContext:
+            'ChEMBL/jsonld_context/chembl_target2compound_context.json'
+  '/drug_indication':
+    get:
+      summary: 'return indications for drugs'
+      parameters:
+        - name: molecule_chembl_id
+          in: query
+          description: >-
+            Put ChEMBL compound ID here, e.g. CHEMBL112
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/chembl.compound/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/chembl.compound/'
+              template: input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "drug_indications" property'
+          x-responseValueType:
+            - path: drug_indications.mesh_id
+              valueType: 'http://biothings.io/explorer/vocab/terms/mesh.disease/'
+            - path: drug_indications.efo_id
+              valueType: 'http://identifiers.org/hp/'
+            - path: drug_indications.efo_id
+              valueType: 'http://identifiers.org/efo/'
+            - path: drug_indications.efo_id
+              valueType: 'http://identifiers.org/orphanet/'
+          x-JSONLDContext:
+            'ChEMBL/jsonld_context/chembl_drugindication_context.json'

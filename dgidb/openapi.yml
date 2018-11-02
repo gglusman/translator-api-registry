@@ -30,9 +30,12 @@ paths:
           required: true
           x-valueType:
             - 'http://biothings.io/terms/drugname/'
+            - 'http://identifiers.org/chembl.compound/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/drugname/'
-              template: drugs={{input}}
+            - valueType: 'http://biothings.io/terms/drugname/'
+              template: /interactions.json?drugs={drugname}
+            - valueType: 'http://identifiers.org/chembl.compound/'
+              template: /interactions.json?drugs={drugname}
           schema:
             type: string
       responses:
@@ -43,10 +46,8 @@ paths:
               valueType: 'http://identifiers.org/hgnc.symbol/'
             - path: matchedTerms.interactions.geneEntrezId
               valueType: 'http://identifiers.org/ncbigene/'
-            - path: matchedTerms.interactions
-              valueType: 'http://biothings.io/concepts/drug_interaction/'
           x-JSONLDContext:
-            'https://raw.githubusercontent.com/NCATS-Tangerine/translator-api-registry/master/dgidb/jsonld_context/dgidb_context.json'
+            'dgidb/jsonld_context/dgidb_drug2gene_context.json'
   '/interactions.json?genes={genesymbol}':
     get:
       summary: 'return interactions for a gene with a drug'
@@ -58,9 +59,12 @@ paths:
           required: true
           x-valueType:
             - 'http://identifiers.org/hgnc.symbol/'
+            - 'http://identifiers.org/ncbigene/'
           x-requestTemplate:
             - valueType: 'http://identifiers.org/hgnc.symbol/'
-              template: genes={{input}}
+              template: /interactions.json?genes={genesymbol}
+            - valueType: 'http://identifiers.org/ncbigene/'
+              template: /interactions.json?genes={genesymbol}
           schema:
             type: string
       responses:
@@ -69,7 +73,7 @@ paths:
           x-responseValueType:
             - path: matchedTerms.interactions.drugName
               valueType: 'http://biothings.io/terms/drugname/'
-            - path: matchedTerms.interactions
-              valueType: 'http://biothings.io/concepts/drug_interaction/'
+            - path: matchedTerms.interactions.chemblId
+              valueType: 'http://identifiers.org/chembl.compound/'
           x-JSONLDContext:
-            'https://raw.githubusercontent.com/NCATS-Tangerine/translator-api-registry/master/dgidb/jsonld_context/dgidb_context.json'
+            'dgidb/jsonld_context/dgidb_gene2drug_context.json'

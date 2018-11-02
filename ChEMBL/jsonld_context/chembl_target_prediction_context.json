@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "target_predictions": {
+            "@type": "@id",
+            "@id": "assoc:ChemicalToGeneOrGeneProductAssociation",
+            "@context": {
+                "target_chembl_id": {
+                    "@type": "@id",
+                    "@id": "attr:secondary-id",
+                    "@context": {
+                        "@base": "http://identifiers.org/chembl.target/"
+                    }
+                },
+                "target_accession": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://identifiers.org/uniprot/"
+                    }
+                },
+                "target_tax_id": {
+                    "@type": "@id",
+                    "@id": "attr:taxonomy",
+                    "@context": {
+                        "@base": "http://identifiers.org/taxonomy/"
+                    }
+                },
+                "probability": {
+                    "@type": "@id", 
+                    "@id": "rel:probability",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-interaction-probability/"
+                    }
+                }
+            }
+        }
+    }
+}

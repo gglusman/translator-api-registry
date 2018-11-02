@@ -18,27 +18,279 @@ tags:
   - name: query
   - name: translator
 paths:
-  /query:
+  /ontologies/uberon/terms/{uberonid}:
     get:
-      summary: 'The search API is independent of the REST API and supports free text search over the ontologies. The default search is across all textual fields in the ontology, but results are ranked towards hits in labels, then synonyms, then definitions, then annotations.'
+      summary: Return uberon descriptions
       parameters:
-        - name: q
-          in: query
+        - name: uberonid
+          in: path
           description: >-
-            The terms to search. By default the search is performed over term labels, synonyms, descriptions, identifiers and annotation properties.
+            UBERON id, e.g. 0004476
           required: true
           x-valueType:
-            - 'http://biothings.io/concepts/disease_name/'
+            - 'http://identifiers.org/uberon/'
           x-requestTemplate:
-            - valueType: 'http://biothings.io/concepts/disease_name/'
-              template: '{{input}}&ontology=doid'
+            - valueType: 'http://identifiers.org/uberon/'
+              template: '/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_{uberonid}'
           schema:
             type: string
       responses:
         '200':
-          description: 'A query response object with "hits" property'
+          description: 'An UBERON description object'
           x-responseValueType:
-            - path: response.docs.obo_id
+            - path: label
+              valueType: 'http://biothings.io/explorer/vocab/terms/anatomy/'
+            - path: description
+              valueType: 'http://biothings.io/explorer/vocab/terms/anatomy-description/'
+            - path: annotation.cross_database_reference
+              valueType: 'http://biothings.io/explorer/vocab/terms/mesh.anatomy/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_term_anatomy.json'
+  /ontologies/cl/terms/{clid}:
+    get:
+      summary: Return CL descriptions
+      parameters:
+        - name: clid
+          in: path
+          description: >-
+            CL id, e.g. 0000038
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/cl/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/cl/'
+              template: '/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_{clid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An CL description object'
+          x-responseValueType:
+            - path: label
+              valueType: 'http://biothings.io/explorer/vocab/terms/anatomy/'
+            - path: description
+              valueType: 'http://biothings.io/explorer/vocab/terms/anatomy-description/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_term_anatomy.json'
+  /ontologies/hp/terms/{hpid}:
+    get:
+      summary: Return Human Phenotypes descriptions
+      parameters:
+        - name: hpid
+          in: path
+          description: >-
+            HP id, e.g. 0011105
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/hp/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/hp/'
+              template: '/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_{hpid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Human Phenotypes description object'
+          x-responseValueType:
+            - path: label
+              valueType: 'http://biothings.io/explorer/vocab/terms/phenotype-name/'
+            - path: description
+              valueType: 'http://biothings.io/explorer/vocab/terms/phenotype-description/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_term_phenotype.json'
+  /ontologies/go/terms/{goid}:
+    get:
+      summary: Return Gene Ontology descriptions
+      parameters:
+        - name: goid
+          in: path
+          description: >-
+            GO id, e.g. 0042535
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/go/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/go/'
+              template: '/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_{goid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Gene Ontology description object'
+          x-responseValueType:
+            - path: description
+              valueType: 'http://biothings.io/explorer/vocab/terms/go-description/'
+            - path: label
+              valueType: 'http://biothings.io/explorer/vocab/terms/go-term/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_term_go.json'
+  /ontologies/doid/terms/{doid}:
+    get:
+      summary: Return Disease Ontology descriptions
+      parameters:
+        - name: doid
+          in: path
+          description: >-
+            DO id, e.g. 126
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/doid/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/doid/'
+              template: '/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FDOID_{doid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Disease Ontology description object'
+          x-responseValueType:
+            - path: description
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-description/'
+            - path: label
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_term_do.json'
+  /ontologies/go/children/{goid}:
+    get:
+      summary: Return children Gene Ontology id
+      parameters:
+        - name: goid
+          in: path
+          description: >-
+            GO id, e.g. 0042535
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/go/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/go/'
+              template: '/ontologies/go/children?id=GO:{goid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Gene Ontology child object'
+          x-responseValueType:
+            - path: _embedded.terms.obo_id
+              valueType: 'http://identifiers.org/go/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_go_child.json'
+  /ontologies/go/parents/{goid}:
+    get:
+      summary: Return parent Gene Ontology id
+      parameters:
+        - name: goid
+          in: path
+          description: >-
+            GO id, e.g. 0042535
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/go/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/go/'
+              template: '/ontologies/go/parents?id=GO:{goid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Gene Ontology parent object'
+          x-responseValueType:
+            - path: _embedded.terms.obo_id
+              valueType: 'http://identifiers.org/go/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_go_parent.json'
+  /ontologies/doid/children/{doid}:
+    get:
+      summary: Return children Disease Ontology id
+      parameters:
+        - name: doid
+          in: path
+          description: >-
+            DO id, e.g. 162
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/doid/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/doid/'
+              template: '/ontologies/doid/children?id=DOID:{doid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Disease Ontology child object'
+          x-responseValueType:
+            - path: _embeddd.terms.obo_id
               valueType: 'http://identifiers.org/doid/'
           x-JSONLDContext:
-            'https://raw.githubusercontent.com/NCATS-Tangerine/translator-api-registry/master/ebi_ontology_lookup_service_api/jsonld_context/ols_query_1.1.json'
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_do_child.json'
+  /ontologies/do/parents/{doid}:
+    get:
+      summary: Return parent Disease Ontology id
+      parameters:
+        - name: doid
+          in: path
+          description: >-
+            DO id, e.g. 162
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/doid/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/doid/'
+              template: '/ontologies/doid/parents?id=DOID:{doid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Disease Ontology parent object'
+          x-responseValueType:
+            - path: _embeddd.terms.obo_id
+              valueType: 'http://identifiers.org/doid/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_do_parent.json'
+  /ontologies/uberon/parents/{uberonid}:
+    get:
+      summary: Return parent Uberon Ontology id
+      parameters:
+        - name: uberonid
+          in: path
+          description: >-
+            Uberon id, e.g. 0035553
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/uberon/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uberon/'
+              template: '/ontologies/uberon/parents?id=UBERON:{uberonid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Uberon Ontology parent object'
+          x-responseValueType:
+            - path: _embeddd.terms.obo_id
+              valueType: 'http://identifiers.org/uberon/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_uberon_parent.json'
+  /ontologies/uberon/children/{uberonid}:
+    get:
+      summary: Return child Uberon Ontology id
+      parameters:
+        - name: uberonid
+          in: path
+          description: >-
+            Uberon id, e.g. 0035553
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/uberon/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uberon/'
+              template: '/ontologies/uberon/children?id=UBERON:{uberonid}'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An Uberon Ontology child object'
+          x-responseValueType:
+            - path: _embeddd.terms.obo_id
+              valueType: 'http://identifiers.org/uberon/'
+          x-JSONLDContext:
+            'ebi_ontology_lookup_service_api/jsonld_context/ols_uberon_child.json'

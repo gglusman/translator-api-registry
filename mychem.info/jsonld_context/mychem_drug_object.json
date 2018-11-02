@@ -1,0 +1,545 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "CID": "http://identifiers.org/pubchem.compound/",
+        "SID": "http://identifiers.org/pubchem.substance/",
+        "aeolus": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "inchikey": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                },
+                "drug_name": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                    }
+                }
+            }
+        },
+        "drugcentral": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "xref": {
+                    "@type": "@id",
+                    "@id": "term:has_annotation",
+                    "@context": {
+                        "rxnorm": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/rxcui/"
+                            }
+                        },
+                        "chebi": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/chebi/"
+                            }
+                        },
+                        "chembl_id": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/chembl.compound/"
+                            }
+                        },
+                        "chebi": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/chebi/"
+                            }
+                        },
+                        "drugbank_id": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/drugbank/"
+                            }
+                        },
+                        "iuphar_ligand_id": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/iuphar.ligand/"
+                            }
+                        },
+                        "kegg_drug": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/kegg.drug/"
+                            }
+                        },
+                        "pubchem_cid": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubchem.compound/"
+                            }
+                        },
+                        "unii": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/unii/"
+                            }
+                        },
+                        "pubchem_cid": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubchem.compound/"
+                            }
+                        },
+                        "mesh_descriptor_ui": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/mesh.compound/"
+                            }
+                        },
+                        "umlscui": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/umls.compound/"
+                            }
+                        }
+                    }
+                },
+                "structures": {
+                    "@type": "@id",
+                    "@id": "term:has_annotation",
+                    "@context": {
+                        "inchi": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/inchi/"
+                            }
+                        },
+                        "inchikey": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/inchikey/"
+                            }
+                        }
+                    }
+                },
+                "drug_use": {
+                    "@type": "@id",
+                    "@id": "term:has_annotation",
+                    "@context": {
+                        "indication": {
+                            "@type": "@id",
+                            "@id": "assoc:treats",
+                            "@context": {
+                                "concept_name": {
+                                    "@type": "@id",
+                                    "@id": "attr:label",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                                    }
+                                },
+                                "snomed_concept_id": {
+                                    "@type": "@id",
+                                    "@id": "attr:secondary-id",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/snomedct/"
+                                    }
+                                },
+                                "umls_cui": {
+                                    "@type": "@id",
+                                    "@id": "attr:id",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/umls.disease/"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ginas": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "xrefs": {
+                    "@type": "@id",
+                    "@id": "term:has_annotation",
+                    "@context": {
+                        "RXCUI": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/rxcui/"
+                            }
+                        }
+                    }
+                },
+                "unii": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/unii/"
+                    }
+                },
+                "inchikey": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                }
+            }
+        },
+        "pharmgkb": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "pharmgkb_accession_id": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/pharmgkb.drug/"
+                    }                
+                },
+                "external_vocabulary": {
+                    "@type": "@id",
+                    "@id": "term:has_annotation",
+                    "@context": {
+                        "rxnorm": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/rxcui/"
+                            }
+                        }
+                    }
+                },
+                "cross_references": {
+                    "@type": "@id",
+                    "@id": "term:has_annotation",
+                    "@context": {
+                        "drugbank": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/drugbank/"
+                            }
+                        },
+                        "iuphar_ligand": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/iuphar.ligand/"
+                            }
+                        },
+                        "kegg_drug": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/kegg.drug/"
+                            }
+                        },
+                        "kegg_compound": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/kegg.compound/"
+                            }
+                        },
+                        "pubchem_compound": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubchem.compound/"
+                            }
+                        },
+                        "pubchem_substance": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubchem.substance/"
+                            }
+                        },
+                        "drugbank": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/drugbank/"
+                            }
+                        }
+                    }
+                },
+                "inchi": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchi/"
+                    }
+                }
+            }
+        },
+        "chebi": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "chebi_id": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/chebi/"
+                    }
+                },
+                "definition": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/chemical-description/"
+                    }
+                },
+                "chebi_name": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                    }
+                },
+                "definition": {
+                    "@type": "@id",
+                    "@id": "assoc:HasDescriptionAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/chemical-description/"
+                    }
+                },
+                "drugbank_database_links": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/drugbank/"
+                    }
+                },
+                "kegg_drug_database_links": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/kegg.drug/"
+                    }
+                },
+                "kegg_compound_database_links": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/kegg.compound/"
+                    }
+                },
+                "inchikey": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                },
+                "inchi": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchi/"
+                    }
+                }
+            }
+        },
+        "chembl": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "molecule_chembl_id": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/chembl.compound/"
+                    }
+                },
+                "inchi_key": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                },
+                "inchi": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchi/"
+                    }
+                },
+                "pref_name": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                    }
+                }
+            }
+        },
+        "drugbank": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "drugbank_id": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/drugbank/"
+                    }
+                },
+                "pharmgkb": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/pharmgkb.drug/"
+                    }
+                },
+                "name": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                    }
+                },
+                "chembl": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/chembl.compound/"
+                    }
+                },
+                "kegg_drug": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/kegg.drug/"
+                    }
+                },
+                "inchi_key": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                },
+                "inchi": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchi/"
+                    }
+                },
+                "drug_interactions": {
+                    "@type": "@id",
+                    "@id": "assoc:PairwiseChemicalInteractionAssociation",
+                    "@context": {
+                        "drugbank-id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/drugbank/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drugname/"
+                            }
+                        }
+                    }
+                },
+                "targets": {
+                    "@type": "@id",
+                    "@id": "assoc:ChemicalToGeneOrGeneProductAssociation",
+                    "@context": {
+                        "uniprot": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/uniprot/"
+                            }
+                        },
+                        "name": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-approved-name/"
+                            }
+                        },
+                        "organism": {
+                            "@type": "@id",
+                            "@id": "attr:taxonomy",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/genebank-common-name/"
+                            }
+                        },
+                        "source": {
+                            "@type": "@id",
+                            "@id": "rel:provided_by",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                            }
+                        },
+                        "actions": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-relation/"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "pubchem": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "inchi_key": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                }
+            }
+        },
+        "unii": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "unii": {
+                    "@type": "@id",
+                    "@id": "assoc:EquivalentAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/unii/"
+                    }
+                }
+            }
+        }
+    }
+}

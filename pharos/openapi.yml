@@ -1,0 +1,208 @@
+openapi: '3.0.0'
+info:
+  version: '1.0'
+  title: Pharos API
+  description: >-
+    Pharos presents the data from Target Central Resource Database (TCRD), which collates many heterogeneous gene/protein datasets.
+  termsOfService: https://pharos.nih.gov/idg/help
+  contact:
+    name: Dac-Trung Nguyen
+    x-role: responsible developer
+    email: pharos@mail.nih.gov
+servers:
+  - url: 'https://pharos.nih.gov/idg/api/v1'
+    description: 'Production server'
+tags:
+  - name: drug
+  - name: gene
+  - name: disease
+  - name: translator
+paths:
+  '/targets({geneid})':
+    get:
+      summary: 'get pharos target information by pharos target id'
+      parameters:
+        - name: geneid
+          in: path
+          description: >-
+            Pharos target id
+          required: true
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/pharos.target/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
+              template: /targets({geneid})?view=full&format=jsonld
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A pharos target object'
+          x-responseValueType:
+            - path: accession
+              valueType: 'http://identifiers.org/uniprot/'
+            - path: gene
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+            - path: name
+              valueType: 'http://biothings.io/explorer/vocab/terms/gene-approved-name/'
+            - path: synonyms.Entrez Gene.term
+              valueType: 'http://identifiers.org/ncbigene/'
+            - path: MIM.term
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.gene/'
+            - path: links.ix.idg.models.Disease.refid
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
+            - path: links.ix.idg.models.Disease.properties.IDG Disease/term
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+            - path: links.ix.idg.models.Ligand.refid
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
+            - path: links.ix.idg.models.Ligand.properties.IDG Ligand/term
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+          x-JSONLDContext:
+            'pharos/jsonld_context/pharos_target.json'
+    
+  '/ligands({drugid})':
+    get:
+      summary: 'get pharos ligand information by pharos ligand id'
+      parameters:
+        - name: drugid
+          in: path
+          description: >-
+            Pharos ligand id
+          required: true
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
+              template: /ligands({drugid})?view=full&format=jsonld
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A pharos ligand object'
+          x-responseValueType:
+            - path: name
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+            - path: synonyms.CHEMBL ID
+              valueType: 'http://identifiers.org/chembl.compound/'
+            - path: links.ix.idg.models.Target.refid
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
+            - path: links.ix.idg.models.Target.properties.IDG Target.term
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+            - path: links.ix.idg.models.Disease.refid
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
+            - path: links.ix.idg.models.Disease.properties.IDG Disease/term
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+          x-JSONLDContext:
+            'pharos/jsonld_context/pharos_ligand.json'
+  '/diseases({diseaseid})':
+    get:
+      summary: 'get pharos disease information by pharos disease id'
+      parameters:
+        - name: diseaseid
+          in: path
+          description: >-
+            Pharos disease id
+          required: true
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
+              template: /diseases({diseaseid})?view=full&format=jsonld
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A pharos ligand object'
+          x-responseValueType:
+            - path: name
+              valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+            - path: synonyms.DOID
+              valueType: 'http://identifiers.org/doid/'
+            - path: synonyms.DiseaseOntology.term
+              valueType: 'http://biothings.io/explorer/vocab/terms/omim.disease/'
+            - path: synonyms.DiseaseOntology.term
+              valueType: 'http://biothings.io/explorer/vocab/terms/umls.disease/'
+            - path: links.ix.idg.models.Target.refid
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
+            - path: links.ix.idg.models.Target.properties.IDG Target.term
+              valueType: 'http://identifiers.org/hgnc.symbol/'
+            - path: links.ix.idg.models.Ligand.refid
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
+            - path: links.ix.idg.models.Ligand.properties.IDG Ligand/term
+              valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+          x-JSONLDContext:
+            'pharos/jsonld_context/pharos_disease.json'
+  '/ligands/search':
+    get:
+      summary: 'return pharos ligand id based on drugname'
+      parameters:
+        - name: q
+          in: query
+          description: >-
+            Put drugname here, e.g. riluzole 
+          required: true
+          example: riluzole
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/drug-name/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/drug-name/'
+              template: input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A pharos ligand annotation object'
+          x-responseValueType:
+            - path: content.id
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.ligand/'
+          x-JSONLDContext:
+            'pharos/jsonld_context/pharos_drugname2ligand.json'
+  '/targets/search':
+    get:
+      summary: 'return pharos target id based on uniprot'
+      parameters:
+        - name: q
+          in: query
+          description: >-
+            Put uniprot id here, e.g. P61073
+          required: true
+          example: P61073
+          x-valueType:
+            - 'http://identifiers.org/uniprot/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/uniprot/'
+              template: input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A pharos target annotation object'
+          x-responseValueType:
+            - path: content.id
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.target/'
+          x-JSONLDContext:
+            'pharos/jsonld_context/pharos_uniprot2target.json'
+  '/diseases/search':
+    get:
+      summary: 'return pharos disease id based on disease name'
+      parameters:
+        - name: q
+          in: query
+          description: >-
+            Put disease name here, e.g. cancer
+          required: true
+          example: cancer
+          x-valueType:
+            - 'http://biothings.io/explorer/vocab/terms/disease-name/'
+          x-requestTemplate:
+            - valueType: 'http://biothings.io/explorer/vocab/terms/disease-name/'
+              template: input_value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A pharos disease annotation object'
+          x-responseValueType:
+            - path: content.id
+              valueType: 'http://biothings.io/explorer/vocab/terms/pharos.disease/'
+          x-JSONLDContext:
+            'pharos/jsonld_context/pharos_diseasename2disease.json'

@@ -1,0 +1,93 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "NCBIGene": "http://identifiers.org/ncbigene/",
+        "HGNC": "http://identifiers.org/hgnc/",
+        "MGI": "http://identifiers.org/mgi/",
+        "RO": "http://identifiers.org/ro/RO:",
+        "PMID": "http://identifiers.org/pubmed/",
+        "NCBITaxon": "http://identifiers.org/taxonomy/",
+        "associations": {
+            "@type": "@id",
+            "@id": "assoc:PairwiseGeneOrProteinInteractionAssociation",
+            "@context": {
+                "object": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/hgnc/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "attr:secondary-id",
+                            "@context": {
+                                "@base": "http://identifiers.org/hgnc.symbol/"
+                            }
+                        },
+                        "taxon": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "id": {
+                                    "@type": "@id",
+                                    "@id": "attr:taxonomy",
+                                    "@context": {
+                                      "@base": "http://identifiers.org/taxonomy/"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "relation": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "rel:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/ro/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-interaction-relation/"
+                            }
+                        }
+                    }
+                },
+                "publication": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        }
+                    }
+                },
+                "provided_by": {
+                    "@type": "@id",
+                    "@id": "rel:provided_by",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,330 @@
+https://pharos.nih.gov/idg/api/v1/targets(1)?view=full&format=jsonld
+
+{
+"id": 1,
+"version": 3,
+"created": 1524969393000,
+"modified": 1525800596000,
+"deprecated": false,
+"name": "Zinc finger protein 214",
+"accession": "Q9UL59",
+"gene": "ZNF214",
+"description": "May be involved in transcriptional regulation.",
+"idgFamily": "Transcription Factor",
+"idgTDL": "Tdark",
+"novelty": -0.49369036288441986,
+"antibodyCount": 88,
+"monoclonalCount": 8,
+"pubmedCount": null,
+"jensenScore": 2.47619,
+"patentCount": null,
+"grantCount": null,
+"grantTotalCost": null,
+"r01Count": null,
+"ppiCount": 12,
+"knowledgeAvailability": 18.591582683506974,
+"pubTatorScore": 0.729704648286999,
+"self": "https://pharos.nih.gov/idg/api/v1/targets(1)?view=full",
+"namespace": null,
+"organism": null,
+"synonyms": {},
+"properties": {},
+"links": {
+"ix.core.models.Keyword": [],
+"ix.core.models.Text": {},
+"ix.core.models.Timeline": [],
+"ix.idg.models.Compartment": [],
+"ix.idg.models.Disease": [
+{
+"id": 741,
+"version": 1,
+"refid": "1",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 268,
+"term": "Expression Atlas",
+"href": "https://www.ebi.ac.uk/gxa/"
+},
+"IDG Disease": {
+"id": 270,
+"term": "malignant mesothelioma",
+"href": "http://localhost:9801/idg/api/v1/diseases(1)"
+},
+"log2foldchange": {
+"id": 271,
+"value": -1.2
+},
+"pvalue": {
+"id": 272,
+"value": 0.00000995583658504849
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(1)"
+},
+{
+"id": 743,
+"version": 1,
+"refid": "2",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 268,
+"term": "Expression Atlas",
+"href": "https://www.ebi.ac.uk/gxa/"
+},
+"IDG Disease": {
+"id": 276,
+"term": "posterior fossa group B ependymoma",
+"href": "http://localhost:9801/idg/api/v1/diseases(2)"
+},
+"log2foldchange": {
+"id": 277,
+"value": 1.6
+},
+"pvalue": {
+"id": 278,
+"value": 2.53798381918374e-9
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(2)"
+},
+{
+"id": 745,
+"version": 1,
+"refid": "3",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 268,
+"term": "Expression Atlas",
+"href": "https://www.ebi.ac.uk/gxa/"
+},
+"IDG Disease": {
+"id": 280,
+"term": "atypical teratoid / rhabdoid tumor",
+"href": "http://localhost:9801/idg/api/v1/diseases(3)"
+},
+"log2foldchange": {
+"id": 281,
+"value": 1.2
+},
+"pvalue": {
+"id": 282,
+"value": 0.000074995762048331
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(3)"
+},
+{
+"id": 747,
+"version": 1,
+"refid": "4",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 268,
+"term": "Expression Atlas",
+"href": "https://www.ebi.ac.uk/gxa/"
+},
+"IDG Disease": {
+"id": 284,
+"term": "group 4 medulloblastoma",
+"href": "http://localhost:9801/idg/api/v1/diseases(4)"
+},
+"log2foldchange": {
+"id": 285,
+"value": 1.3
+},
+"pvalue": {
+"id": 286,
+"value": 0.0000599738251287403
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(4)"
+},
+{
+"id": 749,
+"version": 1,
+"refid": "5",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 268,
+"term": "Expression Atlas",
+"href": "https://www.ebi.ac.uk/gxa/"
+},
+"IDG Disease": {
+"id": 288,
+"term": "medulloblastoma, large-cell",
+"href": "http://localhost:9801/idg/api/v1/diseases(5)"
+},
+"log2foldchange": {
+"id": 289,
+"value": 1.4
+},
+"pvalue": {
+"id": 290,
+"value": 0.000188426075747352
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(5)"
+},
+{
+"id": 751,
+"version": 1,
+"refid": "6",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 268,
+"term": "Expression Atlas",
+"href": "https://www.ebi.ac.uk/gxa/"
+},
+"IDG Disease": {
+"id": 292,
+"term": "non primary Sjogren syndrome sicca",
+"href": "http://localhost:9801/idg/api/v1/diseases(6)"
+},
+"log2foldchange": {
+"id": 293,
+"value": -1.2
+},
+"pvalue": {
+"id": 294,
+"value": 0.0269864017571244
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(6)"
+},
+{
+"id": 753,
+"version": 1,
+"refid": "7",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 295,
+"term": "JensenLab Text Mining",
+"href": "http://diseases.jensenlab.org"
+},
+"IDG Confidence": {
+"id": 299,
+"value": 2.1
+},
+"IDG Disease": {
+"id": 297,
+"term": "Beckwith-Wiedemann syndrome",
+"href": "http://localhost:9801/idg/api/v1/diseases(7)"
+},
+"IDG Z-score": {
+"id": 298,
+"value": 4.165
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(7)"
+},
+{
+"id": 755,
+"version": 1,
+"refid": "8",
+"deprecated": false,
+"properties": {
+"Data Source": {
+"id": 295,
+"term": "JensenLab Text Mining",
+"href": "http://diseases.jensenlab.org"
+},
+"IDG Confidence": {
+"id": 303,
+"value": 2
+},
+"IDG Disease": {
+"id": 301,
+"term": "Cryptorchidism",
+"href": "http://localhost:9801/idg/api/v1/diseases(8)"
+},
+"IDG Z-score": {
+"id": 302,
+"value": 3.914
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/diseases(8)"
+}
+],
+"ix.idg.models.Expression": [],
+"ix.idg.models.Ortholog": {
+"id": 780,
+"version": 1,
+"refid": "1",
+"deprecated": false,
+"properties": {
+"Data Source": [
+{
+"id": 348,
+"term": "OMA"
+},
+{
+"id": 349,
+"term": "EggNOG"
+}
+],
+"Ortholog Species": {
+"id": 350,
+"term": "Chimp"
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/ortholog(1)"
+}
+},
+"publications": {
+"An integrated physical map of 210 markers assigned to the short arm of human chromosome 11.": {
+"id": 8,
+"pmid": 7959730,
+"year": 1994,
+"abstractText": "Using a panel of patient cell lines with chromosomal breakpoints, we constructed a physical map for the short arm of human chromosome 11. We focused on 11p15, a chromosome band harboring at least 25 known genes and associated with the Beckwith-Wiedemann syndrome, several childhood tumors, and genomic imprinting. This underlines the need for a physical map for this region. We divided the short arm of chromosome 11 into 18 breakpoint regions, and a large series of new and previously described genes and markers was mapped within these intervals using fluorescence in situ hybridization. Cosmid fingerprint analysis showed that 19 of these markers were included in cosmid contigs. A detailed 10-Mb pulsed-field physical map of the region 11p15.3-pter was constructed. These three different approaches enabled the high-resolution mapping of 210 markers, including 22 known genes."
+},
+"Complete sequencing and characterization of 21,243 full-length human cDNAs.": {
+"id": 3,
+"pmid": 14702039,
+"year": 2004,
+"abstractText": "As a base for human transcriptome and functional genomics, we created the \"full-length long Japan\" (FLJ) collection of sequenced human cDNAs. We determined the entire sequence of 21,243 selected clones and found that 14,490 cDNAs (10,897 clusters) were unique to the FLJ collection. About half of them (5,416) seemed to be protein-coding. Of those, 1,999 clusters had not been predicted by computational methods. The distribution of GC content of nonpredicted cDNAs had a peak at approximately 58% compared with a peak at approximately 42%for predicted cDNAs. Thus, there seems to be a slight bias against GC-rich transcripts in current gene prediction procedures. The rest of the cDNAs unique to the FLJ collection (5,481) contained no obvious open reading frames (ORFs) and thus are candidate noncoding RNAs. About one-fourth of them (1,378) showed a clear pattern of splicing. The distribution of GC content of noncoding cDNAs was narrow and had a peak at approximately 42%, relatively low compared with that of protein-coding cDNAs."
+},
+"Disruption of a novel imprinted zinc-finger gene, ZNF215, in Beckwith-Wiedemann syndrome.": {
+"id": 1,
+"pmid": 10762538,
+"year": 2000,
+"abstractText": "The genetics of Beckwith-Wiedemann syndrome (BWS) is complex and is thought to involve multiple genes. It is known that three regions on chromosome 11p15 (BWSCR1, BWSCR2, and BWSCR3) may play a role in the development of BWS. BWSCR2 is defined by two BWS breakpoints. Here we describe the cloning and sequence analysis of 73 kb containing BWSCR2. Within this region, we detected a novel zinc-finger gene, ZNF215. We show that two of its five alternatively spliced transcripts are disrupted by both BWSCR2 breakpoints. Parts of the 3' end of these splice forms are transcribed from the antisense strand of a second zinc-finger gene, ZNF214. We show that ZNF215 is imprinted in a tissue-specific manner."
+},
+"Diversification of transcriptional modulation: large-scale identification and characterization of putative alternative promoters of human genes.": {
+"id": 5,
+"pmid": 16344560,
+"year": 2006,
+"abstractText": "By analyzing 1,780,295 5'-end sequences of human full-length cDNAs derived from 164 kinds of oligo-cap cDNA libraries, we identified 269,774 independent positions of transcriptional start sites (TSSs) for 14,628 human RefSeq genes. These TSSs were clustered into 30,964 clusters that were separated from each other by more than 500 bp and thus are very likely to constitute mutually distinct alternative promoters. To our surprise, at least 7674 (52%) human RefSeq genes were subject to regulation by putative alternative promoters (PAPs). On average, there were 3.1 PAPs per gene, with the composition of one CpG-island-containing promoter per 2.6 CpG-less promoters. In 17% of the PAP-containing loci, tissue-specific use of the PAPs was observed. The richest tissue sources of the tissue-specific PAPs were testis and brain. It was also intriguing that the PAP-containing promoters were enriched in the genes encoding signal transduction-related proteins and were rarer in the genes encoding extracellular proteins, possibly reflecting the varied functional requirement for and the restricted expression of those categories of genes, respectively. The patterns of the first exons were highly diverse as well. On average, there were 7.7 different splicing types of first exons per locus partly produced by the PAPs, suggesting that a wide variety of transcripts can be achieved by this mechanism. Our findings suggest that use of alternate promoters and consequent alternative use of first exons should play a pivotal role in generating the complexity required for the highly elaborated molecular systems in humans."
+},
+"Generation and initial analysis of more than 15,000 full-length human and mouse cDNA sequences.": {
+"id": 2,
+"pmid": 12477932,
+"year": 2002,
+"abstractText": "The National Institutes of Health Mammalian Gene Collection (MGC) Program is a multiinstitutional effort to identify and sequence a cDNA clone containing a complete ORF for each human and mouse gene. ESTs were generated from libraries enriched for full-length cDNAs and analyzed to identify candidate full-ORF clones, which then were sequenced to high accuracy. The MGC has currently sequenced and verified the full ORF for a nonredundant set of >9,000 human and >6,000 mouse genes. Candidate full-ORF clones for an additional 7,800 human and 3,500 mouse genes also have been identified. All MGC sequences and clones are available without restriction through public databases and clone distribution networks (see http:mgc.nci.nih.gov)."
+},
+"Human chromosome 11 DNA sequence and analysis including novel gene identification.": {
+"id": 6,
+"pmid": 16554811,
+"year": 2006,
+"abstractText": "Chromosome 11, although average in size, is one of the most gene- and disease-rich chromosomes in the human genome. Initial gene annotation indicates an average gene density of 11.6 genes per megabase, including 1,524 protein-coding genes, some of which were identified using novel methods, and 765 pseudogenes. One-quarter of the protein-coding genes shows overlap with other genes. Of the 856 olfactory receptor genes in the human genome, more than 40% are located in 28 single- and multi-gene clusters along this chromosome. Out of the 171 disorders currently attributed to the chromosome, 86 remain for which the underlying molecular basis is not yet known, including several mendelian traits, cancer and susceptibility loci. The high-quality data presented here--nearly 134.5 million base pairs representing 99.8% coverage of the euchromatic sequence--provide scientists with a solid foundation for understanding the genetic basis of these disorders and other biological phenomena."
+},
+"Reduced transcript expression of genes affected by inherited and de novo CNVs in autism.": {
+"id": 7,
+"pmid": 21448237,
+"year": 2011,
+"abstractText": "Individuals with autism are more likely to carry rare inherited and de novo copy number variants (CNVs). However, further research is needed to establish which CNVs are causal and the mechanisms by which these CNVs influence autism. We examined genomic DNA of children with autism (N = 41) and healthy controls (N = 367) for rare CNVs using a high-resolution array comparative genomic hybridization platform. We show that individuals with autism are more likely to harbor rare CNVs as small as ? 10 kb, a threshold not previously detectable, and that CNVs in cases disproportionately affect genes involved in transcription, nervous system development, and receptor activity. We also show that a subset of genes that have known or suspected allele-specific or imprinting effects and are within rare-case CNVs may undergo loss of transcript expression. In particular, expression of CNTNAP2 and ZNF214 are decreased in probands compared with their unaffected transmitting parents. Furthermore, expression of PRODH and ARID1B, two genes affected by de novo CNVs, are decreased in probands compared with controls. These results suggest that for some genes affected by CNVs in autism, reduced transcript expression may be a mechanism of pathogenesis during neurodevelopment."
+},
+"The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).": {
+"id": 4,
+"pmid": 15489334,
+"year": 2004,
+"abstractText": "The National Institutes of Health's Mammalian Gene Collection (MGC) project was designed to generate and sequence a publicly accessible cDNA resource containing a complete open reading frame (ORF) for every human and mouse gene. The project initially used a random strategy to select clones from a large number of cDNA libraries from diverse tissues. Candidate clones were chosen based on 5'-EST sequences, and then fully sequenced to high accuracy and analyzed by algorithms developed for this project. Currently, more than 11,000 human and 10,000 mouse genes are represented in MGC by at least one clone with a full ORF. The random selection approach is now reaching a saturation point, and a transition to protocols targeted at the missing transcripts is now required to complete the mouse and human collections. Comparison of the sequence of the MGC clones to reference genome sequences reveals that most cDNA clones are of very high sequence quality, although it is likely that some cDNAs may carry missense variants as a consequence of experimental artifact, such as PCR, cloning, or reverse transcriptase errors. Recently, a rat cDNA component was added to the project, and ongoing frog (Xenopus) and zebrafish (Danio) cDNA projects were expanded to take advantage of the high-throughput MGC pipeline."
+}
+}
+}

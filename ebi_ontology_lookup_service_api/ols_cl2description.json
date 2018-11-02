@@ -1,0 +1,65 @@
+https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038
+
+{
+  "iri" : "http://purl.obolibrary.org/obo/CL_0000038",
+  "label" : "erythroid progenitor cell",
+  "description" : [ "A progenitor cell committed to the erythroid lineage." ],
+  "annotation" : {
+    "database_cross_reference" : [ "BTO:0004911" ],
+    "has_obo_namespace" : [ "cell" ],
+    "has_related_synonym" : [ "blast forming unit erythroid", "burst forming unit erythroid", "erythroid stem cell", "colony forming unit erythroid", "BFU-E", "CFU-E" ]
+  },
+  "synonyms" : null,
+  "ontology_name" : "cl",
+  "ontology_prefix" : "CL",
+  "ontology_iri" : "http://purl.obolibrary.org/obo/cl.owl",
+  "is_obsolete" : false,
+  "term_replaced_by" : null,
+  "is_defining_ontology" : true,
+  "has_children" : true,
+  "is_root" : false,
+  "short_form" : "CL_0000038",
+  "obo_id" : "CL:0000038",
+  "in_subset" : null,
+  "obo_definition_citation" : [{"definition":"A progenitor cell committed to the erythroid lineage.","oboXrefs":[{"database":"GOC","id":"add","description":null,"url":null},{"database":"ISBN","id":"0721601464","description":null,"url":"http://openisbn.com/search.php?q=0721601464&isbn=1/"}]}],
+  "obo_xref" : [{"database":"BTO","id":"0004911","description":null,"url":null}],
+  "obo_synonym" : null,
+  "_links" : {
+    "self" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038"
+    },
+    "parents" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/parents"
+    },
+    "ancestors" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/ancestors"
+    },
+    "hierarchicalParents" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/hierarchicalParents"
+    },
+    "hierarchicalAncestors" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/hierarchicalAncestors"
+    },
+    "jstree" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/jstree"
+    },
+    "children" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/children"
+    },
+    "descendants" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/descendants"
+    },
+    "hierarchicalChildren" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/hierarchicalChildren"
+    },
+    "hierarchicalDescendants" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/hierarchicalDescendants"
+    },
+    "graph" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/graph"
+    },
+    "develops_from" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000038/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+    }
+  }
+}

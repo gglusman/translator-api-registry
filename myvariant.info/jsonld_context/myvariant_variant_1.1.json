@@ -2,7 +2,33 @@
 	"@context": {
 		"@version": 1.1,
 		"@base": "http://identifiers.org/hgvs/",
+        "DOID": "http://identifiers.org/doid/",
 		"term": "http://biothings.io/terms/myvariant/",
+        "chr1": "http://identifiers.org/hgvs/chr1:",
+        "chr2": "http://identifiers.org/hgvs/chr2:",
+        "chr3": "http://identifiers.org/hgvs/chr3:",
+        "chr4": "http://identifiers.org/hgvs/chr4:",
+        "chr5": "http://identifiers.org/hgvs/chr5:",
+        "chr6": "http://identifiers.org/hgvs/chr6:",
+        "chr7": "http://identifiers.org/hgvs/chr7:",
+        "chr8": "http://identifiers.org/hgvs/chr8:",
+        "chr9": "http://identifiers.org/hgvs/chr9:",
+        "chr10": "http://identifiers.org/hgvs/chr10:",
+        "chr11": "http://identifiers.org/hgvs/chr11:",
+        "chr12": "http://identifiers.org/hgvs/chr12:",
+        "chr13": "http://identifiers.org/hgvs/chr13:",
+        "chr14": "http://identifiers.org/hgvs/chr14:",
+        "chr15": "http://identifiers.org/hgvs/chr15:",
+        "chr16": "http://identifiers.org/hgvs/chr16:",
+        "chr17": "http://identifiers.org/hgvs/chr17:",
+        "chr18": "http://identifiers.org/hgvs/chr18:",
+        "chr19": "http://identifiers.org/hgvs/chr19:",
+        "chr20": "http://identifiers.org/hgvs/chr20:",
+        "chr21": "http://identifiers.org/hgvs/chr21:",
+        "chr22": "http://identifiers.org/hgvs/chr22:",
+        "chrMT": "http://identifiers.org/hgvs/chrMT:",
+        "chrX": "http://identifiers.org/hgvs/chrX:",
+        "chrY": "http://identifiers.org/hgvs/chrY:",
 		"_id": "@id",
 		"cadd": {
 			"@type": "@id",
@@ -14,25 +40,32 @@
 					"@context": {
 						"genename": {
 							"@type": "@id",
-							"@id": "ont:isRelatedTo",
+							"@id": "ont:associatedWithGene",
 							"@context": {
 								"@base": "http://identifiers.org/hgnc.symbol/"
 							}
 						},
 						"gene_id": {
 							"@type": "@id",
-							"@id": "ont:isRelatedTo",
+							"@id": "ont:associatedWithGene",
 							"@context": {
-								"@base": "http://identifiers.org/ensembl.gene/"
+								"@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
 							}
 						},
 						"feature_id": {
 							"@type": "@id",
-							"@id": "ont:isRelatedTo",
+							"@id": "ont:associatedWithTranscript",
 							"@context": {
-								"@base": "http://identifiers.org/ensembl.transcript/"
+								"@base": "http://biothings.io/explorer/vocab/terms/ensembl.transcript/"
 							}
-						}
+						},
+                        "ccds_id": {
+                            "@type": "@id",
+                            "@id": "ont:associatedWithGene",
+                            "@context": {
+                                "@base": "http://identifiers.org/ccds/"
+                            }
+                        }
 					}
 				}
 			}
@@ -43,7 +76,7 @@
 			"@context": {
 				"gene": {
 					"@type": "@id",
-					"@id": "ont:isRelatedTo",
+					"@id": "ont:associatedWithGene",
 					"@context": {
 						"@base": "http://identifiers.org/hgnc.symbol/"
 					}
@@ -54,22 +87,29 @@
             "@type": "@id",
             "@id": "term:has_annotation",
             "@context": {
+                "variant_id": {
+                    "@type": "@id",
+                    "@id": "ont:hasXref",
+                    "@context": {
+                        "@base": "http://identifiers.org/clinvar/"
+                    }
+                },
                 "gene": {
                     "@type": "@id",
                     "@id": "term:has_annotation",
                     "@context": {
                         "symbol": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
                         },
                         "id": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
-                                "@base": "http://identifiers.org/hgnc/"
+                                "@base": "http://identifiers.org/ncbigene/"
                             }
                         }
                     }
@@ -85,7 +125,7 @@
                     "@type": "@id",
                     "@id": "ont:hasXref",
                     "@context": {
-                        "@base": "http://identifiers.org/omim/"
+                        "@base": "http://identifiers.org/omim.variant/"
                     }
                 },
                 "rcv": {
@@ -109,9 +149,16 @@
                                         },
                                         "orphanet": {
                                             "@type": "@id",
-                                            "@id": "ont:hasXref",
+                                            "@id": "ont:associatedWithDisease",
                                             "@context": {
                                                 "@base": "http://identifiers.org/orphanet/"
+                                            }
+                                        },
+                                        "omim": {
+                                            "@type": "@id",
+                                            "@id": "ont:associatedWithDisease",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/omim.disease/"
                                             }
                                         }
                                     } 
@@ -120,9 +167,16 @@
                         },
                         "clinical_significance": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithClinicalSignificance",
                             "@context": {
                                 "@base": "http://identifiers.org/clinicalsignificance/"
+                            }
+                        },
+                        "accession": {
+                            "@type": "@id",
+                            "@id": "ont:hasXref",
+                            "@context": {
+                                "@base": "http://identifiers.org/clinvar.record/"
                             }
                         }
                     }
@@ -135,7 +189,7 @@
             "@context": {
                 "gene": {
                     "@type": "@id",
-                    "@id": "ont:isRelatedTo",
+                    "@id": "ont:associatedWithGene",
                     "@context": {
                         "@base": "http://identifiers.org/hgnc.symbol/"
                     }
@@ -153,23 +207,23 @@
                     "@context": {
                         "geneid": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.gene/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.gene/"
                             }
                         },
                         "transcriptid": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithTranscript",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.transcript/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.transcript/"
                             }
                         },
                         "proteinid": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithProtein",
                             "@context": {
-                                "@base": "http://identifiers.org/ensembl.protein/"
+                                "@base": "http://biothings.io/explorer/vocab/terms/ensembl.protein/"
                             }
                         }
                     }
@@ -180,7 +234,7 @@
                     "@context": {
                         "acc": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithProtein",
                             "@context": {
                                 "@base": "http://identifiers.org/uniprot/"
                             }
@@ -199,16 +253,16 @@
                     "@context": {
                         "symbol": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
                         },
                         "geneid": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
-                                "@base": "http://identifiers.org/hgnc/"
+                                "@base": "http://identifiers.org/ncbigene/"
                             }
                         }
                     }
@@ -228,14 +282,14 @@
             "@context": {
                 "genename": {
                     "@type": "@id",
-                    "@id": "ont:isRelatedTo",
+                    "@id": "ont:associatedWithGene",
                     "@context": {
                         "@base": "http://identifiers.org/hgnc.symbol/"
                     }
                 },
                 "pubmed_id": {
                     "@type": "@id",
-                    "@id": "ont:hasEvidence",
+                    "@id": "ont:associatedWithPublication",
                     "@context": {
                         "@base": "http://identifiers.org/pubmed/"
                     }
@@ -248,9 +302,16 @@
             "@context": {
                 "gene": {
                     "@type": "@id",
-                    "@id": "ont:isRelatedTo",
+                    "@id": "ont:associatedWithGene",
                     "@context": {
                         "@base": "http://identifiers.org/hgnc.symbol/"
+                    }
+                },
+                "clinvar_rcv": {
+                    "@type": "@id",
+                    "@id": "ont:hasXref",
+                    "@context": {
+                        "@base": "http://identifiers.org/clinvar.record/"
                     }
                 }
             }
@@ -265,7 +326,7 @@
                     "@context": {
                         "symbol": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
@@ -291,7 +352,7 @@
                     "@context": {
                         "genename": {
                             "@type": "@id",
-                            "@id": "ont:isRelatedTo",
+                            "@id": "ont:associatedWithGene",
                             "@context": {
                                 "@base": "http://identifiers.org/hgnc.symbol/"
                             }
@@ -306,7 +367,7 @@
             "@context": {
                 "pubmed": {
                     "@type": "@id",
-                    "@id": "ont:hasEvidence",
+                    "@id": "ont:associatedWithPublication",
                     "@context": {
                         "@base": "http://identifiers.org/pubmed/"
                     }
@@ -327,9 +388,49 @@
                             "@context": {
                                 "name": {
                                     "@type": "@id",
-                                    "@id": "ont:interactsWith",
+                                    "@id": "ont:associatedWithChemical",
                                     "@context": {
                                         "@base": "http://biothings.io/terms/drugname/"
+                                    }
+                                }
+                            }
+                        },
+                        "clinical_significance": {
+                            "@type": "@id",
+                            "@id": "ont:associatedWithClinicalSignificance",
+                            "@context": {
+                                "@base": "http://identifiers.org/clinicalsignificance/"
+                            }
+                        },
+                        "disease": {
+                            "@type": "@id",
+                            "@id": "term:has_annotation",
+                            "@context": {
+                                "display_name": {
+                                    "@type": "@id",
+                                    "@id": "ont:associatedWithDisease",
+                                    "@context": {
+                                        "@base": "http://biothings.io/concepts/disease_name/"
+                                    }
+                                },
+                                "doid": {
+                                    "@type": "@id",
+                                    "@id": "ont:associatedWithDisease",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/doid/"
+                                    }
+                                }
+                            }
+                        },
+                        "source": {
+                            "@type": "@id",
+                            "@id": "term:has_annotation",
+                            "@context": {
+                                "pubmed_id": {
+                                    "@type": "@id",
+                                    "@id": "ont:associatedWithPublication",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/pubmed/"
                                     }
                                 }
                             }

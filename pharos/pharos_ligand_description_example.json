@@ -1,0 +1,132 @@
+https://pharos.nih.gov/idg/api/v1/ligands(75)?view=full&format=jsonld
+
+
+{
+"id": 75,
+"version": 1,
+"created": 1524969515000,
+"modified": 1524969515000,
+"deprecated": false,
+"name": "CHEMBL6830",
+"description": null,
+"self": "https://pharos.nih.gov/idg/api/v1/ligands(75)?view=full",
+"namespace": null,
+"synonyms": {
+"CHEMBL Synonym": [
+{
+"id": 9189,
+"term": "CHEMBL6830",
+"href": "https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL6830"
+},
+{
+"id": 9194,
+"term": "4-(2,4-Dimethyl-phenylsulfanyl)-thieno[2,3-c]pyridine-2-carboxylic acid amide",
+"href": "https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL6830"
+}
+]
+},
+"properties": {},
+"links": {
+"ix.core.models.Structure": {
+"id": 17088,
+"version": 1,
+"refid": "65bc805a-04ee-454d-9798-95029934f049",
+"deprecated": false,
+"properties": {},
+"href": "https://pharos.nih.gov/idg/api/v1/structures(65bc805a-04ee-454d-9798-95029934f049)"
+},
+"ix.idg.models.Target": [
+{
+"id": 17089,
+"version": 1,
+"refid": "22",
+"deprecated": false,
+"properties": {
+"IC50": {
+"id": 9197,
+"value": 7.37
+},
+"IDG Development Level": {
+"id": 1879,
+"term": "Tchem"
+},
+"IDG Target": {
+"id": 8537,
+"term": "SELE",
+"href": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=SELE"
+},
+"IDG Target Family": {
+"id": 693,
+"term": "Non-IDG"
+},
+"Ligand Activity": {
+"id": 1979,
+"term": "IC50"
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/targets(22)"
+},
+{
+"id": 13497620,
+"version": 1,
+"refid": "16083",
+"deprecated": false,
+"properties": {
+"IC50": {
+"id": 7977265,
+"value": 6.11
+},
+"IDG Development Level": {
+"id": 1879,
+"term": "Tchem"
+},
+"IDG Target": {
+"id": 7977259,
+"term": "VCAM1",
+"href": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=VCAM1"
+},
+"IDG Target Family": {
+"id": 693,
+"term": "Non-IDG"
+},
+"Ligand Activity": {
+"id": 1979,
+"term": "IC50"
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/targets(16083)"
+},
+{
+"id": 16523531,
+"version": 1,
+"refid": "19667",
+"deprecated": false,
+"properties": {
+"IC50": {
+"id": 9867706,
+"value": 7.27
+},
+"IDG Development Level": {
+"id": 1879,
+"term": "Tchem"
+},
+"IDG Target": {
+"id": 9867588,
+"term": "ICAM1",
+"href": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=ICAM1"
+},
+"IDG Target Family": {
+"id": 693,
+"term": "Non-IDG"
+},
+"Ligand Activity": {
+"id": 1979,
+"term": "IC50"
+}
+},
+"href": "https://pharos.nih.gov/idg/api/v1/targets(19667)"
+}
+]
+},
+"publications": []
+}

@@ -1,0 +1,65 @@
+https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476
+
+{
+  "iri" : "http://purl.obolibrary.org/obo/UBERON_0004476",
+  "label" : "musculature of shoulder",
+  "description" : [ "The collection of muscles that form attachments to the shoulder skeleton." ],
+  "annotation" : {
+    "database_cross_reference" : [ "FMA:50220" ],
+    "has_obo_namespace" : [ "uberon" ],
+    "id" : [ "UBERON:0004476" ]
+  },
+  "synonyms" : [ "set of muscles of shoulder", "muscle group of shoulder" ],
+  "ontology_name" : "uberon",
+  "ontology_prefix" : "UBERON",
+  "ontology_iri" : "http://purl.obolibrary.org/obo/uberon.owl",
+  "is_obsolete" : false,
+  "term_replaced_by" : null,
+  "is_defining_ontology" : true,
+  "has_children" : true,
+  "is_root" : false,
+  "short_form" : "UBERON_0004476",
+  "obo_id" : "UBERON:0004476",
+  "in_subset" : [ "pheno_slim" ],
+  "obo_definition_citation" : [{"definition":"The collection of muscles that form attachments to the shoulder skeleton.","oboXrefs":[{"database":null,"id":"http://orcid.org/0000-0002-6601-2165","description":null,"url":"http://orcid.org/0000-0002-6601-2165"}]}],
+  "obo_xref" : [{"database":"FMA","id":"50220","description":null,"url":null}],
+  "obo_synonym" : [{"name":"muscle group of shoulder","scope":"hasExactSynonym","type":null,"xrefs":[{"database":"FMA","id":"50220","description":null,"url":null}]}, {"name":"set of muscles of shoulder","scope":"hasExactSynonym","type":null,"xrefs":[{"database":"FMA","id":"50220","description":null,"url":null}]}],
+  "_links" : {
+    "self" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476"
+    },
+    "parents" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/parents"
+    },
+    "ancestors" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/ancestors"
+    },
+    "hierarchicalParents" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/hierarchicalParents"
+    },
+    "hierarchicalAncestors" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/hierarchicalAncestors"
+    },
+    "jstree" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/jstree"
+    },
+    "children" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/children"
+    },
+    "descendants" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/descendants"
+    },
+    "hierarchicalChildren" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/hierarchicalChildren"
+    },
+    "hierarchicalDescendants" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/hierarchicalDescendants"
+    },
+    "graph" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/graph"
+    },
+    "attaches_to" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0004476/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002371"
+    }
+  }
+}

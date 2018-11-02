@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "HP": "http://identifiers.org/hp/",
+        "EFO": "http://identifiers.org/efo/",
+        "Orphanet": "http://identifiers.org/orphanet",
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "drug_indications": {
+            "@type": "@id",
+            "@id": "assoc:ChemicalToDiseaseOrPhenotypicFeatureAssociation",
+            "@context": {
+                "mesh_id": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/mesh.disease/"
+                    }
+                },
+                "efo_id": {
+                    "@type": "@id",
+                    "@id": "attr:secondary-id",
+                    "@context": {
+                        "@base": "http://identifiers.org/efo/"
+                    }
+                },
+                "mesh_heading": {
+                    "@type": "@id",
+                    "@id": "attr:label",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                    }
+                }
+            }
+        }
+    }
+}

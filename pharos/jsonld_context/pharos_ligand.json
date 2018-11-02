@@ -1,0 +1,147 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "name": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+            }
+        },
+        "synonyms": {
+            "@type": "@id",
+            "@id": "http://biothings.io/pass/",
+            "@context": {
+                "CHEMBL ID": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "term": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/chembl.compound/"
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        "links": {
+            "@type": "@id",
+            "@id": "http://biothings.io/pass/",
+            "@context": {
+                "ix.idg.models.Disease": {
+                    "@type": "@id",
+                    "@id": "assoc:ChemicalToDiseaseAssociation",
+                    "@context": {
+                        "refid": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pharos.disease/"
+                            } 
+                        },
+                        "properties": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "Data Source": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "rel:provided_by",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                                            }
+                                        }
+                                    }
+                                },
+                                "IDG Disease": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "attr:secondary-id",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+                                            }
+                                        }
+                                    }
+                                },
+                                "pvalue": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "value": {
+                                            "@type": "@id",
+                                            "@id": "http://biothings.io/pass/",
+                                            "@context": {
+                                                "@type": "@id",
+                                                "@id": "rel:pvalue",
+                                                "@context": {
+                                                    "@base": "http://biothings.io/explorer/vocab/terms/pvalue/"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ix.idg.models.Target": {
+                    "@type": "@id",
+                    "@id": "assoc:ChemicalToGeneOrGeneProductAssociation",
+                    "@context": {
+                        "refid": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pharos.target/"
+                            } 
+                        },
+                        "properties": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "IDG Target": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "attr:secondary-id",
+                                            "@context": {
+                                                "@base": "http://identifiers.org/hgnc.symbol/"
+                                            }
+                                        }
+                                    }
+                                },
+                                "Pharmalogical Action": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "rel:label",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-relation/"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}

@@ -1,0 +1,78 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "REACT": "http://biothings.io/explorer/vocab/terms/reactome.pathway/",
+        "KEGG-path": "http://identifiers.org/kegg.pathway/",
+        "RO": "http://identifiers.org/ro/RO:",
+        "PMID": "http://identifiers.org/pubmed/",
+        "associations": {
+            "@type": "@id",
+            "@id": "assoc:GeneToPathwayAssociation",
+            "@context": {
+                "object": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/reactome.pathway/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "attr:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                            }
+                        }
+                    }
+                },
+                "relation": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "rel:id",
+                            "@context": {
+                                "@base": "http://identifiers.org/ro/"
+                            }
+                        },
+                        "label": {
+                            "@type": "@id",
+                            "@id": "rel:label",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/gene-pathways-relation/"
+                            }
+                        }
+                    }
+                },
+                "publication": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "id": {
+                            "@type": "@id",
+                            "@id": "rel:publication",
+                            "@context": {
+                                "@base": "http://identifiers.org/pubmed/"
+                            }
+                        }
+                    }
+                },
+                "provided_by": {
+                    "@type": "@id",
+                    "@id": "rel:provided_by",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                    }
+                }
+            }
+        }
+    }
+}

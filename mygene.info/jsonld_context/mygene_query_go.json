@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "hits": {
+            "@type": "@id",
+            "@id": "assoc:GoTermToGeneAssociation",
+            "@context": {
+                "_id": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://identifiers.org/ncbigene/"
+                    }
+                },
+                "symbol": {
+                    "@type": "@id",
+                    "@id": "attr:secondary-id",
+                    "@context": {
+                        "@base": "http://identifiers.org/hgnc.symbol/"
+                    }
+                },
+                "taxid": {
+                    "@type": "@id",
+                    "@id": "attr:taxonomy",
+                    "@context": {
+                        "@base": "http://identifiers.org/taxonomy/"
+                    }
+                },
+                "name": {
+                    "@type": "@id",
+                    "@id": "attr:label",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/gene-approved-name/"
+                    }
+                }
+            }
+        }
+    }
+}

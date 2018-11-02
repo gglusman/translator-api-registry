@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "hits": {
+            "@type": "@id",
+            "@id": "term:has_annotation",
+            "@context": {
+                "_id": {
+                    "@type": "@id",
+                    "@id": "assoc:DiseaseToChemicalAssociation",
+                    "@context": {
+                        "@base": "http://identifiers.org/inchikey/"
+                    }
+                }
+            }
+        }
+    }
+}

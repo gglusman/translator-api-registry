@@ -1,0 +1,36 @@
+https://www.ebi.ac.uk/ols/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0005573
+
+{
+  "iri" : "http://purl.obolibrary.org/obo/GO_0005573",
+  "label" : "obsolete telomerase RNA",
+  "description" : [ "OBSOLETE (was not defined before being made obsolete)." ],
+  "annotation" : {
+    "comment" : [ "This term was made obsolete because it represents a gene product." ],
+    "has_obo_namespace" : [ "cellular_component" ],
+    "id" : [ "GO:0005573" ],
+    "term replaced by" : [ "GO:0000332" ]
+  },
+  "synonyms" : [ "telomerase RNA" ],
+  "ontology_name" : "go",
+  "ontology_prefix" : "GO",
+  "ontology_iri" : "http://purl.obolibrary.org/obo/go.owl",
+  "is_obsolete" : true,
+  "term_replaced_by" : "GO:0000332",
+  "is_defining_ontology" : true,
+  "has_children" : false,
+  "is_root" : true,
+  "short_form" : "GO_0005573",
+  "obo_id" : "GO:0005573",
+  "in_subset" : null,
+  "obo_definition_citation" : [{"definition":"OBSOLETE (was not defined before being made obsolete).","oboXrefs":[{"database":"GOC","id":"krc","description":null,"url":null}]}],
+  "obo_xref" : null,
+  "obo_synonym" : null,
+  "_links" : {
+    "self" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0005573"
+    },
+    "graph" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FGO_0005573/graph"
+    }
+  }
+}

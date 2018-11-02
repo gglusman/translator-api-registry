@@ -6,25 +6,26 @@
 # "translator" is a placeholder for translator specific attributes
 
 APIs:
-  - metadata: mygene.info/openapi_full.yml
+  - metadata: mygene.info/openapi_full_object.yml
     translator:
         - returnjson: true
           notes: ""
-
-  - metadata: myvariant.info/openapi_full.yml
+  - metadata: mychem.info/openapi_object.yml
     translator:
         - returnjson: true
           notes: ""
-
-  - metadata: mychem.info/openapi_full.yml
+  - metadata: mydisease.info/openapi.yml
     translator:
         - returnjson: true
           notes: ""
-  - metadata: dgidb/openapi.yml
+  - metadata: dgidb/openapi_object.yml
     translator:
         - returnjson: true
           notes: ""
-  - metadata: biolink/openapi.yml
+  - metadata: biolink/openapi_object.yml
+    translator:
+        - returnjson: true 
+  - metadata: ChEMBL/openapi.yml
     translator:
         - returnjson: true
           notes: ""
@@ -32,39 +33,27 @@ APIs:
     translator:
         - returnjson: true
           notes: ""
+  - metadata: reactome/openapi.yml
+    translator:
+        - returnjson: true
+          notes: ""
+  - metadata: taxonomy API/openapi.yml
+    translator:
+        - returnjson: true
+          notes: ""
+  - metadata: pubchem/openapi.yml
+    translator:
+        - returnjson: true
+          notes: ""
   - metadata: ebi_ontology_lookup_service_api/openapi.yml
     translator:
         - returnjson: true
           notes: ""
-  - metadata: ensembl/openapi.yml
+  - metadata: pharos/openapi.yml
     translator:
         - returnjson: true
           notes: ""
-  - metadata: ebi_proteins/openapi.yml
+  - metadata: litvar/openapi.yml
     translator:
         - returnjson: true
-          notes: ""
-  - metadata: ebi_proteins_taxonomy/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: broad-pgm/openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: GT_endotypes_api/endotypes_openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: GT_exposures_api/exposures_openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: GT_cmaq_exposures_api/cmaq_exposures_openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
-  - metadata: CTD_api/CTD_openapi.yml
-    translator:
-        - returnjson: true
-          notes: ""
+

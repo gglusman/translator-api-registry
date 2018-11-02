@@ -1,0 +1,52 @@
+https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105
+
+{
+  "iri" : "http://purl.obolibrary.org/obo/HP_0011105",
+  "label" : "Hypervolemia",
+  "description" : [ "An increase in the amount of intravascular fluid, particularly in the volume of the circulating blood." ],
+  "annotation" : {
+    "created_by" : [ "peter" ],
+    "creation_date" : [ "2011-06-07T11:17:32Z" ],
+    "database_cross_reference" : [ "SNOMEDCT_US:21639008", "UMLS:C0546817" ],
+    "has_obo_namespace" : [ "human_phenotype" ],
+    "id" : [ "HP:0011105" ]
+  },
+  "synonyms" : [ "Fluid overload in blood" ],
+  "ontology_name" : "hp",
+  "ontology_prefix" : "HP",
+  "ontology_iri" : "http://purl.obolibrary.org/obo/hp.owl",
+  "is_obsolete" : false,
+  "term_replaced_by" : null,
+  "is_defining_ontology" : true,
+  "has_children" : false,
+  "is_root" : false,
+  "short_form" : "HP_0011105",
+  "obo_id" : "HP:0011105",
+  "in_subset" : null,
+  "obo_definition_citation" : [{"definition":"An increase in the amount of intravascular fluid, particularly in the volume of the circulating blood.","oboXrefs":[{"database":"HPO","id":"probinson","description":null,"url":null}]}],
+  "obo_xref" : [{"database":"UMLS","id":"C0546817","description":null,"url":null}, {"database":"SNOMEDCT_US","id":"21639008","description":null,"url":null}],
+  "obo_synonym" : [{"name":"Fluid overload in blood","scope":"hasExactSynonym","type":"layperson term","xrefs":[{"database":null,"id":"https://en.wikipedia.org/wiki/hypervolemia","description":null,"url":"https://en.wikipedia.org/wiki/hypervolemia"},{"database":"ORCID","id":"0000-0001-5208-3432","description":null,"url":null}]}],
+  "_links" : {
+    "self" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105"
+    },
+    "parents" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105/parents"
+    },
+    "ancestors" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105/ancestors"
+    },
+    "hierarchicalParents" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105/hierarchicalParents"
+    },
+    "hierarchicalAncestors" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105/hierarchicalAncestors"
+    },
+    "jstree" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105/jstree"
+    },
+    "graph" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FHP_0011105/graph"
+    }
+  }
+}

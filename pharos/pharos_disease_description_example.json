@@ -1,0 +1,191 @@
+https://pharos.nih.gov/idg/api/v1/diseases(5)?view=full&format=jsonld
+
+{
+"id": 61,
+"version": 1,
+"created": 1526919484277,
+"modified": 1526919484278,
+"deprecated": false,
+"etag": "e17808a43fbeacf5",
+"uri": "https://pharos.ncats.io/idg/api/v1/ligands/search?q=riluzole",
+"path": "/idg/api/v1/ligands/search",
+"method": "GET",
+"sha1": "e9b11cb4af40bf81cdde8ef876c36273095bf97c",
+"total": 1,
+"count": 1,
+"skip": 0,
+"top": 10,
+"status": null,
+"query": "riluzole",
+"filter": null,
+"_namespace": null,
+"sideway": [],
+"facets": [
+{
+"name": "CHEMBL ID",
+"values": [
+{
+"label": "CHEMBL744",
+"count": 1
+}
+]
+},
+{
+"name": "Data Source",
+"values": [
+{
+"label": "TCRDv4.6.10",
+"count": 1
+},
+{
+"label": "CHEMBL",
+"count": 1
+},
+{
+"label": "IUPHAR",
+"count": 1
+}
+]
+},
+{
+"name": "IDG Development Level",
+"values": [
+{
+"label": "Tchem",
+"count": 1
+},
+{
+"label": "Tclin",
+"count": 1
+}
+]
+},
+{
+"name": "IDG Drug",
+"values": [
+{
+"label": "riluzole",
+"count": 1
+}
+]
+},
+{
+"name": "IDG Target",
+"values": [
+{
+"label": "KCNN4",
+"count": 1
+},
+{
+"label": "KCNN2",
+"count": 1
+},
+{
+"label": "SCN5A",
+"count": 1
+}
+]
+},
+{
+"name": "IDG Target Family",
+"values": [
+{
+"label": "Ion Channel",
+"count": 1
+}
+]
+},
+{
+"name": "Ligand",
+"values": [
+{
+"label": "riluzole",
+"count": 1
+}
+]
+},
+{
+"name": "Ligand Drug",
+"values": [
+{
+"label": "YES",
+"count": 1
+}
+]
+},
+{
+"name": "Ligand Source",
+"values": [
+{
+"label": "IUPHAR",
+"count": 1
+},
+{
+"label": "CHEMBL",
+"count": 1
+}
+]
+},
+{
+"name": "Pharmalogical Action",
+"values": [
+{
+"label": "BLOCKER",
+"count": 1
+}
+]
+},
+{
+"name": "ix.Class",
+"values": [
+{
+"label": "ix.core.models.Keyword",
+"count": 1
+},
+{
+"label": "ix.core.models.Text",
+"count": 1
+},
+{
+"label": "ix.core.models.XRef",
+"count": 1
+},
+{
+"label": "ix.core.models.VNum",
+"count": 1
+},
+{
+"label": "ix.idg.models.Ligand",
+"count": 1
+}
+]
+}
+],
+"content": [
+{
+"id": 94735,
+"version": 1,
+"created": 1525022313000,
+"modified": 1525022313000,
+"deprecated": false,
+"name": "riluzole",
+"description": "A glutamate antagonist (RECEPTORS, GLUTAMATE) used as an anticonvulsant (ANTICONVULSANTS) and to prolong the survival of patients with AMYOTROPHIC LATERAL SCLEROSIS.",
+"self": "https://pharos.ncats.io/idg/api/v1/ligands(94735)?view=full",
+"_synonyms": {
+"count": 2,
+"href": "https://pharos.ncats.io/idg/api/v1/ligands(94735)/synonyms"
+},
+"_publications": null,
+"_properties": {
+"count": 7,
+"href": "https://pharos.ncats.io/idg/api/v1/ligands(94735)/properties"
+},
+"_links": {
+"count": 4,
+"href": "https://pharos.ncats.io/idg/api/v1/ligands(94735)/links"
+},
+"_namespace": null,
+"kind": "ix.idg.models.Ligand"
+}
+]
+}

@@ -1,0 +1,144 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "DOID": "http://identifiers.org/doid/",
+        "name": {
+            "@type": "@id",
+            "@id": "assoc:EquivalentAssociation",
+            "@context": {
+                "@base": "http://biothings.io/explorer/vocab/terms/disease-name/"
+            }
+        },
+        "synonyms": {
+            "@type": "@id",
+            "@id": "http://biothings.io/pass/",
+            "@context": {
+                "DOID": {
+                    "@type": "@id",
+                    "@id": "http://biothings.io/pass/",
+                    "@context": {
+                        "term": {
+                            "@type": "@id",
+                            "@id": "assoc:EquivalentAssociation",
+                            "@context": {
+                                "@base": "http://identifiers.org/doid/"
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        "links": {
+            "@type": "@id",
+            "@id": "http://biothings.io/pass/",
+            "@context": {
+                "ix.idg.models.Target": {
+                    "@type": "@id",
+                    "@id": "assoc:DiseaseToGeneOrGeneProductAssociation",
+                    "@context": {
+                        "refid": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pharos.target/"
+                            } 
+                        },
+                        "properties": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "IDG Target": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "attr:secondary-id",
+                                            "@context": {
+                                                "@base": "http://identifiers.org/hgnc.symbol/"
+                                            }
+                                        }
+                                    }
+                                },
+                                "Data Source": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "rel:provided_by",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ix.idg.models.Ligand": {
+                    "@type": "@id",
+                    "@id": "assoc:DiseaseToChemicalAssociation",
+                    "@context": {
+                        "refid": {
+                            "@type": "@id",
+                            "@id": "attr:id",
+                            "@context": {
+                                "@base": "http://biothings.io/explorer/vocab/terms/pharos.disease/"
+                            } 
+                        },
+                        "properties": {
+                            "@type": "@id",
+                            "@id": "http://biothings.io/pass/",
+                            "@context": {
+                                "Data Source": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "rel:provided_by",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                                            }
+                                        }
+                                    }
+                                },
+                                "IDG Ligand": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "attr:secondary-id",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/drug-name/"
+                                            }
+                                        }
+                                    }
+                                },
+                                "Pharmalogical Action": {
+                                    "@type": "@id",
+                                    "@id": "http://biothings.io/pass/",
+                                    "@context": {
+                                        "term": {
+                                            "@type": "@id",
+                                            "@id": "rel:label",
+                                            "@context": {
+                                                "@base": "http://biothings.io/explorer/vocab/terms/gene-disease-relation/"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

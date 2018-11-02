@@ -19,47 +19,57 @@ tags:
   - name: genotype
   - name: translator
 paths:
-  '/variation/human/{dbsnp}?phenotypes=1':
+  '/taxonomy/id/{taxonomyid}':
     get:
-      summary: 'Uses a variant identifier (e.g. rsID) to return the variation phenotype'
+      summary: 'Search for a taxonomic term by its identifier or name'
       parameters:
-        - name: dbsnp
+        - name: taxonomyid
           in: path
           description: >-
-            Put dbsnp ids here, e.g. rs56116432
+            Put taxonomy ids here, e.g. 9606
           required: true
           x-valueType:
-            - 'http://identifiers.org/dbsnp/'
+            - 'http://identifiers.org/taxonomy/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/dbsnp/'
-              template: '/variation/human/{{input}}?phenotypes=1'
+            - valueType: 'http://identifiers.org/taxonomy/'
+              template: '/taxonomy/id/{taxonomyid}?content-type=application/json'
           schema:
             type: string
       responses:
         '200':
-          description: 'list of phenotypes related to the variant'
+          description: 'taxonomy annotation information'
           x-responseValueType:
-            - path: phenotypes
-              valueType: 'http://biothings.io/concepts/phenotypes/'
-  '/variation/human/{dbsnp}?genotypes=1':
+            - path: parent.id
+              valueType: 'http://identifiers.org/taxonomy/'
+          x-JSONLDContext:
+            'ensembl/jsonld_context/ensembl_taxonomy_context.json'
+  '/lookup/id/{geneid}':
     get:
-      summary: 'Uses a variant identifier (e.g. rsID) to return the variation genotypes'
+      summary: 'Find the species and database for a single identifier e.g. gene, transcript, protein'
       parameters:
-        - name: dbsnp
+        - name: geneid
           in: path
           description: >-
-            Put dbsnp ids here, e.g. rs56116432
+            Put ensembl gene ids here, e.g. ENSG00000157764
           required: true
           x-valueType:
-            - 'http://identifiers.org/dbsnp/'
+            - 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
           x-requestTemplate:
-            - valueType: 'http://identifiers.org/dbsnp/'
-              template: '/variation/human/{{input}}?genotypes=1'
+            - valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
+              template: '/lookup/id/{geneid}?content-type=application/json;phenotypes=1;expand=1'
           schema:
             type: string
       responses:
         '200':
-          description: 'list of phenotypes related to the variant'
+          description: 'ensembl gene lookup information'
           x-responseValueType:
-            - path: genotypes
-              valueType: 'http://biothings.io/concepts/genotypes/'
+            - path: Transcript.Exon.id
+              valueType: 'http://identifiers.org/ensembl.exon/'
+            - path: Transcript.Translation.id
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.protein/'
+            - path: phenotypes.ontology_accessions
+              valueType: 'http://identifiers.org/efo/'
+            - path: phenotypes.ontology_accessions
+              valueType: 'http://identifiers.org/hp/'
+          x-JSONLDContext:
+            'ensembl/jsonld_context/ensembl_gene_context.json'

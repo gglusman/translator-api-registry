@@ -62,4 +62,4 @@ paths:
                         format: float
           x-responseValueType:
             - path: geneid
-              valueType: 'http://identifiers.org/ensembl.gene/'
+              valueType: 'http://biothings.io/explorer/vocab/terms/ensembl.gene/'
