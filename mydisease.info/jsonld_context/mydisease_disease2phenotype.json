@@ -14,7 +14,7 @@
                     "@context": {
                         "phenotype_related_to_disease": {
                             "@type": "@id",
-                            "@id": "assoc:DiseaseToPhenotypeAssociation",
+                            "@id": "assoc:DiseaseToPhenotypicFeatureAssociation",
                             "@context": {
                                 "evidence": {
                                     "@type": "@id",

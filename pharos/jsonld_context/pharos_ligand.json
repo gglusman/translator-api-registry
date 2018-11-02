@@ -36,7 +36,7 @@
             "@context": {
                 "ix.idg.models.Disease": {
                     "@type": "@id",
-                    "@id": "assoc:ChemicalToDiseaseAssociation",
+                    "@id": "assoc:ChemicalToDiseaseOrPhenotypicFeatureAssociation",
                     "@context": {
                         "refid": {
                             "@type": "@id",

@@ -64,7 +64,7 @@
             "@context": {
                 "ix.idg.models.Disease": {
                     "@type": "@id",
-                    "@id": "assoc:GeneToDiseaseAssociation",
+                    "@id": "assoc:GeneOrGeneProductToDiseaseAssociation",
                     "@context": {
                         "refid": {
                             "@type": "@id",

@@ -56,4 +56,8 @@ APIs:
   - metadata: litvar/openapi.yml
     translator:
         - returnjson: true
-
+          notes: ""
+  - metadata: ensembl/openapi.yml
+    translator:
+        - returnjson: true
+          notes: ""

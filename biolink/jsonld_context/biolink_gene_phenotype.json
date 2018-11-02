@@ -9,7 +9,7 @@
         "PMID": "http://identifiers.org/pubmed/",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:GeneToPhenotypicFeatureAssociation",
+            "@id": "assoc:GeneOrGeneProductToPhenotypicFeatureAssociation",
             "@context": {
                 "object": {
                     "@type": "@id",

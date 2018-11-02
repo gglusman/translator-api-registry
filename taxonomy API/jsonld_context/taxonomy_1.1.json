@@ -11,7 +11,7 @@
             "@context": {
                 "id": {
                     "@type": "@id",
-                    "@id": "assoc:IsChildOf",
+                    "@id": "assoc:TaxonomyIsChildOfTaxonomy",
                     "@context": {
                         "@base": "http://identifiers.org/taxonomy/"
                     }

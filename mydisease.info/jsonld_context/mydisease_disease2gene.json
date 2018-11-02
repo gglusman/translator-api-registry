@@ -14,7 +14,7 @@
                     "@context": {
                         "genes_related_to_disease": {
                             "@type": "@id",
-                            "@id": "assoc:DiseaseToGeneAssociation",
+                            "@id": "assoc:DiseaseToGeneOrGeneProductAssociation",
                             "@context": {
                                 "gene_id": {
                                     "@type": "@id",

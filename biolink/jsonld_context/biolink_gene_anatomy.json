@@ -11,7 +11,7 @@
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:GeneOrGeneProductToAnatomyAssociation",
+            "@id": "assoc:GeneOrGeneProductToAnatomicalEntityAssociation",
             "@context": {
                 "object": {
                     "@type": "@id",

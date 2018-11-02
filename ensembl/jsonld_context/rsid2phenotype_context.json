@@ -1,0 +1,52 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "assoc": "http://biothings.io/explorer/vocab/objects/",
+        "attr": "http://biothings.io/explorer/vocab/attributes/",
+        "rel": "http://biothings.io/explorer/vocab/relationships/",
+        "HP": "http://identifiers.org/hp/",
+        "EFO": "http://identifiers.org/efo/",
+        "PMID": "http://identifiers.org/pubmed/",
+        "phenotypes": {
+            "@type": "@id",
+            "@id": "assoc:VariantToDiseaseOrPhenotypicFeatureAssociation",
+            "@context": {
+                "trait": {
+                    "@type": "@id",
+                    "@id": "attr:label",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/phenotype-name/"
+                    }
+                },
+                "ontology_accessions": {
+                    "@type": "@id",
+                    "@id": "attr:id",
+                    "@context": {
+                        "@base": "http://identifiers.org/hp/"
+                    }
+                },
+                "source": {
+                    "@type": "@id",
+                    "@id": "rel:provided_by",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/database/"
+                    }
+                },
+                "study": {
+                    "@type": "@id",
+                    "@id": "rel:publication",
+                    "@context": {
+                        "@base": "http://identifiers.org/pubmed/"
+                    }
+                },
+                "pvalue": {
+                    "@type": "@id",
+                    "@id": "rel:pvalue",
+                    "@context": {
+                        "@base": "http://biothings.io/explorer/vocab/terms/pvalue/"
+                    }
+                }
+            }
+        }
+    }
+}

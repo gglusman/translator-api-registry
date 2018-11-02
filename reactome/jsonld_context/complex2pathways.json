@@ -6,7 +6,7 @@
         "rel": "http://biothings.io/explorer/vocab/relationships/",
         "data": {
             "@type": "@id",
-            "@id": "assoc:ComplexToPathwayAssociation",
+            "@id": "assoc:MacromolecularMachineToBiologicalProcessAssociation",
             "@context": {
                 "stId": {
                     "@type": "@id",

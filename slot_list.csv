@@ -1,0 +1,10 @@
+slot,definition
+api,The source API which distributes the knowledge
+target_id,The object of the association
+source_id,The subject of the association
+publications,Any published piece of information supporting the association
+provided_by,Databases which are the original source of the knowledge
+edge_label,A high-level grouping for the relationship type
+relation,The specific relationship type by which a subject is connected to an object in an association
+evidence_type,Class of evidence that supports an association
+qualifiers,Connects an association to qualifiers that modify or qualify the meaning of that association

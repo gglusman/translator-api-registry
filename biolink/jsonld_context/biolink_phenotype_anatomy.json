@@ -9,7 +9,7 @@
         "PMID": "http://identifiers.org/pubmed/",
         "data": {
             "@type": "@id",
-            "@id": "assoc:PhenotypeToAnatomyAssociation",
+            "@id": "assoc:DiseaseOrPhenotypicFeatureAssociationToLocationAssociation",
             "@context": {
                 "id": {
                     "@type": "@id",
@@ -20,7 +20,7 @@
                 },
                 "label": {
                 	"@type": "@id",
-                    "@id": "attr:secondary-id",
+                    "@id": "attr:label",
                     "@context": {
                         "@base": "http://biothings.io/explorer/vocab/terms/anatomy/"
                     }

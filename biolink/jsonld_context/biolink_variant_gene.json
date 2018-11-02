@@ -10,7 +10,7 @@
         "NCBITaxon": "http://identifiers.org/taxonomy/",
         "associations": {
             "@type": "@id",
-            "@id": "assoc:SequenceVariantToGeneAssociation",
+            "@id": "assoc:VariantToGeneAssociation",
             "@context": {
                 "subject": {
                     "@type": "@id",
