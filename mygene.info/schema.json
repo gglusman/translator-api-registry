@@ -1,0 +1,67 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Gene",
+    "ensembl": "enbsembl.gene",
+    "hgnc": "HGNC",
+    "omim": "MIM",
+    "entrez": "entrezgene",
+    "pharos": "pahros.target_id",
+    "refseq": "refseq.genomic",
+    "umls": "umls.cui",
+    "unigene": "unigene",
+    "pharmgkb": "pharmgkb",
+    "name": ["name", "other_names"],
+    "symbol": "symbol",
+    "description": "summary",
+    "enablesMF": {
+        "@type": "MolecularFunction",
+        "go": "go.MF.id",
+        "pubmed": "go.MF.pubmed",
+        "evidence": "go.MF.evidence",
+        "term": "go.MF.term"
+    },
+    "involvedInBP": {
+        "@type": "BiologicalProcess",
+        "go": "go.BP.id",
+        "pubmed": "go.BP.pubmed",
+        "evidence": "go.BP.evidence",
+        "term": "go.BP.term"
+    },
+    "involedInWikipathways": {
+        "@type": "Wikipathways",
+        "wikipathwaysID": "pathway.wikipathways.id",
+        "name": "pathway.wikipathways.name"
+    },
+    "involedInReactome": {
+        "@type": "Reactome",
+        "reactemeID": "pathway.reactome.id",
+        "name": "pathway.reactome.name"
+    },
+    "hasTranscript": {
+        "@type": "Transcript",
+        "ensembl": "ensembl.transcript",
+        "refseq": "refseq.rna"
+    },
+    "hasGeneProduct": {
+        "@type": "Protein",
+        "ensembl": "ensembl.protein",
+        "refseq": "refseq.protein",
+        "uniprot": "uniprot.Swiss-Prot"
+    },
+    "hasHomolog": {
+        "@type": "Gene",
+        "mgi": "pantherdb.ortholog.MGI",
+        "inTaxon": "pantherdb.ortholog.taxid",
+        "rgd": "pantherdb.ortholog.RGD",
+        "ensembl": "pantherdb.ortholog.Ensembl",
+        "zfin": "pantherdb.ortholog.ZFIN",
+        "flybase": "pantherdb.ortholog.FlyBase",
+        "sgd": "pantherdb.ortholog.SGD",
+        "pombase": "pantherdb.ortholog.PomBase",
+        "dictybase": "pantherdb.ortholog.dictyBase",
+        "tair": "pantherdb.ortholog.TAIR",
+        "hgnc": "pantherdb.ortholog.HGNC"
+    },
+    "hasProteinStructure": "pdb",
+    "inTaxon": "taxid"
+}

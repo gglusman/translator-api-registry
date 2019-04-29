@@ -1,0 +1,13 @@
+{
+    "@context": "http://schema.org",
+    "@type": "ChemicalSubstance",
+    "inchi": ["pubchem.inchi", "chembl.inchi"],
+    "inchikey": ["pubchem.inchi_key", "chembl.inchi_key"],
+    "pubchem": "pubchem.cid",
+    "chembl": "chembl.molecule_chembl_id",
+    "name": ["aeolus.drug_name", "chembl.pref_name", "drugbank.name"],
+    "molecularFormula": ["chembl.molecule_properties.full_molformula"],
+    "drugbank": "drugbank.id",
+    ""
+
+}
