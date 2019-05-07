@@ -307,13 +307,6 @@
                         "@base": "http://identifiers.org/chebi/"
                     }
                 },
-                "definition": {
-                    "@type": "@id",
-                    "@id": "assoc:EquivalentAssociation",
-                    "@context": {
-                        "@base": "http://biothings.io/explorer/vocab/terms/chemical-description/"
-                    }
-                },
                 "chebi_name": {
                     "@type": "@id",
                     "@id": "assoc:EquivalentAssociation",
