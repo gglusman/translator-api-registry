@@ -19,13 +19,6 @@
                 "@base": "http://identifiers.org/uniprot/"
             }
         },
-        "name": {
-            "@type": "@id",
-            "@id": "assoc:EquivalentAssociation",
-            "@context": {
-                "@base": "http://biothings.io/explorer/vocab/terms/gene-approved-name/"
-            }
-        },
         "synonyms": {
             "@type": "@id",
             "@id": "http://biothings.io/pass/",

@@ -22,6 +22,30 @@ tags:
 - name: query
 - name: translator
 paths:
+  /querybypathway:
+    get:
+      summary: 'Query for chemicals which are involved in a pathway'
+      parameters:
+        - name: smpdbid
+          in: path
+          description: >-
+            Query string.
+          required: true
+          x-valueType:
+            - 'http://identifiers.org/smpdb/'
+          x-requestTemplate:
+            - valueType: 'http://identifiers.org/smpdb/'
+              template: /query?q=drugbank.pathways.smpdb_id:{smpdbid}&fields=drugbank.id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'A query response object with "hits" property'
+          x-responseValueType:
+            - path: _id
+              valueType: 'http://identifiers.org/drugbank/'
+          x-JSONLDContext:
+            'mychem.info/jsonld_context/mychem_querybypathway.json'
   /querybydrugtarget:
     get:
       summary: 'Query for chemicals which interacts with proteins'
@@ -100,7 +124,7 @@ paths:
             - valueType: 'http://identifiers.org/chembl.compound/'
               template: /query?q=chembl.molecule_chembl_id:{drugid} OR drugbank.chembl:{drugid} OR drugcentral.xref.chembl_id:{drugid}&fields=drugcentral,drugbank,chembl
             - valueType: 'http://identifiers.org/drugbank/'
-              template: /query?q=drugcentral.xref.drugbank_id:{drugid} OR pharmgkb.cross_references.drugbank:{drugid} OR drugbank.drugbank_id:{drugid} OR chebi.drugbank_database_links:{drugid}
+              template: /query?q=drugcentral.xref.drugbank_id:{drugid} OR pharmgkb.cross_references.drugbank:{drugid} OR drugbank.id:{drugid} OR chebi.drugbank_database_links:{drugid}
             - valueType: 'http://identifiers.org/iuphar.ligand/'
               template: drugcentral.xref.iuphar_ligand_id:input_value OR pharmgkb.cross_references.iuphar_ligand:input_value
             - valueType: 'http://identifiers.org/kegg.drug/'
@@ -155,6 +179,10 @@ paths:
               valueType: 'http://biothings.io/explorer/vocab/terms/ndfrt/'
             - path: chembl.max_phase
               valueType: 'http://biothings.io/explorer/vocab/terms/drug-phase/'
+            - path: drugbank.pathways.smpdb_id
+              valueType: 'http://identifiers.org/smpdb/'
+            - path: drugbank.pharmacology.snp_effects.effect.rs-id
+              valueType: 'http://identifiers.org/dbsnp/'
           x-JSONLDContext:
             'mychem.info/jsonld_context/mychem_query_object.json'
   '/drug/{drugid}':

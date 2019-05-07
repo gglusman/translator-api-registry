@@ -82,13 +82,6 @@
                                         "@base": "http://identifiers.org/unii/"
                                     }
                                 },
-                                "pubchem_cid": {
-                                    "@type": "@id",
-                                    "@id": "assoc:EquivalentAssociation",
-                                    "@context": {
-                                        "@base": "http://identifiers.org/pubchem.compound/"
-                                    }
-                                },
                                 "mesh_descriptor_ui": {
                                     "@type": "@id",
                                     "@id": "assoc:EquivalentAssociation",
@@ -508,13 +501,6 @@
                                         "@base": "http://identifiers.org/uniprot/"
                                     }
                                 },
-                                "name": {
-                                    "@type": "@id",
-                                    "@id": "attr:label",
-                                    "@context": {
-                                        "@base": "http://biothings.io/explorer/vocab/terms/gene-approved-name/"
-                                    }
-                                },
                                 "organism": {
                                     "@type": "@id",
                                     "@id": "attr:taxonomy",
@@ -534,6 +520,58 @@
                                     "@id": "rel:label",
                                     "@context": {
                                         "@base": "http://biothings.io/explorer/vocab/terms/drug-gene-relation/"
+                                    }
+                                }
+                            }
+                        },
+                        "pathways": {
+                            "@type": "@id",
+                            "@id": "assoc:ChemicalToPathwayAssociation",
+                            "@context": {
+                                "name": {
+                                    "@type": "@id",
+                                    "@id": "attr:label",
+                                    "@context": {
+                                        "@base": "http://biothings.io/explorer/vocab/terms/pathways-name/"
+                                    }
+                                },
+                                "smpdb_id": {
+                                    "@type": "@id",
+                                    "@id": "attr:id",
+                                    "@context": {
+                                        "@base": "http://identifiers.org/smpdb/"
+                                    }
+                                }
+                            }
+                        },
+                        "pharmacology": {
+                            "@type": "@id",
+                            "@id": "term:has_annotation",
+                            "@context": {
+                                "snp_effects": {
+                                    "@type": "@id",
+                                    "@id": "term:has_annotation",
+                                    "@context": {
+                                        "effect": {
+                                            "@type": "@id",
+                                            "@id": "assoc:DrugResponseAffectedByVariant",
+                                            "@context": {
+                                                "rs-id": {
+                                                    "@type": "@id",
+                                                    "@id": "attr:id",
+                                                    "@context": {
+                                                        "@base": "http://identifiers.org/dbsnp/"
+                                                    }
+                                                },
+                                                "pubmed-id": {
+                                                    "@type": "@id",
+                                                    "@id": "rel:publication",
+                                                    "@context": {
+                                                        "@base": "http://identifiers.org/pubmed/"
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
