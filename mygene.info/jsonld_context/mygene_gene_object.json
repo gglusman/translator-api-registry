@@ -346,7 +346,7 @@
             "@type": "@id",
             "@id": "assoc:GeneToTaxonomyAssociation",
             "@context": {
-                "@base": "http://identifiers.org/taxnonomy/"
+                "@base": "http://identifiers.org/taxonomy/"
             }
         }
     }
