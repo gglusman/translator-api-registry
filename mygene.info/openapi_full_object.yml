@@ -21,6 +21,7 @@ tags:
   - name: annotation
   - name: query
   - name: translator
+  - name: biothings
 paths:
   /querygene:
     get:
@@ -220,5 +221,7 @@ paths:
               valueType: 'http://identifiers.org/hgnc/'
             - path: miRBase
               valueType: 'http://identifiers.org/mirbase/'
+            - path: taxid
+              valueType: 'http://identifiers.org/taxonomy/'
           x-JSONLDContext:
             'mygene.info/jsonld_context/mygene_gene_object.json'

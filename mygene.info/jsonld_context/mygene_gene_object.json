@@ -341,6 +341,13 @@
             "@context": {
                 "@base": "http://biothings.io/explorer/vocab/terms/gene-description/"
             }
+        },
+        "taxid": {
+            "@type": "@id",
+            "@id": "assoc:GeneToTaxonomyAssociation",
+            "@context": {
+                "@base": "http://identifiers.org/taxnonomy/"
+            }
         }
     }
 }
