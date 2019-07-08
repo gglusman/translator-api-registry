@@ -1,0 +1,10 @@
+{
+    "@context": "http://schema.org",
+    "@type": "SequenceVariant",
+    "bts:dbsnp": "dbsnp.rsid",
+    "bts:variantAssociatedWithGene": {
+        "@type": "Gene",
+        "bts:symbol": "dbsnp.gene.symbol",
+        "bts:entrez": "dbsnp.gene.geneid"
+    }
+}

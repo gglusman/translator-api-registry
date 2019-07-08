@@ -1,67 +1,67 @@
 {
     "@context": "http://schema.org",
     "@type": "Gene",
-    "ensembl": "enbsembl.gene",
-    "hgnc": "HGNC",
-    "omim": "MIM",
-    "entrez": "entrezgene",
-    "pharos": "pahros.target_id",
-    "refseq": "refseq.genomic",
-    "umls": "umls.cui",
-    "unigene": "unigene",
-    "pharmgkb": "pharmgkb",
-    "name": ["name", "other_names"],
-    "symbol": "symbol",
-    "description": "summary",
-    "enablesMF": {
+    "bts:ensembl": "enbsembl.gene",
+    "bts:hgnc": "HGNC",
+    "bts:omim": "MIM",
+    "bts:entrez": "entrezgene",
+    "bts:pharos": "pahros.target_id",
+    "bts:refseq": "refseq.genomic",
+    "bts:umls": "umls.cui",
+    "bts:unigene": "unigene",
+    "bts:pharmgkb": "pharmgkb",
+    "bts:name": ["name", "other_names"],
+    "bts:symbol": "symbol",
+    "bts:description": "summary",
+    "bts:enablesMF": {
         "@type": "MolecularFunction",
-        "go": "go.MF.id",
-        "pubmed": "go.MF.pubmed",
-        "evidence": "go.MF.evidence",
-        "term": "go.MF.term"
+        "bts:go": "go.MF.id",
+        "bts:pubmed": "go.MF.pubmed",
+        "bts:evidence": "go.MF.evidence",
+        "bts:term": "go.MF.term"
     },
-    "involvedInBP": {
+    "bts:involvedInBP": {
         "@type": "BiologicalProcess",
-        "go": "go.BP.id",
-        "pubmed": "go.BP.pubmed",
-        "evidence": "go.BP.evidence",
-        "term": "go.BP.term"
+        "bts:go": "go.BP.id",
+        "bts:pubmed": "go.BP.pubmed",
+        "bts:evidence": "go.BP.evidence",
+        "bts:term": "go.BP.term"
     },
-    "involedInWikipathways": {
+    "bts:involedInWikipathways": {
         "@type": "Wikipathways",
-        "wikipathwaysID": "pathway.wikipathways.id",
-        "name": "pathway.wikipathways.name"
+        "bts:wikipathways": "pathway.wikipathways.id",
+        "bts:name": "pathway.wikipathways.name"
     },
-    "involedInReactome": {
+    "bts:involedInReactome": {
         "@type": "Reactome",
-        "reactemeID": "pathway.reactome.id",
-        "name": "pathway.reactome.name"
+        "bts:reacteme": "pathway.reactome.id",
+        "bts:name": "pathway.reactome.name"
     },
-    "hasTranscript": {
+    "bts:hasTranscript": {
         "@type": "Transcript",
-        "ensembl": "ensembl.transcript",
-        "refseq": "refseq.rna"
+        "bts:ensembl": "ensembl.transcript",
+        "bts:refseq": "refseq.rna"
     },
-    "hasGeneProduct": {
+    "bts:hasGeneProduct": {
         "@type": "Protein",
-        "ensembl": "ensembl.protein",
-        "refseq": "refseq.protein",
-        "uniprot": "uniprot.Swiss-Prot"
+        "bts:ensembl": "ensembl.protein",
+        "bts:refseq": "refseq.protein",
+        "bts:uniprot": "uniprot.Swiss-Prot"
     },
-    "hasHomolog": {
+    "bts:hasHomolog": {
         "@type": "Gene",
-        "mgi": "pantherdb.ortholog.MGI",
-        "inTaxon": "pantherdb.ortholog.taxid",
-        "rgd": "pantherdb.ortholog.RGD",
-        "ensembl": "pantherdb.ortholog.Ensembl",
-        "zfin": "pantherdb.ortholog.ZFIN",
-        "flybase": "pantherdb.ortholog.FlyBase",
-        "sgd": "pantherdb.ortholog.SGD",
-        "pombase": "pantherdb.ortholog.PomBase",
-        "dictybase": "pantherdb.ortholog.dictyBase",
-        "tair": "pantherdb.ortholog.TAIR",
-        "hgnc": "pantherdb.ortholog.HGNC"
+        "bts:mgi": "pantherdb.ortholog.MGI",
+        "bts:inTaxon": "pantherdb.ortholog.taxid",
+        "bts:rgd": "pantherdb.ortholog.RGD",
+        "bts:ensembl": "pantherdb.ortholog.Ensembl",
+        "bts:zfin": "pantherdb.ortholog.ZFIN",
+        "bts:flybase": "pantherdb.ortholog.FlyBase",
+        "bts:sgd": "pantherdb.ortholog.SGD",
+        "bts:pombase": "pantherdb.ortholog.PomBase",
+        "bts:dictybase": "pantherdb.ortholog.dictyBase",
+        "bts:tair": "pantherdb.ortholog.TAIR",
+        "bts:hgnc": "pantherdb.ortholog.HGNC"
     },
-    "hasProteinStructure": "pdb",
-    "inTaxon": "taxid"
+    "bts:hasProteinStructure": "pdb",
+    "bts:inTaxon": "taxid"
 }
