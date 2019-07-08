@@ -1,46 +1,46 @@
 {
     "@context": "http://schema.org",
     "@type": "ChemicalSubstance",
-    "inchi": ["pubchem.inchi", "chembl.inchi"],
-    "inchikey": ["pubchem.inchi_key", "chembl.inchi_key"],
-    "rxcui": ["aeolus.drug_rxcui"],
-    "smiles": ["chembl.smiles"],
-    "pubchem": "pubchem.cid",
-    "chembl": "chembl.molecule_chembl_id",
-    "drugbank": "drugbank.id",
-    "name": ["aeolus.drug_name", "chembl.pref_name", "drugbank.name", "unii.preferred_term"],
-    "unii": "unii.unii",
-    "molecularFormula": ["chembl.molecule_properties.full_molformula"],
-    "interactingDrug": {
+    "bts:inchi": ["pubchem.inchi", "chembl.inchi"],
+    "bts:inchikey": ["pubchem.inchi_key", "chembl.inchi_key"],
+    "bts:rxcui": ["aeolus.drug_rxcui"],
+    "bts:smiles": ["chembl.smiles"],
+    "bts:pubchem": "pubchem.cid",
+    "bts:chembl": "chembl.molecule_chembl_id",
+    "bts:drugbank": "drugbank.id",
+    "bts:name": ["aeolus.drug_name", "chembl.pref_name", "drugbank.name", "unii.preferred_term"],
+    "bts:unii": "unii.unii",
+    "bts:molecularFormula": ["chembl.molecule_properties.full_molformula"],
+    "bts:interactingDrug": {
         "@type": "ChemicalSubstance",
-        "drugbank": "drugbank.drug_interactions.drugbank-id",
-        "name": "drugbank.drug_interactions.name",
-        "description": "drugbank.drug_interactions.description"
+        "bts:drugbank": "drugbank.drug_interactions.drugbank-id",
+        "bts:name": "drugbank.drug_interactions.name",
+        "bts:description": "drugbank.drug_interactions.description"
     },
-    "metabolizedBy": {
+    "bts:metabolizedBy": {
         "@type": "Gene",
-        "name": "drugbank.enzymes.name",
-        "symbol": "drugbank.enzymes.gene_name",
-        "function": "drugbank.enzymes.general_function",
-        "action": "drugbank.enzymes.actions"
+        "bts:name": "drugbank.enzymes.name",
+        "bts:symbol": "drugbank.enzymes.gene_name",
+        "bts:function": "drugbank.enzymes.general_function",
+        "bts:action": "drugbank.enzymes.actions"
     },
-    "targets": {
+    "target": {
         "@type": "Gene",
-        "name": ["drugbank.targets.name", "drugcentral.bioactivity.target_name"],
-        "symbol": ["drugbank.targets.gene_name", "drugcentral.uniprot.gene_symbol"],
-        "function": "drugbank.targets.general_function",
-        "action": ["drugbank.targets.actions", "drugcentral.bioactivity.action_type"]
+        "bts:name": ["drugbank.targets.name", "drugcentral.bioactivity.target_name"],
+        "bts:symbol": ["drugbank.targets.gene_name", "drugcentral.uniprot.gene_symbol"],
+        "bts:function": "drugbank.targets.general_function",
+        "bts:action": ["drugbank.targets.actions", "drugcentral.bioactivity.action_type"]
     },
     "treats": {
         "@type": "Disease",
-        "name": "drugcentral.drug_use.indication.concept_name",
-        "snomed": "drugcentral.drug_use.indication.snomed_concept_id",
-        "umls": "drugcentral.drug_use.indication.umls_cui"
+        "bts:name": "drugcentral.drug_use.indication.concept_name",
+        "bts:snomed": "drugcentral.drug_use.indication.snomed_concept_id",
+        "bts:umls": "drugcentral.drug_use.indication.umls_cui"
     },
     "contraindication": {
         "@type": "Disease",
-        "name": "drugcentral.drug_use.contraindication.concept_name",
-        "snomed": "drugcentral.drug_use.contraindication.snomed_concept_id",
-        "umls": "drugcentral.drug_use.contraindication.umls_cui"
+        "bts:name": "drugcentral.drug_use.contraindication.concept_name",
+        "bts:snomed": "drugcentral.drug_use.contraindication.snomed_concept_id",
+        "bts:umls": "drugcentral.drug_use.contraindication.umls_cui"
     }
 }
