@@ -14,7 +14,7 @@
     "bts:symbol": "symbol",
     "bts:description": "summary",
     "bts:enablesMF": {
-        "@type": "MolecularFunction",
+        "@type": "MolecularActivity",
         "bts:go": "go.MF.id",
         "bts:pubmed": "go.MF.pubmed",
         "bts:evidence": "go.MF.evidence",
@@ -27,12 +27,12 @@
         "bts:evidence": "go.BP.evidence",
         "bts:term": "go.BP.term"
     },
-    "bts:involedInWikipathways": {
+    "bts:involvedInWikipathways": {
         "@type": "Wikipathways",
         "bts:wikipathways": "pathway.wikipathways.id",
         "bts:name": "pathway.wikipathways.name"
     },
-    "bts:involedInReactome": {
+    "bts:involvedInReactome": {
         "@type": "Reactome",
         "bts:reacteme": "pathway.reactome.id",
         "bts:name": "pathway.reactome.name"

@@ -24,20 +24,20 @@
         "bts:function": "drugbank.enzymes.general_function",
         "bts:action": "drugbank.enzymes.actions"
     },
-    "target": {
+    "bts:target": {
         "@type": "Gene",
         "bts:name": ["drugbank.targets.name", "drugcentral.bioactivity.target_name"],
         "bts:symbol": ["drugbank.targets.gene_name", "drugcentral.uniprot.gene_symbol"],
         "bts:function": "drugbank.targets.general_function",
         "bts:action": ["drugbank.targets.actions", "drugcentral.bioactivity.action_type"]
     },
-    "treats": {
+    "bts:treats": {
         "@type": "Disease",
         "bts:name": "drugcentral.drug_use.indication.concept_name",
         "bts:snomed": "drugcentral.drug_use.indication.snomed_concept_id",
         "bts:umls": "drugcentral.drug_use.indication.umls_cui"
     },
-    "contraindication": {
+    "bts:contraindication": {
         "@type": "Disease",
         "bts:name": "drugcentral.drug_use.contraindication.concept_name",
         "bts:snomed": "drugcentral.drug_use.contraindication.snomed_concept_id",
