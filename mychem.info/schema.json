@@ -30,7 +30,8 @@
             "bts:name": "drugbank.targets.name",
             "bts:symbol": "drugbank.targets.gene_name",
             "bts:function": "drugbank.targets.general_function",
-            "bts:action": "drugbank.targets.actions"
+            "bts:action": "drugbank.targets.actions",
+            "bts:pubmed": "drugbank.targets.pmids"
         },
         {
             "@type": "Gene",
