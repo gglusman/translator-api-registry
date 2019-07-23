@@ -1,7 +1,7 @@
 {
     "@context": "http://schema.org",
     "@type": "Gene",
-    "bts:ensembl": "enbsembl.gene",
+    "bts:ensembl": "ensembl.gene",
     "bts:hgnc": "HGNC",
     "bts:omim": "MIM",
     "bts:entrez": "entrezgene",
