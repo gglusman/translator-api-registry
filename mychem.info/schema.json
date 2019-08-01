@@ -4,7 +4,7 @@
     "bts:inchi": ["pubchem.inchi", "chembl.inchi"],
     "bts:inchikey": ["pubchem.inchi_key", "chembl.inchi_key"],
     "bts:rxcui": ["aeolus.drug_rxcui"],
-    "bts:smiles": ["chembl.smiles"],
+    "bts:smiles": "chembl.smiles",
     "bts:pubchem": "pubchem.cid",
     "bts:chembl": "chembl.molecule_chembl_id",
     "bts:drugbank": "drugbank.id",
@@ -15,14 +15,18 @@
         "@type": "ChemicalSubstance",
         "bts:drugbank": "drugbank.drug_interactions.drugbank-id",
         "bts:name": "drugbank.drug_interactions.name",
-        "bts:description": "drugbank.drug_interactions.description"
+        "bts:description": "drugbank.drug_interactions.description",
+        "$input": "bts:drugbank",
+        "$source": "drugbank"
     },
     "bts:metabolizedBy": {
         "@type": "Gene",
         "bts:name": "drugbank.enzymes.name",
         "bts:symbol": "drugbank.enzymes.gene_name",
         "bts:function": "drugbank.enzymes.general_function",
-        "bts:action": "drugbank.enzymes.actions"
+        "bts:action": "drugbank.enzymes.actions",
+        "$input": "bts:drugbank",
+        "$source": "drugbank"
     },
     "bts:target": [
         {
@@ -31,25 +35,33 @@
             "bts:symbol": "drugbank.targets.gene_name",
             "bts:function": "drugbank.targets.general_function",
             "bts:action": "drugbank.targets.actions",
-            "bts:pubmed": "drugbank.targets.pmids"
+            "bts:pubmed": "drugbank.targets.pmids",
+            "$input": "bts:drugbank",
+            "$source": "drugbank"
         },
         {
             "@type": "Gene",
             "bts:name": "drugcentral.bioactivity.target_name",
             "bts:symbol": "drugcentral.bioactivity.uniprot.gene_symbol",
-            "bts:action": "drugcentral.bioactivity.action_type"
+            "bts:action": "drugcentral.bioactivity.action_type",
+            "$input": "bts:chembl",
+            "$source": "drugcentral"
         }
     ],
     "bts:treats": {
         "@type": "Disease",
         "bts:name": "drugcentral.drug_use.indication.concept_name",
         "bts:snomed": "drugcentral.drug_use.indication.snomed_concept_id",
-        "bts:umls": "drugcentral.drug_use.indication.umls_cui"
+        "bts:umls": "drugcentral.drug_use.indication.umls_cui",
+        "$input": "bts:chembl",
+        "$source": "drugcentral"
     },
     "bts:contraindication": {
         "@type": "Disease",
         "bts:name": "drugcentral.drug_use.contraindication.concept_name",
         "bts:snomed": "drugcentral.drug_use.contraindication.snomed_concept_id",
-        "bts:umls": "drugcentral.drug_use.contraindication.umls_cui"
+        "bts:umls": "drugcentral.drug_use.contraindication.umls_cui",
+        "$input": "bts:chembl",
+        "$source": "drugcentral"
     }
 }

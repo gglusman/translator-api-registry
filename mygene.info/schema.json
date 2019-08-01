@@ -18,35 +18,45 @@
         "bts:go": "go.MF.id",
         "bts:pubmed": "go.MF.pubmed",
         "bts:evidence": "go.MF.evidence",
-        "bts:term": "go.MF.term"
+        "bts:term": "go.MF.term",
+        "$input": "bts:entrez",
+        "$source": "entrez"
     },
     "bts:involvedInBP": {
         "@type": "BiologicalProcess",
         "bts:go": "go.BP.id",
         "bts:pubmed": "go.BP.pubmed",
         "bts:evidence": "go.BP.evidence",
-        "bts:term": "go.BP.term"
+        "bts:term": "go.BP.term",
+        "$input": "bts:entrez",
+        "$source": "entrez"
     },
     "bts:involvedInWikipathways": {
         "@type": "Wikipathways",
         "bts:wikipathways": "pathway.wikipathways.id",
-        "bts:name": "pathway.wikipathways.name"
+        "bts:name": "pathway.wikipathways.name",
+        "$input": "bts:entrez",
+        "$source": "cpdb"
     },
     "bts:involvedInReactome": {
         "@type": "Reactome",
         "bts:reacteme": "pathway.reactome.id",
-        "bts:name": "pathway.reactome.name"
+        "bts:name": "pathway.reactome.name",
+        "$input": "bts:entrez",
+        "$source": "cpdb"
     },
     "bts:hasTranscript": {
         "@type": "Transcript",
         "bts:ensembl": "ensembl.transcript",
-        "bts:refseq": "refseq.rna"
+        "bts:refseq": "refseq.rna",
+        "$input": "bts:ensembl"
     },
     "bts:hasGeneProduct": {
         "@type": "Protein",
         "bts:ensembl": "ensembl.protein",
         "bts:refseq": "refseq.protein",
-        "bts:uniprot": "uniprot.Swiss-Prot"
+        "bts:uniprot": "uniprot.Swiss-Prot",
+        "$input": "bts:ensembl"
     },
     "bts:hasHomolog": {
         "@type": "Gene",
@@ -60,7 +70,8 @@
         "bts:pombase": "pantherdb.ortholog.PomBase",
         "bts:dictybase": "pantherdb.ortholog.dictyBase",
         "bts:tair": "pantherdb.ortholog.TAIR",
-        "bts:hgnc": "pantherdb.ortholog.HGNC"
+        "bts:hgnc": "pantherdb.ortholog.HGNC",
+        "$input": "bts:entrez"
     },
     "bts:hasProteinStructure": "pdb",
     "bts:inTaxon": "taxid"
