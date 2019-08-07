@@ -10,6 +10,7 @@
     "bts:drugbank": "drugbank.id",
     "bts:name": ["aeolus.drug_name", "chembl.pref_name", "drugbank.name", "unii.preferred_term"],
     "bts:unii": "unii.unii",
+    "bts:mesh": ["ginas.xrefs.MESH", "drugcentral.xrefs.mesh_descriptor_ui"],
     "bts:molecularFormula": ["chembl.molecule_properties.full_molformula"],
     "bts:interactingDrug": {
         "@type": "ChemicalSubstance",
