@@ -1,0 +1,34 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DiseaseOrPhenotypicFeature",
+    "bts:umls": "umls",
+    "bts:treatedBy": {
+        "@type": "ChemicalSubstance",
+        "bts:umls": "TREATS_reverse.chemical_substance.umls",
+        "bts:pubmed": "TREATS_reverse.chemical_substance.pmid",
+        "$input": "bts:umls",
+        "$source": "semmed"
+    },
+    "bts:causedBy": {
+        "@type": "Gene",
+        "bts:umls": "CAUSES_reverse.gene.umls",
+        "$input": "bts:umls",
+        "$source": "semmed"
+    },
+    "bts:associatedWith": [
+        {
+            "@type": "ChemicalSubstance",
+            "bts:umls": "ASSOCIATED_WITH.chemical_substance.umls",
+            "bts:pubmed": "TREATS_reverse.chemical_substance.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        },
+        {
+            "@type": "Gene",
+            "bts:umls": "ASSOCIATED_WITH.gene.umls",
+            "bts:pubmed": "TREATS_reverse.gene.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        }
+    ]
+}
