@@ -1,0 +1,44 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DiseaseOrPhenotypicFeature",
+    "bts:mondo": "_id",
+    "bts:doid": "mondo.xrefs.doid",
+    "bts:bfo": "mondo.xrefs.bfo",
+    "bts:cohd": "mondo.xrefs.cohd",
+    "bts:hp": "mondo.xrefs.hp",
+    "bts:kegg": "mondo.xrefs.kegg",
+    "bts:meddra": "mondo.xrefs.meddra",
+    "bts:medgen": "mondo.xrefs.medgen",
+    "bts:mesh": "mondo.xrefs.mesh",
+    "bts:omim": "mondo.xrefs.omim",
+    "bts:umls": "mondo.xrefs.umls",
+    "bts:associatedWith": [
+        {
+        "@type": "Gene",
+        "bts:entrez": "disgenet.genes_related_to_disease.gene_id",
+        "bts:name": "disgenet.genes_related_to_disease.gene_name",
+        "$input": "bts:umls",
+        "$source": "disgenet"
+        },
+        {
+        "@type": "SequenceVariant",
+        "bts:dbsnp": "disgenet.variants_related_to_disease.rsid",
+        "bts:pubmed": "disgenet.variants_related_to_disease.pubmed",
+        "$input": "bts:umls",
+        "$source": "disgenet"
+        },
+        {
+        "@type": "PhenotypicFeature",
+        "bts:hp": "hpo.phenotype_related_to_disease.hpo_id",
+        "$input": "bts:omim",
+        "$source": "hpo"
+        },
+        {
+        "@type": "ChemicalSubstance",
+        "bts:mesh": "ctd.chemical_related_to_disease.mesh_chemical_id",
+        "bts:pubmed": "ctd.chemical_related_to_disease.pubmed",
+        "$input": "bts:omim",
+        "$source": "ctd"
+        },
+    ]
+}
