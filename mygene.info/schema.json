@@ -6,7 +6,6 @@
     "bts:omim": "MIM",
     "bts:entrez": "entrezgene",
     "bts:pharos": "pahros.target_id",
-    "bts:refseq": "refseq.genomic",
     "bts:umls": "umls.cui",
     "bts:unigene": "unigene",
     "bts:pharmgkb": "pharmgkb",
