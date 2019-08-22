@@ -12,6 +12,7 @@
     "bts:causedBy": {
         "@type": "Gene",
         "bts:umls": "CAUSES_reverse.gene.umls",
+        "bts:pubmed": "CAUSES_reverse.gene.pmid",
         "$input": "bts:umls",
         "$source": "semmed"
     },
