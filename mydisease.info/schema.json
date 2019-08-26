@@ -16,7 +16,6 @@
         {
         "@type": "Gene",
         "bts:entrez": "disgenet.genes_related_to_disease.gene_id",
-        "bts:symbol": "disgenet.genes_related_to_disease.gene_name",
         "$input": "bts:umls",
         "$source": "disgenet"
         },
