@@ -20,14 +20,14 @@
         {
             "@type": "ChemicalSubstance",
             "bts:umls": "ASSOCIATED_WITH.chemical_substance.umls",
-            "bts:pubmed": "TREATS_reverse.chemical_substance.pmid",
+            "bts:pubmed": "ASSOCIATED_WITH.chemical_substance.pmid",
             "$input": "bts:umls",
             "$source": "semmed"
         },
         {
             "@type": "Gene",
             "bts:umls": "ASSOCIATED_WITH.gene.umls",
-            "bts:pubmed": "TREATS_reverse.gene.pmid",
+            "bts:pubmed": "ASSOCIATED_WITH.gene.pmid",
             "$input": "bts:umls",
             "$source": "semmed"
         }
