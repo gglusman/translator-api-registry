@@ -12,14 +12,6 @@
     "bts:unii": "unii.unii",
     "bts:mesh": ["ginas.xrefs.MESH", "drugcentral.xrefs.mesh_descriptor_ui"],
     "bts:molecularFormula": ["chembl.molecule_properties.full_molformula"],
-    "bts:interactingDrug": {
-        "@type": "ChemicalSubstance",
-        "bts:drugbank": "drugbank.drug_interactions.drugbank-id",
-        "bts:name": "drugbank.drug_interactions.name",
-        "bts:description": "drugbank.drug_interactions.description",
-        "$input": "bts:drugbank",
-        "$source": "drugbank"
-    },
     "bts:metabolizedBy": {
         "@type": "Gene",
         "bts:name": "drugbank.enzymes.name",
