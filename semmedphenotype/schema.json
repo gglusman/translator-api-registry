@@ -1,9 +1,9 @@
 {
     "@context": "http://schema.org",
-    "@type": "Gene",
+    "@type": "PhenotypicFeature",
     "bts:umls": "umls",
     "bts:name": "name",
-    "bts:decreaseActivityOf": [
+    "bts:decreasesActivityOf": [
         {
             "@type": "BiologicalProcess",
             "bts:umls": "inhibits.biological_process_or_activity.umls",
