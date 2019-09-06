@@ -1,6 +1,6 @@
 {
     "@context": "http://schema.org",
-    "@type": "ChemicalSubstance",
+    "@type": "Gene",
     "bts:umls": "umls",
     "bts:molecularlyInteractsWith": [
         {
