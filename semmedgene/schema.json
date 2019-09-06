@@ -1,6 +1,6 @@
 {
     "@context": "http://schema.org",
-    "@type": "Gene",
+    "@type": "ChemicalSubstance",
     "bts:umls": "umls",
     "bts:molecularlyInteractsWith": [
         {
@@ -74,7 +74,7 @@
             "$source": "semmed"
         }
     ],
-    "bts:increaseActivityOf": [
+    "bts:increasesActivityOf": [
         {
             "@type": "BiologicalProcess",
             "bts:umls": "stimulates.biological_process_or_activity.umls",
@@ -118,7 +118,7 @@
             "$source": "semmed"
         }
     ], 
-    "bts:decreaseActivityOf": [
+    "bts:decreasesActivityOf": [
         {
             "@type": "BiologicalProcess",
             "bts:umls": "inhibits.biological_process_or_activity.umls",
