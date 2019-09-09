@@ -1,0 +1,13 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Gene",
+    "bts:hgnc": "associations.subject.id",
+    "bts:symbol": "associations.subject.label",
+    "bts:associatedWith": {
+        "@type": "AnatomicalEntity",
+        "bts:uberon": "associations.object.id",
+        "bts:source": "associations.provided_by",
+        "$input": "bts:entrez",
+        "$source": "biolink"
+    }
+}

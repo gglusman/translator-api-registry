@@ -1,0 +1,13 @@
+{
+    "@context": "http://schema.org",
+    "@type": "PhenotypicFeature",
+    "bts:hp": "associations.subject.id",
+    "bts:name": "associations.subject.label",
+    "bts:associatedWith": {
+        "@type": "DiseaseOrPhenotypicFeature",
+        "bts:hgnc": "associations.object.id",
+        "bts:source": "associations.provided_by",
+        "$input": "bts:hp",
+        "$source": "biolink"
+    }
+}

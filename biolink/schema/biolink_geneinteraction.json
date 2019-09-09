@@ -1,0 +1,14 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Gene",
+    "bts:hgnc": "associations.subject.id",
+    "bts:symbol": "associations.subject.label",
+    "bts:molecularlyInteractsWith": {
+        "@type": "Gene",
+        "bts:hgnc": "associations.object.id",
+        "bts:taxid": "associations.object.taxon.id",
+        "bts:source": "associations.provided_by",
+        "$input": "bts:entrez",
+        "$source": "biolink"
+    }
+}
