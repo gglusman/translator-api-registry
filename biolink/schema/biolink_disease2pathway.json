@@ -1,0 +1,15 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DiseaseOrPhenotypicFeature",
+    "bts:mondo": "associations.subject.id",
+    "bts:name": "associations.subject.label",
+    "bts:associatedWith": {
+        "@type": "Pathway",
+        "bts:reactome": "associations.object.id",
+        "bts:name": "associations.object.label",
+        "bts:source": "associations.object.provided_by",
+        "bts:publication": "associations.object.publications",
+        "$input": "bts:mondo",
+        "$source": "biolink"
+    }
+}
