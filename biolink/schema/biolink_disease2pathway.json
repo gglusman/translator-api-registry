@@ -7,8 +7,8 @@
         "@type": "Pathway",
         "bts:reactome": "associations.object.id",
         "bts:name": "associations.object.label",
-        "bts:source": "associations.object.provided_by",
-        "bts:publication": "associations.object.publications",
+        "bts:source": "associations.provided_by",
+        "bts:publication": "associations.publications",
         "$input": "bts:mondo",
         "$source": "biolink"
     }
