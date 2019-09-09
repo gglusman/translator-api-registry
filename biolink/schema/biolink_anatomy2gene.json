@@ -1,0 +1,15 @@
+{
+    "@context": "http://schema.org",
+    "@type": "AnatomicalEntity",
+    "bts:uberon": "associations.subject.id",
+    "bts:name": "associations.subject.label",
+    "bts:associatedWith": {
+        "@type": "Gene",
+        "bts:hgnc": "associations.object.id",
+        "bts:symbol": "associations.object.label",
+        "bts:source": "associations.object.provided_by",
+        "bts:publication": "associations.object.publications",
+        "$input": "bts:uberon",
+        "$source": "biolink"
+    }
+}
