@@ -30,20 +30,22 @@
         "$input": "bts:entrez",
         "$source": "entrez"
     },
-    "bts:involvedInWikipathways": {
-        "@type": "Wikipathways",
-        "bts:wikipathways": "pathway.wikipathways.id",
-        "bts:name": "pathway.wikipathways.name",
-        "$input": "bts:entrez",
-        "$source": "cpdb"
-    },
-    "bts:involvedInReactome": {
-        "@type": "Reactome",
-        "bts:reacteme": "pathway.reactome.id",
-        "bts:name": "pathway.reactome.name",
-        "$input": "bts:entrez",
-        "$source": "cpdb"
-    },
+    "bts:involvedInPathway": [
+        {
+            "@type": "Pathway",
+            "bts:wikipathways": "pathway.wikipathways.id",
+            "bts:name": "pathway.wikipathways.name",
+            "$input": "bts:entrez",
+            "$source": "cpdb"
+        },
+        {
+            "@type": "Pathway",
+            "bts:reacteme": "pathway.reactome.id",
+            "bts:name": "pathway.reactome.name",
+            "$input": "bts:entrez",
+            "$source": "cpdb"
+        }
+    ],
     "bts:hasTranscript": {
         "@type": "Transcript",
         "bts:ensembl": "ensembl.transcript",
