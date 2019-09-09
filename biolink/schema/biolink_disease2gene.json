@@ -6,7 +6,6 @@
     "bts:associatedWith": {
         "@type": "Gene",
         "bts:hgnc": "associations.object.id",
-        "bts:symbol": "associations.object.label",
         "bts:source": "associations.provided_by",
         "bts:publication": "associations.publications",
         "bts:taxid": "associations.object.taxon.id",
