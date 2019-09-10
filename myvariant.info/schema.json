@@ -5,7 +5,6 @@
     "bts:clinvar": "clinvar.variant_id",
     "bts:variantAssociatedWithGene": {
         "@type": "Gene",
-        "bts:symbol": "dbsnp.gene.symbol",
         "bts:entrez": "dbsnp.gene.geneid"
     },
     "bts:variantAssociatedWithCondition": [
