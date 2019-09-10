@@ -40,7 +40,7 @@
         },
         {
             "@type": "Pathway",
-            "bts:reacteme": "pathway.reactome.id",
+            "bts:reactome": "pathway.reactome.id",
             "bts:name": "pathway.reactome.name",
             "$input": "bts:entrez",
             "$source": "cpdb"
@@ -49,13 +49,11 @@
     "bts:hasTranscript": {
         "@type": "Transcript",
         "bts:ensembl": "ensembl.transcript",
-        "bts:refseq": "refseq.rna",
         "$input": "bts:ensembl"
     },
     "bts:hasGeneProduct": {
         "@type": "Protein",
         "bts:ensembl": "ensembl.protein",
-        "bts:refseq": "refseq.protein",
         "bts:uniprot": "uniprot.Swiss-Prot",
         "$input": "bts:ensembl"
     },
