@@ -1,7 +1,7 @@
 {
     "@context": "http://schema.org",
     "@type": "Gene",
-    "bts:hgnc": "associations.subject.id",
+    "bts:entrez": "associations.subject.id",
     "bts:symbol": "associations.subject.label",
     "bts:associatedWith": {
         "@type": "AnatomicalEntity",
