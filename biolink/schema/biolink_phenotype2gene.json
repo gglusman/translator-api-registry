@@ -4,7 +4,7 @@
     "bts:hp": "associations.subject.id",
     "bts:name": "associations.subject.label",
     "bts:associatedWith": {
-        "@type": "DiseaseOrPhenotypicFeature",
+        "@type": "Gene",
         "bts:hgnc": "associations.object.id",
         "bts:source": "associations.provided_by",
         "$input": "bts:hp",
