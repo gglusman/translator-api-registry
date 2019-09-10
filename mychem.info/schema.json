@@ -42,7 +42,7 @@
         }
     ],
     "bts:treats": {
-        "@type": "Disease",
+        "@type": "DiseaseOrPhenotypicFeature",
         "bts:name": "drugcentral.drug_use.indication.concept_name",
         "bts:snomed": "drugcentral.drug_use.indication.snomed_concept_id",
         "bts:umls": "drugcentral.drug_use.indication.umls_cui",
@@ -50,7 +50,7 @@
         "$source": "drugcentral"
     },
     "bts:contraindication": {
-        "@type": "Disease",
+        "@type": "DiseaseOrPhenotypicFeature",
         "bts:name": "drugcentral.drug_use.contraindication.concept_name",
         "bts:snomed": "drugcentral.drug_use.contraindication.snomed_concept_id",
         "bts:umls": "drugcentral.drug_use.contraindication.umls_cui",
