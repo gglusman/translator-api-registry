@@ -2,9 +2,30 @@
     "@context": "http://schema.org",
     "@type": "SequenceVariant",
     "bts:dbsnp": "dbsnp.rsid",
+    "bts:clinvar": "clinvar.variant_id",
     "bts:variantAssociatedWithGene": {
         "@type": "Gene",
         "bts:symbol": "dbsnp.gene.symbol",
         "bts:entrez": "dbsnp.gene.geneid"
-    }
+    },
+    "bts:variantAssociatedWithCondition": [
+        {
+            "@type": "DiseaseOrPhenotypicFeature",
+            "bts:omim": "clinvar.rcv.conditions.identifiers.omim",
+            "bts:name": "clinvar.rcv.conditions.name",
+            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance"
+        },
+        {
+            "@type": "DiseaseOrPhenotypicFeature",
+            "bts:mesh": "clinvar.rcv.conditions.identifiers.mesh",
+            "bts:name": "clinvar.rcv.conditions.name",
+            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance"
+        },
+        {
+            "@type": "DiseaseOrPhenotypicFeature",
+            "bts:orphanet": "clinvar.rcv.conditions.identifiers.orphanet",
+            "bts:name": "clinvar.rcv.conditions.name",
+            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance"
+        }
+    ]
 }
