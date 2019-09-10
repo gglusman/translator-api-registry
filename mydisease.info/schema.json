@@ -39,5 +39,12 @@
         "$input": "bts:omim",
         "$source": "ctd"
         },
+        {
+        "@type": "BiologicalProcess",
+        "bts:go": "ctd.bp_related_to_disease.go_id",
+        "bts:name": "ctd.bp_related_to_disease.go_name",
+        "$input": "bts:omim",
+        "$source": "ctd"
+        }
     ]
 }
