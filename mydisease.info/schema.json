@@ -36,14 +36,14 @@
         "@type": "ChemicalSubstance",
         "bts:mesh": "ctd.chemical_related_to_disease.mesh_chemical_id",
         "bts:pubmed": "ctd.chemical_related_to_disease.pubmed",
-        "$input": "bts:omim",
+        "$input": "bts:mesh",
         "$source": "ctd"
         },
         {
         "@type": "BiologicalProcess",
         "bts:go": "ctd.bp_related_to_disease.go_id",
         "bts:name": "ctd.bp_related_to_disease.go_name",
-        "$input": "bts:omim",
+        "$input": "bts:mesh",
         "$source": "ctd"
         }
     ]
