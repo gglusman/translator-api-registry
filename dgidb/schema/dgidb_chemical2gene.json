@@ -4,7 +4,7 @@
     "bts:chembl": "matchedTerms.chemblId",
     "bts:name": "matchedTerms.drugName",
     "bts:target": {
-        "@type": "ChemicalSubstance",
+        "@type": "Gene",
         "bts:entrez": "matchedTerms.interactions.geneEntrezId",
         "bts:name": "matchedTerms.interactions.geneLongName",
         "bts:source": "matchedTerms.interactions.sources",
