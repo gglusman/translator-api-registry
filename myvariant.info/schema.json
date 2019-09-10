@@ -20,14 +20,6 @@
         },
         {
             "@type": "DiseaseOrPhenotypicFeature",
-            "bts:mesh": "clinvar.rcv.conditions.identifiers.mesh",
-            "bts:name": "clinvar.rcv.conditions.name",
-            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance",
-            "$input": "bts:dbsnp",
-            "$source": "clinvar"
-        },
-        {
-            "@type": "DiseaseOrPhenotypicFeature",
             "bts:orphanet": "clinvar.rcv.conditions.identifiers.orphanet",
             "bts:name": "clinvar.rcv.conditions.name",
             "bts:clinicalsignificance": "clinvar.rcv.clinical_significance",
