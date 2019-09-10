@@ -5,26 +5,34 @@
     "bts:clinvar": "clinvar.variant_id",
     "bts:variantAssociatedWithGene": {
         "@type": "Gene",
-        "bts:entrez": "dbsnp.gene.geneid"
+        "bts:entrez": "dbsnp.gene.geneid",
+        "$input": "bts:dbsnp",
+        "$source": "dbsnp"
     },
     "bts:variantAssociatedWithCondition": [
         {
             "@type": "DiseaseOrPhenotypicFeature",
             "bts:omim": "clinvar.rcv.conditions.identifiers.omim",
             "bts:name": "clinvar.rcv.conditions.name",
-            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance"
+            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance",
+            "$input": "bts:dbsnp",
+            "$source": "clinvar"
         },
         {
             "@type": "DiseaseOrPhenotypicFeature",
             "bts:mesh": "clinvar.rcv.conditions.identifiers.mesh",
             "bts:name": "clinvar.rcv.conditions.name",
-            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance"
+            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance",
+            "$input": "bts:dbsnp",
+            "$source": "clinvar"
         },
         {
             "@type": "DiseaseOrPhenotypicFeature",
             "bts:orphanet": "clinvar.rcv.conditions.identifiers.orphanet",
             "bts:name": "clinvar.rcv.conditions.name",
-            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance"
+            "bts:clinicalsignificance": "clinvar.rcv.clinical_significance",
+            "$input": "bts:dbsnp",
+            "$source": "clinvar"
         }
     ]
 }
