@@ -9,9 +9,9 @@
     "bts:kegg": "mondo.xrefs.kegg",
     "bts:meddra": "mondo.xrefs.meddra",
     "bts:medgen": "mondo.xrefs.medgen",
-    "bts:mesh": "mondo.xrefs.mesh",
+    "bts:mesh": ["mondo.xrefs.mesh", "disgenet.xrefs.mesh"],
     "bts:omim": "mondo.xrefs.omim",
-    "bts:umls": "mondo.xrefs.umls",
+    "bts:umls": ["mondo.xrefs.umls", "disgenet.xrefs.umls"],
     "bts:associatedWith": [
         {
         "@type": "Gene",
