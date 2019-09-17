@@ -30,6 +30,15 @@
         "$input": "bts:entrez",
         "$source": "entrez"
     },
+    "bts:involvedInCC": {
+        "@type": "CellularComponent",
+        "bts:go": "go.CC.id",
+        "bts:pubmed": "go.CC.pubmed",
+        "bts:evidence": "go.CC.evidence",
+        "bts:term": "go.CC.term",
+        "$input": "bts:entrez",
+        "$source": "entrez"
+    },
     "bts:involvedInPathway": [
         {
             "@type": "Pathway",
