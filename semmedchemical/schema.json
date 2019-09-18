@@ -2,6 +2,20 @@
     "@context": "http://schema.org",
     "@type": "ChemicalSubstance",
     "bts:umls": "umls",
+    "bts:convertsTo": {
+        "@type": "ChemicalSubstance",
+        "bts:umls": "converts_to.chemical_substance.umls",
+        "bts:pubmed": "converts_to.chemical_substance.pmid",
+        "$input": "bts:umls",
+        "$source": "semmed"
+    },
+    "bts:molecularlyInteractsWith": {
+        "@type": "ChemicalSubstance",
+        "bts:umls": "interacts_with.chemical_substance.umls",
+        "bts:pubmed": "interacts_with.chemical_substance.pmid",
+        "$input": "bts:umls",
+        "$source": "semmed"
+    },
     "bts:associatedWith": [
         {
             "@type": "AnatomicalEntity",
@@ -109,6 +123,13 @@
             "@type": "BiologicalProcess",
             "bts:umls": "inhibits.biological_process_or_activity.umls",
             "bts:pubmed": "inhibits.biological_process_or_activity.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        },
+        {
+            "@type": "ChemicalSubstance",
+            "bts:umls": "inhibits.chemical_substance.umls",
+            "bts:pubmed": "inhibits.chemical_substance.pmid",
             "$input": "bts:umls",
             "$source": "semmed"
         },
