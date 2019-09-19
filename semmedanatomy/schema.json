@@ -2,6 +2,7 @@
     "@context": "http://schema.org",
     "@type": "AnatomicalEntity",
     "bts:umls": "umls",
+    "bts:name": "name",
     "bts:associatedWith": [
         {
             "@type": "AnatomicalEntity",
