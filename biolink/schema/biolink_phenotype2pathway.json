@@ -5,9 +5,10 @@
     "bts:name": "associations.subject.label",
     "bts:associatedWith": {
         "@type": "Pathway",
-        "bts:reactome": "associations.object.id",
+        "bts:reactome": "associations.object.REACT",
         "bts:name": "associations.object.label",
         "bts:source": "associations.provided_by",
+        "bts:relation": "associations.relation.label",
         "bts:pubmed": "associations.publications.id",
         "$input": "bts:hp",
         "$source": "biolink"

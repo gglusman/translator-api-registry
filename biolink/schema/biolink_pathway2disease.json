@@ -5,9 +5,10 @@
     "bts:name": "associations.subject.label",
     "bts:associatedWith": {
         "@type": "DiseaseOrPhenotypicFeature",
-        "bts:mondo": "associations.object.id",
+        "bts:mondo": "associations.object.MONDO",
         "bts:name": "associations.object.label",
         "bts:source": "associations.provided_by",
+        "bts:relation": "associations.relation.label",
         "bts:pubmed": "associations.publications.id",
         "$input": "bts:reactome",
         "$source": "biolink"
