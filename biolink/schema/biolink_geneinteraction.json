@@ -8,6 +8,7 @@
         "bts:hgnc": "associations.object.id",
         "bts:taxid": "associations.object.taxon.id",
         "bts:source": "associations.provided_by",
+        "bts:pubmed": "associations.publications.id",
         "$input": "bts:entrez",
         "$source": "biolink"
     }

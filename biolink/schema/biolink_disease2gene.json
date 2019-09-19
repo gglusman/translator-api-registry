@@ -7,7 +7,7 @@
         "@type": "Gene",
         "bts:hgnc": "associations.object.id",
         "bts:source": "associations.provided_by",
-        "bts:publication": "associations.publications",
+        "bts:pubmed": "associations.publications.id",
         "bts:taxid": "associations.object.taxon.id",
         "$input": "bts:mondo",
         "$source": "biolink"

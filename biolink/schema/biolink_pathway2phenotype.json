@@ -8,6 +8,7 @@
         "bts:hp": "associations.object.id",
         "bts:name": "associations.object.label",
         "bts:source": "associations.provided_by",
+        "bts:pubmed": "associations.publications.id",
         "$input": "bts:reactome",
         "$source": "biolink"
     }
