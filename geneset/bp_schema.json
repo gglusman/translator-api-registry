@@ -1,0 +1,7 @@
+{
+    "@context": "http://schema.org",
+    "@type": "BiologicalProcess",
+    "bts:go": "go",
+    "bts:umls": "umls",
+    "bts:name": "name"
+}

@@ -1,0 +1,7 @@
+{
+    "@context": "http://schema.org",
+    "@type": "MolecullarActivity",
+    "bts:go": "go",
+    "bts:umls": "umls",
+    "bts:name": "name"
+}
