@@ -323,6 +323,34 @@
             "bts:pubmed": "associated_with.phenotypic_feature.pmid",
             "$input": "bts:umls",
             "$source": "semmed"
+        },
+        {
+            "@type": "Cell",
+            "bts:umls": "affects.cell.umls",
+            "bts:pubmed": "affects.cell.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        },
+        {
+            "@type": "Cell",
+            "bts:umls": "affects_reverse.cell.umls",
+            "bts:pubmed": "affects_reverse.cell.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        },
+        {
+            "@type": "Cell",
+            "bts:umls": "associated_with.cell.umls",
+            "bts:pubmed": "associated_with.cell.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        },
+        {
+            "@type": "Cell",
+            "bts:umls": "affects_reverse.cell.umls",
+            "bts:pubmed": "affects_reverse.cell.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
         }
     ]
 }
