@@ -1,0 +1,15 @@
+{
+    "@context": "http://schema.org",
+    "@type": "SequenceVariant",
+    "bts:dbsnp": "gwascatalog.rsid",
+    "bts:associatedWith": {
+        "@type": "DiseaseOrPhenotypicFeature",
+        "bts:efo": "gwascatalog.associations.efo.id",
+        "bts:name": "gwascatalog.associations.efo.name",
+        "bts:source": "matchedTerms.interactions.sources",
+        "bts:publication": "gwascatalog.associations.pubmed",
+        "bts:pval": "gwascatalog.associations.pval",
+        "$input": "bts:rsid",
+        "$source": "gwascatalog"
+    }
+}
