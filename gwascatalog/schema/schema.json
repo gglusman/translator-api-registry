@@ -9,7 +9,7 @@
         "bts:source": "matchedTerms.interactions.sources",
         "bts:publication": "gwascatalog.associations.pubmed",
         "bts:pval": "gwascatalog.associations.pval",
-        "$input": "bts:rsid",
+        "$input": "bts:dbsnp",
         "$source": "gwascatalog"
     }
 }
