@@ -7,7 +7,6 @@
         "bts:efo": "gwascatalog.associations.efo.id",
         "bts:name": "gwascatalog.associations.efo.name",
         "bts:publication": "gwascatalog.associations.pubmed",
-        "bts:pval": "gwascatalog.associations.pval",
         "$input": "bts:dbsnp",
         "$source": "gwascatalog"
     }
