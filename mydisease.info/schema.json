@@ -4,6 +4,7 @@
     "bts:mondo": "_id",
     "bts:doid": "mondo.xrefs.doid",
     "bts:bfo": "mondo.xrefs.bfo",
+    "bts:efo": "mondo.xrefs.efo",
     "bts:cohd": "mondo.xrefs.cohd",
     "bts:hp": "mondo.xrefs.hp",
     "bts:kegg": "mondo.xrefs.kegg",
