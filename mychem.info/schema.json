@@ -9,7 +9,7 @@
     "bts:chebi": "drugcentral.xrefs.chebi",
     "bts:chembl": "chembl.molecule_chembl_id",
     "bts:drugbank": "drugbank.id",
-    "bts:name": ["aeolus.drug_name", "chembl.pref_name", "drugbank.name", "unii.preferred_term"],
+    "bts:name": ["chembl.pref_name"],
     "bts:unii": "unii.unii",
     "bts:umls": "drugcentral.xrefs.umlscui",
     "bts:mesh": ["ginas.xrefs.MESH", "drugcentral.xrefs.mesh_descriptor_ui"],
