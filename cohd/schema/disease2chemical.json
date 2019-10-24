@@ -4,7 +4,7 @@
     "bts:cohd": "results.id",
     "bts:associatedWith": {
         "@type": "ChemicalSubstance",
-        "bts:cohd": "results.concept_id",
+        "bts:cohd": "results.associated_concept_id",
         "bts:name": "results.concept.associated_concept_name",
         "$input": "bts:cohd",
         "$source": "cohd"
