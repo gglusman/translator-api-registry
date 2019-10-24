@@ -13,7 +13,7 @@
     "bts:mesh": ["mondo.xrefs.mesh", "disgenet.xrefs.mesh"],
     "bts:omim": "mondo.xrefs.omim",
     "bts:umls": ["mondo.xrefs.umls", "disgenet.xrefs.umls"],
-    "bts:name": ["mondo.label", "hpo.disease_name"],
+    "bts:name": "mondo.label",
     "bts:associatedWith": [
         {
         "@type": "Gene",
