@@ -6,7 +6,6 @@
         "@type": "Gene",
         "bts:symbol": "DISEASES.associatedWith.symbol",
         "bts:category": "DISEASES.associatedWith.category",
-        "bts:confidence": "DISEASES.associatedWith.confidence",
         "$input": "bts:mondo",
         "$source": "DISEASES"
     }
