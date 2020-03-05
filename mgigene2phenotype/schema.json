@@ -12,7 +12,7 @@
         },
         {
             "@type": "PhenotypicFeature",
-            "bts:doid": "mgi.associated_with_phenotype.mp",
+            "bts:mp": "mgi.associated_with_phenotype.mp",
             "bts:pubmed": "mgi.associated_with_disease.pubmed",
             "$input": "bts:mgi",
             "$source": "MGI"
