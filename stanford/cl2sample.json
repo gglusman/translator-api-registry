@@ -9,7 +9,7 @@
             "bts:age": "data.attributes.age",
             "bts:sex": "data.attributes.sex.name",
             "bts:cellline": "data.attributes.cell_line.name",
-            "$input": "bts:mondo",
+            "$input": "bts:clo",
             "$source": "NCBI Biosample Database"
         }
     ]
