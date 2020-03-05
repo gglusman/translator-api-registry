@@ -1,0 +1,12 @@
+{
+    "@context": "http://schema.org",
+    "@type": "ChemicalSubstance",
+    "bts:chembl": "chembl",
+    "bts:treats": {
+        "@type": "DiseaseOrPhenotypicFeature",
+        "bts:efo": "drug_indications.efo_id",
+        "bts:name": "drug_indications.efo_term",
+        "$input": "bts:chembl",
+        "$source": "chembl"
+    }
+}
