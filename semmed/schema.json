@@ -172,6 +172,13 @@
             "$source": "semmed"
         },
         {
+            "@type": "Gene",
+            "bts:umls": "ASSOCIATED_WITH_reverse.gene.umls",
+            "bts:pubmed": "ASSOCIATED_WITH_reverse.gene.pmid",
+            "$input": "bts:umls",
+            "$source": "semmed"
+        },
+        {
             "@type": "Disease",
             "bts:umls": "AFFECTS.disease_or_phenotypic_feature.umls",
             "bts:pubmed": "AFFECTS.disease_or_phenotypic_feature.pmid",
