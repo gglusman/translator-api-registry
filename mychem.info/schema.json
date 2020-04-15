@@ -6,7 +6,7 @@
     "bts:rxcui": ["aeolus.drug_rxcui"],
     "bts:smiles": "chembl.smiles",
     "bts:pubchem": "pubchem.cid",
-    "bts:chebi": "drugcentral.xrefs.chebi",
+    "bts:chebi": ["drugcentral.xrefs.chebi", "chebi.id"],
     "bts:chembl": "chembl.molecule_chembl_id",
     "bts:drugbank": "drugbank.id",
     "bts:name": ["chembl.pref_name"],
